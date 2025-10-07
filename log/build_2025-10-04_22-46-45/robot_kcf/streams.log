@@ -1,0 +1,25 @@
+[0.118s] Invoking command in '/Pav-S_ws/build/robot_kcf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/robot_kcf -- -j6 -l6
+[0.396s] [35m[1mConsolidate compiler generated dependencies of target run_tracker_node[0m
+[0.558s] [100%] Built target run_tracker_node
+[0.620s] Invoked command in '/Pav-S_ws/build/robot_kcf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/robot_kcf -- -j6 -l6
+[0.631s] Invoking command in '/Pav-S_ws/build/robot_kcf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/robot_kcf
+[0.666s] -- Install configuration: "Release"
+[0.669s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/lib/robot_kcf/run_tracker_node
+[0.671s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/launch
+[0.678s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/launch/robot_kcf.launch.py
+[0.678s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/ament_index/resource_index/package_run_dependencies/robot_kcf
+[0.679s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/ament_index/resource_index/parent_prefix_path/robot_kcf
+[0.680s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/environment/ament_prefix_path.sh
+[0.681s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/environment/ament_prefix_path.dsv
+[0.681s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/environment/path.sh
+[0.681s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/environment/path.dsv
+[0.681s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/local_setup.bash
+[0.681s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/local_setup.sh
+[0.681s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/local_setup.zsh
+[0.682s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/local_setup.dsv
+[0.682s] -- Installing: /Pav-S_ws/install/robot_kcf/share/robot_kcf/package.dsv
+[0.683s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/ament_index/resource_index/packages/robot_kcf
+[0.687s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/cmake/robot_kcfConfig.cmake
+[0.687s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/cmake/robot_kcfConfig-version.cmake
+[0.687s] -- Up-to-date: /Pav-S_ws/install/robot_kcf/share/robot_kcf/package.xml
+[0.693s] Invoked command in '/Pav-S_ws/build/robot_kcf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/robot_kcf

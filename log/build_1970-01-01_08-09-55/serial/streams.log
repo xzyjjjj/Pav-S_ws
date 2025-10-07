@@ -1,0 +1,56 @@
+[0.067s] Invoking command in '/Pav-S_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake /Pav-S_ws/src/serial_ros2 -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/serial
+[0.120s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.120s] -- Found ament_cmake_core: 1.3.12 (/opt/ros/humble/share/ament_cmake_core/cmake)
+[0.564s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.576s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.689s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.966s] -- Configuring done
+[0.981s] -- Generating done
+[0.986s] -- Build files have been written to: /Pav-S_ws/build/serial
+[1.005s] Invoked command in '/Pav-S_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake /Pav-S_ws/src/serial_ros2 -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/serial
+[1.006s] Invoking command in '/Pav-S_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/serial -- -j6 -l6
+[1.084s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.086s] -- Found ament_cmake_core: 1.3.12 (/opt/ros/humble/share/ament_cmake_core/cmake)
+[1.499s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.505s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.607s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.880s] -- Configuring done
+[1.893s] -- Generating done
+[1.902s] -- Build files have been written to: /Pav-S_ws/build/serial
+[1.944s] gmake[2]: Warning: File 'CMakeFiles/serial.dir/flags.make' has modification time 1759584930 s in the future
+[1.999s] [35m[1mConsolidate compiler generated dependencies of target serial[0m
+[2.007s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.012s] gmake[2]: Warning: File 'CMakeFiles/serial.dir/flags.make' has modification time 1759584930 s in the future
+[2.015s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[2.065s] [100%] Built target serial
+[2.117s] Invoked command in '/Pav-S_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/serial -- -j6 -l6
+[2.181s] Invoking command in '/Pav-S_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/serial
+[2.212s] -- Install configuration: "Release"
+[2.212s] -- Up-to-date: /Pav-S_ws/install/serial/lib/libserial.a
+[2.214s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/environment/library_path.sh
+[2.214s] -- Installing: /Pav-S_ws/install/serial/share/serial/environment/library_path.dsv
+[2.215s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial
+[2.216s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial/serial.h
+[2.216s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial/v8stdint.h
+[2.216s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial/impl
+[2.216s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial/impl/unix.h
+[2.217s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial/impl/win.h
+[2.217s] -- Up-to-date: /Pav-S_ws/install/serial/share/ament_index/resource_index/package_run_dependencies/serial
+[2.217s] -- Installing: /Pav-S_ws/install/serial/share/ament_index/resource_index/parent_prefix_path/serial
+[2.218s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/environment/ament_prefix_path.sh
+[2.218s] -- Installing: /Pav-S_ws/install/serial/share/serial/environment/ament_prefix_path.dsv
+[2.218s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/environment/path.sh
+[2.219s] -- Installing: /Pav-S_ws/install/serial/share/serial/environment/path.dsv
+[2.219s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/local_setup.bash
+[2.220s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/local_setup.sh
+[2.223s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/local_setup.zsh
+[2.224s] -- Installing: /Pav-S_ws/install/serial/share/serial/local_setup.dsv
+[2.225s] -- Installing: /Pav-S_ws/install/serial/share/serial/package.dsv
+[2.225s] -- Up-to-date: /Pav-S_ws/install/serial/share/ament_index/resource_index/packages/serial
+[2.225s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.225s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/cmake/ament_cmake_export_libraries-extras.cmake
+[2.225s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.225s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/cmake/serialConfig.cmake
+[2.225s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/cmake/serialConfig-version.cmake
+[2.226s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/package.xml
+[2.229s] Invoked command in '/Pav-S_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/serial

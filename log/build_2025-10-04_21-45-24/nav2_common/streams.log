@@ -1,0 +1,64 @@
+[0.200s] Invoking command in '/Pav-S_ws/build/nav2_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake /Pav-S_ws/src/navigation2-humble/nav2_common -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/nav2_common
+[0.375s] -- Found ament_cmake_core: 1.3.12 (/opt/ros/humble/share/ament_cmake_core/cmake)
+[1.259s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.600s] -- Found ament_cmake_python: 1.3.12 (/opt/ros/humble/share/ament_cmake_python/cmake)
+[2.136s] -- Configuring done
+[2.144s] -- Generating done
+[2.158s] -- Build files have been written to: /Pav-S_ws/build/nav2_common
+[2.276s] Invoked command in '/Pav-S_ws/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake /Pav-S_ws/src/navigation2-humble/nav2_common -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/nav2_common
+[2.277s] Invoking command in '/Pav-S_ws/build/nav2_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/nav2_common -- -j6 -l6
+[2.580s] Built target ament_cmake_python_copy_nav2_common
+[3.672s] running egg_info
+[3.673s] creating nav2_common.egg-info
+[3.673s] writing nav2_common.egg-info/PKG-INFO
+[3.678s] writing dependency_links to nav2_common.egg-info/dependency_links.txt
+[3.678s] writing top-level names to nav2_common.egg-info/top_level.txt
+[3.679s] writing manifest file 'nav2_common.egg-info/SOURCES.txt'
+[3.684s] reading manifest file 'nav2_common.egg-info/SOURCES.txt'
+[3.685s] writing manifest file 'nav2_common.egg-info/SOURCES.txt'
+[3.808s] Built target ament_cmake_python_build_nav2_common_egg
+[3.874s] Invoked command in '/Pav-S_ws/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/nav2_common -- -j6 -l6
+[3.900s] Invoking command in '/Pav-S_ws/build/nav2_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/nav2_common
+[3.918s] -- Install configuration: "Release"
+[3.918s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/environment/pythonpath.sh
+[3.919s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/environment/pythonpath.dsv
+[3.919s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common-1.1.18-py3.10.egg-info
+[3.919s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common-1.1.18-py3.10.egg-info/dependency_links.txt
+[3.919s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common-1.1.18-py3.10.egg-info/SOURCES.txt
+[3.920s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common-1.1.18-py3.10.egg-info/PKG-INFO
+[3.920s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common-1.1.18-py3.10.egg-info/top_level.txt
+[3.921s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common
+[3.921s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/__init__.py
+[3.921s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch
+[3.921s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/rewritten_yaml.py
+[3.921s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/replace_string.py
+[3.922s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/has_node_params.py
+[3.922s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/__init__.py
+[3.922s] -- Installing: /Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/parse_multirobot_pose.py
+[4.116s] Listing '/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common'...
+[4.117s] Compiling '/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/__init__.py'...
+[4.117s] Listing '/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch'...
+[4.117s] Compiling '/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/__init__.py'...
+[4.117s] Compiling '/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/has_node_params.py'...
+[4.117s] Compiling '/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/parse_multirobot_pose.py'...
+[4.117s] Compiling '/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/replace_string.py'...
+[4.117s] Compiling '/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/rewritten_yaml.py'...
+[4.134s] -- Installing: /Pav-S_ws/install/nav2_common/share/ament_index/resource_index/package_run_dependencies/nav2_common
+[4.134s] -- Installing: /Pav-S_ws/install/nav2_common/share/ament_index/resource_index/parent_prefix_path/nav2_common
+[4.135s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/environment/ament_prefix_path.sh
+[4.136s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/environment/ament_prefix_path.dsv
+[4.136s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/environment/path.sh
+[4.136s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/environment/path.dsv
+[4.137s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/local_setup.bash
+[4.137s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/local_setup.sh
+[4.138s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/local_setup.zsh
+[4.138s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/local_setup.dsv
+[4.138s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/package.dsv
+[4.139s] -- Installing: /Pav-S_ws/install/nav2_common/share/ament_index/resource_index/packages/nav2_common
+[4.139s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/cmake/nav2_common-extras.cmake
+[4.140s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/cmake/nav2_commonConfig.cmake
+[4.140s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/cmake/nav2_commonConfig-version.cmake
+[4.140s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/package.xml
+[4.141s] -- Up-to-date: /Pav-S_ws/install/nav2_common/share/nav2_common/cmake
+[4.142s] -- Installing: /Pav-S_ws/install/nav2_common/share/nav2_common/cmake/nav2_package.cmake
+[4.168s] Invoked command in '/Pav-S_ws/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/nav2_common

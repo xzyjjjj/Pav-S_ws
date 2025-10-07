@@ -1,0 +1,2515 @@
+[0.000000] (-) TimerEvent: {}
+[0.000423] (-) JobUnselected: {'identifier': 'astra_camera'}
+[0.000488] (-) JobUnselected: {'identifier': 'astra_camera_msgs'}
+[0.000754] (-) JobUnselected: {'identifier': 'costmap_queue'}
+[0.001239] (-) JobUnselected: {'identifier': 'dwb_core'}
+[0.001502] (-) JobUnselected: {'identifier': 'dwb_critics'}
+[0.001729] (-) JobUnselected: {'identifier': 'dwb_msgs'}
+[0.001815] (-) JobUnselected: {'identifier': 'dwb_plugins'}
+[0.001964] (-) JobUnselected: {'identifier': 'fast_lio'}
+[0.002038] (-) JobUnselected: {'identifier': 'libuvc'}
+[0.002075] (-) JobUnselected: {'identifier': 'nav2_amcl'}
+[0.002111] (-) JobUnselected: {'identifier': 'nav2_behavior_tree'}
+[0.002161] (-) JobUnselected: {'identifier': 'nav2_behaviors'}
+[0.002221] (-) JobUnselected: {'identifier': 'nav2_bringup'}
+[0.002260] (-) JobUnselected: {'identifier': 'nav2_bt_navigator'}
+[0.002292] (-) JobUnselected: {'identifier': 'nav2_collision_monitor'}
+[0.002323] (-) JobUnselected: {'identifier': 'nav2_common'}
+[0.002353] (-) JobUnselected: {'identifier': 'nav2_constrained_smoother'}
+[0.002383] (-) JobUnselected: {'identifier': 'nav2_controller'}
+[0.002413] (-) JobUnselected: {'identifier': 'nav2_core'}
+[0.002464] (-) JobUnselected: {'identifier': 'nav2_dwb_controller'}
+[0.002847] (-) JobUnselected: {'identifier': 'nav2_graceful_controller'}
+[0.002883] (-) JobUnselected: {'identifier': 'nav2_lifecycle_manager'}
+[0.002952] (-) JobUnselected: {'identifier': 'nav2_map_server'}
+[0.003073] (-) JobUnselected: {'identifier': 'nav2_mppi_controller'}
+[0.003138] (-) JobUnselected: {'identifier': 'nav2_msgs'}
+[0.003174] (-) JobUnselected: {'identifier': 'nav2_navfn_planner'}
+[0.003210] (-) JobUnselected: {'identifier': 'nav2_planner'}
+[0.003260] (-) JobUnselected: {'identifier': 'nav2_regulated_pure_pursuit_controller'}
+[0.003296] (-) JobUnselected: {'identifier': 'nav2_rotation_shim_controller'}
+[0.003327] (-) JobUnselected: {'identifier': 'nav2_rviz_plugins'}
+[0.003357] (-) JobUnselected: {'identifier': 'nav2_simple_commander'}
+[0.003386] (-) JobUnselected: {'identifier': 'nav2_smac_planner'}
+[0.003416] (-) JobUnselected: {'identifier': 'nav2_smoother'}
+[0.003449] (-) JobUnselected: {'identifier': 'nav2_theta_star_planner'}
+[0.003683] (-) JobUnselected: {'identifier': 'nav2_util'}
+[0.003753] (-) JobUnselected: {'identifier': 'nav2_velocity_smoother'}
+[0.003865] (-) JobUnselected: {'identifier': 'nav2_voxel_grid'}
+[0.003927] (-) JobUnselected: {'identifier': 'nav2_waypoint_follower'}
+[0.003963] (-) JobUnselected: {'identifier': 'nav_2d_msgs'}
+[0.004000] (-) JobUnselected: {'identifier': 'nav_2d_utils'}
+[0.004046] (-) JobUnselected: {'identifier': 'navigation2'}
+[0.004081] (-) JobUnselected: {'identifier': 'navigation_manager'}
+[0.004111] (-) JobUnselected: {'identifier': 'robot_kcf'}
+[0.004141] (-) JobUnselected: {'identifier': 'serial'}
+[0.004170] (-) JobUnselected: {'identifier': 'turn_on_wheeltec_robot'}
+[0.004199] (-) JobUnselected: {'identifier': 'usb_cam'}
+[0.004229] (-) JobUnselected: {'identifier': 'wheeltec_robot_msg'}
+[0.004261] (-) JobUnselected: {'identifier': 'wheeltec_robot_urdf'}
+[0.004666] (-) JobUnselected: {'identifier': 'yolo_detector'}
+[0.004878] (-) JobUnselected: {'identifier': 'yolov5_lib'}
+[0.004964] (nav2_costmap_2d) JobQueued: {'identifier': 'nav2_costmap_2d', 'dependencies': OrderedDict([('nav2_common', '/Pav-S_ws/install/nav2_common'), ('nav2_msgs', '/Pav-S_ws/install/nav2_msgs'), ('nav2_voxel_grid', '/Pav-S_ws/install/nav2_voxel_grid'), ('nav2_util', '/Pav-S_ws/install/nav2_util'), ('nav2_lifecycle_manager', '/Pav-S_ws/install/nav2_lifecycle_manager'), ('nav2_map_server', '/Pav-S_ws/install/nav2_map_server')])}
+[0.005062] (nav2_costmap_2d) JobStarted: {'identifier': 'nav2_costmap_2d'}
+[0.054928] (nav2_costmap_2d) JobProgress: {'identifier': 'nav2_costmap_2d', 'progress': 'cmake'}
+[0.055994] (nav2_costmap_2d) Command: {'cmd': ['/usr/bin/cmake', '/Pav-S_ws/src/navigation2-humble/nav2_costmap_2d', '-DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/nav2_costmap_2d'], 'cwd': '/Pav-S_ws/build/nav2_costmap_2d', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_costmap_2d'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[0.099323] (-) TimerEvent: {}
+[0.199909] (-) TimerEvent: {}
+[0.263064] (nav2_costmap_2d) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.300106] (-) TimerEvent: {}
+[0.399718] (nav2_costmap_2d) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.400200] (-) TimerEvent: {}
+[0.424369] (nav2_costmap_2d) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.500448] (-) TimerEvent: {}
+[0.601199] (-) TimerEvent: {}
+[0.604000] (nav2_costmap_2d) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.628800] (nav2_costmap_2d) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.630029] (nav2_costmap_2d) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.631810] (nav2_costmap_2d) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.643377] (nav2_costmap_2d) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.701378] (-) TimerEvent: {}
+[0.802083] (-) TimerEvent: {}
+[0.833149] (nav2_costmap_2d) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.858394] (nav2_costmap_2d) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.859369] (nav2_costmap_2d) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.860920] (nav2_costmap_2d) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.881684] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.902198] (-) TimerEvent: {}
+[1.002788] (-) TimerEvent: {}
+[1.103492] (-) TimerEvent: {}
+[1.204230] (-) TimerEvent: {}
+[1.287989] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.304377] (-) TimerEvent: {}
+[1.404997] (-) TimerEvent: {}
+[1.505638] (-) TimerEvent: {}
+[1.606412] (-) TimerEvent: {}
+[1.612982] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.706584] (-) TimerEvent: {}
+[1.739340] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.757456] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.783897] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.806711] (-) TimerEvent: {}
+[1.820657] (nav2_costmap_2d) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.866023] (nav2_costmap_2d) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.906814] (-) TimerEvent: {}
+[1.960464] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found laser_geometry: 2.4.0 (/opt/ros/humble/share/laser_geometry/cmake)\n'}
+[2.006942] (-) TimerEvent: {}
+[2.107526] (-) TimerEvent: {}
+[2.116539] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.127323] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.207639] (-) TimerEvent: {}
+[2.308209] (-) TimerEvent: {}
+[2.355504] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.408382] (-) TimerEvent: {}
+[2.437965] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[2.508543] (-) TimerEvent: {}
+[2.536441] (nav2_costmap_2d) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.567379] (nav2_costmap_2d) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.608721] (-) TimerEvent: {}
+[2.709402] (-) TimerEvent: {}
+[2.734426] (nav2_costmap_2d) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.735117] (nav2_costmap_2d) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.809589] (-) TimerEvent: {}
+[2.910287] (-) TimerEvent: {}
+[2.919421] (nav2_costmap_2d) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[2.923442] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.010420] (-) TimerEvent: {}
+[3.111020] (-) TimerEvent: {}
+[3.146687] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found map_msgs: 2.1.0 (/opt/ros/humble/share/map_msgs/cmake)\n'}
+[3.211137] (-) TimerEvent: {}
+[3.236933] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found message_filters: 4.3.8 (/opt/ros/humble/share/message_filters/cmake)\n'}
+[3.244272] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found nav2_common: 1.1.18 (/Pav-S_ws/install/nav2_common/share/nav2_common/cmake)\n'}
+[3.246741] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found nav2_msgs: 1.1.18 (/Pav-S_ws/install/nav2_msgs/share/nav2_msgs/cmake)\n'}
+[3.311249] (-) TimerEvent: {}
+[3.352097] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found nav2_util: 1.1.18 (/Pav-S_ws/install/nav2_util/share/nav2_util/cmake)\n'}
+[3.411374] (-) TimerEvent: {}
+[3.511874] (-) TimerEvent: {}
+[3.546516] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[3.546930] (nav2_costmap_2d) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[3.611986] (-) TimerEvent: {}
+[3.677056] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found nav2_voxel_grid: 1.1.18 (/Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake)\n'}
+[3.687945] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)\n'}
+[3.712097] (-) TimerEvent: {}
+[3.736866] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found std_srvs: 4.9.0 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[3.764666] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found tf2_sensor_msgs: 0.25.16 (/opt/ros/humble/share/tf2_sensor_msgs/cmake)\n'}
+[3.779489] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[3.812207] (-) TimerEvent: {}
+[3.825863] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found angles: 1.15.0 (/opt/ros/humble/share/angles/cmake)\n'}
+[3.831046] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found suitable version "3.4.0", minimum required is "3.3") \n'}
+[3.831266] (nav2_costmap_2d) StdoutLine: {'line': b'-- Setting build type to Release as none was specified.\n'}
+[3.912323] (-) TimerEvent: {}
+[4.012778] (-) TimerEvent: {}
+[4.113247] (-) TimerEvent: {}
+[4.213770] (-) TimerEvent: {}
+[4.307247] (nav2_costmap_2d) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[4.313865] (-) TimerEvent: {}
+[4.414362] (-) TimerEvent: {}
+[4.514994] (-) TimerEvent: {}
+[4.615737] (-) TimerEvent: {}
+[4.716346] (-) TimerEvent: {}
+[4.769040] (nav2_costmap_2d) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[4.813231] (nav2_costmap_2d) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[4.816409] (-) TimerEvent: {}
+[4.835992] (nav2_costmap_2d) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[4.916564] (-) TimerEvent: {}
+[4.939291] (nav2_costmap_2d) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.942307] (nav2_costmap_2d) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/Pav-S_ws/src/navigation2-humble/nav2_costmap_2d/include>\n'}
+[4.942474] (nav2_costmap_2d) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.945169] (nav2_costmap_2d) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[4.948606] (nav2_costmap_2d) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.951074] (nav2_costmap_2d) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[4.959243] (nav2_costmap_2d) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.959486] (nav2_costmap_2d) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.961889] (nav2_costmap_2d) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.969283] (nav2_costmap_2d) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.016684] (-) TimerEvent: {}
+[5.117477] (-) TimerEvent: {}
+[5.218149] (-) TimerEvent: {}
+[5.319026] (-) TimerEvent: {}
+[5.419688] (-) TimerEvent: {}
+[5.520369] (-) TimerEvent: {}
+[5.621060] (-) TimerEvent: {}
+[5.721738] (-) TimerEvent: {}
+[5.822470] (-) TimerEvent: {}
+[5.923245] (-) TimerEvent: {}
+[6.024203] (-) TimerEvent: {}
+[6.124949] (-) TimerEvent: {}
+[6.197841] (nav2_costmap_2d) StdoutLine: {'line': b'-- Generating done\n'}
+[6.225049] (-) TimerEvent: {}
+[6.325690] (-) TimerEvent: {}
+[6.382342] (nav2_costmap_2d) StdoutLine: {'line': b'-- Build files have been written to: /Pav-S_ws/build/nav2_costmap_2d\n'}
+[6.425878] (-) TimerEvent: {}
+[6.433740] (nav2_costmap_2d) CommandEnded: {'returncode': 0}
+[6.436228] (nav2_costmap_2d) JobProgress: {'identifier': 'nav2_costmap_2d', 'progress': 'build'}
+[6.439147] (nav2_costmap_2d) Command: {'cmd': ['/usr/bin/cmake', '--build', '/Pav-S_ws/build/nav2_costmap_2d', '--', '-j6', '-l6'], 'cwd': '/Pav-S_ws/build/nav2_costmap_2d', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_costmap_2d'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[6.526060] (-) TimerEvent: {}
+[6.577756] (nav2_costmap_2d) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[6.578295] (nav2_costmap_2d) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d.cpp.o\x1b[0m\n'}
+[6.578472] (nav2_costmap_2d) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/layer.cpp.o\x1b[0m\n'}
+[6.578617] (nav2_costmap_2d) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[6.578902] (nav2_costmap_2d) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/array_parser.cpp.o\x1b[0m\n'}
+[6.580121] (nav2_costmap_2d) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/layered_costmap.cpp.o\x1b[0m\n'}
+[6.626274] (-) TimerEvent: {}
+[6.726993] (-) TimerEvent: {}
+[6.827717] (-) TimerEvent: {}
+[6.928484] (-) TimerEvent: {}
+[7.029632] (-) TimerEvent: {}
+[7.130426] (-) TimerEvent: {}
+[7.231206] (-) TimerEvent: {}
+[7.331974] (-) TimerEvent: {}
+[7.432775] (-) TimerEvent: {}
+[7.533563] (-) TimerEvent: {}
+[7.634356] (-) TimerEvent: {}
+[7.735143] (-) TimerEvent: {}
+[7.835946] (-) TimerEvent: {}
+[7.936809] (-) TimerEvent: {}
+[8.015257] (nav2_costmap_2d) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d_ros.cpp.o\x1b[0m\n'}
+[8.037033] (-) TimerEvent: {}
+[8.137880] (-) TimerEvent: {}
+[8.239688] (-) TimerEvent: {}
+[8.340533] (-) TimerEvent: {}
+[8.441331] (-) TimerEvent: {}
+[8.542632] (-) TimerEvent: {}
+[8.643363] (-) TimerEvent: {}
+[8.744090] (-) TimerEvent: {}
+[8.844815] (-) TimerEvent: {}
+[8.945548] (-) TimerEvent: {}
+[8.983436] (nav2_costmap_2d) StdoutLine: {'line': b'[  9%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[9.045775] (-) TimerEvent: {}
+[9.092471] (nav2_costmap_2d) StdoutLine: {'line': b'[  9%] Built target gtest_main\n'}
+[9.116204] (nav2_costmap_2d) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d_publisher.cpp.o\x1b[0m\n'}
+[9.128821] (nav2_costmap_2d) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_math.cpp.o\x1b[0m\n'}
+[9.146000] (-) TimerEvent: {}
+[9.246745] (-) TimerEvent: {}
+[9.347502] (-) TimerEvent: {}
+[9.448270] (-) TimerEvent: {}
+[9.549042] (-) TimerEvent: {}
+[9.649793] (-) TimerEvent: {}
+[9.750550] (-) TimerEvent: {}
+[9.851267] (-) TimerEvent: {}
+[9.952047] (-) TimerEvent: {}
+[10.052849] (-) TimerEvent: {}
+[10.153639] (-) TimerEvent: {}
+[10.254417] (-) TimerEvent: {}
+[10.355157] (-) TimerEvent: {}
+[10.455892] (-) TimerEvent: {}
+[10.556624] (-) TimerEvent: {}
+[10.657358] (-) TimerEvent: {}
+[10.758207] (-) TimerEvent: {}
+[10.852432] (nav2_costmap_2d) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/footprint.cpp.o\x1b[0m\n'}
+[10.858385] (-) TimerEvent: {}
+[10.959161] (-) TimerEvent: {}
+[11.060491] (-) TimerEvent: {}
+[11.161824] (-) TimerEvent: {}
+[11.263166] (-) TimerEvent: {}
+[11.364470] (-) TimerEvent: {}
+[11.465910] (-) TimerEvent: {}
+[11.567260] (-) TimerEvent: {}
+[11.668036] (-) TimerEvent: {}
+[11.768788] (-) TimerEvent: {}
+[11.869563] (-) TimerEvent: {}
+[11.970350] (-) TimerEvent: {}
+[12.071116] (-) TimerEvent: {}
+[12.172389] (-) TimerEvent: {}
+[12.273163] (-) TimerEvent: {}
+[12.373940] (-) TimerEvent: {}
+[12.474732] (-) TimerEvent: {}
+[12.575505] (-) TimerEvent: {}
+[12.676305] (-) TimerEvent: {}
+[12.777079] (-) TimerEvent: {}
+[12.877855] (-) TimerEvent: {}
+[12.978692] (-) TimerEvent: {}
+[13.079466] (-) TimerEvent: {}
+[13.180196] (-) TimerEvent: {}
+[13.280960] (-) TimerEvent: {}
+[13.381742] (-) TimerEvent: {}
+[13.482535] (-) TimerEvent: {}
+[13.583292] (-) TimerEvent: {}
+[13.684054] (-) TimerEvent: {}
+[13.784801] (-) TimerEvent: {}
+[13.885555] (-) TimerEvent: {}
+[13.986877] (-) TimerEvent: {}
+[14.088253] (-) TimerEvent: {}
+[14.189695] (-) TimerEvent: {}
+[14.291132] (-) TimerEvent: {}
+[14.392479] (-) TimerEvent: {}
+[14.493914] (-) TimerEvent: {}
+[14.595224] (-) TimerEvent: {}
+[14.696470] (-) TimerEvent: {}
+[14.797190] (-) TimerEvent: {}
+[14.897942] (-) TimerEvent: {}
+[14.998769] (-) TimerEvent: {}
+[15.099584] (-) TimerEvent: {}
+[15.200397] (-) TimerEvent: {}
+[15.301220] (-) TimerEvent: {}
+[15.402060] (-) TimerEvent: {}
+[15.502886] (-) TimerEvent: {}
+[15.603683] (-) TimerEvent: {}
+[15.704472] (-) TimerEvent: {}
+[15.805175] (-) TimerEvent: {}
+[15.905948] (-) TimerEvent: {}
+[16.006735] (-) TimerEvent: {}
+[16.107487] (-) TimerEvent: {}
+[16.208805] (-) TimerEvent: {}
+[16.309564] (-) TimerEvent: {}
+[16.410313] (-) TimerEvent: {}
+[16.511063] (-) TimerEvent: {}
+[16.611805] (-) TimerEvent: {}
+[16.712581] (-) TimerEvent: {}
+[16.813354] (-) TimerEvent: {}
+[16.818839] (nav2_costmap_2d) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_layer.cpp.o\x1b[0m\n'}
+[16.862570] (nav2_costmap_2d) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/observation_buffer.cpp.o\x1b[0m\n'}
+[16.913537] (-) TimerEvent: {}
+[17.014300] (-) TimerEvent: {}
+[17.115010] (-) TimerEvent: {}
+[17.215761] (-) TimerEvent: {}
+[17.316549] (-) TimerEvent: {}
+[17.417320] (-) TimerEvent: {}
+[17.518092] (-) TimerEvent: {}
+[17.618875] (-) TimerEvent: {}
+[17.719648] (-) TimerEvent: {}
+[17.820399] (-) TimerEvent: {}
+[17.921195] (-) TimerEvent: {}
+[18.021971] (-) TimerEvent: {}
+[18.122741] (-) TimerEvent: {}
+[18.223531] (-) TimerEvent: {}
+[18.324341] (-) TimerEvent: {}
+[18.425134] (-) TimerEvent: {}
+[18.525890] (-) TimerEvent: {}
+[18.626655] (-) TimerEvent: {}
+[18.727415] (-) TimerEvent: {}
+[18.828236] (-) TimerEvent: {}
+[18.928998] (-) TimerEvent: {}
+[19.029752] (-) TimerEvent: {}
+[19.130526] (-) TimerEvent: {}
+[19.231252] (-) TimerEvent: {}
+[19.332021] (-) TimerEvent: {}
+[19.432773] (-) TimerEvent: {}
+[19.533541] (-) TimerEvent: {}
+[19.634331] (-) TimerEvent: {}
+[19.735403] (-) TimerEvent: {}
+[19.819180] (nav2_costmap_2d) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/clear_costmap_service.cpp.o\x1b[0m\n'}
+[19.835612] (-) TimerEvent: {}
+[19.936329] (-) TimerEvent: {}
+[20.037072] (-) TimerEvent: {}
+[20.137821] (-) TimerEvent: {}
+[20.238659] (-) TimerEvent: {}
+[20.339384] (-) TimerEvent: {}
+[20.440162] (-) TimerEvent: {}
+[20.540925] (-) TimerEvent: {}
+[20.641684] (-) TimerEvent: {}
+[20.742641] (-) TimerEvent: {}
+[20.843369] (-) TimerEvent: {}
+[20.944082] (-) TimerEvent: {}
+[21.045400] (-) TimerEvent: {}
+[21.147053] (-) TimerEvent: {}
+[21.248736] (-) TimerEvent: {}
+[21.350104] (-) TimerEvent: {}
+[21.451541] (-) TimerEvent: {}
+[21.552938] (-) TimerEvent: {}
+[21.654298] (-) TimerEvent: {}
+[21.757987] (-) TimerEvent: {}
+[21.859310] (-) TimerEvent: {}
+[21.960120] (-) TimerEvent: {}
+[22.060941] (-) TimerEvent: {}
+[22.161688] (-) TimerEvent: {}
+[22.262487] (-) TimerEvent: {}
+[22.363262] (-) TimerEvent: {}
+[22.464021] (-) TimerEvent: {}
+[22.564827] (-) TimerEvent: {}
+[22.665594] (-) TimerEvent: {}
+[22.766370] (-) TimerEvent: {}
+[22.867146] (-) TimerEvent: {}
+[22.967981] (-) TimerEvent: {}
+[23.068795] (-) TimerEvent: {}
+[23.169626] (-) TimerEvent: {}
+[23.270459] (-) TimerEvent: {}
+[23.371268] (-) TimerEvent: {}
+[23.472072] (-) TimerEvent: {}
+[23.572869] (-) TimerEvent: {}
+[23.673629] (-) TimerEvent: {}
+[23.774358] (-) TimerEvent: {}
+[23.875136] (-) TimerEvent: {}
+[23.975897] (-) TimerEvent: {}
+[24.076638] (-) TimerEvent: {}
+[24.177402] (-) TimerEvent: {}
+[24.278212] (-) TimerEvent: {}
+[24.379010] (-) TimerEvent: {}
+[24.479785] (-) TimerEvent: {}
+[24.580570] (-) TimerEvent: {}
+[24.681408] (-) TimerEvent: {}
+[24.782232] (-) TimerEvent: {}
+[24.883015] (-) TimerEvent: {}
+[24.983740] (-) TimerEvent: {}
+[25.084486] (-) TimerEvent: {}
+[25.185213] (-) TimerEvent: {}
+[25.285957] (-) TimerEvent: {}
+[25.386695] (-) TimerEvent: {}
+[25.487429] (-) TimerEvent: {}
+[25.588152] (-) TimerEvent: {}
+[25.688875] (-) TimerEvent: {}
+[25.789607] (-) TimerEvent: {}
+[25.890310] (-) TimerEvent: {}
+[25.948904] (nav2_costmap_2d) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/footprint_collision_checker.cpp.o\x1b[0m\n'}
+[25.990498] (-) TimerEvent: {}
+[26.091812] (-) TimerEvent: {}
+[26.193083] (-) TimerEvent: {}
+[26.294426] (-) TimerEvent: {}
+[26.371864] (nav2_costmap_2d) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[26.394628] (-) TimerEvent: {}
+[26.464146] (nav2_costmap_2d) StdoutLine: {'line': b'[ 19%] Built target gtest\n'}
+[26.486408] (nav2_costmap_2d) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/plugins/costmap_filters/costmap_filter.cpp.o\x1b[0m\n'}
+[26.494812] (-) TimerEvent: {}
+[26.596044] (-) TimerEvent: {}
+[26.697263] (-) TimerEvent: {}
+[26.798570] (-) TimerEvent: {}
+[26.900424] (-) TimerEvent: {}
+[27.001741] (-) TimerEvent: {}
+[27.103011] (-) TimerEvent: {}
+[27.203801] (-) TimerEvent: {}
+[27.304613] (-) TimerEvent: {}
+[27.405393] (-) TimerEvent: {}
+[27.506284] (-) TimerEvent: {}
+[27.607024] (-) TimerEvent: {}
+[27.707853] (-) TimerEvent: {}
+[27.808582] (-) TimerEvent: {}
+[27.909371] (-) TimerEvent: {}
+[28.010190] (-) TimerEvent: {}
+[28.110901] (-) TimerEvent: {}
+[28.211625] (-) TimerEvent: {}
+[28.312375] (-) TimerEvent: {}
+[28.413147] (-) TimerEvent: {}
+[28.513837] (-) TimerEvent: {}
+[28.614549] (-) TimerEvent: {}
+[28.715256] (-) TimerEvent: {}
+[28.815947] (-) TimerEvent: {}
+[28.916647] (-) TimerEvent: {}
+[29.017397] (-) TimerEvent: {}
+[29.118208] (-) TimerEvent: {}
+[29.218982] (-) TimerEvent: {}
+[29.319761] (-) TimerEvent: {}
+[29.420558] (-) TimerEvent: {}
+[29.521353] (-) TimerEvent: {}
+[29.622082] (-) TimerEvent: {}
+[29.722854] (-) TimerEvent: {}
+[29.823531] (-) TimerEvent: {}
+[29.924265] (-) TimerEvent: {}
+[30.024985] (-) TimerEvent: {}
+[30.125710] (-) TimerEvent: {}
+[30.226487] (-) TimerEvent: {}
+[30.327238] (-) TimerEvent: {}
+[30.428019] (-) TimerEvent: {}
+[30.528747] (-) TimerEvent: {}
+[30.629490] (-) TimerEvent: {}
+[30.730254] (-) TimerEvent: {}
+[30.831008] (-) TimerEvent: {}
+[30.931718] (-) TimerEvent: {}
+[31.032466] (-) TimerEvent: {}
+[31.133209] (-) TimerEvent: {}
+[31.233952] (-) TimerEvent: {}
+[31.334735] (-) TimerEvent: {}
+[31.435478] (-) TimerEvent: {}
+[31.536203] (-) TimerEvent: {}
+[31.636953] (-) TimerEvent: {}
+[31.737738] (-) TimerEvent: {}
+[31.838505] (-) TimerEvent: {}
+[31.939234] (-) TimerEvent: {}
+[32.039986] (-) TimerEvent: {}
+[32.140729] (-) TimerEvent: {}
+[32.241494] (-) TimerEvent: {}
+[32.342249] (-) TimerEvent: {}
+[32.443782] (-) TimerEvent: {}
+[32.544585] (-) TimerEvent: {}
+[32.645376] (-) TimerEvent: {}
+[32.746320] (-) TimerEvent: {}
+[32.847463] (-) TimerEvent: {}
+[32.948171] (-) TimerEvent: {}
+[33.048866] (-) TimerEvent: {}
+[33.149767] (-) TimerEvent: {}
+[33.250518] (-) TimerEvent: {}
+[33.351191] (-) TimerEvent: {}
+[33.451879] (-) TimerEvent: {}
+[33.552571] (-) TimerEvent: {}
+[33.653472] (-) TimerEvent: {}
+[33.754506] (-) TimerEvent: {}
+[33.855175] (-) TimerEvent: {}
+[33.956019] (-) TimerEvent: {}
+[34.056694] (-) TimerEvent: {}
+[34.157420] (-) TimerEvent: {}
+[34.258111] (-) TimerEvent: {}
+[34.359071] (-) TimerEvent: {}
+[34.459787] (-) TimerEvent: {}
+[34.561025] (-) TimerEvent: {}
+[34.662295] (-) TimerEvent: {}
+[34.763509] (-) TimerEvent: {}
+[34.864723] (-) TimerEvent: {}
+[34.965980] (-) TimerEvent: {}
+[35.067244] (-) TimerEvent: {}
+[35.168298] (-) TimerEvent: {}
+[35.268964] (-) TimerEvent: {}
+[35.369617] (-) TimerEvent: {}
+[35.470276] (-) TimerEvent: {}
+[35.570934] (-) TimerEvent: {}
+[35.671577] (-) TimerEvent: {}
+[35.772275] (-) TimerEvent: {}
+[35.873366] (-) TimerEvent: {}
+[35.974047] (-) TimerEvent: {}
+[36.074709] (-) TimerEvent: {}
+[36.175385] (-) TimerEvent: {}
+[36.276036] (-) TimerEvent: {}
+[36.376703] (-) TimerEvent: {}
+[36.477355] (-) TimerEvent: {}
+[36.578013] (-) TimerEvent: {}
+[36.678683] (-) TimerEvent: {}
+[36.779343] (-) TimerEvent: {}
+[36.880002] (-) TimerEvent: {}
+[36.980666] (-) TimerEvent: {}
+[37.081348] (-) TimerEvent: {}
+[37.182005] (-) TimerEvent: {}
+[37.282696] (-) TimerEvent: {}
+[37.383383] (-) TimerEvent: {}
+[37.484062] (-) TimerEvent: {}
+[37.584701] (-) TimerEvent: {}
+[37.685389] (-) TimerEvent: {}
+[37.786048] (-) TimerEvent: {}
+[37.886733] (-) TimerEvent: {}
+[37.987401] (-) TimerEvent: {}
+[38.088070] (-) TimerEvent: {}
+[38.188728] (-) TimerEvent: {}
+[38.289422] (-) TimerEvent: {}
+[38.390210] (-) TimerEvent: {}
+[38.490890] (-) TimerEvent: {}
+[38.591550] (-) TimerEvent: {}
+[38.692201] (-) TimerEvent: {}
+[38.792867] (-) TimerEvent: {}
+[38.893539] (-) TimerEvent: {}
+[38.994281] (-) TimerEvent: {}
+[39.095062] (-) TimerEvent: {}
+[39.195862] (-) TimerEvent: {}
+[39.296667] (-) TimerEvent: {}
+[39.397444] (-) TimerEvent: {}
+[39.498267] (-) TimerEvent: {}
+[39.599032] (-) TimerEvent: {}
+[39.699803] (-) TimerEvent: {}
+[39.800548] (-) TimerEvent: {}
+[39.901302] (-) TimerEvent: {}
+[40.002089] (-) TimerEvent: {}
+[40.102899] (-) TimerEvent: {}
+[40.203696] (-) TimerEvent: {}
+[40.304482] (-) TimerEvent: {}
+[40.405242] (-) TimerEvent: {}
+[40.506035] (-) TimerEvent: {}
+[40.606835] (-) TimerEvent: {}
+[40.707587] (-) TimerEvent: {}
+[40.808348] (-) TimerEvent: {}
+[40.909081] (-) TimerEvent: {}
+[41.009875] (-) TimerEvent: {}
+[41.110703] (-) TimerEvent: {}
+[41.211511] (-) TimerEvent: {}
+[41.312290] (-) TimerEvent: {}
+[41.413077] (-) TimerEvent: {}
+[41.513848] (-) TimerEvent: {}
+[41.614663] (-) TimerEvent: {}
+[41.715454] (-) TimerEvent: {}
+[41.816239] (-) TimerEvent: {}
+[41.916977] (-) TimerEvent: {}
+[42.017766] (-) TimerEvent: {}
+[42.118501] (-) TimerEvent: {}
+[42.219142] (-) TimerEvent: {}
+[42.319798] (-) TimerEvent: {}
+[42.420521] (-) TimerEvent: {}
+[42.521178] (-) TimerEvent: {}
+[42.621776] (-) TimerEvent: {}
+[42.722425] (-) TimerEvent: {}
+[42.823112] (-) TimerEvent: {}
+[42.923812] (-) TimerEvent: {}
+[43.024524] (-) TimerEvent: {}
+[43.125278] (-) TimerEvent: {}
+[43.226061] (-) TimerEvent: {}
+[43.327010] (-) TimerEvent: {}
+[43.427935] (-) TimerEvent: {}
+[43.528747] (-) TimerEvent: {}
+[43.629542] (-) TimerEvent: {}
+[43.730504] (-) TimerEvent: {}
+[43.831289] (-) TimerEvent: {}
+[43.932066] (-) TimerEvent: {}
+[44.032845] (-) TimerEvent: {}
+[44.133661] (-) TimerEvent: {}
+[44.234492] (-) TimerEvent: {}
+[44.335257] (-) TimerEvent: {}
+[44.436031] (-) TimerEvent: {}
+[44.536806] (-) TimerEvent: {}
+[44.637591] (-) TimerEvent: {}
+[44.738366] (-) TimerEvent: {}
+[44.839141] (-) TimerEvent: {}
+[44.939931] (-) TimerEvent: {}
+[45.040724] (-) TimerEvent: {}
+[45.141517] (-) TimerEvent: {}
+[45.242314] (-) TimerEvent: {}
+[45.343127] (-) TimerEvent: {}
+[45.443895] (-) TimerEvent: {}
+[45.544664] (-) TimerEvent: {}
+[45.645431] (-) TimerEvent: {}
+[45.746240] (-) TimerEvent: {}
+[45.846976] (-) TimerEvent: {}
+[45.947772] (-) TimerEvent: {}
+[46.048550] (-) TimerEvent: {}
+[46.149346] (-) TimerEvent: {}
+[46.250172] (-) TimerEvent: {}
+[46.350967] (-) TimerEvent: {}
+[46.451745] (-) TimerEvent: {}
+[46.552511] (-) TimerEvent: {}
+[46.653352] (-) TimerEvent: {}
+[46.754182] (-) TimerEvent: {}
+[46.854962] (-) TimerEvent: {}
+[46.955774] (-) TimerEvent: {}
+[47.056573] (-) TimerEvent: {}
+[47.157351] (-) TimerEvent: {}
+[47.258173] (-) TimerEvent: {}
+[47.358971] (-) TimerEvent: {}
+[47.459777] (-) TimerEvent: {}
+[47.560570] (-) TimerEvent: {}
+[47.661330] (-) TimerEvent: {}
+[47.762106] (-) TimerEvent: {}
+[47.862880] (-) TimerEvent: {}
+[47.963646] (-) TimerEvent: {}
+[48.064420] (-) TimerEvent: {}
+[48.165142] (-) TimerEvent: {}
+[48.265943] (-) TimerEvent: {}
+[48.366770] (-) TimerEvent: {}
+[48.467552] (-) TimerEvent: {}
+[48.568329] (-) TimerEvent: {}
+[48.669118] (-) TimerEvent: {}
+[48.769906] (-) TimerEvent: {}
+[48.870695] (-) TimerEvent: {}
+[48.971445] (-) TimerEvent: {}
+[49.072169] (-) TimerEvent: {}
+[49.172903] (-) TimerEvent: {}
+[49.273660] (-) TimerEvent: {}
+[49.374453] (-) TimerEvent: {}
+[49.475246] (-) TimerEvent: {}
+[49.576041] (-) TimerEvent: {}
+[49.676833] (-) TimerEvent: {}
+[49.777655] (-) TimerEvent: {}
+[49.878464] (-) TimerEvent: {}
+[49.979237] (-) TimerEvent: {}
+[50.080001] (-) TimerEvent: {}
+[50.180757] (-) TimerEvent: {}
+[50.281518] (-) TimerEvent: {}
+[50.382318] (-) TimerEvent: {}
+[50.483084] (-) TimerEvent: {}
+[50.583834] (-) TimerEvent: {}
+[50.684597] (-) TimerEvent: {}
+[50.785348] (-) TimerEvent: {}
+[50.886052] (-) TimerEvent: {}
+[50.986871] (-) TimerEvent: {}
+[51.087694] (-) TimerEvent: {}
+[51.188479] (-) TimerEvent: {}
+[51.289261] (-) TimerEvent: {}
+[51.390041] (-) TimerEvent: {}
+[51.490853] (-) TimerEvent: {}
+[51.591642] (-) TimerEvent: {}
+[51.692433] (-) TimerEvent: {}
+[51.793206] (-) TimerEvent: {}
+[51.893973] (-) TimerEvent: {}
+[51.994822] (-) TimerEvent: {}
+[52.095609] (-) TimerEvent: {}
+[52.196421] (-) TimerEvent: {}
+[52.297214] (-) TimerEvent: {}
+[52.397990] (-) TimerEvent: {}
+[52.498820] (-) TimerEvent: {}
+[52.599616] (-) TimerEvent: {}
+[52.700396] (-) TimerEvent: {}
+[52.801187] (-) TimerEvent: {}
+[52.902047] (-) TimerEvent: {}
+[53.002887] (-) TimerEvent: {}
+[53.103684] (-) TimerEvent: {}
+[53.204466] (-) TimerEvent: {}
+[53.305264] (-) TimerEvent: {}
+[53.406287] (-) TimerEvent: {}
+[53.507119] (-) TimerEvent: {}
+[53.607920] (-) TimerEvent: {}
+[53.708725] (-) TimerEvent: {}
+[53.809514] (-) TimerEvent: {}
+[53.910325] (-) TimerEvent: {}
+[54.011117] (-) TimerEvent: {}
+[54.111882] (-) TimerEvent: {}
+[54.212602] (-) TimerEvent: {}
+[54.313330] (-) TimerEvent: {}
+[54.414083] (-) TimerEvent: {}
+[54.514912] (-) TimerEvent: {}
+[54.615613] (-) TimerEvent: {}
+[54.716235] (-) TimerEvent: {}
+[54.816869] (-) TimerEvent: {}
+[54.917495] (-) TimerEvent: {}
+[55.018152] (-) TimerEvent: {}
+[55.118785] (-) TimerEvent: {}
+[55.185858] (nav2_costmap_2d) StdoutLine: {'line': b'[ 21%] \x1b[32m\x1b[1mLinking CXX shared library libnav2_costmap_2d_core.so\x1b[0m\n'}
+[55.218969] (-) TimerEvent: {}
+[55.319670] (-) TimerEvent: {}
+[55.420338] (-) TimerEvent: {}
+[55.521014] (-) TimerEvent: {}
+[55.621677] (-) TimerEvent: {}
+[55.722328] (-) TimerEvent: {}
+[55.823106] (-) TimerEvent: {}
+[55.923867] (-) TimerEvent: {}
+[55.969201] (nav2_costmap_2d) StdoutLine: {'line': b'[ 21%] Built target nav2_costmap_2d_core\n'}
+[56.022440] (nav2_costmap_2d) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_markers.dir/src/costmap_2d_markers.cpp.o\x1b[0m\n'}
+[56.023025] (nav2_costmap_2d) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/array_parser_test.dir/array_parser_test.cpp.o\x1b[0m\n'}
+[56.023701] (nav2_costmap_2d) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/layers.dir/plugins/inflation_layer.cpp.o\x1b[0m\n'}
+[56.023933] (-) TimerEvent: {}
+[56.027167] (nav2_costmap_2d) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_cloud.dir/src/costmap_2d_cloud.cpp.o\x1b[0m\n'}
+[56.028612] (nav2_costmap_2d) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/filters.dir/plugins/costmap_filters/keepout_filter.cpp.o\x1b[0m\n'}
+[56.042552] (nav2_costmap_2d) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/footprint_subscriber.cpp.o\x1b[0m\n'}
+[56.124161] (-) TimerEvent: {}
+[56.224844] (-) TimerEvent: {}
+[56.325530] (-) TimerEvent: {}
+[56.426436] (-) TimerEvent: {}
+[56.527147] (-) TimerEvent: {}
+[56.627887] (-) TimerEvent: {}
+[56.728621] (-) TimerEvent: {}
+[56.829542] (-) TimerEvent: {}
+[56.930297] (-) TimerEvent: {}
+[57.031030] (-) TimerEvent: {}
+[57.131771] (-) TimerEvent: {}
+[57.232569] (-) TimerEvent: {}
+[57.333345] (-) TimerEvent: {}
+[57.434107] (-) TimerEvent: {}
+[57.534882] (-) TimerEvent: {}
+[57.636346] (-) TimerEvent: {}
+[57.737092] (-) TimerEvent: {}
+[57.837855] (-) TimerEvent: {}
+[57.938601] (-) TimerEvent: {}
+[58.039324] (-) TimerEvent: {}
+[58.140043] (-) TimerEvent: {}
+[58.240742] (-) TimerEvent: {}
+[58.341447] (-) TimerEvent: {}
+[58.442222] (-) TimerEvent: {}
+[58.542957] (-) TimerEvent: {}
+[58.643687] (-) TimerEvent: {}
+[58.744416] (-) TimerEvent: {}
+[58.845156] (-) TimerEvent: {}
+[58.945888] (-) TimerEvent: {}
+[59.046596] (-) TimerEvent: {}
+[59.147310] (-) TimerEvent: {}
+[59.248025] (-) TimerEvent: {}
+[59.348778] (-) TimerEvent: {}
+[59.449525] (-) TimerEvent: {}
+[59.550314] (-) TimerEvent: {}
+[59.613429] (nav2_costmap_2d) StdoutLine: {'line': b'[ 30%] \x1b[32m\x1b[1mLinking CXX executable array_parser_test\x1b[0m\n'}
+[59.650499] (-) TimerEvent: {}
+[59.751219] (-) TimerEvent: {}
+[59.851971] (-) TimerEvent: {}
+[59.952728] (-) TimerEvent: {}
+[60.053438] (-) TimerEvent: {}
+[60.137087] (nav2_costmap_2d) StdoutLine: {'line': b'[ 30%] Built target array_parser_test\n'}
+[60.153672] (-) TimerEvent: {}
+[60.192246] (nav2_costmap_2d) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/collision_footprint_test.dir/footprint_collision_checker_test.cpp.o\x1b[0m\n'}
+[60.253891] (-) TimerEvent: {}
+[60.354641] (-) TimerEvent: {}
+[60.455366] (-) TimerEvent: {}
+[60.556078] (-) TimerEvent: {}
+[60.656780] (-) TimerEvent: {}
+[60.757482] (-) TimerEvent: {}
+[60.858241] (-) TimerEvent: {}
+[60.958986] (-) TimerEvent: {}
+[61.059727] (-) TimerEvent: {}
+[61.160492] (-) TimerEvent: {}
+[61.261288] (-) TimerEvent: {}
+[61.362091] (-) TimerEvent: {}
+[61.462858] (-) TimerEvent: {}
+[61.563630] (-) TimerEvent: {}
+[61.664394] (-) TimerEvent: {}
+[61.765142] (-) TimerEvent: {}
+[61.865862] (-) TimerEvent: {}
+[61.966639] (-) TimerEvent: {}
+[62.067371] (-) TimerEvent: {}
+[62.168101] (-) TimerEvent: {}
+[62.268804] (-) TimerEvent: {}
+[62.369539] (-) TimerEvent: {}
+[62.470296] (-) TimerEvent: {}
+[62.571012] (-) TimerEvent: {}
+[62.671757] (-) TimerEvent: {}
+[62.772479] (-) TimerEvent: {}
+[62.873242] (-) TimerEvent: {}
+[62.973962] (-) TimerEvent: {}
+[63.074679] (-) TimerEvent: {}
+[63.175393] (-) TimerEvent: {}
+[63.276144] (-) TimerEvent: {}
+[63.376883] (-) TimerEvent: {}
+[63.477624] (-) TimerEvent: {}
+[63.578357] (-) TimerEvent: {}
+[63.679090] (-) TimerEvent: {}
+[63.779815] (-) TimerEvent: {}
+[63.880541] (-) TimerEvent: {}
+[63.981251] (-) TimerEvent: {}
+[64.081967] (-) TimerEvent: {}
+[64.182712] (-) TimerEvent: {}
+[64.283407] (-) TimerEvent: {}
+[64.384117] (-) TimerEvent: {}
+[64.484858] (-) TimerEvent: {}
+[64.585613] (-) TimerEvent: {}
+[64.686368] (-) TimerEvent: {}
+[64.787093] (-) TimerEvent: {}
+[64.887804] (-) TimerEvent: {}
+[64.988531] (-) TimerEvent: {}
+[65.089268] (-) TimerEvent: {}
+[65.190030] (-) TimerEvent: {}
+[65.290774] (-) TimerEvent: {}
+[65.391506] (-) TimerEvent: {}
+[65.492276] (-) TimerEvent: {}
+[65.592967] (-) TimerEvent: {}
+[65.693693] (-) TimerEvent: {}
+[65.794432] (-) TimerEvent: {}
+[65.895138] (-) TimerEvent: {}
+[65.995859] (-) TimerEvent: {}
+[66.096588] (-) TimerEvent: {}
+[66.197789] (-) TimerEvent: {}
+[66.298956] (-) TimerEvent: {}
+[66.400108] (-) TimerEvent: {}
+[66.501335] (-) TimerEvent: {}
+[66.602497] (-) TimerEvent: {}
+[66.703634] (-) TimerEvent: {}
+[66.805080] (-) TimerEvent: {}
+[66.906328] (-) TimerEvent: {}
+[67.007027] (-) TimerEvent: {}
+[67.107796] (-) TimerEvent: {}
+[67.208590] (-) TimerEvent: {}
+[67.309394] (-) TimerEvent: {}
+[67.410220] (-) TimerEvent: {}
+[67.510971] (-) TimerEvent: {}
+[67.611689] (-) TimerEvent: {}
+[67.713540] (-) TimerEvent: {}
+[67.814709] (-) TimerEvent: {}
+[67.915952] (-) TimerEvent: {}
+[68.016706] (-) TimerEvent: {}
+[68.117438] (-) TimerEvent: {}
+[68.218182] (-) TimerEvent: {}
+[68.256706] (nav2_costmap_2d) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/layers.dir/plugins/static_layer.cpp.o\x1b[0m\n'}
+[68.318308] (-) TimerEvent: {}
+[68.419058] (-) TimerEvent: {}
+[68.519784] (-) TimerEvent: {}
+[68.620565] (-) TimerEvent: {}
+[68.721350] (-) TimerEvent: {}
+[68.822151] (-) TimerEvent: {}
+[68.922892] (-) TimerEvent: {}
+[69.023641] (-) TimerEvent: {}
+[69.124387] (-) TimerEvent: {}
+[69.225116] (-) TimerEvent: {}
+[69.325862] (-) TimerEvent: {}
+[69.426619] (-) TimerEvent: {}
+[69.527394] (-) TimerEvent: {}
+[69.628143] (-) TimerEvent: {}
+[69.728903] (-) TimerEvent: {}
+[69.829606] (-) TimerEvent: {}
+[69.930310] (-) TimerEvent: {}
+[70.031002] (-) TimerEvent: {}
+[70.131702] (-) TimerEvent: {}
+[70.232454] (-) TimerEvent: {}
+[70.333221] (-) TimerEvent: {}
+[70.434010] (-) TimerEvent: {}
+[70.534810] (-) TimerEvent: {}
+[70.635613] (-) TimerEvent: {}
+[70.736359] (-) TimerEvent: {}
+[70.837103] (-) TimerEvent: {}
+[70.937905] (-) TimerEvent: {}
+[71.038666] (-) TimerEvent: {}
+[71.139384] (-) TimerEvent: {}
+[71.240141] (-) TimerEvent: {}
+[71.340902] (-) TimerEvent: {}
+[71.441648] (-) TimerEvent: {}
+[71.542436] (-) TimerEvent: {}
+[71.643196] (-) TimerEvent: {}
+[71.744014] (-) TimerEvent: {}
+[71.844761] (-) TimerEvent: {}
+[71.945563] (-) TimerEvent: {}
+[72.046314] (-) TimerEvent: {}
+[72.147099] (-) TimerEvent: {}
+[72.247909] (-) TimerEvent: {}
+[72.349132] (-) TimerEvent: {}
+[72.450365] (-) TimerEvent: {}
+[72.529232] (nav2_costmap_2d) StdoutLine: {'line': b'[ 34%] \x1b[32m\x1b[1mLinking CXX executable collision_footprint_test\x1b[0m\n'}
+[72.550556] (-) TimerEvent: {}
+[72.651796] (-) TimerEvent: {}
+[72.753723] (-) TimerEvent: {}
+[72.855067] (-) TimerEvent: {}
+[72.958536] (-) TimerEvent: {}
+[73.059732] (-) TimerEvent: {}
+[73.060549] (nav2_costmap_2d) StdoutLine: {'line': b'[ 34%] Built target collision_footprint_test\n'}
+[73.112517] (nav2_costmap_2d) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/costmap_convesion_test.dir/costmap_conversion_test.cpp.o\x1b[0m\n'}
+[73.159929] (-) TimerEvent: {}
+[73.260696] (-) TimerEvent: {}
+[73.361478] (-) TimerEvent: {}
+[73.462259] (-) TimerEvent: {}
+[73.562999] (-) TimerEvent: {}
+[73.663752] (-) TimerEvent: {}
+[73.764936] (-) TimerEvent: {}
+[73.866199] (-) TimerEvent: {}
+[73.967390] (-) TimerEvent: {}
+[74.068607] (-) TimerEvent: {}
+[74.169859] (-) TimerEvent: {}
+[74.271089] (-) TimerEvent: {}
+[74.372305] (-) TimerEvent: {}
+[74.473537] (-) TimerEvent: {}
+[74.574810] (-) TimerEvent: {}
+[74.675957] (-) TimerEvent: {}
+[74.777166] (-) TimerEvent: {}
+[74.878406] (-) TimerEvent: {}
+[74.979565] (-) TimerEvent: {}
+[75.080785] (-) TimerEvent: {}
+[75.182039] (-) TimerEvent: {}
+[75.282787] (-) TimerEvent: {}
+[75.383518] (-) TimerEvent: {}
+[75.484258] (-) TimerEvent: {}
+[75.585515] (-) TimerEvent: {}
+[75.686761] (-) TimerEvent: {}
+[75.787901] (-) TimerEvent: {}
+[75.889175] (-) TimerEvent: {}
+[75.990401] (-) TimerEvent: {}
+[76.091699] (-) TimerEvent: {}
+[76.193004] (-) TimerEvent: {}
+[76.293733] (-) TimerEvent: {}
+[76.394457] (-) TimerEvent: {}
+[76.495163] (-) TimerEvent: {}
+[76.595894] (-) TimerEvent: {}
+[76.697040] (-) TimerEvent: {}
+[76.797764] (-) TimerEvent: {}
+[76.898514] (-) TimerEvent: {}
+[76.999697] (-) TimerEvent: {}
+[77.100465] (-) TimerEvent: {}
+[77.201254] (-) TimerEvent: {}
+[77.301984] (-) TimerEvent: {}
+[77.402728] (-) TimerEvent: {}
+[77.503455] (-) TimerEvent: {}
+[77.604136] (-) TimerEvent: {}
+[77.704821] (-) TimerEvent: {}
+[77.805572] (-) TimerEvent: {}
+[77.906355] (-) TimerEvent: {}
+[78.007060] (-) TimerEvent: {}
+[78.107827] (-) TimerEvent: {}
+[78.208595] (-) TimerEvent: {}
+[78.309350] (-) TimerEvent: {}
+[78.410056] (-) TimerEvent: {}
+[78.510809] (-) TimerEvent: {}
+[78.611573] (-) TimerEvent: {}
+[78.712338] (-) TimerEvent: {}
+[78.813134] (-) TimerEvent: {}
+[78.913900] (-) TimerEvent: {}
+[79.014672] (-) TimerEvent: {}
+[79.115423] (-) TimerEvent: {}
+[79.216176] (-) TimerEvent: {}
+[79.316901] (-) TimerEvent: {}
+[79.417670] (-) TimerEvent: {}
+[79.518390] (-) TimerEvent: {}
+[79.619622] (-) TimerEvent: {}
+[79.720849] (-) TimerEvent: {}
+[79.822058] (-) TimerEvent: {}
+[79.923303] (-) TimerEvent: {}
+[80.024481] (-) TimerEvent: {}
+[80.126368] (-) TimerEvent: {}
+[80.227918] (-) TimerEvent: {}
+[80.329044] (-) TimerEvent: {}
+[80.430319] (-) TimerEvent: {}
+[80.531433] (-) TimerEvent: {}
+[80.632684] (-) TimerEvent: {}
+[80.733863] (-) TimerEvent: {}
+[80.834626] (-) TimerEvent: {}
+[80.935366] (-) TimerEvent: {}
+[81.036633] (-) TimerEvent: {}
+[81.137847] (-) TimerEvent: {}
+[81.239055] (-) TimerEvent: {}
+[81.340257] (-) TimerEvent: {}
+[81.441014] (-) TimerEvent: {}
+[81.541756] (-) TimerEvent: {}
+[81.642476] (-) TimerEvent: {}
+[81.743583] (-) TimerEvent: {}
+[81.844704] (-) TimerEvent: {}
+[81.945905] (-) TimerEvent: {}
+[82.047354] (-) TimerEvent: {}
+[82.148644] (-) TimerEvent: {}
+[82.249935] (-) TimerEvent: {}
+[82.351209] (-) TimerEvent: {}
+[82.452466] (-) TimerEvent: {}
+[82.553227] (-) TimerEvent: {}
+[82.654606] (-) TimerEvent: {}
+[82.755766] (-) TimerEvent: {}
+[82.856987] (-) TimerEvent: {}
+[82.958188] (-) TimerEvent: {}
+[83.059391] (-) TimerEvent: {}
+[83.160587] (-) TimerEvent: {}
+[83.261861] (-) TimerEvent: {}
+[83.363140] (-) TimerEvent: {}
+[83.464228] (-) TimerEvent: {}
+[83.565437] (-) TimerEvent: {}
+[83.666655] (-) TimerEvent: {}
+[83.767849] (-) TimerEvent: {}
+[83.869076] (-) TimerEvent: {}
+[83.971222] (-) TimerEvent: {}
+[84.072704] (-) TimerEvent: {}
+[84.173905] (-) TimerEvent: {}
+[84.275136] (-) TimerEvent: {}
+[84.376319] (-) TimerEvent: {}
+[84.477484] (-) TimerEvent: {}
+[84.578782] (-) TimerEvent: {}
+[84.680132] (-) TimerEvent: {}
+[84.781275] (-) TimerEvent: {}
+[84.795007] (nav2_costmap_2d) StdoutLine: {'line': b'[ 36%] \x1b[32m\x1b[1mLinking CXX executable costmap_convesion_test\x1b[0m\n'}
+[84.881457] (-) TimerEvent: {}
+[84.982569] (-) TimerEvent: {}
+[85.083820] (-) TimerEvent: {}
+[85.185023] (-) TimerEvent: {}
+[85.286257] (-) TimerEvent: {}
+[85.387417] (-) TimerEvent: {}
+[85.455019] (nav2_costmap_2d) StdoutLine: {'line': b'[ 36%] Built target costmap_convesion_test\n'}
+[85.477992] (nav2_costmap_2d) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/layers.dir/plugins/obstacle_layer.cpp.o\x1b[0m\n'}
+[85.487624] (-) TimerEvent: {}
+[85.588768] (-) TimerEvent: {}
+[85.642642] (nav2_costmap_2d) StdoutLine: {'line': b'[ 39%] \x1b[32m\x1b[1mLinking CXX executable nav2_costmap_2d_markers\x1b[0m\n'}
+[85.689019] (-) TimerEvent: {}
+[85.790309] (-) TimerEvent: {}
+[85.891630] (-) TimerEvent: {}
+[85.992942] (-) TimerEvent: {}
+[86.094415] (-) TimerEvent: {}
+[86.195480] (-) TimerEvent: {}
+[86.251447] (nav2_costmap_2d) StdoutLine: {'line': b'[ 39%] Built target nav2_costmap_2d_markers\n'}
+[86.295678] (-) TimerEvent: {}
+[86.306683] (nav2_costmap_2d) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/declare_parameter_test.dir/declare_parameter_test.cpp.o\x1b[0m\n'}
+[86.395879] (-) TimerEvent: {}
+[86.496973] (-) TimerEvent: {}
+[86.598311] (-) TimerEvent: {}
+[86.698994] (-) TimerEvent: {}
+[86.799708] (-) TimerEvent: {}
+[86.900427] (-) TimerEvent: {}
+[87.001137] (-) TimerEvent: {}
+[87.101989] (-) TimerEvent: {}
+[87.202786] (-) TimerEvent: {}
+[87.303514] (-) TimerEvent: {}
+[87.312285] (nav2_costmap_2d) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/costmap_subscriber.cpp.o\x1b[0m\n'}
+[87.403697] (-) TimerEvent: {}
+[87.504678] (-) TimerEvent: {}
+[87.605440] (-) TimerEvent: {}
+[87.706228] (-) TimerEvent: {}
+[87.807137] (-) TimerEvent: {}
+[87.907974] (-) TimerEvent: {}
+[88.008714] (-) TimerEvent: {}
+[88.109464] (-) TimerEvent: {}
+[88.210317] (-) TimerEvent: {}
+[88.311234] (-) TimerEvent: {}
+[88.412002] (-) TimerEvent: {}
+[88.512724] (-) TimerEvent: {}
+[88.613551] (-) TimerEvent: {}
+[88.714401] (-) TimerEvent: {}
+[88.815171] (-) TimerEvent: {}
+[88.915957] (-) TimerEvent: {}
+[89.016715] (-) TimerEvent: {}
+[89.117492] (-) TimerEvent: {}
+[89.218239] (-) TimerEvent: {}
+[89.318968] (-) TimerEvent: {}
+[89.419674] (-) TimerEvent: {}
+[89.433551] (nav2_costmap_2d) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX executable nav2_costmap_2d_cloud\x1b[0m\n'}
+[89.519873] (-) TimerEvent: {}
+[89.620619] (-) TimerEvent: {}
+[89.721387] (-) TimerEvent: {}
+[89.822081] (-) TimerEvent: {}
+[89.922826] (-) TimerEvent: {}
+[89.987544] (nav2_costmap_2d) StdoutLine: {'line': b'[ 42%] Built target nav2_costmap_2d_cloud\n'}
+[90.011775] (nav2_costmap_2d) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/costmap_topic_collision_checker.cpp.o\x1b[0m\n'}
+[90.023029] (-) TimerEvent: {}
+[90.123738] (-) TimerEvent: {}
+[90.224446] (-) TimerEvent: {}
+[90.325287] (-) TimerEvent: {}
+[90.426022] (-) TimerEvent: {}
+[90.527105] (-) TimerEvent: {}
+[90.627869] (-) TimerEvent: {}
+[90.728579] (-) TimerEvent: {}
+[90.829350] (-) TimerEvent: {}
+[90.930084] (-) TimerEvent: {}
+[91.031573] (-) TimerEvent: {}
+[91.132456] (-) TimerEvent: {}
+[91.233160] (-) TimerEvent: {}
+[91.333869] (-) TimerEvent: {}
+[91.434635] (-) TimerEvent: {}
+[91.535355] (-) TimerEvent: {}
+[91.636094] (-) TimerEvent: {}
+[91.736833] (-) TimerEvent: {}
+[91.837564] (-) TimerEvent: {}
+[91.938591] (-) TimerEvent: {}
+[92.039305] (-) TimerEvent: {}
+[92.140018] (-) TimerEvent: {}
+[92.240767] (-) TimerEvent: {}
+[92.341759] (-) TimerEvent: {}
+[92.442502] (-) TimerEvent: {}
+[92.543229] (-) TimerEvent: {}
+[92.643981] (-) TimerEvent: {}
+[92.744986] (-) TimerEvent: {}
+[92.845783] (-) TimerEvent: {}
+[92.947057] (-) TimerEvent: {}
+[93.048223] (-) TimerEvent: {}
+[93.149294] (-) TimerEvent: {}
+[93.250066] (-) TimerEvent: {}
+[93.350870] (-) TimerEvent: {}
+[93.451586] (-) TimerEvent: {}
+[93.552378] (-) TimerEvent: {}
+[93.653477] (-) TimerEvent: {}
+[93.754341] (-) TimerEvent: {}
+[93.855066] (-) TimerEvent: {}
+[93.955813] (-) TimerEvent: {}
+[94.056785] (-) TimerEvent: {}
+[94.157498] (-) TimerEvent: {}
+[94.258304] (-) TimerEvent: {}
+[94.359048] (-) TimerEvent: {}
+[94.461766] (-) TimerEvent: {}
+[94.562520] (-) TimerEvent: {}
+[94.663260] (-) TimerEvent: {}
+[94.763985] (-) TimerEvent: {}
+[94.864728] (-) TimerEvent: {}
+[94.965487] (-) TimerEvent: {}
+[95.066374] (-) TimerEvent: {}
+[95.167092] (-) TimerEvent: {}
+[95.268104] (-) TimerEvent: {}
+[95.368835] (-) TimerEvent: {}
+[95.469562] (-) TimerEvent: {}
+[95.570341] (-) TimerEvent: {}
+[95.671336] (-) TimerEvent: {}
+[95.686865] (nav2_costmap_2d) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/filters.dir/plugins/costmap_filters/speed_filter.cpp.o\x1b[0m\n'}
+[95.771583] (-) TimerEvent: {}
+[95.872858] (-) TimerEvent: {}
+[95.973638] (-) TimerEvent: {}
+[96.074420] (-) TimerEvent: {}
+[96.175173] (-) TimerEvent: {}
+[96.275924] (-) TimerEvent: {}
+[96.376896] (-) TimerEvent: {}
+[96.477640] (-) TimerEvent: {}
+[96.578449] (-) TimerEvent: {}
+[96.679145] (-) TimerEvent: {}
+[96.779874] (-) TimerEvent: {}
+[96.880610] (-) TimerEvent: {}
+[96.981352] (-) TimerEvent: {}
+[97.082166] (-) TimerEvent: {}
+[97.182876] (-) TimerEvent: {}
+[97.283616] (-) TimerEvent: {}
+[97.384474] (-) TimerEvent: {}
+[97.485197] (-) TimerEvent: {}
+[97.585907] (-) TimerEvent: {}
+[97.686706] (-) TimerEvent: {}
+[97.787935] (-) TimerEvent: {}
+[97.889867] (-) TimerEvent: {}
+[97.991077] (-) TimerEvent: {}
+[98.092258] (-) TimerEvent: {}
+[98.193433] (-) TimerEvent: {}
+[98.294637] (-) TimerEvent: {}
+[98.396069] (-) TimerEvent: {}
+[98.497757] (-) TimerEvent: {}
+[98.598936] (-) TimerEvent: {}
+[98.700596] (-) TimerEvent: {}
+[98.802514] (-) TimerEvent: {}
+[98.903640] (-) TimerEvent: {}
+[99.004823] (-) TimerEvent: {}
+[99.106002] (-) TimerEvent: {}
+[99.207235] (-) TimerEvent: {}
+[99.265461] (nav2_costmap_2d) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX executable declare_parameter_test\x1b[0m\n'}
+[99.307429] (-) TimerEvent: {}
+[99.408505] (-) TimerEvent: {}
+[99.510061] (-) TimerEvent: {}
+[99.611813] (-) TimerEvent: {}
+[99.713048] (-) TimerEvent: {}
+[99.814253] (-) TimerEvent: {}
+[99.915394] (-) TimerEvent: {}
+[99.992116] (nav2_costmap_2d) StdoutLine: {'line': b'[ 46%] Built target declare_parameter_test\n'}
+[100.015609] (-) TimerEvent: {}
+[100.031966] (nav2_costmap_2d) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/layers.dir/src/observation_buffer.cpp.o\x1b[0m\n'}
+[100.115829] (-) TimerEvent: {}
+[100.217016] (-) TimerEvent: {}
+[100.318191] (-) TimerEvent: {}
+[100.320000] (nav2_costmap_2d) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/costmap_filter_test.dir/costmap_filter_test.cpp.o\x1b[0m\n'}
+[100.418350] (-) TimerEvent: {}
+[100.519731] (-) TimerEvent: {}
+[100.622710] (-) TimerEvent: {}
+[100.724858] (-) TimerEvent: {}
+[100.829071] (-) TimerEvent: {}
+[100.930966] (-) TimerEvent: {}
+[101.032083] (-) TimerEvent: {}
+[101.133240] (-) TimerEvent: {}
+[101.234448] (-) TimerEvent: {}
+[101.335593] (-) TimerEvent: {}
+[101.436755] (-) TimerEvent: {}
+[101.538494] (-) TimerEvent: {}
+[101.641166] (-) TimerEvent: {}
+[101.742736] (-) TimerEvent: {}
+[101.843459] (-) TimerEvent: {}
+[101.944279] (-) TimerEvent: {}
+[102.044976] (-) TimerEvent: {}
+[102.145724] (-) TimerEvent: {}
+[102.246493] (-) TimerEvent: {}
+[102.347234] (-) TimerEvent: {}
+[102.448513] (-) TimerEvent: {}
+[102.549854] (-) TimerEvent: {}
+[102.654234] (-) TimerEvent: {}
+[102.755945] (-) TimerEvent: {}
+[102.856746] (-) TimerEvent: {}
+[102.957553] (-) TimerEvent: {}
+[103.058350] (-) TimerEvent: {}
+[103.159096] (-) TimerEvent: {}
+[103.259820] (-) TimerEvent: {}
+[103.360545] (-) TimerEvent: {}
+[103.461302] (-) TimerEvent: {}
+[103.562108] (-) TimerEvent: {}
+[103.662895] (-) TimerEvent: {}
+[103.763624] (-) TimerEvent: {}
+[103.864369] (-) TimerEvent: {}
+[103.965423] (-) TimerEvent: {}
+[104.066218] (-) TimerEvent: {}
+[104.167112] (-) TimerEvent: {}
+[104.267818] (-) TimerEvent: {}
+[104.368565] (-) TimerEvent: {}
+[104.469307] (-) TimerEvent: {}
+[104.570077] (-) TimerEvent: {}
+[104.670914] (-) TimerEvent: {}
+[104.771694] (-) TimerEvent: {}
+[104.872438] (-) TimerEvent: {}
+[104.973207] (-) TimerEvent: {}
+[105.073994] (-) TimerEvent: {}
+[105.174860] (-) TimerEvent: {}
+[105.276152] (-) TimerEvent: {}
+[105.376927] (-) TimerEvent: {}
+[105.477684] (-) TimerEvent: {}
+[105.578439] (-) TimerEvent: {}
+[105.679186] (-) TimerEvent: {}
+[105.779952] (-) TimerEvent: {}
+[105.880746] (-) TimerEvent: {}
+[105.981608] (-) TimerEvent: {}
+[106.082409] (-) TimerEvent: {}
+[106.183169] (-) TimerEvent: {}
+[106.284098] (-) TimerEvent: {}
+[106.384974] (-) TimerEvent: {}
+[106.485846] (-) TimerEvent: {}
+[106.586596] (-) TimerEvent: {}
+[106.687303] (-) TimerEvent: {}
+[106.787980] (-) TimerEvent: {}
+[106.888690] (-) TimerEvent: {}
+[106.989405] (-) TimerEvent: {}
+[107.090200] (-) TimerEvent: {}
+[107.190913] (-) TimerEvent: {}
+[107.291624] (-) TimerEvent: {}
+[107.392336] (-) TimerEvent: {}
+[107.493050] (-) TimerEvent: {}
+[107.593818] (-) TimerEvent: {}
+[107.694634] (-) TimerEvent: {}
+[107.795353] (-) TimerEvent: {}
+[107.896090] (-) TimerEvent: {}
+[107.996851] (-) TimerEvent: {}
+[108.097624] (-) TimerEvent: {}
+[108.198348] (-) TimerEvent: {}
+[108.299054] (-) TimerEvent: {}
+[108.399799] (-) TimerEvent: {}
+[108.500520] (-) TimerEvent: {}
+[108.601504] (-) TimerEvent: {}
+[108.702274] (-) TimerEvent: {}
+[108.802957] (-) TimerEvent: {}
+[108.903710] (-) TimerEvent: {}
+[109.004441] (-) TimerEvent: {}
+[109.105164] (-) TimerEvent: {}
+[109.205877] (-) TimerEvent: {}
+[109.306644] (-) TimerEvent: {}
+[109.407359] (-) TimerEvent: {}
+[109.508601] (-) TimerEvent: {}
+[109.609408] (-) TimerEvent: {}
+[109.710414] (-) TimerEvent: {}
+[109.811185] (-) TimerEvent: {}
+[109.911998] (-) TimerEvent: {}
+[110.013130] (-) TimerEvent: {}
+[110.114300] (-) TimerEvent: {}
+[110.215449] (-) TimerEvent: {}
+[110.316622] (-) TimerEvent: {}
+[110.417835] (-) TimerEvent: {}
+[110.519008] (-) TimerEvent: {}
+[110.620170] (-) TimerEvent: {}
+[110.721325] (-) TimerEvent: {}
+[110.823066] (-) TimerEvent: {}
+[110.924463] (-) TimerEvent: {}
+[111.025852] (-) TimerEvent: {}
+[111.126998] (-) TimerEvent: {}
+[111.228182] (-) TimerEvent: {}
+[111.329692] (-) TimerEvent: {}
+[111.430466] (-) TimerEvent: {}
+[111.531160] (-) TimerEvent: {}
+[111.631866] (-) TimerEvent: {}
+[111.732559] (-) TimerEvent: {}
+[111.833300] (-) TimerEvent: {}
+[111.934089] (-) TimerEvent: {}
+[111.955022] (nav2_costmap_2d) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/copy_window_test.dir/copy_window_test.cpp.o\x1b[0m\n'}
+[112.034334] (-) TimerEvent: {}
+[112.135480] (-) TimerEvent: {}
+[112.236646] (-) TimerEvent: {}
+[112.337813] (-) TimerEvent: {}
+[112.438966] (-) TimerEvent: {}
+[112.540121] (-) TimerEvent: {}
+[112.641312] (-) TimerEvent: {}
+[112.742565] (-) TimerEvent: {}
+[112.843796] (-) TimerEvent: {}
+[112.929569] (nav2_costmap_2d) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX executable costmap_filter_test\x1b[0m\n'}
+[112.944006] (-) TimerEvent: {}
+[113.044750] (-) TimerEvent: {}
+[113.145557] (-) TimerEvent: {}
+[113.246330] (-) TimerEvent: {}
+[113.347111] (-) TimerEvent: {}
+[113.447888] (-) TimerEvent: {}
+[113.548624] (-) TimerEvent: {}
+[113.578800] (nav2_costmap_2d) StdoutLine: {'line': b'[ 51%] Built target costmap_filter_test\n'}
+[113.601907] (nav2_costmap_2d) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/layers.dir/plugins/voxel_layer.cpp.o\x1b[0m\n'}
+[113.648834] (-) TimerEvent: {}
+[113.749791] (-) TimerEvent: {}
+[113.850775] (-) TimerEvent: {}
+[113.951497] (-) TimerEvent: {}
+[114.052215] (-) TimerEvent: {}
+[114.153015] (-) TimerEvent: {}
+[114.253758] (-) TimerEvent: {}
+[114.354558] (-) TimerEvent: {}
+[114.455299] (-) TimerEvent: {}
+[114.556047] (-) TimerEvent: {}
+[114.656758] (-) TimerEvent: {}
+[114.757513] (-) TimerEvent: {}
+[114.858302] (-) TimerEvent: {}
+[114.959025] (-) TimerEvent: {}
+[115.059784] (-) TimerEvent: {}
+[115.160496] (-) TimerEvent: {}
+[115.261228] (-) TimerEvent: {}
+[115.361990] (-) TimerEvent: {}
+[115.462741] (-) TimerEvent: {}
+[115.563472] (-) TimerEvent: {}
+[115.664203] (-) TimerEvent: {}
+[115.764925] (-) TimerEvent: {}
+[115.865637] (-) TimerEvent: {}
+[115.966641] (-) TimerEvent: {}
+[116.067372] (-) TimerEvent: {}
+[116.090096] (nav2_costmap_2d) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libnav2_costmap_2d_client.so\x1b[0m\n'}
+[116.167553] (-) TimerEvent: {}
+[116.268482] (-) TimerEvent: {}
+[116.369385] (-) TimerEvent: {}
+[116.470379] (-) TimerEvent: {}
+[116.571163] (-) TimerEvent: {}
+[116.671934] (-) TimerEvent: {}
+[116.773036] (-) TimerEvent: {}
+[116.873832] (-) TimerEvent: {}
+[116.974620] (-) TimerEvent: {}
+[117.041019] (nav2_costmap_2d) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/layers.dir/plugins/range_sensor_layer.cpp.o\x1b[0m\n'}
+[117.074805] (-) TimerEvent: {}
+[117.108043] (nav2_costmap_2d) StdoutLine: {'line': b'[ 54%] Built target nav2_costmap_2d_client\n'}
+[117.175115] (-) TimerEvent: {}
+[117.192449] (nav2_costmap_2d) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/costmap_filter_service_test.dir/costmap_filter_service_test.cpp.o\x1b[0m\n'}
+[117.275518] (-) TimerEvent: {}
+[117.376309] (-) TimerEvent: {}
+[117.476981] (-) TimerEvent: {}
+[117.577702] (-) TimerEvent: {}
+[117.678485] (-) TimerEvent: {}
+[117.779264] (-) TimerEvent: {}
+[117.880144] (-) TimerEvent: {}
+[117.980945] (-) TimerEvent: {}
+[118.081629] (-) TimerEvent: {}
+[118.182341] (-) TimerEvent: {}
+[118.283094] (-) TimerEvent: {}
+[118.383815] (-) TimerEvent: {}
+[118.484524] (-) TimerEvent: {}
+[118.585239] (-) TimerEvent: {}
+[118.686032] (-) TimerEvent: {}
+[118.787144] (-) TimerEvent: {}
+[118.888095] (-) TimerEvent: {}
+[118.988829] (-) TimerEvent: {}
+[119.089595] (-) TimerEvent: {}
+[119.190343] (-) TimerEvent: {}
+[119.291564] (-) TimerEvent: {}
+[119.392562] (-) TimerEvent: {}
+[119.493361] (-) TimerEvent: {}
+[119.594099] (-) TimerEvent: {}
+[119.694839] (-) TimerEvent: {}
+[119.795694] (-) TimerEvent: {}
+[119.896422] (-) TimerEvent: {}
+[119.997163] (-) TimerEvent: {}
+[120.097855] (-) TimerEvent: {}
+[120.198765] (-) TimerEvent: {}
+[120.299477] (-) TimerEvent: {}
+[120.400209] (-) TimerEvent: {}
+[120.501000] (-) TimerEvent: {}
+[120.601787] (-) TimerEvent: {}
+[120.702556] (-) TimerEvent: {}
+[120.803231] (-) TimerEvent: {}
+[120.903937] (-) TimerEvent: {}
+[121.004653] (-) TimerEvent: {}
+[121.105370] (-) TimerEvent: {}
+[121.206200] (-) TimerEvent: {}
+[121.306959] (-) TimerEvent: {}
+[121.407795] (-) TimerEvent: {}
+[121.508612] (-) TimerEvent: {}
+[121.609397] (-) TimerEvent: {}
+[121.710292] (-) TimerEvent: {}
+[121.810989] (-) TimerEvent: {}
+[121.911745] (-) TimerEvent: {}
+[122.012519] (-) TimerEvent: {}
+[122.113293] (-) TimerEvent: {}
+[122.214500] (-) TimerEvent: {}
+[122.315761] (-) TimerEvent: {}
+[122.416961] (-) TimerEvent: {}
+[122.517731] (-) TimerEvent: {}
+[122.618536] (-) TimerEvent: {}
+[122.720054] (-) TimerEvent: {}
+[122.821652] (-) TimerEvent: {}
+[122.922894] (-) TimerEvent: {}
+[123.024054] (-) TimerEvent: {}
+[123.125190] (-) TimerEvent: {}
+[123.226825] (-) TimerEvent: {}
+[123.327994] (-) TimerEvent: {}
+[123.429190] (-) TimerEvent: {}
+[123.530481] (-) TimerEvent: {}
+[123.631272] (-) TimerEvent: {}
+[123.732048] (-) TimerEvent: {}
+[123.832839] (-) TimerEvent: {}
+[123.928631] (nav2_costmap_2d) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX executable copy_window_test\x1b[0m\n'}
+[123.933025] (-) TimerEvent: {}
+[124.033738] (-) TimerEvent: {}
+[124.134554] (-) TimerEvent: {}
+[124.235353] (-) TimerEvent: {}
+[124.336132] (-) TimerEvent: {}
+[124.436857] (-) TimerEvent: {}
+[124.537921] (-) TimerEvent: {}
+[124.639384] (-) TimerEvent: {}
+[124.740673] (-) TimerEvent: {}
+[124.760234] (nav2_costmap_2d) StdoutLine: {'line': b'[ 57%] Built target copy_window_test\n'}
+[124.831137] (nav2_costmap_2d) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object test/integration/CMakeFiles/dyn_params_tests.dir/dyn_params_tests.cpp.o\x1b[0m\n'}
+[124.840864] (-) TimerEvent: {}
+[124.941926] (-) TimerEvent: {}
+[125.043595] (-) TimerEvent: {}
+[125.144785] (-) TimerEvent: {}
+[125.245958] (-) TimerEvent: {}
+[125.347198] (-) TimerEvent: {}
+[125.448438] (-) TimerEvent: {}
+[125.549983] (-) TimerEvent: {}
+[125.650751] (-) TimerEvent: {}
+[125.751481] (-) TimerEvent: {}
+[125.852169] (-) TimerEvent: {}
+[125.953477] (-) TimerEvent: {}
+[126.056268] (-) TimerEvent: {}
+[126.157493] (-) TimerEvent: {}
+[126.258800] (-) TimerEvent: {}
+[126.360294] (-) TimerEvent: {}
+[126.461473] (-) TimerEvent: {}
+[126.562726] (-) TimerEvent: {}
+[126.663902] (-) TimerEvent: {}
+[126.765057] (-) TimerEvent: {}
+[126.866236] (-) TimerEvent: {}
+[126.967368] (-) TimerEvent: {}
+[127.068564] (-) TimerEvent: {}
+[127.169882] (-) TimerEvent: {}
+[127.270716] (-) TimerEvent: {}
+[127.371545] (-) TimerEvent: {}
+[127.472307] (-) TimerEvent: {}
+[127.573058] (-) TimerEvent: {}
+[127.673807] (-) TimerEvent: {}
+[127.774547] (-) TimerEvent: {}
+[127.875282] (-) TimerEvent: {}
+[127.976041] (-) TimerEvent: {}
+[128.076781] (-) TimerEvent: {}
+[128.177649] (-) TimerEvent: {}
+[128.278580] (-) TimerEvent: {}
+[128.379632] (-) TimerEvent: {}
+[128.480377] (-) TimerEvent: {}
+[128.581120] (-) TimerEvent: {}
+[128.681835] (-) TimerEvent: {}
+[128.782590] (-) TimerEvent: {}
+[128.883359] (-) TimerEvent: {}
+[128.984114] (-) TimerEvent: {}
+[129.084833] (-) TimerEvent: {}
+[129.185535] (-) TimerEvent: {}
+[129.286246] (-) TimerEvent: {}
+[129.386957] (-) TimerEvent: {}
+[129.487705] (-) TimerEvent: {}
+[129.588448] (-) TimerEvent: {}
+[129.689198] (-) TimerEvent: {}
+[129.789922] (-) TimerEvent: {}
+[129.890703] (-) TimerEvent: {}
+[129.991472] (-) TimerEvent: {}
+[130.092212] (-) TimerEvent: {}
+[130.192941] (-) TimerEvent: {}
+[130.293610] (-) TimerEvent: {}
+[130.394490] (-) TimerEvent: {}
+[130.495386] (-) TimerEvent: {}
+[130.596598] (-) TimerEvent: {}
+[130.697414] (-) TimerEvent: {}
+[130.798218] (-) TimerEvent: {}
+[130.899027] (-) TimerEvent: {}
+[130.999831] (-) TimerEvent: {}
+[131.100589] (-) TimerEvent: {}
+[131.201373] (-) TimerEvent: {}
+[131.302620] (-) TimerEvent: {}
+[131.403773] (-) TimerEvent: {}
+[131.504839] (-) TimerEvent: {}
+[131.606044] (-) TimerEvent: {}
+[131.708264] (-) TimerEvent: {}
+[131.810392] (-) TimerEvent: {}
+[131.911555] (-) TimerEvent: {}
+[132.012715] (-) TimerEvent: {}
+[132.114108] (-) TimerEvent: {}
+[132.215395] (-) TimerEvent: {}
+[132.316138] (-) TimerEvent: {}
+[132.416890] (-) TimerEvent: {}
+[132.517669] (-) TimerEvent: {}
+[132.618897] (-) TimerEvent: {}
+[132.719660] (-) TimerEvent: {}
+[132.820443] (-) TimerEvent: {}
+[132.921706] (-) TimerEvent: {}
+[133.023099] (-) TimerEvent: {}
+[133.125647] (-) TimerEvent: {}
+[133.226905] (-) TimerEvent: {}
+[133.328172] (-) TimerEvent: {}
+[133.429365] (-) TimerEvent: {}
+[133.532252] (-) TimerEvent: {}
+[133.632950] (-) TimerEvent: {}
+[133.733661] (-) TimerEvent: {}
+[133.745777] (nav2_costmap_2d) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX executable costmap_filter_service_test\x1b[0m\n'}
+[133.833931] (-) TimerEvent: {}
+[133.935145] (-) TimerEvent: {}
+[134.035934] (-) TimerEvent: {}
+[134.136775] (-) TimerEvent: {}
+[134.237609] (-) TimerEvent: {}
+[134.338428] (-) TimerEvent: {}
+[134.439136] (-) TimerEvent: {}
+[134.527700] (nav2_costmap_2d) StdoutLine: {'line': b'[ 59%] Built target costmap_filter_service_test\n'}
+[134.539406] (-) TimerEvent: {}
+[134.587814] (nav2_costmap_2d) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object test/regression/CMakeFiles/costmap_bresenham_2d.dir/costmap_bresenham_2d.cpp.o\x1b[0m\n'}
+[134.639604] (-) TimerEvent: {}
+[134.740703] (-) TimerEvent: {}
+[134.843521] (-) TimerEvent: {}
+[134.945166] (-) TimerEvent: {}
+[135.046321] (-) TimerEvent: {}
+[135.147463] (-) TimerEvent: {}
+[135.248581] (-) TimerEvent: {}
+[135.349768] (-) TimerEvent: {}
+[135.451542] (-) TimerEvent: {}
+[135.552753] (-) TimerEvent: {}
+[135.653842] (-) TimerEvent: {}
+[135.755193] (-) TimerEvent: {}
+[135.857172] (-) TimerEvent: {}
+[135.960287] (-) TimerEvent: {}
+[136.061780] (-) TimerEvent: {}
+[136.165046] (-) TimerEvent: {}
+[136.266261] (-) TimerEvent: {}
+[136.367406] (-) TimerEvent: {}
+[136.423595] (nav2_costmap_2d) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/filters.dir/plugins/costmap_filters/binary_filter.cpp.o\x1b[0m\n'}
+[136.467705] (-) TimerEvent: {}
+[136.568794] (-) TimerEvent: {}
+[136.669962] (-) TimerEvent: {}
+[136.771102] (-) TimerEvent: {}
+[136.872359] (-) TimerEvent: {}
+[136.973586] (-) TimerEvent: {}
+[137.075181] (-) TimerEvent: {}
+[137.176441] (-) TimerEvent: {}
+[137.277631] (-) TimerEvent: {}
+[137.378822] (-) TimerEvent: {}
+[137.479638] (-) TimerEvent: {}
+[137.580896] (-) TimerEvent: {}
+[137.682203] (-) TimerEvent: {}
+[137.783422] (-) TimerEvent: {}
+[137.884708] (-) TimerEvent: {}
+[137.985961] (-) TimerEvent: {}
+[138.087313] (-) TimerEvent: {}
+[138.188605] (-) TimerEvent: {}
+[138.290073] (-) TimerEvent: {}
+[138.391219] (-) TimerEvent: {}
+[138.494163] (-) TimerEvent: {}
+[138.559391] (nav2_costmap_2d) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX executable costmap_bresenham_2d\x1b[0m\n'}
+[138.594496] (-) TimerEvent: {}
+[138.695774] (-) TimerEvent: {}
+[138.797032] (-) TimerEvent: {}
+[138.898266] (-) TimerEvent: {}
+[138.999665] (-) TimerEvent: {}
+[139.100941] (-) TimerEvent: {}
+[139.136265] (nav2_costmap_2d) StdoutLine: {'line': b'[ 63%] Built target costmap_bresenham_2d\n'}
+[139.196346] (nav2_costmap_2d) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object test/regression/CMakeFiles/order_layer.dir/order_layer.cpp.o\x1b[0m\n'}
+[139.201123] (-) TimerEvent: {}
+[139.302249] (-) TimerEvent: {}
+[139.403450] (-) TimerEvent: {}
+[139.504597] (-) TimerEvent: {}
+[139.605790] (-) TimerEvent: {}
+[139.707438] (-) TimerEvent: {}
+[139.808546] (-) TimerEvent: {}
+[139.909711] (-) TimerEvent: {}
+[140.010860] (-) TimerEvent: {}
+[140.111981] (-) TimerEvent: {}
+[140.213635] (-) TimerEvent: {}
+[140.314755] (-) TimerEvent: {}
+[140.415860] (-) TimerEvent: {}
+[140.517660] (-) TimerEvent: {}
+[140.618757] (-) TimerEvent: {}
+[140.720110] (-) TimerEvent: {}
+[140.732979] (nav2_costmap_2d) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/layers.dir/plugins/denoise_layer.cpp.o\x1b[0m\n'}
+[140.820312] (-) TimerEvent: {}
+[140.921269] (-) TimerEvent: {}
+[141.021968] (-) TimerEvent: {}
+[141.122771] (-) TimerEvent: {}
+[141.223466] (-) TimerEvent: {}
+[141.324173] (-) TimerEvent: {}
+[141.424911] (-) TimerEvent: {}
+[141.525633] (-) TimerEvent: {}
+[141.626325] (-) TimerEvent: {}
+[141.727069] (-) TimerEvent: {}
+[141.827793] (-) TimerEvent: {}
+[141.928529] (-) TimerEvent: {}
+[142.029288] (-) TimerEvent: {}
+[142.130046] (-) TimerEvent: {}
+[142.230813] (-) TimerEvent: {}
+[142.331558] (-) TimerEvent: {}
+[142.432299] (-) TimerEvent: {}
+[142.533027] (-) TimerEvent: {}
+[142.633800] (-) TimerEvent: {}
+[142.734636] (-) TimerEvent: {}
+[142.835419] (-) TimerEvent: {}
+[142.921623] (nav2_costmap_2d) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object test/regression/CMakeFiles/plugin_api_order.dir/plugin_api_order.cpp.o\x1b[0m\n'}
+[142.935619] (-) TimerEvent: {}
+[143.036395] (-) TimerEvent: {}
+[143.137199] (-) TimerEvent: {}
+[143.237955] (-) TimerEvent: {}
+[143.338794] (-) TimerEvent: {}
+[143.439620] (-) TimerEvent: {}
+[143.540330] (-) TimerEvent: {}
+[143.641189] (-) TimerEvent: {}
+[143.741954] (-) TimerEvent: {}
+[143.842936] (-) TimerEvent: {}
+[143.944001] (-) TimerEvent: {}
+[144.044797] (-) TimerEvent: {}
+[144.145604] (-) TimerEvent: {}
+[144.246384] (-) TimerEvent: {}
+[144.347340] (-) TimerEvent: {}
+[144.448082] (-) TimerEvent: {}
+[144.548856] (-) TimerEvent: {}
+[144.649651] (-) TimerEvent: {}
+[144.750680] (-) TimerEvent: {}
+[144.851770] (-) TimerEvent: {}
+[144.952577] (-) TimerEvent: {}
+[145.053647] (-) TimerEvent: {}
+[145.154737] (-) TimerEvent: {}
+[145.255556] (-) TimerEvent: {}
+[145.356361] (-) TimerEvent: {}
+[145.457424] (-) TimerEvent: {}
+[145.560093] (-) TimerEvent: {}
+[145.662165] (-) TimerEvent: {}
+[145.764518] (-) TimerEvent: {}
+[145.865257] (-) TimerEvent: {}
+[145.966043] (-) TimerEvent: {}
+[146.066803] (-) TimerEvent: {}
+[146.167619] (-) TimerEvent: {}
+[146.268608] (-) TimerEvent: {}
+[146.369402] (-) TimerEvent: {}
+[146.470252] (-) TimerEvent: {}
+[146.571013] (-) TimerEvent: {}
+[146.671788] (-) TimerEvent: {}
+[146.772873] (-) TimerEvent: {}
+[146.873661] (-) TimerEvent: {}
+[146.974761] (-) TimerEvent: {}
+[147.076091] (-) TimerEvent: {}
+[147.164171] (nav2_costmap_2d) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX executable dyn_params_tests\x1b[0m\n'}
+[147.176309] (-) TimerEvent: {}
+[147.277081] (-) TimerEvent: {}
+[147.377869] (-) TimerEvent: {}
+[147.478679] (-) TimerEvent: {}
+[147.579408] (-) TimerEvent: {}
+[147.680178] (-) TimerEvent: {}
+[147.780928] (-) TimerEvent: {}
+[147.880978] (nav2_costmap_2d) StdoutLine: {'line': b'[ 68%] Built target dyn_params_tests\n'}
+[147.881469] (-) TimerEvent: {}
+[147.982024] (-) TimerEvent: {}
+[148.083336] (-) TimerEvent: {}
+[148.184406] (-) TimerEvent: {}
+[148.285572] (-) TimerEvent: {}
+[148.387085] (-) TimerEvent: {}
+[148.488694] (-) TimerEvent: {}
+[148.589957] (-) TimerEvent: {}
+[148.691495] (-) TimerEvent: {}
+[148.792559] (-) TimerEvent: {}
+[148.893242] (-) TimerEvent: {}
+[148.909743] (nav2_costmap_2d) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library liborder_layer.so\x1b[0m\n'}
+[148.993438] (-) TimerEvent: {}
+[149.094782] (-) TimerEvent: {}
+[149.195494] (-) TimerEvent: {}
+[149.296246] (-) TimerEvent: {}
+[149.397030] (-) TimerEvent: {}
+[149.410020] (nav2_costmap_2d) StdoutLine: {'line': b'[ 69%] Built target order_layer\n'}
+[149.497207] (-) TimerEvent: {}
+[149.597897] (-) TimerEvent: {}
+[149.698660] (-) TimerEvent: {}
+[149.799380] (-) TimerEvent: {}
+[149.900093] (-) TimerEvent: {}
+[150.000810] (-) TimerEvent: {}
+[150.101510] (-) TimerEvent: {}
+[150.202230] (-) TimerEvent: {}
+[150.302965] (-) TimerEvent: {}
+[150.403659] (-) TimerEvent: {}
+[150.504354] (-) TimerEvent: {}
+[150.605176] (-) TimerEvent: {}
+[150.705880] (-) TimerEvent: {}
+[150.806583] (-) TimerEvent: {}
+[150.907644] (-) TimerEvent: {}
+[151.008332] (-) TimerEvent: {}
+[151.108990] (-) TimerEvent: {}
+[151.209662] (-) TimerEvent: {}
+[151.310381] (-) TimerEvent: {}
+[151.411082] (-) TimerEvent: {}
+[151.511770] (-) TimerEvent: {}
+[151.612433] (-) TimerEvent: {}
+[151.713093] (-) TimerEvent: {}
+[151.813779] (-) TimerEvent: {}
+[151.914808] (-) TimerEvent: {}
+[152.015526] (-) TimerEvent: {}
+[152.116236] (-) TimerEvent: {}
+[152.216988] (-) TimerEvent: {}
+[152.317741] (-) TimerEvent: {}
+[152.418522] (-) TimerEvent: {}
+[152.519211] (-) TimerEvent: {}
+[152.619913] (-) TimerEvent: {}
+[152.720612] (-) TimerEvent: {}
+[152.821311] (-) TimerEvent: {}
+[152.922013] (-) TimerEvent: {}
+[153.022849] (-) TimerEvent: {}
+[153.123500] (-) TimerEvent: {}
+[153.224168] (-) TimerEvent: {}
+[153.324829] (-) TimerEvent: {}
+[153.400026] (nav2_costmap_2d) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library liblayers.so\x1b[0m\n'}
+[153.425205] (-) TimerEvent: {}
+[153.525892] (-) TimerEvent: {}
+[153.626583] (-) TimerEvent: {}
+[153.727255] (-) TimerEvent: {}
+[153.827920] (-) TimerEvent: {}
+[153.928609] (-) TimerEvent: {}
+[154.029298] (-) TimerEvent: {}
+[154.129967] (-) TimerEvent: {}
+[154.230633] (-) TimerEvent: {}
+[154.331261] (-) TimerEvent: {}
+[154.431925] (-) TimerEvent: {}
+[154.532574] (-) TimerEvent: {}
+[154.633211] (-) TimerEvent: {}
+[154.725205] (nav2_costmap_2d) StdoutLine: {'line': b'[ 70%] Built target layers\n'}
+[154.733390] (-) TimerEvent: {}
+[154.776020] (nav2_costmap_2d) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/denoise_layer_test.dir/denoise_layer_test.cpp.o\x1b[0m\n'}
+[154.776496] (nav2_costmap_2d) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object test/integration/CMakeFiles/footprint_tests_exec.dir/footprint_tests.cpp.o\x1b[0m\n'}
+[154.833580] (-) TimerEvent: {}
+[154.934289] (-) TimerEvent: {}
+[155.035007] (-) TimerEvent: {}
+[155.135682] (-) TimerEvent: {}
+[155.236355] (-) TimerEvent: {}
+[155.337002] (-) TimerEvent: {}
+[155.437673] (-) TimerEvent: {}
+[155.538315] (-) TimerEvent: {}
+[155.639334] (-) TimerEvent: {}
+[155.740061] (-) TimerEvent: {}
+[155.831276] (nav2_costmap_2d) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object test/integration/CMakeFiles/test_collision_checker_exec.dir/test_costmap_topic_collision_checker.cpp.o\x1b[0m\n'}
+[155.832148] (nav2_costmap_2d) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object test/integration/CMakeFiles/inflation_tests_exec.dir/inflation_tests.cpp.o\x1b[0m\n'}
+[155.840246] (-) TimerEvent: {}
+[155.941418] (-) TimerEvent: {}
+[156.042681] (-) TimerEvent: {}
+[156.143783] (-) TimerEvent: {}
+[156.244922] (-) TimerEvent: {}
+[156.346066] (-) TimerEvent: {}
+[156.447222] (-) TimerEvent: {}
+[156.457063] (nav2_costmap_2d) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX executable plugin_api_order\x1b[0m\n'}
+[156.547426] (-) TimerEvent: {}
+[156.648517] (-) TimerEvent: {}
+[156.749573] (-) TimerEvent: {}
+[156.850686] (-) TimerEvent: {}
+[156.951906] (-) TimerEvent: {}
+[157.053031] (-) TimerEvent: {}
+[157.101916] (nav2_costmap_2d) StdoutLine: {'line': b'[ 76%] Built target plugin_api_order\n'}
+[157.153259] (-) TimerEvent: {}
+[157.163459] (nav2_costmap_2d) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object test/integration/CMakeFiles/obstacle_tests_exec.dir/obstacle_tests.cpp.o\x1b[0m\n'}
+[157.253492] (-) TimerEvent: {}
+[157.354701] (-) TimerEvent: {}
+[157.455886] (-) TimerEvent: {}
+[157.557034] (-) TimerEvent: {}
+[157.658235] (-) TimerEvent: {}
+[157.759441] (-) TimerEvent: {}
+[157.860609] (-) TimerEvent: {}
+[157.961721] (-) TimerEvent: {}
+[158.062931] (-) TimerEvent: {}
+[158.164150] (-) TimerEvent: {}
+[158.265370] (-) TimerEvent: {}
+[158.366565] (-) TimerEvent: {}
+[158.467670] (-) TimerEvent: {}
+[158.568874] (-) TimerEvent: {}
+[158.670109] (-) TimerEvent: {}
+[158.771436] (-) TimerEvent: {}
+[158.872696] (-) TimerEvent: {}
+[158.974966] (-) TimerEvent: {}
+[159.076234] (-) TimerEvent: {}
+[159.176986] (-) TimerEvent: {}
+[159.277773] (-) TimerEvent: {}
+[159.378556] (-) TimerEvent: {}
+[159.479293] (-) TimerEvent: {}
+[159.580031] (-) TimerEvent: {}
+[159.680742] (-) TimerEvent: {}
+[159.781462] (-) TimerEvent: {}
+[159.882182] (-) TimerEvent: {}
+[159.982947] (-) TimerEvent: {}
+[160.083654] (-) TimerEvent: {}
+[160.184363] (-) TimerEvent: {}
+[160.285121] (-) TimerEvent: {}
+[160.385922] (-) TimerEvent: {}
+[160.486675] (-) TimerEvent: {}
+[160.587439] (-) TimerEvent: {}
+[160.688188] (-) TimerEvent: {}
+[160.788924] (-) TimerEvent: {}
+[160.889679] (-) TimerEvent: {}
+[160.990426] (-) TimerEvent: {}
+[161.091175] (-) TimerEvent: {}
+[161.191874] (-) TimerEvent: {}
+[161.292607] (-) TimerEvent: {}
+[161.393720] (-) TimerEvent: {}
+[161.494968] (-) TimerEvent: {}
+[161.596159] (-) TimerEvent: {}
+[161.697383] (-) TimerEvent: {}
+[161.798578] (-) TimerEvent: {}
+[161.899846] (-) TimerEvent: {}
+[162.001076] (-) TimerEvent: {}
+[162.102268] (-) TimerEvent: {}
+[162.202962] (-) TimerEvent: {}
+[162.303686] (-) TimerEvent: {}
+[162.404431] (-) TimerEvent: {}
+[162.505192] (-) TimerEvent: {}
+[162.605935] (-) TimerEvent: {}
+[162.706703] (-) TimerEvent: {}
+[162.807426] (-) TimerEvent: {}
+[162.908136] (-) TimerEvent: {}
+[163.008876] (-) TimerEvent: {}
+[163.109641] (-) TimerEvent: {}
+[163.210325] (-) TimerEvent: {}
+[163.311046] (-) TimerEvent: {}
+[163.411747] (-) TimerEvent: {}
+[163.512474] (-) TimerEvent: {}
+[163.613219] (-) TimerEvent: {}
+[163.713956] (-) TimerEvent: {}
+[163.814703] (-) TimerEvent: {}
+[163.915429] (-) TimerEvent: {}
+[164.016132] (-) TimerEvent: {}
+[164.116850] (-) TimerEvent: {}
+[164.217599] (-) TimerEvent: {}
+[164.318330] (-) TimerEvent: {}
+[164.419066] (-) TimerEvent: {}
+[164.519791] (-) TimerEvent: {}
+[164.620504] (-) TimerEvent: {}
+[164.721251] (-) TimerEvent: {}
+[164.822030] (-) TimerEvent: {}
+[164.922792] (-) TimerEvent: {}
+[165.023504] (-) TimerEvent: {}
+[165.124231] (-) TimerEvent: {}
+[165.224973] (-) TimerEvent: {}
+[165.325746] (-) TimerEvent: {}
+[165.426471] (-) TimerEvent: {}
+[165.527209] (-) TimerEvent: {}
+[165.627932] (-) TimerEvent: {}
+[165.728680] (-) TimerEvent: {}
+[165.829433] (-) TimerEvent: {}
+[165.930191] (-) TimerEvent: {}
+[166.030927] (-) TimerEvent: {}
+[166.131648] (-) TimerEvent: {}
+[166.232365] (-) TimerEvent: {}
+[166.333110] (-) TimerEvent: {}
+[166.433845] (-) TimerEvent: {}
+[166.534589] (-) TimerEvent: {}
+[166.635372] (-) TimerEvent: {}
+[166.736141] (-) TimerEvent: {}
+[166.836887] (-) TimerEvent: {}
+[166.937653] (-) TimerEvent: {}
+[167.038399] (-) TimerEvent: {}
+[167.139198] (-) TimerEvent: {}
+[167.240034] (-) TimerEvent: {}
+[167.340860] (-) TimerEvent: {}
+[167.441614] (-) TimerEvent: {}
+[167.542457] (-) TimerEvent: {}
+[167.643233] (-) TimerEvent: {}
+[167.743974] (-) TimerEvent: {}
+[167.844730] (-) TimerEvent: {}
+[167.945492] (-) TimerEvent: {}
+[168.046315] (-) TimerEvent: {}
+[168.147040] (-) TimerEvent: {}
+[168.247770] (-) TimerEvent: {}
+[168.348496] (-) TimerEvent: {}
+[168.396515] (nav2_costmap_2d) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX executable footprint_tests_exec\x1b[0m\n'}
+[168.448729] (-) TimerEvent: {}
+[168.549552] (-) TimerEvent: {}
+[168.658343] (-) TimerEvent: {}
+[168.759204] (-) TimerEvent: {}
+[168.859974] (-) TimerEvent: {}
+[168.960783] (-) TimerEvent: {}
+[169.046703] (nav2_costmap_2d) StdoutLine: {'line': b'[ 79%] Built target footprint_tests_exec\n'}
+[169.061020] (-) TimerEvent: {}
+[169.115098] (nav2_costmap_2d) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object test/integration/CMakeFiles/range_tests_exec.dir/range_tests.cpp.o\x1b[0m\n'}
+[169.161235] (-) TimerEvent: {}
+[169.262058] (-) TimerEvent: {}
+[169.367101] (-) TimerEvent: {}
+[169.467886] (-) TimerEvent: {}
+[169.568732] (-) TimerEvent: {}
+[169.669528] (-) TimerEvent: {}
+[169.715831] (nav2_costmap_2d) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/denoise_layer_test.dir/image_test.cpp.o\x1b[0m\n'}
+[169.769753] (-) TimerEvent: {}
+[169.870569] (-) TimerEvent: {}
+[169.971360] (-) TimerEvent: {}
+[170.072209] (-) TimerEvent: {}
+[170.173016] (-) TimerEvent: {}
+[170.273797] (-) TimerEvent: {}
+[170.374573] (-) TimerEvent: {}
+[170.475381] (-) TimerEvent: {}
+[170.576159] (-) TimerEvent: {}
+[170.676941] (-) TimerEvent: {}
+[170.777760] (-) TimerEvent: {}
+[170.878549] (-) TimerEvent: {}
+[170.979325] (-) TimerEvent: {}
+[171.080101] (-) TimerEvent: {}
+[171.181454] (-) TimerEvent: {}
+[171.282340] (-) TimerEvent: {}
+[171.383095] (-) TimerEvent: {}
+[171.484702] (-) TimerEvent: {}
+[171.585516] (-) TimerEvent: {}
+[171.686362] (-) TimerEvent: {}
+[171.787159] (-) TimerEvent: {}
+[171.887990] (-) TimerEvent: {}
+[171.988816] (-) TimerEvent: {}
+[172.089610] (-) TimerEvent: {}
+[172.190445] (-) TimerEvent: {}
+[172.291196] (-) TimerEvent: {}
+[172.392016] (-) TimerEvent: {}
+[172.493295] (-) TimerEvent: {}
+[172.594570] (-) TimerEvent: {}
+[172.695786] (-) TimerEvent: {}
+[172.807598] (-) TimerEvent: {}
+[172.908903] (-) TimerEvent: {}
+[173.009683] (-) TimerEvent: {}
+[173.110514] (-) TimerEvent: {}
+[173.211338] (-) TimerEvent: {}
+[173.312119] (-) TimerEvent: {}
+[173.412899] (-) TimerEvent: {}
+[173.513743] (-) TimerEvent: {}
+[173.614545] (-) TimerEvent: {}
+[173.683460] (nav2_costmap_2d) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/denoise_layer_test.dir/image_processing_test.cpp.o\x1b[0m\n'}
+[173.714741] (-) TimerEvent: {}
+[173.815519] (-) TimerEvent: {}
+[173.916297] (-) TimerEvent: {}
+[174.017038] (-) TimerEvent: {}
+[174.117969] (-) TimerEvent: {}
+[174.218787] (-) TimerEvent: {}
+[174.319546] (-) TimerEvent: {}
+[174.420327] (-) TimerEvent: {}
+[174.521130] (-) TimerEvent: {}
+[174.621910] (-) TimerEvent: {}
+[174.722774] (-) TimerEvent: {}
+[174.823538] (-) TimerEvent: {}
+[174.924311] (-) TimerEvent: {}
+[175.025083] (-) TimerEvent: {}
+[175.127087] (-) TimerEvent: {}
+[175.227910] (-) TimerEvent: {}
+[175.328681] (-) TimerEvent: {}
+[175.429459] (-) TimerEvent: {}
+[175.530313] (-) TimerEvent: {}
+[175.631062] (-) TimerEvent: {}
+[175.731837] (-) TimerEvent: {}
+[175.832568] (-) TimerEvent: {}
+[175.933321] (-) TimerEvent: {}
+[176.034082] (-) TimerEvent: {}
+[176.134843] (-) TimerEvent: {}
+[176.235585] (-) TimerEvent: {}
+[176.336337] (-) TimerEvent: {}
+[176.437115] (-) TimerEvent: {}
+[176.538555] (-) TimerEvent: {}
+[176.639310] (-) TimerEvent: {}
+[176.740166] (-) TimerEvent: {}
+[176.840995] (-) TimerEvent: {}
+[176.941810] (-) TimerEvent: {}
+[177.042612] (-) TimerEvent: {}
+[177.143395] (-) TimerEvent: {}
+[177.244248] (-) TimerEvent: {}
+[177.345082] (-) TimerEvent: {}
+[177.446452] (-) TimerEvent: {}
+[177.547691] (-) TimerEvent: {}
+[177.648867] (-) TimerEvent: {}
+[177.750077] (-) TimerEvent: {}
+[177.851332] (-) TimerEvent: {}
+[177.952544] (-) TimerEvent: {}
+[178.053758] (-) TimerEvent: {}
+[178.154978] (-) TimerEvent: {}
+[178.256197] (-) TimerEvent: {}
+[178.357607] (-) TimerEvent: {}
+[178.404036] (nav2_costmap_2d) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX shared library libfilters.so\x1b[0m\n'}
+[178.457804] (-) TimerEvent: {}
+[178.558971] (-) TimerEvent: {}
+[178.660188] (-) TimerEvent: {}
+[178.761407] (-) TimerEvent: {}
+[178.862736] (-) TimerEvent: {}
+[178.963985] (-) TimerEvent: {}
+[179.065323] (-) TimerEvent: {}
+[179.166554] (-) TimerEvent: {}
+[179.267775] (-) TimerEvent: {}
+[179.368970] (-) TimerEvent: {}
+[179.470433] (-) TimerEvent: {}
+[179.571678] (-) TimerEvent: {}
+[179.672929] (-) TimerEvent: {}
+[179.753491] (nav2_costmap_2d) StdoutLine: {'line': b'[ 84%] Built target filters\n'}
+[179.773133] (-) TimerEvent: {}
+[179.826433] (nav2_costmap_2d) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/nav2_costmap_2d.dir/src/costmap_2d_node.cpp.o\x1b[0m\n'}
+[179.873362] (-) TimerEvent: {}
+[179.975450] (-) TimerEvent: {}
+[180.076680] (-) TimerEvent: {}
+[180.177910] (-) TimerEvent: {}
+[180.279587] (-) TimerEvent: {}
+[180.380899] (-) TimerEvent: {}
+[180.482171] (-) TimerEvent: {}
+[180.583334] (-) TimerEvent: {}
+[180.684590] (-) TimerEvent: {}
+[180.785868] (-) TimerEvent: {}
+[180.887221] (-) TimerEvent: {}
+[180.988000] (-) TimerEvent: {}
+[181.088749] (-) TimerEvent: {}
+[181.190309] (-) TimerEvent: {}
+[181.291100] (-) TimerEvent: {}
+[181.391949] (-) TimerEvent: {}
+[181.492826] (-) TimerEvent: {}
+[181.593610] (-) TimerEvent: {}
+[181.694635] (-) TimerEvent: {}
+[181.795439] (-) TimerEvent: {}
+[181.896236] (-) TimerEvent: {}
+[181.997033] (-) TimerEvent: {}
+[182.097869] (-) TimerEvent: {}
+[182.198663] (-) TimerEvent: {}
+[182.299452] (-) TimerEvent: {}
+[182.400300] (-) TimerEvent: {}
+[182.501094] (-) TimerEvent: {}
+[182.601933] (-) TimerEvent: {}
+[182.701416] (nav2_costmap_2d) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking CXX executable denoise_layer_test\x1b[0m\n'}
+[182.701921] (-) TimerEvent: {}
+[182.803008] (-) TimerEvent: {}
+[182.904244] (-) TimerEvent: {}
+[183.005504] (-) TimerEvent: {}
+[183.106854] (-) TimerEvent: {}
+[183.208140] (-) TimerEvent: {}
+[183.309461] (-) TimerEvent: {}
+[183.410681] (-) TimerEvent: {}
+[183.511954] (-) TimerEvent: {}
+[183.613136] (-) TimerEvent: {}
+[183.714490] (-) TimerEvent: {}
+[183.723343] (nav2_costmap_2d) StdoutLine: {'line': b'[ 86%] Built target denoise_layer_test\n'}
+[183.747190] (nav2_costmap_2d) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking CXX executable obstacle_tests_exec\x1b[0m\n'}
+[183.771709] (nav2_costmap_2d) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/keepout_filter_test.dir/keepout_filter_test.cpp.o\x1b[0m\n'}
+[183.814692] (-) TimerEvent: {}
+[183.915904] (-) TimerEvent: {}
+[184.017123] (-) TimerEvent: {}
+[184.118362] (-) TimerEvent: {}
+[184.219506] (-) TimerEvent: {}
+[184.320810] (-) TimerEvent: {}
+[184.406884] (nav2_costmap_2d) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable inflation_tests_exec\x1b[0m\n'}
+[184.421044] (-) TimerEvent: {}
+[184.522286] (-) TimerEvent: {}
+[184.585919] (nav2_costmap_2d) StdoutLine: {'line': b'[ 90%] Built target obstacle_tests_exec\n'}
+[184.622498] (-) TimerEvent: {}
+[184.641896] (nav2_costmap_2d) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/speed_filter_test.dir/speed_filter_test.cpp.o\x1b[0m\n'}
+[184.722734] (-) TimerEvent: {}
+[184.824047] (-) TimerEvent: {}
+[184.925328] (-) TimerEvent: {}
+[185.026764] (-) TimerEvent: {}
+[185.128137] (-) TimerEvent: {}
+[185.229467] (-) TimerEvent: {}
+[185.330823] (-) TimerEvent: {}
+[185.365431] (nav2_costmap_2d) StdoutLine: {'line': b'[ 91%] Built target inflation_tests_exec\n'}
+[185.429311] (nav2_costmap_2d) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/binary_filter_test.dir/binary_filter_test.cpp.o\x1b[0m\n'}
+[185.430965] (-) TimerEvent: {}
+[185.532094] (-) TimerEvent: {}
+[185.633277] (-) TimerEvent: {}
+[185.680772] (nav2_costmap_2d) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX executable test_collision_checker_exec\x1b[0m\n'}
+[185.733474] (-) TimerEvent: {}
+[185.834490] (-) TimerEvent: {}
+[185.935350] (-) TimerEvent: {}
+[186.036139] (-) TimerEvent: {}
+[186.136914] (-) TimerEvent: {}
+[186.237757] (-) TimerEvent: {}
+[186.339328] (-) TimerEvent: {}
+[186.440205] (-) TimerEvent: {}
+[186.541755] (-) TimerEvent: {}
+[186.642550] (-) TimerEvent: {}
+[186.742616] (nav2_costmap_2d) StdoutLine: {'line': b'[ 93%] Built target test_collision_checker_exec\n'}
+[186.743099] (-) TimerEvent: {}
+[186.843668] (-) TimerEvent: {}
+[186.944474] (-) TimerEvent: {}
+[187.045231] (-) TimerEvent: {}
+[187.146003] (-) TimerEvent: {}
+[187.246778] (-) TimerEvent: {}
+[187.347514] (-) TimerEvent: {}
+[187.448255] (-) TimerEvent: {}
+[187.549011] (-) TimerEvent: {}
+[187.649821] (-) TimerEvent: {}
+[187.750686] (-) TimerEvent: {}
+[187.851448] (-) TimerEvent: {}
+[187.952244] (-) TimerEvent: {}
+[188.053078] (-) TimerEvent: {}
+[188.153807] (-) TimerEvent: {}
+[188.254630] (-) TimerEvent: {}
+[188.355390] (-) TimerEvent: {}
+[188.456256] (-) TimerEvent: {}
+[188.557000] (-) TimerEvent: {}
+[188.657763] (-) TimerEvent: {}
+[188.758522] (-) TimerEvent: {}
+[188.859270] (-) TimerEvent: {}
+[188.960023] (-) TimerEvent: {}
+[189.060781] (-) TimerEvent: {}
+[189.161548] (-) TimerEvent: {}
+[189.262320] (-) TimerEvent: {}
+[189.363046] (-) TimerEvent: {}
+[189.463810] (-) TimerEvent: {}
+[189.564557] (-) TimerEvent: {}
+[189.665734] (-) TimerEvent: {}
+[189.767021] (-) TimerEvent: {}
+[189.867810] (-) TimerEvent: {}
+[189.968588] (-) TimerEvent: {}
+[190.069360] (-) TimerEvent: {}
+[190.170117] (-) TimerEvent: {}
+[190.270910] (-) TimerEvent: {}
+[190.371664] (-) TimerEvent: {}
+[190.472431] (-) TimerEvent: {}
+[190.573225] (-) TimerEvent: {}
+[190.673945] (-) TimerEvent: {}
+[190.777690] (-) TimerEvent: {}
+[190.879179] (-) TimerEvent: {}
+[190.979943] (-) TimerEvent: {}
+[191.080752] (-) TimerEvent: {}
+[191.181529] (-) TimerEvent: {}
+[191.282321] (-) TimerEvent: {}
+[191.383064] (-) TimerEvent: {}
+[191.483843] (-) TimerEvent: {}
+[191.584611] (-) TimerEvent: {}
+[191.681506] (nav2_costmap_2d) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX executable range_tests_exec\x1b[0m\n'}
+[191.684773] (-) TimerEvent: {}
+[191.785899] (-) TimerEvent: {}
+[191.887077] (-) TimerEvent: {}
+[191.988310] (-) TimerEvent: {}
+[192.089089] (-) TimerEvent: {}
+[192.189923] (-) TimerEvent: {}
+[192.290786] (-) TimerEvent: {}
+[192.391594] (-) TimerEvent: {}
+[192.492370] (-) TimerEvent: {}
+[192.593095] (-) TimerEvent: {}
+[192.617527] (nav2_costmap_2d) StdoutLine: {'line': b'[ 95%] Built target range_tests_exec\n'}
+[192.693298] (-) TimerEvent: {}
+[192.794055] (-) TimerEvent: {}
+[192.894814] (-) TimerEvent: {}
+[192.991650] (nav2_costmap_2d) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX executable nav2_costmap_2d\x1b[0m\n'}
+[192.994927] (-) TimerEvent: {}
+[193.095534] (-) TimerEvent: {}
+[193.196242] (-) TimerEvent: {}
+[193.296956] (-) TimerEvent: {}
+[193.397689] (-) TimerEvent: {}
+[193.498445] (-) TimerEvent: {}
+[193.599197] (-) TimerEvent: {}
+[193.675394] (nav2_costmap_2d) StdoutLine: {'line': b'[ 96%] Built target nav2_costmap_2d\n'}
+[193.699379] (-) TimerEvent: {}
+[193.800059] (-) TimerEvent: {}
+[193.900729] (-) TimerEvent: {}
+[194.001391] (-) TimerEvent: {}
+[194.102050] (-) TimerEvent: {}
+[194.202737] (-) TimerEvent: {}
+[194.303410] (-) TimerEvent: {}
+[194.404088] (-) TimerEvent: {}
+[194.504779] (-) TimerEvent: {}
+[194.605440] (-) TimerEvent: {}
+[194.706106] (-) TimerEvent: {}
+[194.806789] (-) TimerEvent: {}
+[194.907467] (-) TimerEvent: {}
+[195.008123] (-) TimerEvent: {}
+[195.108785] (-) TimerEvent: {}
+[195.209441] (-) TimerEvent: {}
+[195.310147] (-) TimerEvent: {}
+[195.410816] (-) TimerEvent: {}
+[195.511479] (-) TimerEvent: {}
+[195.612136] (-) TimerEvent: {}
+[195.712812] (-) TimerEvent: {}
+[195.813505] (-) TimerEvent: {}
+[195.914224] (-) TimerEvent: {}
+[196.014924] (-) TimerEvent: {}
+[196.115607] (-) TimerEvent: {}
+[196.216270] (-) TimerEvent: {}
+[196.316931] (-) TimerEvent: {}
+[196.417605] (-) TimerEvent: {}
+[196.518283] (-) TimerEvent: {}
+[196.619203] (-) TimerEvent: {}
+[196.719876] (-) TimerEvent: {}
+[196.820557] (-) TimerEvent: {}
+[196.921284] (-) TimerEvent: {}
+[197.021981] (-) TimerEvent: {}
+[197.122713] (-) TimerEvent: {}
+[197.223372] (-) TimerEvent: {}
+[197.324025] (-) TimerEvent: {}
+[197.424695] (-) TimerEvent: {}
+[197.525360] (-) TimerEvent: {}
+[197.626018] (-) TimerEvent: {}
+[197.726688] (-) TimerEvent: {}
+[197.827351] (-) TimerEvent: {}
+[197.928003] (-) TimerEvent: {}
+[198.028666] (-) TimerEvent: {}
+[198.129326] (-) TimerEvent: {}
+[198.229977] (-) TimerEvent: {}
+[198.330662] (-) TimerEvent: {}
+[198.431341] (-) TimerEvent: {}
+[198.531981] (-) TimerEvent: {}
+[198.632641] (-) TimerEvent: {}
+[198.733286] (-) TimerEvent: {}
+[198.833944] (-) TimerEvent: {}
+[198.934633] (-) TimerEvent: {}
+[199.035311] (-) TimerEvent: {}
+[199.135986] (-) TimerEvent: {}
+[199.236639] (-) TimerEvent: {}
+[199.337296] (-) TimerEvent: {}
+[199.437979] (-) TimerEvent: {}
+[199.538667] (-) TimerEvent: {}
+[199.639335] (-) TimerEvent: {}
+[199.739999] (-) TimerEvent: {}
+[199.840677] (-) TimerEvent: {}
+[199.941350] (-) TimerEvent: {}
+[200.042015] (-) TimerEvent: {}
+[200.142744] (-) TimerEvent: {}
+[200.243454] (-) TimerEvent: {}
+[200.344119] (-) TimerEvent: {}
+[200.444807] (-) TimerEvent: {}
+[200.545472] (-) TimerEvent: {}
+[200.646172] (-) TimerEvent: {}
+[200.746864] (-) TimerEvent: {}
+[200.847541] (-) TimerEvent: {}
+[200.948247] (-) TimerEvent: {}
+[201.048954] (-) TimerEvent: {}
+[201.149669] (-) TimerEvent: {}
+[201.250388] (-) TimerEvent: {}
+[201.351087] (-) TimerEvent: {}
+[201.451794] (-) TimerEvent: {}
+[201.552507] (-) TimerEvent: {}
+[201.653195] (-) TimerEvent: {}
+[201.753860] (-) TimerEvent: {}
+[201.854555] (-) TimerEvent: {}
+[201.955246] (-) TimerEvent: {}
+[202.055928] (-) TimerEvent: {}
+[202.156585] (-) TimerEvent: {}
+[202.257286] (-) TimerEvent: {}
+[202.357951] (-) TimerEvent: {}
+[202.458640] (-) TimerEvent: {}
+[202.559284] (-) TimerEvent: {}
+[202.659946] (-) TimerEvent: {}
+[202.760604] (-) TimerEvent: {}
+[202.861256] (-) TimerEvent: {}
+[202.961989] (-) TimerEvent: {}
+[203.062756] (-) TimerEvent: {}
+[203.163480] (-) TimerEvent: {}
+[203.264196] (-) TimerEvent: {}
+[203.365180] (-) TimerEvent: {}
+[203.465864] (-) TimerEvent: {}
+[203.566583] (-) TimerEvent: {}
+[203.667538] (-) TimerEvent: {}
+[203.768207] (-) TimerEvent: {}
+[203.868898] (-) TimerEvent: {}
+[203.969597] (-) TimerEvent: {}
+[204.070302] (-) TimerEvent: {}
+[204.171000] (-) TimerEvent: {}
+[204.271698] (-) TimerEvent: {}
+[204.345148] (nav2_costmap_2d) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking CXX executable keepout_filter_test\x1b[0m\n'}
+[204.371898] (-) TimerEvent: {}
+[204.473054] (-) TimerEvent: {}
+[204.573733] (-) TimerEvent: {}
+[204.674458] (-) TimerEvent: {}
+[204.775121] (-) TimerEvent: {}
+[204.876028] (-) TimerEvent: {}
+[204.976736] (-) TimerEvent: {}
+[205.077444] (-) TimerEvent: {}
+[205.086549] (nav2_costmap_2d) StdoutLine: {'line': b'[ 97%] Built target keepout_filter_test\n'}
+[205.177635] (-) TimerEvent: {}
+[205.278290] (-) TimerEvent: {}
+[205.378954] (-) TimerEvent: {}
+[205.479609] (-) TimerEvent: {}
+[205.580264] (-) TimerEvent: {}
+[205.680930] (-) TimerEvent: {}
+[205.781593] (-) TimerEvent: {}
+[205.882294] (-) TimerEvent: {}
+[205.982963] (-) TimerEvent: {}
+[206.083617] (-) TimerEvent: {}
+[206.184272] (-) TimerEvent: {}
+[206.284926] (-) TimerEvent: {}
+[206.385584] (-) TimerEvent: {}
+[206.486430] (-) TimerEvent: {}
+[206.587098] (-) TimerEvent: {}
+[206.687903] (-) TimerEvent: {}
+[206.788702] (-) TimerEvent: {}
+[206.889370] (-) TimerEvent: {}
+[206.990043] (-) TimerEvent: {}
+[207.090683] (-) TimerEvent: {}
+[207.191318] (-) TimerEvent: {}
+[207.291955] (-) TimerEvent: {}
+[207.392555] (-) TimerEvent: {}
+[207.493118] (-) TimerEvent: {}
+[207.593727] (-) TimerEvent: {}
+[207.694292] (-) TimerEvent: {}
+[207.794884] (-) TimerEvent: {}
+[207.895428] (-) TimerEvent: {}
+[207.996038] (-) TimerEvent: {}
+[208.096598] (-) TimerEvent: {}
+[208.197243] (-) TimerEvent: {}
+[208.297843] (-) TimerEvent: {}
+[208.398439] (-) TimerEvent: {}
+[208.499057] (-) TimerEvent: {}
+[208.599700] (-) TimerEvent: {}
+[208.700340] (-) TimerEvent: {}
+[208.800971] (-) TimerEvent: {}
+[208.901605] (-) TimerEvent: {}
+[209.002252] (-) TimerEvent: {}
+[209.103174] (-) TimerEvent: {}
+[209.203816] (-) TimerEvent: {}
+[209.304462] (-) TimerEvent: {}
+[209.405130] (-) TimerEvent: {}
+[209.505782] (-) TimerEvent: {}
+[209.606448] (-) TimerEvent: {}
+[209.707071] (-) TimerEvent: {}
+[209.807712] (-) TimerEvent: {}
+[209.908362] (-) TimerEvent: {}
+[210.008978] (-) TimerEvent: {}
+[210.109600] (-) TimerEvent: {}
+[210.210258] (-) TimerEvent: {}
+[210.310894] (-) TimerEvent: {}
+[210.411525] (-) TimerEvent: {}
+[210.512142] (-) TimerEvent: {}
+[210.612765] (-) TimerEvent: {}
+[210.713397] (-) TimerEvent: {}
+[210.814032] (-) TimerEvent: {}
+[210.914713] (-) TimerEvent: {}
+[211.015355] (-) TimerEvent: {}
+[211.115987] (-) TimerEvent: {}
+[211.216633] (-) TimerEvent: {}
+[211.317263] (-) TimerEvent: {}
+[211.417922] (-) TimerEvent: {}
+[211.518602] (-) TimerEvent: {}
+[211.619245] (-) TimerEvent: {}
+[211.719881] (-) TimerEvent: {}
+[211.820508] (-) TimerEvent: {}
+[211.921158] (-) TimerEvent: {}
+[212.021809] (-) TimerEvent: {}
+[212.122471] (-) TimerEvent: {}
+[212.223108] (-) TimerEvent: {}
+[212.323763] (-) TimerEvent: {}
+[212.424402] (-) TimerEvent: {}
+[212.525053] (-) TimerEvent: {}
+[212.625721] (-) TimerEvent: {}
+[212.726369] (-) TimerEvent: {}
+[212.827016] (-) TimerEvent: {}
+[212.927695] (-) TimerEvent: {}
+[213.028356] (-) TimerEvent: {}
+[213.129042] (-) TimerEvent: {}
+[213.229706] (-) TimerEvent: {}
+[213.330431] (-) TimerEvent: {}
+[213.431080] (-) TimerEvent: {}
+[213.531740] (-) TimerEvent: {}
+[213.632377] (-) TimerEvent: {}
+[213.733023] (-) TimerEvent: {}
+[213.833677] (-) TimerEvent: {}
+[213.934356] (-) TimerEvent: {}
+[214.035004] (-) TimerEvent: {}
+[214.135678] (-) TimerEvent: {}
+[214.236317] (-) TimerEvent: {}
+[214.336958] (-) TimerEvent: {}
+[214.437647] (-) TimerEvent: {}
+[214.538289] (-) TimerEvent: {}
+[214.638911] (-) TimerEvent: {}
+[214.739534] (-) TimerEvent: {}
+[214.840190] (-) TimerEvent: {}
+[214.940853] (-) TimerEvent: {}
+[215.041638] (-) TimerEvent: {}
+[215.142287] (-) TimerEvent: {}
+[215.242910] (-) TimerEvent: {}
+[215.343564] (-) TimerEvent: {}
+[215.444224] (-) TimerEvent: {}
+[215.544900] (-) TimerEvent: {}
+[215.645545] (-) TimerEvent: {}
+[215.746246] (-) TimerEvent: {}
+[215.846913] (-) TimerEvent: {}
+[215.947593] (-) TimerEvent: {}
+[216.048244] (-) TimerEvent: {}
+[216.148880] (-) TimerEvent: {}
+[216.249522] (-) TimerEvent: {}
+[216.350273] (-) TimerEvent: {}
+[216.450934] (-) TimerEvent: {}
+[216.551590] (-) TimerEvent: {}
+[216.652234] (-) TimerEvent: {}
+[216.752880] (-) TimerEvent: {}
+[216.853568] (-) TimerEvent: {}
+[216.954488] (-) TimerEvent: {}
+[217.055136] (-) TimerEvent: {}
+[217.155802] (-) TimerEvent: {}
+[217.256473] (-) TimerEvent: {}
+[217.357128] (-) TimerEvent: {}
+[217.457770] (-) TimerEvent: {}
+[217.558478] (-) TimerEvent: {}
+[217.659105] (-) TimerEvent: {}
+[217.759763] (-) TimerEvent: {}
+[217.860412] (-) TimerEvent: {}
+[217.961078] (-) TimerEvent: {}
+[218.061737] (-) TimerEvent: {}
+[218.162450] (-) TimerEvent: {}
+[218.263113] (-) TimerEvent: {}
+[218.363742] (-) TimerEvent: {}
+[218.464445] (-) TimerEvent: {}
+[218.565136] (-) TimerEvent: {}
+[218.665803] (-) TimerEvent: {}
+[218.766495] (-) TimerEvent: {}
+[218.867140] (-) TimerEvent: {}
+[218.967942] (-) TimerEvent: {}
+[219.068622] (-) TimerEvent: {}
+[219.169480] (-) TimerEvent: {}
+[219.270153] (-) TimerEvent: {}
+[219.370804] (-) TimerEvent: {}
+[219.471453] (-) TimerEvent: {}
+[219.572079] (-) TimerEvent: {}
+[219.672737] (-) TimerEvent: {}
+[219.773364] (-) TimerEvent: {}
+[219.874005] (-) TimerEvent: {}
+[219.974655] (-) TimerEvent: {}
+[220.075326] (-) TimerEvent: {}
+[220.078339] (nav2_costmap_2d) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking CXX executable speed_filter_test\x1b[0m\n'}
+[220.175505] (-) TimerEvent: {}
+[220.276174] (-) TimerEvent: {}
+[220.376806] (-) TimerEvent: {}
+[220.477427] (-) TimerEvent: {}
+[220.578210] (-) TimerEvent: {}
+[220.678805] (-) TimerEvent: {}
+[220.779428] (-) TimerEvent: {}
+[220.880103] (-) TimerEvent: {}
+[220.892117] (nav2_costmap_2d) StdoutLine: {'line': b'[ 98%] Built target speed_filter_test\n'}
+[220.964118] (nav2_costmap_2d) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable binary_filter_test\x1b[0m\n'}
+[220.980276] (-) TimerEvent: {}
+[221.080955] (-) TimerEvent: {}
+[221.181644] (-) TimerEvent: {}
+[221.282307] (-) TimerEvent: {}
+[221.382984] (-) TimerEvent: {}
+[221.483669] (-) TimerEvent: {}
+[221.584356] (-) TimerEvent: {}
+[221.684998] (-) TimerEvent: {}
+[221.767616] (nav2_costmap_2d) StdoutLine: {'line': b'[100%] Built target binary_filter_test\n'}
+[221.785155] (-) TimerEvent: {}
+[221.800652] (nav2_costmap_2d) CommandEnded: {'returncode': 0}
+[221.803564] (nav2_costmap_2d) JobProgress: {'identifier': 'nav2_costmap_2d', 'progress': 'install'}
+[221.831088] (nav2_costmap_2d) Command: {'cmd': ['/usr/bin/cmake', '--install', '/Pav-S_ws/build/nav2_costmap_2d'], 'cwd': '/Pav-S_ws/build/nav2_costmap_2d', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_costmap_2d'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[221.857976] (nav2_costmap_2d) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[221.860180] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/lib/liblayers.so\n'}
+[221.871917] (nav2_costmap_2d) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_costmap_2d/lib/liblayers.so" to ""\n'}
+[221.872252] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/lib/libfilters.so\n'}
+[221.877789] (nav2_costmap_2d) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_costmap_2d/lib/libfilters.so" to ""\n'}
+[221.878354] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/lib/libnav2_costmap_2d_core.so\n'}
+[221.885386] (-) TimerEvent: {}
+[221.886611] (nav2_costmap_2d) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_costmap_2d/lib/libnav2_costmap_2d_core.so" to ""\n'}
+[221.886923] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/lib/libnav2_costmap_2d_client.so\n'}
+[221.891014] (nav2_costmap_2d) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_costmap_2d/lib/libnav2_costmap_2d_client.so" to ""\n'}
+[221.891867] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d_markers\n'}
+[221.893568] (nav2_costmap_2d) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d_markers" to ""\n'}
+[221.893844] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d_cloud\n'}
+[221.895920] (nav2_costmap_2d) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d_cloud" to ""\n'}
+[221.896151] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d\n'}
+[221.896705] (nav2_costmap_2d) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d" to ""\n'}
+[221.896976] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/costmap_plugins.xml\n'}
+[221.897462] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d\n'}
+[221.897720] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d\n'}
+[221.897911] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/array_parser.hpp\n'}
+[221.898084] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/footprint_subscriber.hpp\n'}
+[221.898300] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/exceptions.hpp\n'}
+[221.898500] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters\n'}
+[221.898683] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters/speed_filter.hpp\n'}
+[221.898887] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters/costmap_filter.hpp\n'}
+[221.899113] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters/binary_filter.hpp\n'}
+[221.899338] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters/filter_values.hpp\n'}
+[221.899544] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters/keepout_filter.hpp\n'}
+[221.899749] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_layer.hpp\n'}
+[221.899970] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp\n'}
+[221.900209] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/layered_costmap.hpp\n'}
+[221.900423] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/footprint_collision_checker.hpp\n'}
+[221.900627] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/obstacle_layer.hpp\n'}
+[221.900848] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_math.hpp\n'}
+[221.901040] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/denoise\n'}
+[221.901214] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/denoise/image_processing.hpp\n'}
+[221.901480] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/denoise/image.hpp\n'}
+[221.901700] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/range_sensor_layer.hpp\n'}
+[221.901934] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/denoise_layer.hpp\n'}
+[221.902168] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d.hpp\n'}
+[221.902460] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/layer.hpp\n'}
+[221.902677] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/observation_buffer.hpp\n'}
+[221.902892] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/static_layer.hpp\n'}
+[221.903102] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/inflation_layer.hpp\n'}
+[221.903325] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/observation.hpp\n'}
+[221.903540] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/clear_costmap_service.hpp\n'}
+[221.903743] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/footprint.hpp\n'}
+[221.903975] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/cost_values.hpp\n'}
+[221.904179] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/voxel_layer.hpp\n'}
+[221.904398] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_topic_collision_checker.hpp\n'}
+[221.904607] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_publisher.hpp\n'}
+[221.904816] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_subscriber.hpp\n'}
+[221.905237] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/test/regression/order_layer.xml\n'}
+[221.905780] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/library_path.sh\n'}
+[221.906058] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/library_path.dsv\n'}
+[221.906462] (nav2_costmap_2d) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/costmap_plugins.xml\n'}
+[221.906729] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/ament_index/resource_index/package_run_dependencies/nav2_costmap_2d\n'}
+[221.907181] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/ament_index/resource_index/parent_prefix_path/nav2_costmap_2d\n'}
+[221.907561] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/ament_prefix_path.sh\n'}
+[221.907827] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/ament_prefix_path.dsv\n'}
+[221.908182] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/path.sh\n'}
+[221.908443] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/path.dsv\n'}
+[221.908789] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.bash\n'}
+[221.909146] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.sh\n'}
+[221.909541] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.zsh\n'}
+[221.909888] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.dsv\n'}
+[221.910354] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/package.dsv\n'}
+[221.910789] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/ament_index/resource_index/packages/nav2_costmap_2d\n'}
+[221.911113] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/ament_index/resource_index/nav2_costmap_2d__pluginlib__plugin/nav2_costmap_2d\n'}
+[221.911583] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/export_nav2_costmap_2dExport.cmake\n'}
+[221.912395] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/export_nav2_costmap_2dExport-release.cmake\n'}
+[221.912772] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[221.913137] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[221.913541] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/nav2_costmap_2dConfig.cmake\n'}
+[221.913846] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/nav2_costmap_2dConfig-version.cmake\n'}
+[221.914222] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/package.xml\n'}
+[221.916090] (nav2_costmap_2d) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_costmap_2d/lib/liborder_layer.so\n'}
+[221.916697] (nav2_costmap_2d) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_costmap_2d/lib/liborder_layer.so" to ""\n'}
+[221.921676] (nav2_costmap_2d) CommandEnded: {'returncode': 0}
+[221.986103] (-) TimerEvent: {}
+[221.994583] (nav2_costmap_2d) JobEnded: {'identifier': 'nav2_costmap_2d', 'rc': 0}
+[221.996685] (-) EventReactorShutdown: {}

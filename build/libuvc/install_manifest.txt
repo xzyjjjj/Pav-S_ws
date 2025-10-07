@@ -1,0 +1,15 @@
+/Pav-S_ws/install/libuvc/lib/libuvc.so.0.0.7
+/Pav-S_ws/install/libuvc/lib/libuvc.so.0
+/Pav-S_ws/install/libuvc/lib/libuvc.so
+/Pav-S_ws/install/libuvc/include/libuvc/libuvc.h
+/Pav-S_ws/install/libuvc/include/libuvc/libuvc_config.h
+/Pav-S_ws/install/libuvc/lib/libuvc.a
+/Pav-S_ws/install/libuvc/include/libuvc/libuvc.h
+/Pav-S_ws/install/libuvc/include/libuvc/libuvc_config.h
+/Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcTargets.cmake
+/Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcTargets-release.cmake
+/Pav-S_ws/install/libuvc/lib/cmake/libuvc/FindLibUSB.cmake
+/Pav-S_ws/install/libuvc/lib/cmake/libuvc/FindJpegPkg.cmake
+/Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcConfigVersion.cmake
+/Pav-S_ws/install/libuvc/lib/pkgconfig/libuvc.pc
+/Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcConfig.cmake

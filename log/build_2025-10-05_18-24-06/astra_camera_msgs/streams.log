@@ -1,0 +1,364 @@
+[0.065s] Invoking command in '/Pav-S_ws/build/astra_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/astra_camera_msgs -- -j6 -l6
+[0.129s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.715s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.723s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.728s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.798s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.852s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.196s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[3.130s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.088s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.156s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[4.226s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.227s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[4.227s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[4.362s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.381s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.385s] -- Added test 'lint_cmake' to check CMake code style
+[4.388s] -- Added test 'xmllint' to check XML markup files
+[4.392s] -- Configuring done
+[4.527s] -- Generating done
+[4.562s] -- Build files have been written to: /Pav-S_ws/build/astra_camera_msgs
+[4.670s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_generator_c[0m
+[4.743s] [ 11%] Built target astra_camera_msgs__rosidl_generator_c
+[4.768s] [ 12%] Built target astra_camera_msgs__cpp
+[4.786s] [ 12%] Built target ament_cmake_python_copy_astra_camera_msgs
+[4.798s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_typesupport_fastrtps_c[0m
+[4.816s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_typesupport_introspection_c[0m
+[4.837s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_typesupport_c[0m
+[4.881s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_typesupport_introspection_cpp[0m
+[4.888s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[4.937s] [ 24%] Built target astra_camera_msgs__rosidl_typesupport_fastrtps_c
+[4.963s] [ 35%] Built target astra_camera_msgs__rosidl_typesupport_introspection_c
+[5.029s] [ 58%] Built target astra_camera_msgs__rosidl_typesupport_introspection_cpp
+[5.040s] [ 47%] Built target astra_camera_msgs__rosidl_typesupport_c
+[5.045s] [ 70%] Built target astra_camera_msgs__rosidl_typesupport_fastrtps_cpp
+[5.072s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_typesupport_cpp[0m
+[5.166s] [ 82%] Built target astra_camera_msgs__rosidl_typesupport_cpp
+[5.245s] [ 82%] Built target astra_camera_msgs
+[5.362s] [ 83%] Built target astra_camera_msgs__py
+[5.392s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_generator_py[0m
+[5.456s] [ 93%] Built target astra_camera_msgs__rosidl_generator_py
+[5.479s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[5.479s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[5.491s] [35m[1mConsolidate compiler generated dependencies of target astra_camera_msgs__rosidl_typesupport_c__pyext[0m
+[5.505s] [ 95%] Built target astra_camera_msgs__rosidl_typesupport_fastrtps_c__pyext
+[5.539s] [ 97%] Built target astra_camera_msgs__rosidl_typesupport_introspection_c__pyext
+[5.553s] [100%] Built target astra_camera_msgs__rosidl_typesupport_c__pyext
+[5.709s] running egg_info
+[5.711s] writing astra_camera_msgs.egg-info/PKG-INFO
+[5.712s] writing dependency_links to astra_camera_msgs.egg-info/dependency_links.txt
+[5.713s] writing top-level names to astra_camera_msgs.egg-info/top_level.txt
+[5.720s] reading manifest file 'astra_camera_msgs.egg-info/SOURCES.txt'
+[5.722s] writing manifest file 'astra_camera_msgs.egg-info/SOURCES.txt'
+[5.859s] [100%] Built target ament_cmake_python_build_astra_camera_msgs_egg
+[5.900s] Invoked command in '/Pav-S_ws/build/astra_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/astra_camera_msgs -- -j6 -l6
+[5.901s] Invoking command in '/Pav-S_ws/build/astra_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/astra_camera_msgs
+[5.966s] -- Install configuration: "Release"
+[5.967s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/ament_index/resource_index/rosidl_interfaces/astra_camera_msgs
+[5.967s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[5.967s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[5.967s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_camera_params.h
+[5.967s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_string.h
+[5.967s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/set_int32.h
+[5.968s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_int32.h
+[5.968s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_device_info.h
+[5.968s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[5.968s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__type_support.h
+[5.968s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__functions.h
+[5.968s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__functions.h
+[5.968s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__functions.h
+[5.968s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__type_support.h
+[5.969s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__type_support.h
+[5.969s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__functions.c
+[5.969s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__functions.c
+[5.969s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__type_support.h
+[5.969s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__functions.c
+[5.969s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__functions.c
+[5.969s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__functions.h
+[5.969s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__functions.c
+[5.970s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__struct.h
+[5.970s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__functions.h
+[5.970s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__struct.h
+[5.970s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__type_support.h
+[5.970s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__type_support.h
+[5.970s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__struct.h
+[5.970s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__struct.h
+[5.970s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__struct.h
+[5.970s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__struct.h
+[5.971s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__functions.c
+[5.971s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__functions.h
+[5.975s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_camera_info.h
+[5.976s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[5.976s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/rosidl_generator_c__visibility_control.h
+[5.976s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/extrinsics.h
+[5.976s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[5.976s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__functions.c
+[5.977s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__type_support.h
+[5.977s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__struct.h
+[5.977s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__struct.h
+[5.977s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__type_support.h
+[5.977s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__type_support.h
+[5.977s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__functions.h
+[5.977s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__struct.h
+[5.977s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__functions.c
+[5.978s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__functions.h
+[5.978s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__functions.c
+[5.978s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__functions.h
+[5.978s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/metadata.h
+[5.978s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/device_info.h
+[5.978s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/library_path.sh
+[5.978s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/library_path.dsv
+[5.978s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_generator_c.so
+[5.978s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[5.979s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[5.979s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[5.979s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__rosidl_typesupport_fastrtps_c.h
+[5.979s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__rosidl_typesupport_fastrtps_c.h
+[5.979s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__rosidl_typesupport_fastrtps_c.h
+[5.979s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__rosidl_typesupport_fastrtps_c.h
+[5.979s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__rosidl_typesupport_fastrtps_c.h
+[5.979s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__rosidl_typesupport_fastrtps_c.h
+[5.981s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[5.981s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.981s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[5.981s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_c.h
+[5.981s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_c.h
+[5.982s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__rosidl_typesupport_fastrtps_c.h
+[5.982s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_fastrtps_c.so
+[5.982s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[5.982s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[5.982s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[5.982s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__rosidl_typesupport_introspection_c.h
+[5.982s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__rosidl_typesupport_introspection_c.h
+[5.982s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__type_support.c
+[5.983s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__type_support.c
+[5.983s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__rosidl_typesupport_introspection_c.h
+[5.983s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__type_support.c
+[5.983s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__rosidl_typesupport_introspection_c.h
+[5.983s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__rosidl_typesupport_introspection_c.h
+[5.983s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__type_support.c
+[5.983s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__rosidl_typesupport_introspection_c.h
+[5.983s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__type_support.c
+[5.984s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__type_support.c
+[5.984s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[5.984s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.984s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[5.984s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__type_support.c
+[5.984s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_c.h
+[5.984s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__type_support.c
+[5.984s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__type_support.c
+[5.985s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_c.h
+[5.985s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__rosidl_typesupport_introspection_c.h
+[5.985s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_introspection_c.so
+[5.985s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_c.so
+[5.985s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[5.985s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[5.985s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/set_int32.hpp
+[5.985s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_camera_params.hpp
+[5.985s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_camera_info.hpp
+[5.986s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_string.hpp
+[5.986s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[5.986s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__traits.hpp
+[5.986s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__struct.hpp
+[5.986s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__struct.hpp
+[5.986s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__traits.hpp
+[5.986s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__struct.hpp
+[5.986s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__type_support.hpp
+[5.986s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__traits.hpp
+[5.987s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__traits.hpp
+[5.987s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__type_support.hpp
+[5.995s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__struct.hpp
+[5.995s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__type_support.hpp
+[5.996s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__type_support.hpp
+[5.996s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__builder.hpp
+[5.996s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__type_support.hpp
+[5.996s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__builder.hpp
+[5.996s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__builder.hpp
+[5.996s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__traits.hpp
+[5.997s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__builder.hpp
+[5.997s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__builder.hpp
+[5.997s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__struct.hpp
+[5.997s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__struct.hpp
+[5.997s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__traits.hpp
+[5.997s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__builder.hpp
+[5.997s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__type_support.hpp
+[5.997s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_int32.hpp
+[5.998s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_device_info.hpp
+[5.998s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[5.998s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[5.998s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/device_info.hpp
+[5.998s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[5.998s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__builder.hpp
+[5.998s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__traits.hpp
+[5.998s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__struct.hpp
+[5.998s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__struct.hpp
+[5.999s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__builder.hpp
+[5.999s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__traits.hpp
+[5.999s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__traits.hpp
+[5.999s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__struct.hpp
+[5.999s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__type_support.hpp
+[5.999s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__type_support.hpp
+[6.000s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__type_support.hpp
+[6.000s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__builder.hpp
+[6.000s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/extrinsics.hpp
+[6.000s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/metadata.hpp
+[6.000s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[6.000s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[6.000s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[6.000s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__rosidl_typesupport_fastrtps_cpp.hpp
+[6.000s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__rosidl_typesupport_fastrtps_cpp.hpp
+[6.001s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__rosidl_typesupport_fastrtps_cpp.hpp
+[6.001s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__rosidl_typesupport_fastrtps_cpp.hpp
+[6.001s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__rosidl_typesupport_fastrtps_cpp.hpp
+[6.001s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/dds_fastrtps
+[6.001s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__rosidl_typesupport_fastrtps_cpp.hpp
+[6.001s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[6.001s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[6.001s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_cpp.hpp
+[6.001s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__rosidl_typesupport_fastrtps_cpp.hpp
+[6.002s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_cpp.hpp
+[6.002s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/dds_fastrtps
+[6.002s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.002s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_fastrtps_cpp.so
+[6.002s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[6.002s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[6.002s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[6.002s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__type_support.cpp
+[6.002s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__type_support.cpp
+[6.003s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__rosidl_typesupport_introspection_cpp.hpp
+[6.003s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__rosidl_typesupport_introspection_cpp.hpp
+[6.003s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__rosidl_typesupport_introspection_cpp.hpp
+[6.012s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__rosidl_typesupport_introspection_cpp.hpp
+[6.013s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__rosidl_typesupport_introspection_cpp.hpp
+[6.013s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__type_support.cpp
+[6.013s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__type_support.cpp
+[6.013s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__type_support.cpp
+[6.013s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__type_support.cpp
+[6.013s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__rosidl_typesupport_introspection_cpp.hpp
+[6.013s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[6.014s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[6.014s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__type_support.cpp
+[6.014s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_cpp.hpp
+[6.014s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__type_support.cpp
+[6.014s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__rosidl_typesupport_introspection_cpp.hpp
+[6.014s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__type_support.cpp
+[6.014s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_cpp.hpp
+[6.014s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_introspection_cpp.so
+[6.014s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_cpp.so
+[6.015s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/pythonpath.sh
+[6.015s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/pythonpath.dsv
+[6.015s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs-1.0.1-py3.10.egg-info
+[6.015s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs-1.0.1-py3.10.egg-info/dependency_links.txt
+[6.015s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs-1.0.1-py3.10.egg-info/SOURCES.txt
+[6.015s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs-1.0.1-py3.10.egg-info/PKG-INFO
+[6.015s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs-1.0.1-py3.10.egg-info/top_level.txt
+[6.015s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs
+[6.016s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/_astra_camera_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.016s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/libastra_camera_msgs__rosidl_generator_py.so
+[6.016s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv
+[6.016s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_camera_info_s.c
+[6.016s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_int32.py
+[6.016s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_int32_s.c
+[6.016s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_set_int32_s.c
+[6.016s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_camera_params.py
+[6.016s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_device_info.py
+[6.017s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_camera_params_s.c
+[6.017s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_camera_info.py
+[6.017s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_device_info_s.c
+[6.017s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/__init__.py
+[6.018s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_string_s.c
+[6.018s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_string.py
+[6.018s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_set_int32.py
+[6.018s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/_astra_camera_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[6.019s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[6.019s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/_astra_camera_msgs_s.ep.rosidl_typesupport_c.c
+[6.019s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg
+[6.020s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_device_info.py
+[6.020s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_extrinsics_s.c
+[6.020s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_device_info_s.c
+[6.020s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_metadata.py
+[6.020s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_metadata_s.c
+[6.020s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/__init__.py
+[6.020s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_extrinsics.py
+[6.021s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[6.021s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/__init__.py
+[6.021s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[6.062s] Listing '/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs'...
+[6.062s] Compiling '/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/__init__.py'...
+[6.062s] Listing '/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg'...
+[6.062s] Listing '/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv'...
+[6.081s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[6.081s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[6.082s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[6.082s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_generator_py.so
+[6.083s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/DeviceInfo.idl
+[6.083s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/Extrinsics.idl
+[6.083s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/Metadata.idl
+[6.083s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetDeviceInfo.idl
+[6.083s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraInfo.idl
+[6.084s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraParams.idl
+[6.084s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetInt32.idl
+[6.084s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetString.idl
+[6.084s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/SetInt32.idl
+[6.084s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/DeviceInfo.msg
+[6.084s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/Extrinsics.msg
+[6.084s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/Metadata.msg
+[6.085s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetDeviceInfo.srv
+[6.085s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetDeviceInfo_Request.msg
+[6.085s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetDeviceInfo_Response.msg
+[6.085s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraInfo.srv
+[6.086s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraInfo_Request.msg
+[6.087s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraInfo_Response.msg
+[6.087s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraParams.srv
+[6.087s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraParams_Request.msg
+[6.088s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraParams_Response.msg
+[6.088s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetInt32.srv
+[6.088s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetInt32_Request.msg
+[6.088s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetInt32_Response.msg
+[6.088s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetString.srv
+[6.089s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetString_Request.msg
+[6.089s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetString_Response.msg
+[6.089s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/SetInt32.srv
+[6.089s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/SetInt32_Request.msg
+[6.089s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/SetInt32_Response.msg
+[6.089s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/ament_index/resource_index/package_run_dependencies/astra_camera_msgs
+[6.090s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/ament_index/resource_index/parent_prefix_path/astra_camera_msgs
+[6.090s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/ament_prefix_path.sh
+[6.091s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/ament_prefix_path.dsv
+[6.092s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/path.sh
+[6.094s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/path.dsv
+[6.095s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/local_setup.bash
+[6.099s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/local_setup.sh
+[6.099s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/local_setup.zsh
+[6.099s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/local_setup.dsv
+[6.100s] -- Installing: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/package.dsv
+[6.100s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/ament_index/resource_index/packages/astra_camera_msgs
+[6.101s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_generator_cExport.cmake
+[6.101s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_generator_cExport-release.cmake
+[6.101s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[6.102s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_typesupport_fastrtps_cExport-release.cmake
+[6.103s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_introspection_cExport.cmake
+[6.103s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_introspection_cExport-release.cmake
+[6.104s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_cExport.cmake
+[6.104s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_cExport-release.cmake
+[6.104s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_generator_cppExport.cmake
+[6.105s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.105s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[6.107s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[6.108s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_introspection_cppExport-release.cmake
+[6.109s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_cppExport.cmake
+[6.109s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_cppExport-release.cmake
+[6.109s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_generator_pyExport.cmake
+[6.110s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_generator_pyExport-release.cmake
+[6.110s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/rosidl_cmake-extras.cmake
+[6.111s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.111s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.112s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[6.113s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[6.113s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[6.113s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[6.114s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgsConfig.cmake
+[6.114s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgsConfig-version.cmake
+[6.115s] -- Up-to-date: /Pav-S_ws/install/astra_camera_msgs/share/astra_camera_msgs/package.xml
+[6.155s] Invoked command in '/Pav-S_ws/build/astra_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/astra_camera_msgs

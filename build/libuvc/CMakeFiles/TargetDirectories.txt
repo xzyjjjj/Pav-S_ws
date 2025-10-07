@@ -1,0 +1,9 @@
+/Pav-S_ws/build/libuvc/CMakeFiles/uvc.dir
+/Pav-S_ws/build/libuvc/CMakeFiles/uvc_static.dir
+/Pav-S_ws/build/libuvc/CMakeFiles/example.dir
+/Pav-S_ws/build/libuvc/CMakeFiles/edit_cache.dir
+/Pav-S_ws/build/libuvc/CMakeFiles/rebuild_cache.dir
+/Pav-S_ws/build/libuvc/CMakeFiles/list_install_components.dir
+/Pav-S_ws/build/libuvc/CMakeFiles/install.dir
+/Pav-S_ws/build/libuvc/CMakeFiles/install/local.dir
+/Pav-S_ws/build/libuvc/CMakeFiles/install/strip.dir

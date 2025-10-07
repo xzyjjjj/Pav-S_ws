@@ -1,0 +1,73 @@
+[0.069s] Invoking command in '/Pav-S_ws/build/wheeltec_robot_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake /Pav-S_ws/src/wheeltec_robot_urdf/wheeltec_robot_urdf -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/wheeltec_robot_urdf
+[71.151s] -- The C compiler identification is GNU 11.4.0
+[71.152s] -- The CXX compiler identification is GNU 11.4.0
+[71.152s] -- Detecting C compiler ABI info
+[71.152s] -- Detecting C compiler ABI info - done
+[71.152s] -- Check for working C compiler: /usr/bin/cc - skipped
+[71.152s] -- Detecting C compile features
+[71.152s] -- Detecting C compile features - done
+[71.152s] -- Detecting CXX compiler ABI info
+[71.152s] -- Detecting CXX compiler ABI info - done
+[71.153s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[71.153s] -- Detecting CXX compile features
+[71.153s] -- Detecting CXX compile features - done
+[71.153s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[71.153s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[71.153s] -- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+[71.153s] -- Configuring done
+[71.153s] -- Generating done
+[71.153s] -- Build files have been written to: /Pav-S_ws/build/wheeltec_robot_urdf
+[71.222s] Invoked command in '/Pav-S_ws/build/wheeltec_robot_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake /Pav-S_ws/src/wheeltec_robot_urdf/wheeltec_robot_urdf -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/wheeltec_robot_urdf
+[71.238s] Invoking command in '/Pav-S_ws/build/wheeltec_robot_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/wheeltec_robot_urdf -- -j6 -l6
+[71.455s] Invoked command in '/Pav-S_ws/build/wheeltec_robot_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/wheeltec_robot_urdf -- -j6 -l6
+[71.464s] Invoking command in '/Pav-S_ws/build/wheeltec_robot_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/wheeltec_robot_urdf
+[71.487s] -- Install configuration: "Release"
+[71.490s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes
+[71.501s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/bases
+[71.501s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/bases/burger_base.stl
+[71.535s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/bases/waffle_pi_base.stl
+[71.570s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/bases/waffle_base.stl
+[71.748s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes
+[71.749s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/lf_link.STL
+[71.783s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/controller_link.STL
+[71.874s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/camera_link.STL
+[71.905s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/laser_link.STL
+[71.916s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/front_link.STL
+[71.920s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/rb_link.STL
+[71.951s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/right_link.STL
+[71.953s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/lb_link.STL
+[71.982s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/left_link.STL
+[72.001s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/base_link.STL
+[72.032s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_meshes/rf_link.STL
+[72.060s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes
+[72.064s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/lf_link.STL
+[72.089s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/controller_link.STL
+[72.136s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/camera_link.STL
+[72.157s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/front_link.STL
+[72.157s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/laser.STL
+[72.160s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/rb_link.STL
+[72.177s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/right_link.STL
+[72.182s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/lb_link.STL
+[72.201s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/left_link.STL
+[72.202s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/base_link.STL
+[72.216s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/meshes/mini_akm_robot_meshes/rf_link.STL
+[72.226s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/rviz
+[72.227s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/rviz/model.rviz
+[72.227s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/urdf
+[72.228s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/urdf/mini_akm_robot.urdf
+[72.230s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/ament_index/resource_index/package_run_dependencies/wheeltec_robot_urdf
+[72.232s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/ament_index/resource_index/parent_prefix_path/wheeltec_robot_urdf
+[72.234s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/environment/ament_prefix_path.sh
+[72.235s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/environment/ament_prefix_path.dsv
+[72.236s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/environment/path.sh
+[72.236s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/environment/path.dsv
+[72.237s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/local_setup.bash
+[72.237s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/local_setup.sh
+[72.238s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/local_setup.zsh
+[72.240s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/local_setup.dsv
+[72.241s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/package.dsv
+[72.241s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/ament_index/resource_index/packages/wheeltec_robot_urdf
+[72.242s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/cmake/wheeltec_robot_urdfConfig.cmake
+[72.242s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/cmake/wheeltec_robot_urdfConfig-version.cmake
+[72.243s] -- Installing: /Pav-S_ws/install/wheeltec_robot_urdf/share/wheeltec_robot_urdf/package.xml
+[72.256s] Invoked command in '/Pav-S_ws/build/wheeltec_robot_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/wheeltec_robot_urdf

@@ -1,0 +1,137 @@
+-- Found builtin_interfaces: 1.2.2 (/opt/ros/humble/share/builtin_interfaces/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found nav_2d_msgs: 1.1.18 (/Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake)
+-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Pav-S_ws/build/dwb_msgs
+-- Found builtin_interfaces: 1.2.2 (/opt/ros/humble/share/builtin_interfaces/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found nav_2d_msgs: 1.1.18 (/Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake)
+-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Pav-S_ws/build/dwb_msgs
+gmake[2]: Warning: File 'CMakeFiles/ament_cmake_python_copy_dwb_msgs.dir/compiler_depend.make' has modification time 1759585003 s in the future
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_generator_c.dir/flags.make' has modification time 1759585003 s in the future
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__cpp.dir/compiler_depend.make' has modification time 1759585003 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_generator_c[0m
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__cpp.dir/compiler_depend.make' has modification time 1759585003 s in the future
+gmake[2]: Warning: File 'CMakeFiles/ament_cmake_python_copy_dwb_msgs.dir/compiler_depend.make' has modification time 1759585003 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_generator_c.dir/flags.make' has modification time 1759585003 s in the future
+[  1%] Built target dwb_msgs__cpp
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_cpp.dir/flags.make' has modification time 1759585003 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_fastrtps_cpp.dir/flags.make' has modification time 1759585003 s in the future
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make' has modification time 1759585003 s in the future
+[ 12%] Built target dwb_msgs__rosidl_generator_c
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make' has modification time 1759585003 s in the future
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_introspection_c.dir/flags.make' has modification time 1759585003 s in the future
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_cpp[0m
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 12%] Built target ament_cmake_python_copy_dwb_msgs
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_fastrtps_c[0m
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_introspection_cpp[0m
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_cpp.dir/flags.make' has modification time 1759585003 s in the future
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_fastrtps_cpp[0m
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_c.dir/flags.make' has modification time 1759585003 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_introspection_c[0m
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make' has modification time 1759585002 s in the future
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make' has modification time 1759585003 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_introspection_c.dir/flags.make' has modification time 1759585002 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 24%] Built target dwb_msgs__rosidl_typesupport_cpp
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_fastrtps_cpp.dir/flags.make' has modification time 1759585002 s in the future
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_c[0m
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/ament_cmake_python_build_dwb_msgs_egg.dir/compiler_depend.make' has modification time 1759585002 s in the future
+[ 35%] Built target dwb_msgs__rosidl_typesupport_fastrtps_c
+[ 49%] Built target dwb_msgs__rosidl_typesupport_introspection_c
+[ 58%] Built target dwb_msgs__rosidl_typesupport_introspection_cpp
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_c.dir/flags.make' has modification time 1759585002 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 70%] Built target dwb_msgs__rosidl_typesupport_fastrtps_cpp
+[ 82%] Built target dwb_msgs__rosidl_typesupport_c
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/ament_cmake_python_build_dwb_msgs_egg.dir/compiler_depend.make' has modification time 1759585002 s in the future
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs.dir/compiler_depend.make' has modification time 1759585002 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs.dir/compiler_depend.make' has modification time 1759585002 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 82%] Built target dwb_msgs
+gmake[2]: Warning: File 'dwb_msgs__py/CMakeFiles/dwb_msgs__py.dir/compiler_depend.make' has modification time 1759585002 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'dwb_msgs__py/CMakeFiles/dwb_msgs__py.dir/compiler_depend.make' has modification time 1759585002 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 83%] Built target dwb_msgs__py
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_generator_py.dir/flags.make' has modification time 1759585002 s in the future
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_generator_py[0m
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_generator_py.dir/flags.make' has modification time 1759585002 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 93%] Built target dwb_msgs__rosidl_generator_py
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/flags.make' has modification time 1759585002 s in the future
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_introspection_c__pyext.dir/flags.make' has modification time 1759585002 s in the future
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_c__pyext.dir/flags.make' has modification time 1759585002 s in the future
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_c__pyext.dir/flags.make' has modification time 1759585002 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_introspection_c__pyext.dir/flags.make' has modification time 1759585002 s in the future
+gmake[2]: Warning: File 'CMakeFiles/dwb_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/flags.make' has modification time 1759585002 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 95%] Built target dwb_msgs__rosidl_typesupport_c__pyext
+[ 97%] Built target dwb_msgs__rosidl_typesupport_introspection_c__pyext
+[100%] Built target dwb_msgs__rosidl_typesupport_fastrtps_c__pyext
+running egg_info
+writing dwb_msgs.egg-info/PKG-INFO
+writing dependency_links to dwb_msgs.egg-info/dependency_links.txt
+writing top-level names to dwb_msgs.egg-info/top_level.txt
+reading manifest file 'dwb_msgs.egg-info/SOURCES.txt'
+writing manifest file 'dwb_msgs.egg-info/SOURCES.txt'
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[100%] Built target ament_cmake_python_build_dwb_msgs_egg

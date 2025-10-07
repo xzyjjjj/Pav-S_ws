@@ -1,0 +1,362 @@
+[0.041s] Invoking command in '/Pav-S_ws/build/dwb_msgs': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav_2d_msgs:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav_2d_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake --build /Pav-S_ws/build/dwb_msgs -- -j6 -l6
+[0.114s] -- Found builtin_interfaces: 1.2.2 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.487s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.492s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.503s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.523s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.550s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.575s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.624s] -- Found nav_2d_msgs: 1.1.18 (/Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake)
+[0.652s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.684s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.560s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.881s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.418s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.553s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.556s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.557s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.557s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[3.676s] -- Configuring done
+[3.787s] -- Generating done
+[3.819s] -- Build files have been written to: /Pav-S_ws/build/dwb_msgs
+[3.896s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_generator_c[0m
+[3.964s] [ 11%] Built target dwb_msgs__rosidl_generator_c
+[4.003s] [ 12%] Built target dwb_msgs__cpp
+[4.006s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_fastrtps_c[0m
+[4.025s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_c[0m
+[4.026s] [ 12%] Built target ament_cmake_python_copy_dwb_msgs
+[4.039s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_introspection_c[0m
+[4.066s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_cpp[0m
+[4.087s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[4.118s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_introspection_cpp[0m
+[4.121s] [ 24%] Built target dwb_msgs__rosidl_typesupport_fastrtps_c
+[4.144s] [ 35%] Built target dwb_msgs__rosidl_typesupport_c
+[4.162s] [ 47%] Built target dwb_msgs__rosidl_typesupport_introspection_c
+[4.165s] [ 58%] Built target dwb_msgs__rosidl_typesupport_cpp
+[4.186s] [ 70%] Built target dwb_msgs__rosidl_typesupport_introspection_cpp
+[4.189s] [ 82%] Built target dwb_msgs__rosidl_typesupport_fastrtps_cpp
+[4.256s] [ 82%] Built target dwb_msgs
+[4.331s] [ 83%] Built target dwb_msgs__py
+[4.359s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_generator_py[0m
+[4.402s] [ 93%] Built target dwb_msgs__rosidl_generator_py
+[4.426s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[4.426s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_c__pyext[0m
+[4.427s] [35m[1mConsolidate compiler generated dependencies of target dwb_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[4.458s] [ 97%] Built target dwb_msgs__rosidl_typesupport_c__pyext
+[4.458s] [ 97%] Built target dwb_msgs__rosidl_typesupport_fastrtps_c__pyext
+[4.463s] [100%] Built target dwb_msgs__rosidl_typesupport_introspection_c__pyext
+[4.843s] running egg_info
+[4.845s] writing dwb_msgs.egg-info/PKG-INFO
+[4.845s] writing dependency_links to dwb_msgs.egg-info/dependency_links.txt
+[4.846s] writing top-level names to dwb_msgs.egg-info/top_level.txt
+[4.851s] reading manifest file 'dwb_msgs.egg-info/SOURCES.txt'
+[4.852s] writing manifest file 'dwb_msgs.egg-info/SOURCES.txt'
+[4.936s] [100%] Built target ament_cmake_python_build_dwb_msgs_egg
+[4.965s] Invoked command in '/Pav-S_ws/build/dwb_msgs' returned '0': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav_2d_msgs:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav_2d_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake --build /Pav-S_ws/build/dwb_msgs -- -j6 -l6
+[4.969s] Invoking command in '/Pav-S_ws/build/dwb_msgs': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav_2d_msgs:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav_2d_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake --install /Pav-S_ws/build/dwb_msgs
+[4.990s] -- Install configuration: "Release"
+[4.992s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/ament_index/resource_index/rosidl_interfaces/dwb_msgs
+[4.992s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs
+[4.992s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv
+[4.993s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/get_critic_score.h
+[4.993s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/generate_twists.h
+[4.993s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/debug_local_plan.h
+[4.993s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/score_trajectory.h
+[4.993s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/generate_trajectory.h
+[4.993s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail
+[4.993s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__functions.h
+[4.993s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__struct.h
+[4.994s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__functions.h
+[4.994s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__struct.h
+[4.994s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__functions.c
+[4.994s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__functions.h
+[4.994s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__type_support.h
+[4.994s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__functions.c
+[4.994s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__type_support.h
+[4.994s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__functions.c
+[4.995s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__functions.c
+[4.995s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__type_support.h
+[4.995s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__struct.h
+[4.995s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__struct.h
+[4.995s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__type_support.h
+[4.995s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__type_support.h
+[4.995s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__struct.h
+[4.995s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__functions.h
+[4.995s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__functions.h
+[4.996s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__functions.c
+[4.996s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg
+[4.997s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/rosidl_generator_c__visibility_control.h
+[4.997s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/trajectory_score.h
+[4.997s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/critic_score.h
+[4.997s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/trajectory2_d.h
+[4.998s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail
+[4.998s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__functions.c
+[4.998s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__type_support.h
+[4.998s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__functions.c
+[4.998s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__struct.h
+[4.998s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__functions.c
+[4.999s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__type_support.h
+[4.999s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__functions.h
+[5.000s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__struct.h
+[5.000s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__type_support.h
+[5.000s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__struct.h
+[5.001s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__functions.h
+[5.001s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__struct.h
+[5.001s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__functions.h
+[5.001s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__functions.h
+[5.002s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__type_support.h
+[5.002s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__functions.c
+[5.002s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/local_plan_evaluation.h
+[5.002s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/environment/library_path.sh
+[5.003s] -- Installing: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/environment/library_path.dsv
+[5.003s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/lib/libdwb_msgs__rosidl_generator_c.so
+[5.003s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs
+[5.003s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv
+[5.003s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail
+[5.003s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__rosidl_typesupport_fastrtps_c.h
+[5.003s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__rosidl_typesupport_fastrtps_c.h
+[5.003s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__rosidl_typesupport_fastrtps_c.h
+[5.004s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__rosidl_typesupport_fastrtps_c.h
+[5.004s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__rosidl_typesupport_fastrtps_c.h
+[5.004s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg
+[5.004s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.005s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail
+[5.005s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__rosidl_typesupport_fastrtps_c.h
+[5.005s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__rosidl_typesupport_fastrtps_c.h
+[5.005s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__rosidl_typesupport_fastrtps_c.h
+[5.006s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__rosidl_typesupport_fastrtps_c.h
+[5.006s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_fastrtps_c.so
+[5.006s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs
+[5.006s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv
+[5.006s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/get_critic_score.hpp
+[5.006s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/debug_local_plan.hpp
+[5.006s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/generate_trajectory.hpp
+[5.006s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail
+[5.007s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__traits.hpp
+[5.007s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__traits.hpp
+[5.007s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__struct.hpp
+[5.007s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__traits.hpp
+[5.007s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__traits.hpp
+[5.007s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__type_support.hpp
+[5.008s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__traits.hpp
+[5.008s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__builder.hpp
+[5.008s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__type_support.hpp
+[5.008s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__builder.hpp
+[5.009s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__type_support.hpp
+[5.009s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__struct.hpp
+[5.009s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__struct.hpp
+[5.009s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__type_support.hpp
+[5.009s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__type_support.hpp
+[5.009s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__struct.hpp
+[5.009s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__builder.hpp
+[5.010s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__builder.hpp
+[5.010s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__struct.hpp
+[5.010s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__builder.hpp
+[5.010s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/score_trajectory.hpp
+[5.010s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/generate_twists.hpp
+[5.010s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg
+[5.010s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[5.011s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/critic_score.hpp
+[5.011s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/local_plan_evaluation.hpp
+[5.011s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail
+[5.011s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__struct.hpp
+[5.011s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__type_support.hpp
+[5.012s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__builder.hpp
+[5.012s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__traits.hpp
+[5.012s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__traits.hpp
+[5.012s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__builder.hpp
+[5.012s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__builder.hpp
+[5.012s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__builder.hpp
+[5.013s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__struct.hpp
+[5.013s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__traits.hpp
+[5.013s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__type_support.hpp
+[5.014s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__struct.hpp
+[5.014s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__type_support.hpp
+[5.014s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__struct.hpp
+[5.014s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__type_support.hpp
+[5.014s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__traits.hpp
+[5.015s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/trajectory_score.hpp
+[5.015s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/trajectory2_d.hpp
+[5.015s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs
+[5.015s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv
+[5.015s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail
+[5.015s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__rosidl_typesupport_fastrtps_cpp.hpp
+[5.015s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[5.015s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/dds_fastrtps
+[5.015s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[5.016s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__rosidl_typesupport_fastrtps_cpp.hpp
+[5.016s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__rosidl_typesupport_fastrtps_cpp.hpp
+[5.016s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg
+[5.016s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail
+[5.016s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__rosidl_typesupport_fastrtps_cpp.hpp
+[5.016s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__rosidl_typesupport_fastrtps_cpp.hpp
+[5.016s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__rosidl_typesupport_fastrtps_cpp.hpp
+[5.016s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/dds_fastrtps
+[5.017s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__rosidl_typesupport_fastrtps_cpp.hpp
+[5.017s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.017s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_fastrtps_cpp.so
+[5.017s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs
+[5.017s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv
+[5.017s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail
+[5.017s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__type_support.c
+[5.017s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__rosidl_typesupport_introspection_c.h
+[5.018s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__type_support.c
+[5.018s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__type_support.c
+[5.018s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__type_support.c
+[5.018s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__type_support.c
+[5.018s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__rosidl_typesupport_introspection_c.h
+[5.018s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__rosidl_typesupport_introspection_c.h
+[5.018s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__rosidl_typesupport_introspection_c.h
+[5.018s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__rosidl_typesupport_introspection_c.h
+[5.019s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg
+[5.019s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.019s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail
+[5.019s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__type_support.c
+[5.019s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__rosidl_typesupport_introspection_c.h
+[5.019s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__rosidl_typesupport_introspection_c.h
+[5.019s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__type_support.c
+[5.019s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__rosidl_typesupport_introspection_c.h
+[5.019s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__rosidl_typesupport_introspection_c.h
+[5.020s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__type_support.c
+[5.020s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__type_support.c
+[5.020s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_introspection_c.so
+[5.020s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_c.so
+[5.020s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs
+[5.020s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv
+[5.020s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail
+[5.020s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__type_support.cpp
+[5.020s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/score_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[5.021s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__type_support.cpp
+[5.021s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[5.021s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__type_support.cpp
+[5.021s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__type_support.cpp
+[5.021s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/debug_local_plan__rosidl_typesupport_introspection_cpp.hpp
+[5.021s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__rosidl_typesupport_introspection_cpp.hpp
+[5.022s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/get_critic_score__type_support.cpp
+[5.023s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/srv/detail/generate_twists__rosidl_typesupport_introspection_cpp.hpp
+[5.023s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg
+[5.023s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail
+[5.023s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__type_support.cpp
+[5.023s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__rosidl_typesupport_introspection_cpp.hpp
+[5.023s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__rosidl_typesupport_introspection_cpp.hpp
+[5.023s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory_score__type_support.cpp
+[5.024s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__type_support.cpp
+[5.024s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/critic_score__rosidl_typesupport_introspection_cpp.hpp
+[5.024s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/trajectory2_d__rosidl_typesupport_introspection_cpp.hpp
+[5.024s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/include/dwb_msgs/dwb_msgs/msg/detail/local_plan_evaluation__type_support.cpp
+[5.024s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_introspection_cpp.so
+[5.024s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_cpp.so
+[5.024s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/environment/pythonpath.sh
+[5.024s] -- Installing: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/environment/pythonpath.dsv
+[5.024s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs-1.1.18-py3.10.egg-info
+[5.025s] -- Installing: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs-1.1.18-py3.10.egg-info/dependency_links.txt
+[5.025s] -- Installing: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs-1.1.18-py3.10.egg-info/SOURCES.txt
+[5.025s] -- Installing: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs-1.1.18-py3.10.egg-info/PKG-INFO
+[5.025s] -- Installing: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs-1.1.18-py3.10.egg-info/top_level.txt
+[5.025s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs
+[5.025s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/_dwb_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.025s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/dwb_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[5.026s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/_dwb_msgs_s.ep.rosidl_typesupport_c.c
+[5.026s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/_dwb_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[5.026s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv
+[5.026s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/_debug_local_plan.py
+[5.026s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/_get_critic_score.py
+[5.026s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/_generate_trajectory.py
+[5.026s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/_generate_twists.py
+[5.026s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/_score_trajectory.py
+[5.026s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/__init__.py
+[5.027s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/_score_trajectory_s.c
+[5.027s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/_generate_twists_s.c
+[5.027s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/_debug_local_plan_s.c
+[5.027s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/_get_critic_score_s.c
+[5.027s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv/_generate_trajectory_s.c
+[5.027s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/dwb_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[5.027s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg
+[5.027s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg/_critic_score.py
+[5.027s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg/_local_plan_evaluation_s.c
+[5.028s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg/_critic_score_s.c
+[5.028s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg/_local_plan_evaluation.py
+[5.028s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg/__init__.py
+[5.028s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg/_trajectory2_d_s.c
+[5.028s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg/_trajectory2_d.py
+[5.028s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg/_trajectory_score.py
+[5.028s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg/_trajectory_score_s.c
+[5.028s] -- Installing: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/__init__.py
+[5.029s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/libdwb_msgs__rosidl_generator_py.so
+[5.029s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/dwb_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[5.111s] Listing '/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs'...
+[5.111s] Compiling '/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/__init__.py'...
+[5.111s] Listing '/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/msg'...
+[5.112s] Listing '/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/srv'...
+[5.126s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/dwb_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[5.127s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/dwb_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[5.128s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages/dwb_msgs/dwb_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[5.129s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/lib/libdwb_msgs__rosidl_generator_py.so
+[5.129s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/msg/CriticScore.idl
+[5.130s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/msg/LocalPlanEvaluation.idl
+[5.130s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/msg/Trajectory2D.idl
+[5.131s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/msg/TrajectoryScore.idl
+[5.131s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/DebugLocalPlan.idl
+[5.132s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GenerateTrajectory.idl
+[5.132s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GenerateTwists.idl
+[5.133s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GetCriticScore.idl
+[5.133s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/ScoreTrajectory.idl
+[5.133s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/msg/CriticScore.msg
+[5.134s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/msg/LocalPlanEvaluation.msg
+[5.134s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/msg/Trajectory2D.msg
+[5.135s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/msg/TrajectoryScore.msg
+[5.135s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/DebugLocalPlan.srv
+[5.135s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/DebugLocalPlan_Request.msg
+[5.136s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/DebugLocalPlan_Response.msg
+[5.136s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GenerateTrajectory.srv
+[5.137s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GenerateTrajectory_Request.msg
+[5.137s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GenerateTrajectory_Response.msg
+[5.138s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GenerateTwists.srv
+[5.138s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GenerateTwists_Request.msg
+[5.138s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GenerateTwists_Response.msg
+[5.139s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GetCriticScore.srv
+[5.139s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GetCriticScore_Request.msg
+[5.140s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/GetCriticScore_Response.msg
+[5.140s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/ScoreTrajectory.srv
+[5.140s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/ScoreTrajectory_Request.msg
+[5.141s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/srv/ScoreTrajectory_Response.msg
+[5.141s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/ament_index/resource_index/package_run_dependencies/dwb_msgs
+[5.142s] -- Installing: /Pav-S_ws/install/dwb_msgs/share/ament_index/resource_index/parent_prefix_path/dwb_msgs
+[5.143s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/environment/ament_prefix_path.sh
+[5.143s] -- Installing: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/environment/ament_prefix_path.dsv
+[5.144s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/environment/path.sh
+[5.144s] -- Installing: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/environment/path.dsv
+[5.145s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/local_setup.bash
+[5.145s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/local_setup.sh
+[5.146s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/local_setup.zsh
+[5.146s] -- Installing: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/local_setup.dsv
+[5.147s] -- Installing: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/package.dsv
+[5.148s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/ament_index/resource_index/packages/dwb_msgs
+[5.149s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/export_dwb_msgs__rosidl_generator_cExport.cmake
+[5.149s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/export_dwb_msgs__rosidl_generator_cExport-release.cmake
+[5.150s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/export_dwb_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[5.150s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/export_dwb_msgs__rosidl_typesupport_fastrtps_cExport-release.cmake
+[5.151s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/export_dwb_msgs__rosidl_generator_cppExport.cmake
+[5.152s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/export_dwb_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.152s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/export_dwb_msgs__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[5.153s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_introspection_cExport.cmake
+[5.153s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_introspection_cExport-release.cmake
+[5.154s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_cExport.cmake
+[5.154s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_cExport-release.cmake
+[5.155s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[5.155s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_introspection_cppExport-release.cmake
+[5.156s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_cppExport.cmake
+[5.157s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_cppExport-release.cmake
+[5.157s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/export_dwb_msgs__rosidl_generator_pyExport.cmake
+[5.158s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/export_dwb_msgs__rosidl_generator_pyExport-release.cmake
+[5.159s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/rosidl_cmake-extras.cmake
+[5.159s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.160s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.160s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[5.161s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[5.161s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.161s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.162s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgsConfig.cmake
+[5.162s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgsConfig-version.cmake
+[5.163s] -- Up-to-date: /Pav-S_ws/install/dwb_msgs/share/dwb_msgs/package.xml
+[5.171s] Invoked command in '/Pav-S_ws/build/dwb_msgs' returned '0': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav_2d_msgs:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav_2d_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake --install /Pav-S_ws/build/dwb_msgs

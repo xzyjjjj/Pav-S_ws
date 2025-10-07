@@ -1,0 +1,10 @@
+/Pav-S_ws/build/serial/CMakeFiles/uninstall.dir
+/Pav-S_ws/build/serial/CMakeFiles/serial_uninstall.dir
+/Pav-S_ws/build/serial/CMakeFiles/serial.dir
+/Pav-S_ws/build/serial/CMakeFiles/test.dir
+/Pav-S_ws/build/serial/CMakeFiles/edit_cache.dir
+/Pav-S_ws/build/serial/CMakeFiles/rebuild_cache.dir
+/Pav-S_ws/build/serial/CMakeFiles/list_install_components.dir
+/Pav-S_ws/build/serial/CMakeFiles/install.dir
+/Pav-S_ws/build/serial/CMakeFiles/install/local.dir
+/Pav-S_ws/build/serial/CMakeFiles/install/strip.dir

@@ -1,0 +1,38 @@
+-- libusb-1.0 found using pkgconfig
+-- Found JPEG: /usr/lib/aarch64-linux-gnu/libjpeg.so (found version "80") 
+-- Found JPEG library using standard module
+-- Found JPEG: /usr/lib/aarch64-linux-gnu/libjpeg.so  
+-- Building libuvc with JPEG support.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Pav-S_ws/build/libuvc
+-- libusb-1.0 found using pkgconfig
+-- Found JPEG: /usr/lib/aarch64-linux-gnu/libjpeg.so (found version "80") 
+-- Found JPEG library using standard module
+-- Found JPEG: /usr/lib/aarch64-linux-gnu/libjpeg.so  
+-- Building libuvc with JPEG support.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Pav-S_ws/build/libuvc
+[35m[1mConsolidate compiler generated dependencies of target uvc[0m
+[35m[1mConsolidate compiler generated dependencies of target uvc_static[0m
+[ 45%] Built target uvc
+[ 90%] Built target uvc_static
+[35m[1mConsolidate compiler generated dependencies of target example[0m
+[100%] Built target example
+-- Install configuration: "Release"
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.so.0.0.7
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.so.0
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.so
+-- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc.h
+-- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc_config.h
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.a
+-- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc.h
+-- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc_config.h
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcTargets.cmake
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcTargets-release.cmake
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/FindLibUSB.cmake
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/FindJpegPkg.cmake
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcConfigVersion.cmake
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/pkgconfig/libuvc.pc
+-- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcConfig.cmake

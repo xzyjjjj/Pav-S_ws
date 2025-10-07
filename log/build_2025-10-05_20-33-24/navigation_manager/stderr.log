@@ -1,0 +1,26 @@
+/usr/bin/ld: /usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1c): undefined reference to `main'
+/usr/bin/ld: (.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/stop_line_detection.dir/build.make:553: stop_line_detection] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/stop_line_detection.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+/usr/bin/ld: /usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1c): undefined reference to `main'
+/usr/bin/ld: (.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/dynamic_speed_controller.dir/build.make:553: dynamic_speed_controller] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/dynamic_speed_controller.dir/all] Error 2
+/usr/bin/ld: /usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1c): undefined reference to `main'
+/usr/bin/ld: (.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/cruise_perception_navigator.dir/build.make:553: cruise_perception_navigator] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/cruise_perception_navigator.dir/all] Error 2
+/usr/bin/ld: /usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1c): undefined reference to `main'
+/usr/bin/ld: (.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/navigation_behavior_nodes.dir/build.make:553: navigation_behavior_nodes] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/navigation_behavior_nodes.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

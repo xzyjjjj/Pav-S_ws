@@ -1,0 +1,111 @@
+[0.046s] Invoking command in '/Pav-S_ws/build/nav2_voxel_grid': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake /Pav-S_ws/src/navigation2-humble/nav2_voxel_grid -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/nav2_voxel_grid
+[0.194s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.535s] -- Found nav2_common: 1.1.18 (/Pav-S_ws/install/nav2_common/share/nav2_common/cmake)
+[0.535s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.604s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.617s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.630s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.652s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.679s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.749s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.753s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.102s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.204s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.430s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.455s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.455s] -- Configured cppcheck include dirs: /Pav-S_ws/src/navigation2-humble/nav2_voxel_grid/include
+[1.455s] -- Configured cppcheck exclude dirs and/or files: 
+[1.457s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.457s] -- Configured cpplint exclude dirs and/or files: 
+[1.458s] -- Added test 'lint_cmake' to check CMake code style
+[1.460s] -- Added test 'uncrustify' to check C / C++ code style
+[1.461s] -- Configured uncrustify additional arguments: 
+[1.461s] -- Added test 'xmllint' to check XML markup files
+[1.479s] -- Configuring done
+[1.574s] -- Generating done
+[1.588s] -- Build files have been written to: /Pav-S_ws/build/nav2_voxel_grid
+[1.636s] Invoked command in '/Pav-S_ws/build/nav2_voxel_grid' returned '0': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake /Pav-S_ws/src/navigation2-humble/nav2_voxel_grid -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/nav2_voxel_grid
+[1.646s] Invoking command in '/Pav-S_ws/build/nav2_voxel_grid': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/nav2_voxel_grid -- -j6 -l6
+[4.765s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.765s] -- Found nav2_common: 1.1.18 (/Pav-S_ws/install/nav2_common/share/nav2_common/cmake)
+[4.765s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[4.765s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[4.765s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[4.765s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[4.766s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.766s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.766s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[4.766s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[4.766s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.766s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.766s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[4.766s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.767s] -- Configured cppcheck include dirs: /Pav-S_ws/src/navigation2-humble/nav2_voxel_grid/include
+[4.767s] -- Configured cppcheck exclude dirs and/or files: 
+[4.767s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[4.767s] -- Configured cpplint exclude dirs and/or files: 
+[4.767s] -- Added test 'lint_cmake' to check CMake code style
+[4.767s] -- Added test 'uncrustify' to check C / C++ code style
+[4.767s] -- Configured uncrustify additional arguments: 
+[4.767s] -- Added test 'xmllint' to check XML markup files
+[4.767s] -- Configuring done
+[4.768s] -- Generating done
+[4.768s] -- Build files have been written to: /Pav-S_ws/build/nav2_voxel_grid
+[4.769s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[4.769s] [35m[1mConsolidate compiler generated dependencies of target voxel_grid[0m
+[4.769s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[4.769s] [ 20%] Built target gtest_main
+[4.769s] [ 40%] Built target voxel_grid
+[4.769s] [ 60%] Built target gtest
+[4.769s] [35m[1mConsolidate compiler generated dependencies of target voxel_grid_bresenham_3d[0m
+[4.769s] [35m[1mConsolidate compiler generated dependencies of target voxel_grid_tests[0m
+[4.770s] [ 80%] Built target voxel_grid_bresenham_3d
+[4.770s] [100%] Built target voxel_grid_tests
+[4.770s] gmake[2]: Warning: File 'CMakeFiles/voxel_grid.dir/flags.make' has modification time 1759584936 s in the future
+[4.770s] gmake[2]: Warning: File 'gtest/CMakeFiles/gtest_main.dir/flags.make' has modification time 1759584936 s in the future
+[4.770s] gmake[2]: Warning: File 'gtest/CMakeFiles/gtest.dir/flags.make' has modification time 1759584936 s in the future
+[4.770s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.770s] gmake[2]: Warning: File 'gtest/CMakeFiles/gtest_main.dir/flags.make' has modification time 1759584936 s in the future
+[4.771s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.771s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.771s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.771s] gmake[2]: Warning: File 'CMakeFiles/voxel_grid.dir/flags.make' has modification time 1759584936 s in the future
+[4.771s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.771s] gmake[2]: Warning: File 'gtest/CMakeFiles/gtest.dir/flags.make' has modification time 1759584936 s in the future
+[4.771s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.771s] gmake[2]: Warning: File 'test/CMakeFiles/voxel_grid_tests.dir/flags.make' has modification time 1759584936 s in the future
+[4.772s] gmake[2]: Warning: File 'test/CMakeFiles/voxel_grid_bresenham_3d.dir/flags.make' has modification time 1759584936 s in the future
+[4.772s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.772s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.772s] gmake[2]: Warning: File 'test/CMakeFiles/voxel_grid_bresenham_3d.dir/flags.make' has modification time 1759584936 s in the future
+[4.772s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.772s] gmake[2]: Warning: File 'test/CMakeFiles/voxel_grid_tests.dir/flags.make' has modification time 1759584936 s in the future
+[4.772s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.786s] Invoked command in '/Pav-S_ws/build/nav2_voxel_grid' returned '0': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/nav2_voxel_grid -- -j6 -l6
+[4.795s] Invoking command in '/Pav-S_ws/build/nav2_voxel_grid': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/nav2_voxel_grid
+[5.092s] -- Install configuration: "Release"
+[5.092s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/lib/libvoxel_grid.so
+[5.092s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/include
+[5.092s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/include/nav2_voxel_grid
+[5.092s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/include/nav2_voxel_grid/voxel_grid.hpp
+[5.093s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/library_path.sh
+[5.093s] -- Installing: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/library_path.dsv
+[5.093s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/ament_index/resource_index/package_run_dependencies/nav2_voxel_grid
+[5.093s] -- Installing: /Pav-S_ws/install/nav2_voxel_grid/share/ament_index/resource_index/parent_prefix_path/nav2_voxel_grid
+[5.093s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/ament_prefix_path.sh
+[5.093s] -- Installing: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/ament_prefix_path.dsv
+[5.093s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/path.sh
+[5.093s] -- Installing: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/path.dsv
+[5.094s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/local_setup.bash
+[5.094s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/local_setup.sh
+[5.094s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/local_setup.zsh
+[5.094s] -- Installing: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/local_setup.dsv
+[5.094s] -- Installing: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/package.dsv
+[5.094s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/ament_index/resource_index/packages/nav2_voxel_grid
+[5.094s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.094s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.095s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake/ament_cmake_export_libraries-extras.cmake
+[5.095s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake/nav2_voxel_gridConfig.cmake
+[5.095s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake/nav2_voxel_gridConfig-version.cmake
+[5.095s] -- Up-to-date: /Pav-S_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/package.xml
+[5.126s] Invoked command in '/Pav-S_ws/build/nav2_voxel_grid' returned '0': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/nav2_voxel_grid

@@ -1,0 +1,34 @@
+[0.090s] Invoking command in '/Pav-S_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/serial -- -j6 -l6
+[0.332s] [35m[1mConsolidate compiler generated dependencies of target serial[0m
+[0.616s] [100%] Built target serial
+[2.157s] Invoked command in '/Pav-S_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/serial -- -j6 -l6
+[2.240s] Invoking command in '/Pav-S_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/serial
+[2.261s] -- Install configuration: "Release"
+[2.261s] -- Up-to-date: /Pav-S_ws/install/serial/lib/libserial.a
+[2.261s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/environment/library_path.sh
+[2.261s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/environment/library_path.dsv
+[2.261s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial
+[2.262s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial/serial.h
+[2.262s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial/v8stdint.h
+[2.262s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial/impl
+[2.267s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial/impl/unix.h
+[2.267s] -- Up-to-date: /Pav-S_ws/install/serial/include/serial/impl/win.h
+[2.268s] -- Up-to-date: /Pav-S_ws/install/serial/share/ament_index/resource_index/package_run_dependencies/serial
+[2.268s] -- Up-to-date: /Pav-S_ws/install/serial/share/ament_index/resource_index/parent_prefix_path/serial
+[2.268s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/environment/ament_prefix_path.sh
+[2.268s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/environment/ament_prefix_path.dsv
+[2.268s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/environment/path.sh
+[2.269s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/environment/path.dsv
+[2.269s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/local_setup.bash
+[2.269s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/local_setup.sh
+[2.269s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/local_setup.zsh
+[2.269s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/local_setup.dsv
+[2.269s] -- Installing: /Pav-S_ws/install/serial/share/serial/package.dsv
+[2.270s] -- Up-to-date: /Pav-S_ws/install/serial/share/ament_index/resource_index/packages/serial
+[2.270s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.270s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/cmake/ament_cmake_export_libraries-extras.cmake
+[2.270s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.270s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/cmake/serialConfig.cmake
+[2.270s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/cmake/serialConfig-version.cmake
+[2.271s] -- Up-to-date: /Pav-S_ws/install/serial/share/serial/package.xml
+[2.317s] Invoked command in '/Pav-S_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/serial

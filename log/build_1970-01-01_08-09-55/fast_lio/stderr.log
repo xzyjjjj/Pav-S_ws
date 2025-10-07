@@ -1,0 +1,96 @@
+[0mCurrent CPU archtecture: aarch64[0m
+[33mCMake Warning (dev) at CMakeLists.txt:81 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  CMake variable PCL_ROOT is set to:
+
+    /usr
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[0mEigen:/usr/include/eigen3[0m
+[0mCurrent CPU archtecture: aarch64[0m
+[33mCMake Warning (dev) at CMakeLists.txt:81 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  CMake variable PCL_ROOT is set to:
+
+    /usr
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[0mEigen:/usr/include/eigen3[0m
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__cpp.dir/compiler_depend.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_generator_c.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/ament_cmake_python_copy_fast_lio.dir/compiler_depend.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__cpp.dir/compiler_depend.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_generator_c.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_cpp.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_cpp.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/ament_cmake_python_copy_fast_lio.dir/compiler_depend.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_introspection_c.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_c.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_introspection_cpp.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_cpp.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_introspection_c.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_c.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_introspection_cpp.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_cpp.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_c.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/ament_cmake_python_build_fast_lio_egg.dir/compiler_depend.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/fastlio_mapping.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_c.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/ament_cmake_python_build_fast_lio_egg.dir/compiler_depend.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio.dir/compiler_depend.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/fastlio_mapping.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio.dir/compiler_depend.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'fast_lio__py/CMakeFiles/fast_lio__py.dir/compiler_depend.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'fast_lio__py/CMakeFiles/fast_lio__py.dir/compiler_depend.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_generator_py.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_generator_py.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_introspection_c__pyext.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_c__pyext.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_c__pyext.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_introspection_c__pyext.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_c__pyext.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: Warning: File 'CMakeFiles/fast_lio__rosidl_typesupport_c__pyext.dir/flags.make' has modification time 1759584952 s in the future
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.

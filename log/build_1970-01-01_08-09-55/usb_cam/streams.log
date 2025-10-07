@@ -1,0 +1,151 @@
+[0.068s] Invoking command in '/Pav-S_ws/build/usb_cam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake /Pav-S_ws/src/usb_cam-ros2 -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/usb_cam
+[0.126s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.853s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.857s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.861s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.861s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.877s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.056s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.059s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.358s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.787s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.802s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.817s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/usb_cam` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[1.827s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.832s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.833s] -- Configured cppcheck include dirs: /Pav-S_ws/src/usb_cam-ros2/include
+[1.834s] -- Configured cppcheck exclude dirs and/or files: 
+[1.838s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.838s] -- Configured cpplint exclude dirs and/or files: 
+[1.840s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.842s] -- Added test 'lint_cmake' to check CMake code style
+[1.844s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.848s] -- Added test 'uncrustify' to check C / C++ code style
+[1.848s] -- Configured uncrustify additional arguments: 
+[1.851s] -- Added test 'xmllint' to check XML markup files
+[1.856s] -- Configuring done
+[1.979s] -- Generating done
+[2.008s] -- Build files have been written to: /Pav-S_ws/build/usb_cam
+[2.042s] Invoked command in '/Pav-S_ws/build/usb_cam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake /Pav-S_ws/src/usb_cam-ros2 -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/usb_cam
+[2.043s] Invoking command in '/Pav-S_ws/build/usb_cam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/usb_cam -- -j6 -l6
+[2.912s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[2.913s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.913s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.913s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.913s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.913s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.991s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.994s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.236s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.519s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.532s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[3.546s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/usb_cam` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[3.555s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.555s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.556s] -- Configured cppcheck include dirs: /Pav-S_ws/src/usb_cam-ros2/include
+[3.556s] -- Configured cppcheck exclude dirs and/or files: 
+[3.560s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.560s] -- Configured cpplint exclude dirs and/or files: 
+[3.561s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.562s] -- Added test 'lint_cmake' to check CMake code style
+[3.563s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.566s] -- Added test 'uncrustify' to check C / C++ code style
+[3.568s] -- Configured uncrustify additional arguments: 
+[3.569s] -- Added test 'xmllint' to check XML markup files
+[3.571s] -- Configuring done
+[3.636s] -- Generating done
+[3.654s] -- Build files have been written to: /Pav-S_ws/build/usb_cam
+[3.730s] gmake[2]: Warning: File 'CMakeFiles/usb_cam.dir/flags.make' has modification time 1759585031 s in the future
+[3.735s] gmake[2]: Warning: File 'CMakeFiles/usb_cam_node_exe.dir/flags.make' has modification time 1759585031 s in the future
+[3.746s] gmake[2]: Warning: File 'gtest/CMakeFiles/gtest_main.dir/flags.make' has modification time 1759585031 s in the future
+[3.754s] gmake[2]: Warning: File 'gtest/CMakeFiles/gtest.dir/flags.make' has modification time 1759585031 s in the future
+[3.758s] [35m[1mConsolidate compiler generated dependencies of target usb_cam[0m
+[3.772s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.797s] [35m[1mConsolidate compiler generated dependencies of target usb_cam_node_exe[0m
+[3.798s] gmake[2]: Warning: File 'CMakeFiles/usb_cam.dir/flags.make' has modification time 1759585031 s in the future
+[3.800s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.801s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[3.807s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.819s] gmake[2]: Warning: File 'gtest/CMakeFiles/gtest_main.dir/flags.make' has modification time 1759585031 s in the future
+[3.820s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.821s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[3.823s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.829s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.848s] gmake[2]: Warning: File 'CMakeFiles/usb_cam_node_exe.dir/flags.make' has modification time 1759585031 s in the future
+[3.862s] gmake[2]: Warning: File 'gtest/CMakeFiles/gtest.dir/flags.make' has modification time 1759585031 s in the future
+[3.863s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.865s] [ 14%] Built target usb_cam
+[3.865s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.880s] [ 28%] Built target gtest_main
+[3.899s] gmake[2]: Warning: File 'CMakeFiles/usb_cam_node.dir/flags.make' has modification time 1759585031 s in the future
+[3.930s] [ 42%] Built target gtest
+[3.944s] [ 57%] Built target usb_cam_node_exe
+[3.958s] gmake[2]: Warning: File 'CMakeFiles/test_usb_cam_utils.dir/flags.make' has modification time 1759585030 s in the future
+[3.964s] [35m[1mConsolidate compiler generated dependencies of target usb_cam_node[0m
+[3.975s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[3.977s] gmake[2]: Warning: File 'CMakeFiles/test_pixel_formats.dir/flags.make' has modification time 1759585030 s in the future
+[3.994s] gmake[2]: Warning: File 'CMakeFiles/usb_cam_node.dir/flags.make' has modification time 1759585030 s in the future
+[4.011s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.029s] [35m[1mConsolidate compiler generated dependencies of target test_pixel_formats[0m
+[4.035s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.035s] [35m[1mConsolidate compiler generated dependencies of target test_usb_cam_utils[0m
+[4.040s] gmake[2]: Warning: File 'CMakeFiles/test_pixel_formats.dir/flags.make' has modification time 1759585030 s in the future
+[4.041s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.042s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.050s] [ 71%] Built target usb_cam_node
+[4.054s] gmake[2]: Warning: File 'CMakeFiles/test_usb_cam_utils.dir/flags.make' has modification time 1759585030 s in the future
+[4.056s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[4.083s] [ 85%] Built target test_pixel_formats
+[4.102s] [100%] Built target test_usb_cam_utils
+[4.538s] Invoked command in '/Pav-S_ws/build/usb_cam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/usb_cam -- -j6 -l6
+[4.540s] Invoking command in '/Pav-S_ws/build/usb_cam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/usb_cam
+[4.600s] -- Install configuration: "Release"
+[4.601s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/environment/library_path.sh
+[4.611s] -- Installing: /Pav-S_ws/install/usb_cam/share/usb_cam/environment/library_path.dsv
+[4.616s] -- Up-to-date: /Pav-S_ws/install/usb_cam/lib/usb_cam/usb_cam_node_exe
+[4.616s] -- Up-to-date: /Pav-S_ws/install/usb_cam/lib/usb_cam/show_image.py
+[4.628s] -- Up-to-date: /Pav-S_ws/install/usb_cam/lib/libusb_cam.so
+[4.629s] -- Up-to-date: /Pav-S_ws/install/usb_cam/lib/libusb_cam_node.so
+[4.629s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include
+[4.630s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam
+[4.630s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/utils.hpp
+[4.630s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/formats
+[4.632s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/formats/utils.hpp
+[4.632s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/formats/yuyv.hpp
+[4.632s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/formats/rgb.hpp
+[4.632s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/formats/mono.hpp
+[4.632s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/formats/uyvy.hpp
+[4.632s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/formats/m420.hpp
+[4.633s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/formats/pixel_format_base.hpp
+[4.633s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/formats/mjpeg.hpp
+[4.633s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/conversions.hpp
+[4.633s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/constants.hpp
+[4.633s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/usb_cam.hpp
+[4.633s] -- Up-to-date: /Pav-S_ws/install/usb_cam/include/usb_cam/usb_cam_node.hpp
+[4.633s] -- Up-to-date: /Pav-S_ws/install/usb_cam/lib/libusb_cam_node.so
+[4.634s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/launch
+[4.634s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/launch/usb_cam_launch.py
+[4.634s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/launch/demo.launch.py
+[4.635s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/config
+[4.635s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/config/params.yaml
+[4.635s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/config/camera_info.yaml
+[4.635s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/ament_index/resource_index/package_run_dependencies/usb_cam
+[4.636s] -- Installing: /Pav-S_ws/install/usb_cam/share/ament_index/resource_index/parent_prefix_path/usb_cam
+[4.636s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/environment/ament_prefix_path.sh
+[4.636s] -- Installing: /Pav-S_ws/install/usb_cam/share/usb_cam/environment/ament_prefix_path.dsv
+[4.636s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/environment/path.sh
+[4.639s] -- Installing: /Pav-S_ws/install/usb_cam/share/usb_cam/environment/path.dsv
+[4.639s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/local_setup.bash
+[4.639s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/local_setup.sh
+[4.639s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/local_setup.zsh
+[4.651s] -- Installing: /Pav-S_ws/install/usb_cam/share/usb_cam/local_setup.dsv
+[4.651s] -- Installing: /Pav-S_ws/install/usb_cam/share/usb_cam/package.dsv
+[4.651s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/ament_index/resource_index/packages/usb_cam
+[4.651s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/ament_index/resource_index/rclcpp_components/usb_cam
+[4.651s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_libraries-extras.cmake
+[4.651s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.651s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.652s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/cmake/usb_camConfig.cmake
+[4.652s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/cmake/usb_camConfig-version.cmake
+[4.652s] -- Up-to-date: /Pav-S_ws/install/usb_cam/share/usb_cam/package.xml
+[4.652s] Invoked command in '/Pav-S_ws/build/usb_cam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/usb_cam

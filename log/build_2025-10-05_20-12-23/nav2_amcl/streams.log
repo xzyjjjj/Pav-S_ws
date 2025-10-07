@@ -1,0 +1,31 @@
+[0.129s] Invoking command in '/Pav-S_ws/build/nav2_amcl': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/nav2_behavior_tree:/Pav-S_ws/install/nav2_dwb_controller:/Pav-S_ws/install/nav2_controller:/Pav-S_ws/install/nav2_planner:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_behavior_tree/lib:/Pav-S_ws/install/nav2_controller/lib:/Pav-S_ws/install/nav2_planner/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/costmap_queue/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake --build /Pav-S_ws/build/nav2_amcl -- -j6 -l6
+[0.470s] [  4%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_pdf.c.o[0m
+[0.485s] [  8%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_kdtree.c.o[0m
+[0.490s] [ 12%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf.c.o[0m
+[0.494s] [ 16%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_vector.c.o[0m
+[0.521s] [ 20%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/eig3.c.o[0m
+[0.551s] [ 25%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map.c.o[0m
+[1.047s] [ 29%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map_draw.c.o[0m
+[1.055s] [ 33%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_draw.c.o[0m
+[1.077s] [ 37%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map_range.c.o[0m
+[1.195s] [ 41%] [32mBuilding CXX object src/map/CMakeFiles/map_lib.dir/map_cspace.cpp.o[0m
+[1.484s] [ 45%] [32m[1mLinking C shared library libpf_lib.so[0m
+[1.732s] [ 45%] Built target pf_lib
+[1.907s] [ 50%] [32mBuilding CXX object src/motion_model/CMakeFiles/motions_lib.dir/omni_motion_model.cpp.o[0m
+[1.919s] [ 54%] [32mBuilding CXX object src/motion_model/CMakeFiles/motions_lib.dir/differential_motion_model.cpp.o[0m
+[2.601s] [ 58%] [32m[1mLinking CXX shared library libmap_lib.so[0m
+[3.081s] [ 58%] Built target map_lib
+[3.255s] [ 62%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/beam_model.cpp.o[0m
+[3.260s] [ 70%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/laser.cpp.o[0m
+[3.260s] [ 70%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/likelihood_field_model.cpp.o[0m
+[3.260s] [ 75%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/likelihood_field_model_prob.cpp.o[0m
+[5.535s] [ 79%] [32m[1mLinking CXX shared library libsensors_lib.so[0m
+[5.924s] [ 79%] Built target sensors_lib
+[6.107s] [ 83%] [32mBuilding CXX object CMakeFiles/amcl_core.dir/src/amcl_node.cpp.o[0m
+[6.676s] [ 87%] [32m[1mLinking CXX shared library libmotions_lib.so[0m
+[7.275s] [ 87%] Built target motions_lib
+[104.248s] [ 91%] [32m[1mLinking CXX shared library libamcl_core.so[0m
+[105.068s] [ 91%] Built target amcl_core
+[105.131s] [ 95%] [32mBuilding CXX object CMakeFiles/amcl.dir/src/main.cpp.o[0m
+[115.696s] [100%] [32m[1mLinking CXX executable amcl[0m
+[116.307s] [100%] Built target amcl

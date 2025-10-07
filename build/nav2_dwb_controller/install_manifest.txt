@@ -1,0 +1,15 @@
+/Pav-S_ws/install/nav2_dwb_controller/share/ament_index/resource_index/package_run_dependencies/nav2_dwb_controller
+/Pav-S_ws/install/nav2_dwb_controller/share/ament_index/resource_index/parent_prefix_path/nav2_dwb_controller
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/ament_prefix_path.sh
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/ament_prefix_path.dsv
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/path.sh
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/path.dsv
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.bash
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.sh
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.zsh
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.dsv
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/package.dsv
+/Pav-S_ws/install/nav2_dwb_controller/share/ament_index/resource_index/packages/nav2_dwb_controller
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/cmake/nav2_dwb_controllerConfig.cmake
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/cmake/nav2_dwb_controllerConfig-version.cmake
+/Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/package.xml

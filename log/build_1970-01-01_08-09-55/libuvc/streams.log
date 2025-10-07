@@ -1,0 +1,76 @@
+[0.068s] Invoking command in '/Pav-S_ws/build/libuvc': /usr/bin/cmake /Pav-S_ws/src/ros2_astra_camera-master/3dparty/libuvc -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/libuvc
+[0.117s] -- libusb-1.0 found using pkgconfig
+[0.162s] -- Found JPEG: /usr/lib/aarch64-linux-gnu/libjpeg.so (found version "80") 
+[0.163s] -- Found JPEG library using standard module
+[0.165s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[0.166s]   The package name passed to `find_package_handle_standard_args` (JPEG) does
+[0.167s]   not match the name of the calling package (JpegPkg).  This can lead to
+[0.167s]   problems in calling code that expects `find_package` result variables
+[0.167s]   (e.g., `_FOUND`) to follow a certain pattern.
+[0.167s] Call Stack (most recent call first):
+[0.168s]   cmake/FindJpegPkg.cmake:58 (find_package_handle_standard_args)
+[0.168s]   CMakeLists.txt:45 (find_package)
+[0.168s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.168s] [0m
+[0.169s] -- Found JPEG: /usr/lib/aarch64-linux-gnu/libjpeg.so  
+[0.170s] -- Building libuvc with JPEG support.
+[0.189s] -- Configuring done
+[0.213s] -- Generating done
+[0.220s] -- Build files have been written to: /Pav-S_ws/build/libuvc
+[0.236s] Invoked command in '/Pav-S_ws/build/libuvc' returned '0': /usr/bin/cmake /Pav-S_ws/src/ros2_astra_camera-master/3dparty/libuvc -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/libuvc
+[0.237s] Invoking command in '/Pav-S_ws/build/libuvc': /usr/bin/cmake --build /Pav-S_ws/build/libuvc -- -j6 -l6
+[0.758s] -- libusb-1.0 found using pkgconfig
+[0.759s] -- Found JPEG: /usr/lib/aarch64-linux-gnu/libjpeg.so (found version "80") 
+[0.759s] -- Found JPEG library using standard module
+[0.759s] -- Found JPEG: /usr/lib/aarch64-linux-gnu/libjpeg.so  
+[0.760s] -- Building libuvc with JPEG support.
+[0.760s] -- Configuring done
+[0.760s] -- Generating done
+[0.760s] -- Build files have been written to: /Pav-S_ws/build/libuvc
+[0.760s] [35m[1mConsolidate compiler generated dependencies of target uvc[0m
+[0.760s] [35m[1mConsolidate compiler generated dependencies of target uvc_static[0m
+[0.760s] [ 45%] Built target uvc
+[0.761s] [ 90%] Built target uvc_static
+[0.761s] [35m[1mConsolidate compiler generated dependencies of target example[0m
+[0.761s] [100%] Built target example
+[0.762s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[0.762s]   The package name passed to `find_package_handle_standard_args` (JPEG) does
+[0.762s]   not match the name of the calling package (JpegPkg).  This can lead to
+[0.762s]   problems in calling code that expects `find_package` result variables
+[0.762s]   (e.g., `_FOUND`) to follow a certain pattern.
+[0.763s] Call Stack (most recent call first):
+[0.763s]   cmake/FindJpegPkg.cmake:58 (find_package_handle_standard_args)
+[0.763s]   CMakeLists.txt:45 (find_package)
+[0.763s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.763s] [0m
+[0.763s] gmake[2]: Warning: File 'CMakeFiles/uvc.dir/flags.make' has modification time 1759584974 s in the future
+[0.763s] gmake[2]: Warning: File 'CMakeFiles/uvc_static.dir/flags.make' has modification time 1759584974 s in the future
+[0.766s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[0.767s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[0.767s] gmake[2]: Warning: File 'CMakeFiles/uvc.dir/flags.make' has modification time 1759584973 s in the future
+[0.767s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[0.767s] gmake[2]: Warning: File 'CMakeFiles/uvc_static.dir/flags.make' has modification time 1759584973 s in the future
+[0.767s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[0.767s] gmake[2]: Warning: File 'CMakeFiles/example.dir/flags.make' has modification time 1759584973 s in the future
+[0.767s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[0.767s] gmake[2]: Warning: File 'CMakeFiles/example.dir/flags.make' has modification time 1759584973 s in the future
+[0.768s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[0.773s] Invoked command in '/Pav-S_ws/build/libuvc' returned '0': /usr/bin/cmake --build /Pav-S_ws/build/libuvc -- -j6 -l6
+[0.777s] Invoking command in '/Pav-S_ws/build/libuvc': /usr/bin/cmake --install /Pav-S_ws/build/libuvc
+[0.802s] -- Install configuration: "Release"
+[0.804s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.so.0.0.7
+[0.804s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.so.0
+[0.804s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.so
+[0.804s] -- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc.h
+[0.804s] -- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc_config.h
+[0.805s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.a
+[0.805s] -- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc.h
+[0.805s] -- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc_config.h
+[0.805s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcTargets.cmake
+[0.805s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcTargets-release.cmake
+[0.805s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/FindLibUSB.cmake
+[0.806s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/FindJpegPkg.cmake
+[0.806s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcConfigVersion.cmake
+[0.806s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/pkgconfig/libuvc.pc
+[0.806s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcConfig.cmake
+[0.811s] Invoked command in '/Pav-S_ws/build/libuvc' returned '0': /usr/bin/cmake --install /Pav-S_ws/build/libuvc

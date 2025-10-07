@@ -1,0 +1,14 @@
+{
+  "package_name": "astra_camera_msgs",
+  "non_idl_tuples": [
+    "/Pav-S_ws/src/ros2_astra_camera-master/astra_camera_msgs:msg/DeviceInfo.msg",
+    "/Pav-S_ws/src/ros2_astra_camera-master/astra_camera_msgs:msg/Extrinsics.msg",
+    "/Pav-S_ws/src/ros2_astra_camera-master/astra_camera_msgs:msg/Metadata.msg",
+    "/Pav-S_ws/src/ros2_astra_camera-master/astra_camera_msgs:srv/GetDeviceInfo.srv",
+    "/Pav-S_ws/src/ros2_astra_camera-master/astra_camera_msgs:srv/GetCameraInfo.srv",
+    "/Pav-S_ws/src/ros2_astra_camera-master/astra_camera_msgs:srv/GetCameraParams.srv",
+    "/Pav-S_ws/src/ros2_astra_camera-master/astra_camera_msgs:srv/GetInt32.srv",
+    "/Pav-S_ws/src/ros2_astra_camera-master/astra_camera_msgs:srv/GetString.srv",
+    "/Pav-S_ws/src/ros2_astra_camera-master/astra_camera_msgs:srv/SetInt32.srv"
+  ]
+}

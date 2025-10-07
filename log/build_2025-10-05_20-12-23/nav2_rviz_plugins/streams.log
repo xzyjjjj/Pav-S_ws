@@ -1,0 +1,95 @@
+[0.155s] Invoking command in '/Pav-S_ws/build/nav2_rviz_plugins': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/nav2_behavior_tree:/Pav-S_ws/install/nav2_dwb_controller:/Pav-S_ws/install/nav2_controller:/Pav-S_ws/install/nav2_planner:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_behavior_tree/lib:/Pav-S_ws/install/nav2_controller/lib:/Pav-S_ws/install/nav2_planner/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/costmap_queue/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_map_server/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake /Pav-S_ws/src/navigation2-humble/nav2_rviz_plugins -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/nav2_rviz_plugins
+[0.494s] -- The C compiler identification is GNU 11.4.0
+[0.767s] -- The CXX compiler identification is GNU 11.4.0
+[0.787s] -- Detecting C compiler ABI info
+[1.241s] -- Detecting C compiler ABI info - done
+[1.249s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.266s] -- Detecting C compile features
+[1.267s] -- Detecting C compile features - done
+[1.281s] -- Detecting CXX compiler ABI info
+[1.803s] -- Detecting CXX compiler ABI info - done
+[1.833s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.859s] -- Detecting CXX compile features
+[1.860s] -- Detecting CXX compile features - done
+[1.872s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.255s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[4.194s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[4.373s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[4.397s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[4.440s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[4.505s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.577s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.693s] -- Found nav2_util: 1.1.18 (/Pav-S_ws/install/nav2_util/share/nav2_util/cmake)
+[5.455s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[5.470s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[5.986s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[6.063s] -- Found FastRTPS: /opt/ros/humble/include  
+[6.197s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[6.276s] -- Looking for pthread.h
+[6.761s] -- Looking for pthread.h - found
+[6.762s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[7.200s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[7.202s] -- Found Threads: TRUE  
+[7.573s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[7.576s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[7.577s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[7.726s] -- Found nav2_lifecycle_manager: 1.1.18 (/Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake)
+[7.982s] -- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)
+[8.198s] -- Found rviz_common: 11.2.20 (/opt/ros/humble/share/rviz_common/cmake)
+[8.251s] -- Setting assimp_DIR to: '/opt/ros/humble/share/rviz_assimp_vendor/cmake/../../../opt/rviz_assimp_vendor/lib/cmake/assimp-4.1'
+[8.319s] -- Setting OGRE_DIR to: '/opt/ros/humble/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[8.323s] -- Found OGRE
+[8.323s] --   static     : OFF
+[8.324s] --   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[8.324s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[8.324s] --   media      : /opt/ros/humble/opt/rviz_ogre_vendor/share/OGRE/Media
+[8.324s] -- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[8.324s] -- OGRE_LIBRARY_DIRS: /opt/ros/humble/opt/rviz_ogre_vendor/lib
+[8.324s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[8.324s] -- OGRE_PLUGIN_DIR: /opt/ros/humble/opt/rviz_ogre_vendor/lib/OGRE
+[8.325s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[8.325s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[8.325s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[8.325s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[8.450s] -- Found ZLIB: /usr/lib/aarch64-linux-gnu/libz.so (found version "1.2.11") 
+[8.469s] -- Found OpenGL: /usr/lib/aarch64-linux-gnu/libOpenGL.so   
+[9.080s] -- Found X11: /usr/include   
+[9.094s] -- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so
+[9.532s] -- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so - found
+[9.532s] -- Looking for gethostbyname
+[9.902s] -- Looking for gethostbyname - found
+[9.902s] -- Looking for connect
+[10.285s] -- Looking for connect - found
+[10.285s] -- Looking for remove
+[10.727s] -- Looking for remove - found
+[10.729s] -- Looking for shmat
+[11.220s] -- Looking for shmat - found
+[11.220s] -- Looking for IceConnectionNumber in ICE
+[11.654s] -- Looking for IceConnectionNumber in ICE - found
+[12.280s] -- library: /usr/lib/aarch64-linux-gnu/libcurl.so
+[12.509s] -- Found rviz_default_plugins: 11.2.20 (/opt/ros/humble/share/rviz_default_plugins/cmake)
+[13.069s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[13.578s] -- Added test 'copyright' to check source files copyright and LICENSE
+[13.593s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[13.595s] -- Configured cppcheck include dirs: /Pav-S_ws/src/navigation2-humble/nav2_rviz_plugins/include
+[13.596s] -- Configured cppcheck exclude dirs and/or files: 
+[13.601s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[13.605s] -- Configured cpplint exclude dirs and/or files: 
+[13.610s] -- Added test 'lint_cmake' to check CMake code style
+[13.626s] -- Added test 'uncrustify' to check C / C++ code style
+[13.628s] -- Configured uncrustify additional arguments: 
+[13.632s] -- Added test 'xmllint' to check XML markup files
+[13.658s] -- Configuring done
+[13.980s] -- Generating done
+[14.041s] -- Build files have been written to: /Pav-S_ws/build/nav2_rviz_plugins
+[14.113s] Invoked command in '/Pav-S_ws/build/nav2_rviz_plugins' returned '0': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/nav2_behavior_tree:/Pav-S_ws/install/nav2_dwb_controller:/Pav-S_ws/install/nav2_controller:/Pav-S_ws/install/nav2_planner:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_behavior_tree/lib:/Pav-S_ws/install/nav2_controller/lib:/Pav-S_ws/install/nav2_planner/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/costmap_queue/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_map_server/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake /Pav-S_ws/src/navigation2-humble/nav2_rviz_plugins -DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/nav2_rviz_plugins
+[14.113s] Invoking command in '/Pav-S_ws/build/nav2_rviz_plugins': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/nav2_behavior_tree:/Pav-S_ws/install/nav2_dwb_controller:/Pav-S_ws/install/nav2_controller:/Pav-S_ws/install/nav2_planner:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_behavior_tree/lib:/Pav-S_ws/install/nav2_controller/lib:/Pav-S_ws/install/nav2_planner/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/costmap_queue/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_map_server/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake --build /Pav-S_ws/build/nav2_rviz_plugins -- -j6 -l6
+[14.520s] [ 14%] [34m[1mAutomatic MOC for target nav2_rviz_plugins[0m
+[19.846s] [ 14%] Built target nav2_rviz_plugins_autogen
+[20.036s] [ 28%] [32mBuilding CXX object CMakeFiles/nav2_rviz_plugins.dir/nav2_rviz_plugins_autogen/mocs_compilation.cpp.o[0m
+[20.042s] [ 42%] [32mBuilding CXX object CMakeFiles/nav2_rviz_plugins.dir/src/goal_tool.cpp.o[0m
+[20.066s] [ 57%] [32mBuilding CXX object CMakeFiles/nav2_rviz_plugins.dir/src/particle_cloud_display/particle_cloud_display.cpp.o[0m
+[20.081s] [ 71%] [32mBuilding CXX object CMakeFiles/nav2_rviz_plugins.dir/src/particle_cloud_display/flat_weighted_arrows_array.cpp.o[0m
+[20.086s] [ 85%] [32mBuilding CXX object CMakeFiles/nav2_rviz_plugins.dir/src/nav2_panel.cpp.o[0m
+[87.902s] [100%] [32m[1mLinking CXX shared library libnav2_rviz_plugins.so[0m
+[101.666s] [100%] Built target nav2_rviz_plugins

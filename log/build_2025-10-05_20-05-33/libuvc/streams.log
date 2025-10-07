@@ -1,0 +1,23 @@
+[0.065s] Invoking command in '/Pav-S_ws/build/libuvc': /usr/bin/cmake --build /Pav-S_ws/build/libuvc -- -j6 -l6
+[0.442s] [ 45%] Built target uvc
+[0.457s] [ 90%] Built target uvc_static
+[0.599s] [100%] Built target example
+[0.696s] Invoked command in '/Pav-S_ws/build/libuvc' returned '0': /usr/bin/cmake --build /Pav-S_ws/build/libuvc -- -j6 -l6
+[0.701s] Invoking command in '/Pav-S_ws/build/libuvc': /usr/bin/cmake --install /Pav-S_ws/build/libuvc
+[0.732s] -- Install configuration: "Release"
+[0.734s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.so.0.0.7
+[0.734s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.so.0
+[0.735s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.so
+[0.735s] -- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc.h
+[0.736s] -- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc_config.h
+[0.737s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/libuvc.a
+[0.737s] -- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc.h
+[0.737s] -- Up-to-date: /Pav-S_ws/install/libuvc/include/libuvc/libuvc_config.h
+[0.739s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcTargets.cmake
+[0.740s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcTargets-release.cmake
+[0.740s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/FindLibUSB.cmake
+[0.741s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/FindJpegPkg.cmake
+[0.741s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcConfigVersion.cmake
+[0.741s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/pkgconfig/libuvc.pc
+[0.742s] -- Up-to-date: /Pav-S_ws/install/libuvc/lib/cmake/libuvc/libuvcConfig.cmake
+[0.748s] Invoked command in '/Pav-S_ws/build/libuvc' returned '0': /usr/bin/cmake --install /Pav-S_ws/build/libuvc

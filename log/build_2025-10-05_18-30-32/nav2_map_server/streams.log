@@ -1,0 +1,97 @@
+[0.033s] Invoking command in '/Pav-S_ws/build/nav2_map_server': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake --build /Pav-S_ws/build/nav2_map_server -- -j6 -l6
+[0.147s] [  2%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[0.150s] [  5%] [32mBuilding CXX object CMakeFiles/map_io.dir/src/map_io.cpp.o[0m
+[0.157s] [  8%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[0.158s] [ 11%] [32mBuilding CXX object CMakeFiles/map_io.dir/src/map_mode.cpp.o[0m
+[3.577s] [ 13%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[3.669s] [ 13%] Built target gtest_main
+[17.420s] [ 16%] [32m[1mLinking CXX shared library libmap_io.so[0m
+[17.868s] [ 16%] Built target map_io
+[17.921s] [ 19%] [32mBuilding CXX object test/component/CMakeFiles/test_map_saver_publisher.dir/test_map_saver_publisher.cpp.o[0m
+[17.922s] [ 22%] [32mBuilding CXX object CMakeFiles/map_server_core.dir/src/map_server/map_server.cpp.o[0m
+[17.928s] [ 25%] [32mBuilding CXX object CMakeFiles/map_server_core.dir/src/map_saver/map_saver.cpp.o[0m
+[17.937s] [ 27%] [32mBuilding CXX object test/component/CMakeFiles/test_map_saver_publisher.dir/__/test_constants.cpp.o[0m
+[17.959s] [ 30%] [32mBuilding CXX object CMakeFiles/map_server_core.dir/src/costmap_filter_info/costmap_filter_info_server.cpp.o[0m
+[20.543s] [ 33%] [32m[1mLinking CXX static library libgtest.a[0m
+[20.672s] [ 33%] Built target gtest
+[20.755s] [ 36%] [32mBuilding CXX object test/map_saver_cli/CMakeFiles/test_map_saver_cli.dir/test_map_saver_cli.cpp.o[0m
+[20.763s] [ 38%] [32mBuilding CXX object test/unit/CMakeFiles/test_map_io.dir/test_map_io.cpp.o[0m
+[35.556s] [ 41%] [32m[1mLinking CXX executable test_map_saver_publisher[0m
+[36.861s] [ 41%] Built target test_map_saver_publisher
+[36.885s] [ 44%] [32mBuilding CXX object test/unit/CMakeFiles/test_map_io.dir/__/test_constants.cpp.o[0m
+[37.517s] [ 47%] [32mBuilding CXX object test/map_saver_cli/CMakeFiles/test_map_saver_cli.dir/__/test_constants.cpp.o[0m
+[42.352s] [ 50%] [32m[1mLinking CXX executable test_map_io[0m
+[43.297s] [ 50%] Built target test_map_io
+[44.973s] [ 52%] [32m[1mLinking CXX executable test_map_saver_cli[0m
+[45.373s] [ 52%] Built target test_map_saver_cli
+[54.207s] [ 55%] [32m[1mLinking CXX shared library libmap_server_core.so[0m
+[54.903s] [ 55%] Built target map_server_core
+[54.957s] [ 63%] [32mBuilding CXX object CMakeFiles/map_saver_cli.dir/src/map_saver/main_cli.cpp.o[0m
+[54.957s] [ 66%] [32mBuilding CXX object test/unit/CMakeFiles/test_costmap_filter_info_server.dir/test_costmap_filter_info_server.cpp.o[0m
+[54.957s] [ 66%] [32mBuilding CXX object test/component/CMakeFiles/test_map_server_node.dir/test_map_server_node.cpp.o[0m
+[54.958s] [ 66%] [32mBuilding CXX object CMakeFiles/map_server.dir/src/map_server/main.cpp.o[0m
+[54.960s] [ 69%] [32mBuilding CXX object CMakeFiles/map_saver_server.dir/src/map_saver/main_server.cpp.o[0m
+[54.965s] [ 72%] [32mBuilding CXX object CMakeFiles/costmap_filter_info_server.dir/src/costmap_filter_info/main.cpp.o[0m
+[63.022s] [ 75%] [32m[1mLinking CXX executable map_saver_server[0m
+[63.715s] [ 75%] Built target map_saver_server
+[63.744s] [ 77%] [32m[1mLinking CXX executable costmap_filter_info_server[0m
+[63.783s] [ 80%] [32mBuilding CXX object test/component/CMakeFiles/test_map_saver_node.dir/test_map_saver_node.cpp.o[0m
+[63.941s] [ 83%] [32m[1mLinking CXX executable map_saver_cli[0m
+[64.044s] [ 86%] [32m[1mLinking CXX executable map_server[0m
+[64.610s] [ 86%] Built target costmap_filter_info_server
+[64.644s] [ 88%] [32mBuilding CXX object test/component/CMakeFiles/test_map_saver_node.dir/__/test_constants.cpp.o[0m
+[64.747s] [ 88%] Built target map_server
+[64.769s] [ 91%] [32mBuilding CXX object test/component/CMakeFiles/test_map_server_node.dir/__/test_constants.cpp.o[0m
+[64.812s] [ 91%] Built target map_saver_cli
+[73.216s] [ 94%] [32m[1mLinking CXX executable test_map_server_node[0m
+[73.749s] [ 94%] Built target test_map_server_node
+[78.408s] [ 97%] [32m[1mLinking CXX executable test_map_saver_node[0m
+[79.034s] [ 97%] Built target test_map_saver_node
+[83.120s] [100%] [32m[1mLinking CXX executable test_costmap_filter_info_server[0m
+[83.874s] [100%] Built target test_costmap_filter_info_server
+[83.905s] Invoked command in '/Pav-S_ws/build/nav2_map_server' returned '0': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake --build /Pav-S_ws/build/nav2_map_server -- -j6 -l6
+[83.913s] Invoking command in '/Pav-S_ws/build/nav2_map_server': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake --install /Pav-S_ws/build/nav2_map_server
+[83.934s] -- Install configuration: "Release"
+[83.935s] -- Installing: /Pav-S_ws/install/nav2_map_server/lib/libmap_server_core.so
+[83.939s] -- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/libmap_server_core.so" to ""
+[83.939s] -- Installing: /Pav-S_ws/install/nav2_map_server/lib/libmap_io.so
+[83.940s] -- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/libmap_io.so" to ""
+[83.940s] -- Installing: /Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_server
+[83.941s] -- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_server" to ""
+[83.941s] -- Installing: /Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_saver_cli
+[83.942s] -- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_saver_cli" to ""
+[83.942s] -- Installing: /Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_saver_server
+[83.943s] -- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_saver_server" to ""
+[83.943s] -- Installing: /Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/costmap_filter_info_server
+[83.944s] -- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/costmap_filter_info_server" to ""
+[83.944s] -- Installing: /Pav-S_ws/install/nav2_map_server/include/
+[83.944s] -- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server
+[83.944s] -- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server/map_server.hpp
+[83.945s] -- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server/costmap_filter_info_server.hpp
+[83.945s] -- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server/map_saver.hpp
+[83.945s] -- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server/map_mode.hpp
+[83.945s] -- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server/map_io.hpp
+[83.945s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/launch
+[83.946s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/launch/map_saver_server.launch.py
+[83.947s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/library_path.sh
+[83.947s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/library_path.dsv
+[83.948s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/ament_index/resource_index/package_run_dependencies/nav2_map_server
+[83.949s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/ament_index/resource_index/parent_prefix_path/nav2_map_server
+[83.949s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/ament_prefix_path.sh
+[83.950s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/ament_prefix_path.dsv
+[83.950s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/path.sh
+[83.950s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/path.dsv
+[83.951s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/local_setup.bash
+[83.951s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/local_setup.sh
+[83.952s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/local_setup.zsh
+[83.952s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/local_setup.dsv
+[83.952s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/package.dsv
+[83.953s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/ament_index/resource_index/packages/nav2_map_server
+[83.953s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/ament_index/resource_index/rclcpp_components/nav2_map_server
+[83.954s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/cmake/ament_cmake_export_include_directories-extras.cmake
+[83.955s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/cmake/ament_cmake_export_libraries-extras.cmake
+[83.955s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/cmake/ament_cmake_export_dependencies-extras.cmake
+[83.956s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/cmake/nav2_map_serverConfig.cmake
+[83.956s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/cmake/nav2_map_serverConfig-version.cmake
+[83.957s] -- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/package.xml
+[83.965s] Invoked command in '/Pav-S_ws/build/nav2_map_server' returned '0': CMAKE_PREFIX_PATH=/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble LD_LIBRARY_PATH=/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64 /usr/bin/cmake --install /Pav-S_ws/build/nav2_map_server

@@ -1,0 +1,1045 @@
+[0.000000] (-) TimerEvent: {}
+[0.001138] (-) JobUnselected: {'identifier': 'astra_camera'}
+[0.001433] (-) JobUnselected: {'identifier': 'astra_camera_msgs'}
+[0.001912] (-) JobUnselected: {'identifier': 'costmap_queue'}
+[0.002318] (-) JobUnselected: {'identifier': 'dwb_core'}
+[0.002500] (-) JobUnselected: {'identifier': 'dwb_critics'}
+[0.002598] (-) JobUnselected: {'identifier': 'dwb_msgs'}
+[0.002662] (-) JobUnselected: {'identifier': 'dwb_plugins'}
+[0.002717] (-) JobUnselected: {'identifier': 'fast_lio'}
+[0.002778] (-) JobUnselected: {'identifier': 'libuvc'}
+[0.002838] (-) JobUnselected: {'identifier': 'nav2_amcl'}
+[0.002892] (-) JobUnselected: {'identifier': 'nav2_behavior_tree'}
+[0.003143] (-) JobUnselected: {'identifier': 'nav2_behaviors'}
+[0.003310] (-) JobUnselected: {'identifier': 'nav2_bringup'}
+[0.003399] (-) JobUnselected: {'identifier': 'nav2_bt_navigator'}
+[0.003455] (-) JobUnselected: {'identifier': 'nav2_collision_monitor'}
+[0.003510] (-) JobUnselected: {'identifier': 'nav2_common'}
+[0.003566] (-) JobUnselected: {'identifier': 'nav2_constrained_smoother'}
+[0.003624] (-) JobUnselected: {'identifier': 'nav2_controller'}
+[0.003677] (-) JobUnselected: {'identifier': 'nav2_core'}
+[0.004012] (-) JobUnselected: {'identifier': 'nav2_costmap_2d'}
+[0.004122] (-) JobUnselected: {'identifier': 'nav2_dwb_controller'}
+[0.004218] (-) JobUnselected: {'identifier': 'nav2_graceful_controller'}
+[0.004310] (-) JobUnselected: {'identifier': 'nav2_mppi_controller'}
+[0.004398] (-) JobUnselected: {'identifier': 'nav2_msgs'}
+[0.004487] (-) JobUnselected: {'identifier': 'nav2_navfn_planner'}
+[0.004576] (-) JobUnselected: {'identifier': 'nav2_planner'}
+[0.004665] (-) JobUnselected: {'identifier': 'nav2_regulated_pure_pursuit_controller'}
+[0.004781] (-) JobUnselected: {'identifier': 'nav2_rotation_shim_controller'}
+[0.004872] (-) JobUnselected: {'identifier': 'nav2_rviz_plugins'}
+[0.004962] (-) JobUnselected: {'identifier': 'nav2_simple_commander'}
+[0.005050] (-) JobUnselected: {'identifier': 'nav2_smac_planner'}
+[0.005139] (-) JobUnselected: {'identifier': 'nav2_smoother'}
+[0.005282] (-) JobUnselected: {'identifier': 'nav2_theta_star_planner'}
+[0.005376] (-) JobUnselected: {'identifier': 'nav2_util'}
+[0.005468] (-) JobUnselected: {'identifier': 'nav2_velocity_smoother'}
+[0.005570] (-) JobUnselected: {'identifier': 'nav2_voxel_grid'}
+[0.005677] (-) JobUnselected: {'identifier': 'nav2_waypoint_follower'}
+[0.005831] (-) JobUnselected: {'identifier': 'nav_2d_msgs'}
+[0.005888] (-) JobUnselected: {'identifier': 'nav_2d_utils'}
+[0.005941] (-) JobUnselected: {'identifier': 'navigation2'}
+[0.006016] (-) JobUnselected: {'identifier': 'navigation_manager'}
+[0.006228] (-) JobUnselected: {'identifier': 'robot_kcf'}
+[0.006285] (-) JobUnselected: {'identifier': 'serial'}
+[0.006382] (-) JobUnselected: {'identifier': 'turn_on_wheeltec_robot'}
+[0.006555] (-) JobUnselected: {'identifier': 'usb_cam'}
+[0.006707] (-) JobUnselected: {'identifier': 'wheeltec_robot_msg'}
+[0.006825] (-) JobUnselected: {'identifier': 'wheeltec_robot_urdf'}
+[0.007024] (-) JobUnselected: {'identifier': 'yolo_detector'}
+[0.007094] (-) JobUnselected: {'identifier': 'yolov5_lib'}
+[0.007165] (nav2_lifecycle_manager) JobQueued: {'identifier': 'nav2_lifecycle_manager', 'dependencies': OrderedDict([('nav2_common', '/Pav-S_ws/install/nav2_common'), ('nav2_msgs', '/Pav-S_ws/install/nav2_msgs'), ('nav2_util', '/Pav-S_ws/install/nav2_util')])}
+[0.007259] (nav2_map_server) JobQueued: {'identifier': 'nav2_map_server', 'dependencies': OrderedDict([('nav2_common', '/Pav-S_ws/install/nav2_common'), ('nav2_msgs', '/Pav-S_ws/install/nav2_msgs'), ('nav2_util', '/Pav-S_ws/install/nav2_util')])}
+[0.007442] (nav2_lifecycle_manager) JobStarted: {'identifier': 'nav2_lifecycle_manager'}
+[0.021175] (nav2_map_server) JobStarted: {'identifier': 'nav2_map_server'}
+[0.037391] (nav2_lifecycle_manager) JobProgress: {'identifier': 'nav2_lifecycle_manager', 'progress': 'cmake'}
+[0.038832] (nav2_lifecycle_manager) JobProgress: {'identifier': 'nav2_lifecycle_manager', 'progress': 'build'}
+[0.040243] (nav2_lifecycle_manager) Command: {'cmd': ['/usr/bin/cmake', '--build', '/Pav-S_ws/build/nav2_lifecycle_manager', '--', '-j6', '-l6'], 'cwd': '/Pav-S_ws/build/nav2_lifecycle_manager', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_lifecycle_manager'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[0.049751] (nav2_map_server) JobProgress: {'identifier': 'nav2_map_server', 'progress': 'cmake'}
+[0.051177] (nav2_map_server) JobProgress: {'identifier': 'nav2_map_server', 'progress': 'build'}
+[0.051761] (nav2_map_server) Command: {'cmd': ['/usr/bin/cmake', '--build', '/Pav-S_ws/build/nav2_map_server', '--', '-j6', '-l6'], 'cwd': '/Pav-S_ws/build/nav2_map_server', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_map_server'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[0.099390] (-) TimerEvent: {}
+[0.167089] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/nav2_lifecycle_manager_core.dir/src/lifecycle_manager_client.cpp.o\x1b[0m\n'}
+[0.168647] (nav2_map_server) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[0.171551] (nav2_map_server) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding CXX object CMakeFiles/map_io.dir/src/map_io.cpp.o\x1b[0m\n'}
+[0.171920] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[0.173130] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/nav2_lifecycle_manager_core.dir/src/lifecycle_manager.cpp.o\x1b[0m\n'}
+[0.176096] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[0.178240] (nav2_map_server) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[0.179579] (nav2_map_server) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/map_io.dir/src/map_mode.cpp.o\x1b[0m\n'}
+[0.199550] (-) TimerEvent: {}
+[0.300274] (-) TimerEvent: {}
+[0.400991] (-) TimerEvent: {}
+[0.501722] (-) TimerEvent: {}
+[0.603192] (-) TimerEvent: {}
+[0.704473] (-) TimerEvent: {}
+[0.805936] (-) TimerEvent: {}
+[0.907386] (-) TimerEvent: {}
+[1.009145] (-) TimerEvent: {}
+[1.110647] (-) TimerEvent: {}
+[1.212446] (-) TimerEvent: {}
+[1.313813] (-) TimerEvent: {}
+[1.415346] (-) TimerEvent: {}
+[1.517357] (-) TimerEvent: {}
+[1.619051] (-) TimerEvent: {}
+[1.720373] (-) TimerEvent: {}
+[1.821873] (-) TimerEvent: {}
+[1.923348] (-) TimerEvent: {}
+[2.026888] (-) TimerEvent: {}
+[2.128311] (-) TimerEvent: {}
+[2.230470] (-) TimerEvent: {}
+[2.332251] (-) TimerEvent: {}
+[2.433964] (-) TimerEvent: {}
+[2.535466] (-) TimerEvent: {}
+[2.637050] (-) TimerEvent: {}
+[2.738576] (-) TimerEvent: {}
+[2.840147] (-) TimerEvent: {}
+[2.941475] (-) TimerEvent: {}
+[3.042935] (-) TimerEvent: {}
+[3.144368] (-) TimerEvent: {}
+[3.245875] (-) TimerEvent: {}
+[3.332462] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 38%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[3.346061] (-) TimerEvent: {}
+[3.447406] (-) TimerEvent: {}
+[3.528191] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 38%] Built target gtest_main\n'}
+[3.547629] (-) TimerEvent: {}
+[3.597721] (nav2_map_server) StdoutLine: {'line': b'[ 13%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[3.647857] (-) TimerEvent: {}
+[3.689921] (nav2_map_server) StdoutLine: {'line': b'[ 13%] Built target gtest_main\n'}
+[3.748088] (-) TimerEvent: {}
+[3.848822] (-) TimerEvent: {}
+[3.949552] (-) TimerEvent: {}
+[4.050255] (-) TimerEvent: {}
+[4.150976] (-) TimerEvent: {}
+[4.251705] (-) TimerEvent: {}
+[4.352462] (-) TimerEvent: {}
+[4.453836] (-) TimerEvent: {}
+[4.555226] (-) TimerEvent: {}
+[4.656668] (-) TimerEvent: {}
+[4.758024] (-) TimerEvent: {}
+[4.859382] (-) TimerEvent: {}
+[4.960711] (-) TimerEvent: {}
+[5.062153] (-) TimerEvent: {}
+[5.163585] (-) TimerEvent: {}
+[5.264922] (-) TimerEvent: {}
+[5.366321] (-) TimerEvent: {}
+[5.467111] (-) TimerEvent: {}
+[5.568545] (-) TimerEvent: {}
+[5.669915] (-) TimerEvent: {}
+[5.771163] (-) TimerEvent: {}
+[5.872545] (-) TimerEvent: {}
+[5.973890] (-) TimerEvent: {}
+[6.075180] (-) TimerEvent: {}
+[6.176506] (-) TimerEvent: {}
+[6.277832] (-) TimerEvent: {}
+[6.379172] (-) TimerEvent: {}
+[6.480494] (-) TimerEvent: {}
+[6.581849] (-) TimerEvent: {}
+[6.683125] (-) TimerEvent: {}
+[6.784485] (-) TimerEvent: {}
+[6.885720] (-) TimerEvent: {}
+[6.986495] (-) TimerEvent: {}
+[7.087244] (-) TimerEvent: {}
+[7.188603] (-) TimerEvent: {}
+[7.289989] (-) TimerEvent: {}
+[7.391410] (-) TimerEvent: {}
+[7.492902] (-) TimerEvent: {}
+[7.594640] (-) TimerEvent: {}
+[7.696062] (-) TimerEvent: {}
+[7.797421] (-) TimerEvent: {}
+[7.898178] (-) TimerEvent: {}
+[7.998944] (-) TimerEvent: {}
+[8.099743] (-) TimerEvent: {}
+[8.200638] (-) TimerEvent: {}
+[8.301419] (-) TimerEvent: {}
+[8.402182] (-) TimerEvent: {}
+[8.502929] (-) TimerEvent: {}
+[8.604291] (-) TimerEvent: {}
+[8.705879] (-) TimerEvent: {}
+[8.811301] (-) TimerEvent: {}
+[8.912779] (-) TimerEvent: {}
+[9.014027] (-) TimerEvent: {}
+[9.115459] (-) TimerEvent: {}
+[9.217010] (-) TimerEvent: {}
+[9.318390] (-) TimerEvent: {}
+[9.420665] (-) TimerEvent: {}
+[9.521911] (-) TimerEvent: {}
+[9.624657] (-) TimerEvent: {}
+[9.728169] (-) TimerEvent: {}
+[9.829567] (-) TimerEvent: {}
+[9.931185] (-) TimerEvent: {}
+[10.031952] (-) TimerEvent: {}
+[10.132742] (-) TimerEvent: {}
+[10.236385] (-) TimerEvent: {}
+[10.337699] (-) TimerEvent: {}
+[10.439048] (-) TimerEvent: {}
+[10.540579] (-) TimerEvent: {}
+[10.641838] (-) TimerEvent: {}
+[10.743298] (-) TimerEvent: {}
+[10.845038] (-) TimerEvent: {}
+[10.945807] (-) TimerEvent: {}
+[11.049967] (-) TimerEvent: {}
+[11.151390] (-) TimerEvent: {}
+[11.252773] (-) TimerEvent: {}
+[11.354452] (-) TimerEvent: {}
+[11.455816] (-) TimerEvent: {}
+[11.557258] (-) TimerEvent: {}
+[11.658449] (-) TimerEvent: {}
+[11.759205] (-) TimerEvent: {}
+[11.860538] (-) TimerEvent: {}
+[11.961900] (-) TimerEvent: {}
+[12.063641] (-) TimerEvent: {}
+[12.165008] (-) TimerEvent: {}
+[12.266352] (-) TimerEvent: {}
+[12.367720] (-) TimerEvent: {}
+[12.469117] (-) TimerEvent: {}
+[12.570539] (-) TimerEvent: {}
+[12.671892] (-) TimerEvent: {}
+[12.773177] (-) TimerEvent: {}
+[12.874480] (-) TimerEvent: {}
+[12.975189] (-) TimerEvent: {}
+[13.075892] (-) TimerEvent: {}
+[13.176602] (-) TimerEvent: {}
+[13.277307] (-) TimerEvent: {}
+[13.378053] (-) TimerEvent: {}
+[13.478794] (-) TimerEvent: {}
+[13.579537] (-) TimerEvent: {}
+[13.680264] (-) TimerEvent: {}
+[13.780992] (-) TimerEvent: {}
+[13.881695] (-) TimerEvent: {}
+[13.983010] (-) TimerEvent: {}
+[14.084359] (-) TimerEvent: {}
+[14.185105] (-) TimerEvent: {}
+[14.286398] (-) TimerEvent: {}
+[14.387676] (-) TimerEvent: {}
+[14.489036] (-) TimerEvent: {}
+[14.589790] (-) TimerEvent: {}
+[14.690501] (-) TimerEvent: {}
+[14.791242] (-) TimerEvent: {}
+[14.891976] (-) TimerEvent: {}
+[14.992707] (-) TimerEvent: {}
+[15.096139] (-) TimerEvent: {}
+[15.202610] (-) TimerEvent: {}
+[15.304175] (-) TimerEvent: {}
+[15.407658] (-) TimerEvent: {}
+[15.511095] (-) TimerEvent: {}
+[15.617742] (-) TimerEvent: {}
+[15.718496] (-) TimerEvent: {}
+[15.819215] (-) TimerEvent: {}
+[15.919941] (-) TimerEvent: {}
+[16.020674] (-) TimerEvent: {}
+[16.121392] (-) TimerEvent: {}
+[16.222065] (-) TimerEvent: {}
+[16.322755] (-) TimerEvent: {}
+[16.423451] (-) TimerEvent: {}
+[16.524296] (-) TimerEvent: {}
+[16.625083] (-) TimerEvent: {}
+[16.725851] (-) TimerEvent: {}
+[16.826582] (-) TimerEvent: {}
+[16.927309] (-) TimerEvent: {}
+[17.028072] (-) TimerEvent: {}
+[17.128804] (-) TimerEvent: {}
+[17.229569] (-) TimerEvent: {}
+[17.330287] (-) TimerEvent: {}
+[17.430962] (-) TimerEvent: {}
+[17.441096] (nav2_map_server) StdoutLine: {'line': b'[ 16%] \x1b[32m\x1b[1mLinking CXX shared library libmap_io.so\x1b[0m\n'}
+[17.531172] (-) TimerEvent: {}
+[17.631922] (-) TimerEvent: {}
+[17.732642] (-) TimerEvent: {}
+[17.833372] (-) TimerEvent: {}
+[17.889421] (nav2_map_server) StdoutLine: {'line': b'[ 16%] Built target map_io\n'}
+[17.933582] (-) TimerEvent: {}
+[17.942494] (nav2_map_server) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object test/component/CMakeFiles/test_map_saver_publisher.dir/test_map_saver_publisher.cpp.o\x1b[0m\n'}
+[17.943201] (nav2_map_server) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/map_server_core.dir/src/map_server/map_server.cpp.o\x1b[0m\n'}
+[17.948709] (nav2_map_server) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/map_server_core.dir/src/map_saver/map_saver.cpp.o\x1b[0m\n'}
+[17.957976] (nav2_map_server) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object test/component/CMakeFiles/test_map_saver_publisher.dir/__/test_constants.cpp.o\x1b[0m\n'}
+[17.976078] (nav2_map_server) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/map_server_core.dir/src/costmap_filter_info/costmap_filter_info_server.cpp.o\x1b[0m\n'}
+[18.033792] (-) TimerEvent: {}
+[18.136073] (-) TimerEvent: {}
+[18.236949] (-) TimerEvent: {}
+[18.337664] (-) TimerEvent: {}
+[18.438382] (-) TimerEvent: {}
+[18.548834] (-) TimerEvent: {}
+[18.649573] (-) TimerEvent: {}
+[18.750323] (-) TimerEvent: {}
+[18.851120] (-) TimerEvent: {}
+[18.951861] (-) TimerEvent: {}
+[19.052640] (-) TimerEvent: {}
+[19.153398] (-) TimerEvent: {}
+[19.254206] (-) TimerEvent: {}
+[19.355051] (-) TimerEvent: {}
+[19.455898] (-) TimerEvent: {}
+[19.556780] (-) TimerEvent: {}
+[19.658211] (-) TimerEvent: {}
+[19.760097] (-) TimerEvent: {}
+[19.861529] (-) TimerEvent: {}
+[19.962821] (-) TimerEvent: {}
+[20.064297] (-) TimerEvent: {}
+[20.165704] (-) TimerEvent: {}
+[20.166309] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[20.265899] (-) TimerEvent: {}
+[20.367217] (-) TimerEvent: {}
+[20.419833] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 46%] Built target gtest\n'}
+[20.467435] (-) TimerEvent: {}
+[20.563712] (nav2_map_server) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[20.567641] (-) TimerEvent: {}
+[20.669295] (-) TimerEvent: {}
+[20.692883] (nav2_map_server) StdoutLine: {'line': b'[ 33%] Built target gtest\n'}
+[20.769505] (-) TimerEvent: {}
+[20.776026] (nav2_map_server) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object test/map_saver_cli/CMakeFiles/test_map_saver_cli.dir/test_map_saver_cli.cpp.o\x1b[0m\n'}
+[20.783714] (nav2_map_server) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/test_map_io.dir/test_map_io.cpp.o\x1b[0m\n'}
+[20.869730] (-) TimerEvent: {}
+[20.971161] (-) TimerEvent: {}
+[21.072600] (-) TimerEvent: {}
+[21.173950] (-) TimerEvent: {}
+[21.275404] (-) TimerEvent: {}
+[21.376740] (-) TimerEvent: {}
+[21.478030] (-) TimerEvent: {}
+[21.579413] (-) TimerEvent: {}
+[21.681055] (-) TimerEvent: {}
+[21.782454] (-) TimerEvent: {}
+[21.883849] (-) TimerEvent: {}
+[21.985240] (-) TimerEvent: {}
+[22.086629] (-) TimerEvent: {}
+[22.187446] (-) TimerEvent: {}
+[22.288270] (-) TimerEvent: {}
+[22.389064] (-) TimerEvent: {}
+[22.489867] (-) TimerEvent: {}
+[22.591246] (-) TimerEvent: {}
+[22.692595] (-) TimerEvent: {}
+[22.793936] (-) TimerEvent: {}
+[22.895347] (-) TimerEvent: {}
+[22.996942] (-) TimerEvent: {}
+[23.100354] (-) TimerEvent: {}
+[23.201688] (-) TimerEvent: {}
+[23.302999] (-) TimerEvent: {}
+[23.404338] (-) TimerEvent: {}
+[23.505698] (-) TimerEvent: {}
+[23.607167] (-) TimerEvent: {}
+[23.708759] (-) TimerEvent: {}
+[23.810158] (-) TimerEvent: {}
+[23.911585] (-) TimerEvent: {}
+[24.012944] (-) TimerEvent: {}
+[24.114332] (-) TimerEvent: {}
+[24.215829] (-) TimerEvent: {}
+[24.317567] (-) TimerEvent: {}
+[24.418918] (-) TimerEvent: {}
+[24.520368] (-) TimerEvent: {}
+[24.621636] (-) TimerEvent: {}
+[24.723164] (-) TimerEvent: {}
+[24.824443] (-) TimerEvent: {}
+[24.925849] (-) TimerEvent: {}
+[25.027131] (-) TimerEvent: {}
+[25.128570] (-) TimerEvent: {}
+[25.229901] (-) TimerEvent: {}
+[25.331261] (-) TimerEvent: {}
+[25.432638] (-) TimerEvent: {}
+[25.533434] (-) TimerEvent: {}
+[25.634214] (-) TimerEvent: {}
+[25.735534] (-) TimerEvent: {}
+[25.836916] (-) TimerEvent: {}
+[25.938307] (-) TimerEvent: {}
+[26.039689] (-) TimerEvent: {}
+[26.141226] (-) TimerEvent: {}
+[26.242517] (-) TimerEvent: {}
+[26.344076] (-) TimerEvent: {}
+[26.445365] (-) TimerEvent: {}
+[26.546734] (-) TimerEvent: {}
+[26.648186] (-) TimerEvent: {}
+[26.749567] (-) TimerEvent: {}
+[26.850968] (-) TimerEvent: {}
+[26.955534] (-) TimerEvent: {}
+[27.056972] (-) TimerEvent: {}
+[27.158352] (-) TimerEvent: {}
+[27.259726] (-) TimerEvent: {}
+[27.361085] (-) TimerEvent: {}
+[27.462573] (-) TimerEvent: {}
+[27.564543] (-) TimerEvent: {}
+[27.666075] (-) TimerEvent: {}
+[27.766854] (-) TimerEvent: {}
+[27.867753] (-) TimerEvent: {}
+[27.968568] (-) TimerEvent: {}
+[28.069359] (-) TimerEvent: {}
+[28.170903] (-) TimerEvent: {}
+[28.271762] (-) TimerEvent: {}
+[28.372630] (-) TimerEvent: {}
+[28.473398] (-) TimerEvent: {}
+[28.574209] (-) TimerEvent: {}
+[28.645369] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libnav2_lifecycle_manager_core.so\x1b[0m\n'}
+[28.674413] (-) TimerEvent: {}
+[28.775231] (-) TimerEvent: {}
+[28.876024] (-) TimerEvent: {}
+[28.977442] (-) TimerEvent: {}
+[29.078778] (-) TimerEvent: {}
+[29.180154] (-) TimerEvent: {}
+[29.281453] (-) TimerEvent: {}
+[29.297236] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 53%] Built target nav2_lifecycle_manager_core\n'}
+[29.381669] (-) TimerEvent: {}
+[29.421515] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object test/CMakeFiles/test_bond_gtest.dir/test_bond.cpp.o\x1b[0m\n'}
+[29.449173] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object test/CMakeFiles/test_lifecycle_gtest.dir/test_lifecycle_manager.cpp.o\x1b[0m\n'}
+[29.449688] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/lifecycle_manager.dir/src/main.cpp.o\x1b[0m\n'}
+[29.481885] (-) TimerEvent: {}
+[29.583202] (-) TimerEvent: {}
+[29.684543] (-) TimerEvent: {}
+[29.785917] (-) TimerEvent: {}
+[29.887208] (-) TimerEvent: {}
+[29.988735] (-) TimerEvent: {}
+[30.090068] (-) TimerEvent: {}
+[30.191177] (-) TimerEvent: {}
+[30.292623] (-) TimerEvent: {}
+[30.393902] (-) TimerEvent: {}
+[30.494629] (-) TimerEvent: {}
+[30.596109] (-) TimerEvent: {}
+[30.697614] (-) TimerEvent: {}
+[30.798939] (-) TimerEvent: {}
+[30.900190] (-) TimerEvent: {}
+[31.001421] (-) TimerEvent: {}
+[31.102692] (-) TimerEvent: {}
+[31.204073] (-) TimerEvent: {}
+[31.305283] (-) TimerEvent: {}
+[31.406619] (-) TimerEvent: {}
+[31.507382] (-) TimerEvent: {}
+[31.608720] (-) TimerEvent: {}
+[31.709995] (-) TimerEvent: {}
+[31.811286] (-) TimerEvent: {}
+[31.912511] (-) TimerEvent: {}
+[32.013879] (-) TimerEvent: {}
+[32.115162] (-) TimerEvent: {}
+[32.216510] (-) TimerEvent: {}
+[32.317502] (-) TimerEvent: {}
+[32.418215] (-) TimerEvent: {}
+[32.518973] (-) TimerEvent: {}
+[32.619923] (-) TimerEvent: {}
+[32.720734] (-) TimerEvent: {}
+[32.821811] (-) TimerEvent: {}
+[32.922614] (-) TimerEvent: {}
+[33.025187] (-) TimerEvent: {}
+[33.125973] (-) TimerEvent: {}
+[33.226772] (-) TimerEvent: {}
+[33.328614] (-) TimerEvent: {}
+[33.429843] (-) TimerEvent: {}
+[33.531130] (-) TimerEvent: {}
+[33.632500] (-) TimerEvent: {}
+[33.733769] (-) TimerEvent: {}
+[33.834997] (-) TimerEvent: {}
+[33.936613] (-) TimerEvent: {}
+[34.037885] (-) TimerEvent: {}
+[34.139226] (-) TimerEvent: {}
+[34.240593] (-) TimerEvent: {}
+[34.342016] (-) TimerEvent: {}
+[34.443272] (-) TimerEvent: {}
+[34.544581] (-) TimerEvent: {}
+[34.645352] (-) TimerEvent: {}
+[34.746082] (-) TimerEvent: {}
+[34.847430] (-) TimerEvent: {}
+[34.948186] (-) TimerEvent: {}
+[35.048953] (-) TimerEvent: {}
+[35.149720] (-) TimerEvent: {}
+[35.250497] (-) TimerEvent: {}
+[35.351275] (-) TimerEvent: {}
+[35.452064] (-) TimerEvent: {}
+[35.552807] (-) TimerEvent: {}
+[35.576435] (nav2_map_server) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX executable test_map_saver_publisher\x1b[0m\n'}
+[35.653029] (-) TimerEvent: {}
+[35.753841] (-) TimerEvent: {}
+[35.855203] (-) TimerEvent: {}
+[35.956265] (-) TimerEvent: {}
+[36.057572] (-) TimerEvent: {}
+[36.158906] (-) TimerEvent: {}
+[36.260261] (-) TimerEvent: {}
+[36.361796] (-) TimerEvent: {}
+[36.463623] (-) TimerEvent: {}
+[36.564935] (-) TimerEvent: {}
+[36.665703] (-) TimerEvent: {}
+[36.766461] (-) TimerEvent: {}
+[36.867234] (-) TimerEvent: {}
+[36.881677] (nav2_map_server) StdoutLine: {'line': b'[ 41%] Built target test_map_saver_publisher\n'}
+[36.906246] (nav2_map_server) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/test_map_io.dir/__/test_constants.cpp.o\x1b[0m\n'}
+[36.967461] (-) TimerEvent: {}
+[37.068757] (-) TimerEvent: {}
+[37.170090] (-) TimerEvent: {}
+[37.271380] (-) TimerEvent: {}
+[37.372802] (-) TimerEvent: {}
+[37.474125] (-) TimerEvent: {}
+[37.538354] (nav2_map_server) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object test/map_saver_cli/CMakeFiles/test_map_saver_cli.dir/__/test_constants.cpp.o\x1b[0m\n'}
+[37.576187] (-) TimerEvent: {}
+[37.676921] (-) TimerEvent: {}
+[37.777629] (-) TimerEvent: {}
+[37.878406] (-) TimerEvent: {}
+[37.979242] (-) TimerEvent: {}
+[38.080074] (-) TimerEvent: {}
+[38.180799] (-) TimerEvent: {}
+[38.281583] (-) TimerEvent: {}
+[38.382341] (-) TimerEvent: {}
+[38.483117] (-) TimerEvent: {}
+[38.583854] (-) TimerEvent: {}
+[38.684645] (-) TimerEvent: {}
+[38.785461] (-) TimerEvent: {}
+[38.886841] (-) TimerEvent: {}
+[38.988141] (-) TimerEvent: {}
+[39.089438] (-) TimerEvent: {}
+[39.190801] (-) TimerEvent: {}
+[39.292090] (-) TimerEvent: {}
+[39.393359] (-) TimerEvent: {}
+[39.494615] (-) TimerEvent: {}
+[39.595872] (-) TimerEvent: {}
+[39.697092] (-) TimerEvent: {}
+[39.798381] (-) TimerEvent: {}
+[39.899629] (-) TimerEvent: {}
+[40.000933] (-) TimerEvent: {}
+[40.102249] (-) TimerEvent: {}
+[40.203594] (-) TimerEvent: {}
+[40.304875] (-) TimerEvent: {}
+[40.406156] (-) TimerEvent: {}
+[40.508279] (-) TimerEvent: {}
+[40.609027] (-) TimerEvent: {}
+[40.709776] (-) TimerEvent: {}
+[40.810534] (-) TimerEvent: {}
+[40.911873] (-) TimerEvent: {}
+[41.013216] (-) TimerEvent: {}
+[41.114418] (-) TimerEvent: {}
+[41.215718] (-) TimerEvent: {}
+[41.316957] (-) TimerEvent: {}
+[41.418404] (-) TimerEvent: {}
+[41.519773] (-) TimerEvent: {}
+[41.621172] (-) TimerEvent: {}
+[41.722511] (-) TimerEvent: {}
+[41.823826] (-) TimerEvent: {}
+[41.925229] (-) TimerEvent: {}
+[42.026611] (-) TimerEvent: {}
+[42.127783] (-) TimerEvent: {}
+[42.229104] (-) TimerEvent: {}
+[42.330643] (-) TimerEvent: {}
+[42.373557] (nav2_map_server) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable test_map_io\x1b[0m\n'}
+[42.430842] (-) TimerEvent: {}
+[42.531611] (-) TimerEvent: {}
+[42.632396] (-) TimerEvent: {}
+[42.733156] (-) TimerEvent: {}
+[42.833913] (-) TimerEvent: {}
+[42.934723] (-) TimerEvent: {}
+[43.035508] (-) TimerEvent: {}
+[43.136294] (-) TimerEvent: {}
+[43.237037] (-) TimerEvent: {}
+[43.317733] (nav2_map_server) StdoutLine: {'line': b'[ 50%] Built target test_map_io\n'}
+[43.337256] (-) TimerEvent: {}
+[43.438070] (-) TimerEvent: {}
+[43.538900] (-) TimerEvent: {}
+[43.639741] (-) TimerEvent: {}
+[43.740576] (-) TimerEvent: {}
+[43.841303] (-) TimerEvent: {}
+[43.942026] (-) TimerEvent: {}
+[44.042787] (-) TimerEvent: {}
+[44.143544] (-) TimerEvent: {}
+[44.244334] (-) TimerEvent: {}
+[44.345125] (-) TimerEvent: {}
+[44.445886] (-) TimerEvent: {}
+[44.546621] (-) TimerEvent: {}
+[44.647393] (-) TimerEvent: {}
+[44.748139] (-) TimerEvent: {}
+[44.848820] (-) TimerEvent: {}
+[44.949560] (-) TimerEvent: {}
+[44.993632] (nav2_map_server) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX executable test_map_saver_cli\x1b[0m\n'}
+[45.049792] (-) TimerEvent: {}
+[45.151263] (-) TimerEvent: {}
+[45.252548] (-) TimerEvent: {}
+[45.353741] (-) TimerEvent: {}
+[45.393874] (nav2_map_server) StdoutLine: {'line': b'[ 52%] Built target test_map_saver_cli\n'}
+[45.453957] (-) TimerEvent: {}
+[45.554680] (-) TimerEvent: {}
+[45.655386] (-) TimerEvent: {}
+[45.712146] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX executable lifecycle_manager\x1b[0m\n'}
+[45.755579] (-) TimerEvent: {}
+[45.856821] (-) TimerEvent: {}
+[45.957541] (-) TimerEvent: {}
+[46.058212] (-) TimerEvent: {}
+[46.146429] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 84%] Built target lifecycle_manager\n'}
+[46.158382] (-) TimerEvent: {}
+[46.259065] (-) TimerEvent: {}
+[46.359733] (-) TimerEvent: {}
+[46.460464] (-) TimerEvent: {}
+[46.561190] (-) TimerEvent: {}
+[46.661895] (-) TimerEvent: {}
+[46.762597] (-) TimerEvent: {}
+[46.863256] (-) TimerEvent: {}
+[46.895544] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable test_lifecycle_gtest\x1b[0m\n'}
+[46.963442] (-) TimerEvent: {}
+[47.064720] (-) TimerEvent: {}
+[47.165464] (-) TimerEvent: {}
+[47.266185] (-) TimerEvent: {}
+[47.366875] (-) TimerEvent: {}
+[47.430939] (nav2_lifecycle_manager) StdoutLine: {'line': b'[ 92%] Built target test_lifecycle_gtest\n'}
+[47.467050] (-) TimerEvent: {}
+[47.567718] (-) TimerEvent: {}
+[47.668446] (-) TimerEvent: {}
+[47.769145] (-) TimerEvent: {}
+[47.869850] (-) TimerEvent: {}
+[47.970532] (-) TimerEvent: {}
+[48.071194] (-) TimerEvent: {}
+[48.171859] (-) TimerEvent: {}
+[48.272551] (-) TimerEvent: {}
+[48.373226] (-) TimerEvent: {}
+[48.473897] (-) TimerEvent: {}
+[48.574582] (-) TimerEvent: {}
+[48.675262] (-) TimerEvent: {}
+[48.775948] (-) TimerEvent: {}
+[48.876628] (-) TimerEvent: {}
+[48.977313] (-) TimerEvent: {}
+[49.077997] (-) TimerEvent: {}
+[49.178703] (-) TimerEvent: {}
+[49.279398] (-) TimerEvent: {}
+[49.380120] (-) TimerEvent: {}
+[49.480792] (-) TimerEvent: {}
+[49.581467] (-) TimerEvent: {}
+[49.682157] (-) TimerEvent: {}
+[49.685658] (nav2_lifecycle_manager) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_bond_gtest\x1b[0m\n'}
+[49.782345] (-) TimerEvent: {}
+[49.883035] (-) TimerEvent: {}
+[49.983739] (-) TimerEvent: {}
+[50.084441] (-) TimerEvent: {}
+[50.185120] (-) TimerEvent: {}
+[50.210659] (nav2_lifecycle_manager) StdoutLine: {'line': b'[100%] Built target test_bond_gtest\n'}
+[50.247054] (nav2_lifecycle_manager) CommandEnded: {'returncode': 0}
+[50.252190] (nav2_lifecycle_manager) JobProgress: {'identifier': 'nav2_lifecycle_manager', 'progress': 'install'}
+[50.281993] (nav2_lifecycle_manager) Command: {'cmd': ['/usr/bin/cmake', '--install', '/Pav-S_ws/build/nav2_lifecycle_manager'], 'cwd': '/Pav-S_ws/build/nav2_lifecycle_manager', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_lifecycle_manager'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[50.286479] (-) TimerEvent: {}
+[50.306080] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[50.307223] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/lib/libnav2_lifecycle_manager_core.so\n'}
+[50.310794] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_lifecycle_manager/lib/libnav2_lifecycle_manager_core.so" to ""\n'}
+[50.311106] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/lib/nav2_lifecycle_manager/lifecycle_manager\n'}
+[50.311899] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_lifecycle_manager/lib/nav2_lifecycle_manager/lifecycle_manager" to ""\n'}
+[50.312191] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/include/\n'}
+[50.312415] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/include//nav2_lifecycle_manager\n'}
+[50.312683] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/include//nav2_lifecycle_manager/lifecycle_manager.hpp\n'}
+[50.313149] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/include//nav2_lifecycle_manager/lifecycle_manager_client.hpp\n'}
+[50.314588] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/library_path.sh\n'}
+[50.315071] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/library_path.dsv\n'}
+[50.316003] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/ament_index/resource_index/package_run_dependencies/nav2_lifecycle_manager\n'}
+[50.316553] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/ament_index/resource_index/parent_prefix_path/nav2_lifecycle_manager\n'}
+[50.317774] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/ament_prefix_path.sh\n'}
+[50.318266] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/ament_prefix_path.dsv\n'}
+[50.318696] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/path.sh\n'}
+[50.319079] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/path.dsv\n'}
+[50.319425] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/local_setup.bash\n'}
+[50.319773] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/local_setup.sh\n'}
+[50.320170] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/local_setup.zsh\n'}
+[50.320528] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/local_setup.dsv\n'}
+[50.320851] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/package.dsv\n'}
+[50.321459] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/ament_index/resource_index/packages/nav2_lifecycle_manager\n'}
+[50.322018] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/ament_index/resource_index/rclcpp_components/nav2_lifecycle_manager\n'}
+[50.322682] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[50.323278] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[50.323769] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[50.324587] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake/nav2_lifecycle_managerConfig.cmake\n'}
+[50.324900] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake/nav2_lifecycle_managerConfig-version.cmake\n'}
+[50.325260] (nav2_lifecycle_manager) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/package.xml\n'}
+[50.331675] (nav2_lifecycle_manager) CommandEnded: {'returncode': 0}
+[50.386804] (-) TimerEvent: {}
+[50.404999] (nav2_lifecycle_manager) JobEnded: {'identifier': 'nav2_lifecycle_manager', 'rc': 0}
+[50.487031] (-) TimerEvent: {}
+[50.587817] (-) TimerEvent: {}
+[50.688659] (-) TimerEvent: {}
+[50.789447] (-) TimerEvent: {}
+[50.890231] (-) TimerEvent: {}
+[50.991003] (-) TimerEvent: {}
+[51.091778] (-) TimerEvent: {}
+[51.192598] (-) TimerEvent: {}
+[51.293401] (-) TimerEvent: {}
+[51.394182] (-) TimerEvent: {}
+[51.494955] (-) TimerEvent: {}
+[51.595752] (-) TimerEvent: {}
+[51.696690] (-) TimerEvent: {}
+[51.797470] (-) TimerEvent: {}
+[51.898332] (-) TimerEvent: {}
+[51.999129] (-) TimerEvent: {}
+[52.099917] (-) TimerEvent: {}
+[52.200745] (-) TimerEvent: {}
+[52.301521] (-) TimerEvent: {}
+[52.402391] (-) TimerEvent: {}
+[52.503192] (-) TimerEvent: {}
+[52.604041] (-) TimerEvent: {}
+[52.704817] (-) TimerEvent: {}
+[52.805721] (-) TimerEvent: {}
+[52.906499] (-) TimerEvent: {}
+[53.007274] (-) TimerEvent: {}
+[53.108127] (-) TimerEvent: {}
+[53.208915] (-) TimerEvent: {}
+[53.309711] (-) TimerEvent: {}
+[53.410615] (-) TimerEvent: {}
+[53.511404] (-) TimerEvent: {}
+[53.612216] (-) TimerEvent: {}
+[53.713019] (-) TimerEvent: {}
+[53.813904] (-) TimerEvent: {}
+[53.914732] (-) TimerEvent: {}
+[54.015388] (-) TimerEvent: {}
+[54.116050] (-) TimerEvent: {}
+[54.216718] (-) TimerEvent: {}
+[54.228317] (nav2_map_server) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libmap_server_core.so\x1b[0m\n'}
+[54.316884] (-) TimerEvent: {}
+[54.417557] (-) TimerEvent: {}
+[54.518216] (-) TimerEvent: {}
+[54.618883] (-) TimerEvent: {}
+[54.719559] (-) TimerEvent: {}
+[54.820215] (-) TimerEvent: {}
+[54.920883] (-) TimerEvent: {}
+[54.923747] (nav2_map_server) StdoutLine: {'line': b'[ 55%] Built target map_server_core\n'}
+[54.978080] (nav2_map_server) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/map_saver_cli.dir/src/map_saver/main_cli.cpp.o\x1b[0m\n'}
+[54.978562] (nav2_map_server) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object test/unit/CMakeFiles/test_costmap_filter_info_server.dir/test_costmap_filter_info_server.cpp.o\x1b[0m\n'}
+[54.978736] (nav2_map_server) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object test/component/CMakeFiles/test_map_server_node.dir/test_map_server_node.cpp.o\x1b[0m\n'}
+[54.979169] (nav2_map_server) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/map_server.dir/src/map_server/main.cpp.o\x1b[0m\n'}
+[54.980816] (nav2_map_server) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/map_saver_server.dir/src/map_saver/main_server.cpp.o\x1b[0m\n'}
+[54.985841] (nav2_map_server) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/costmap_filter_info_server.dir/src/costmap_filter_info/main.cpp.o\x1b[0m\n'}
+[55.021058] (-) TimerEvent: {}
+[55.122182] (-) TimerEvent: {}
+[55.223387] (-) TimerEvent: {}
+[55.324882] (-) TimerEvent: {}
+[55.426115] (-) TimerEvent: {}
+[55.527285] (-) TimerEvent: {}
+[55.629482] (-) TimerEvent: {}
+[55.730683] (-) TimerEvent: {}
+[55.832065] (-) TimerEvent: {}
+[55.933383] (-) TimerEvent: {}
+[56.034118] (-) TimerEvent: {}
+[56.134888] (-) TimerEvent: {}
+[56.235675] (-) TimerEvent: {}
+[56.336420] (-) TimerEvent: {}
+[56.437151] (-) TimerEvent: {}
+[56.537955] (-) TimerEvent: {}
+[56.638709] (-) TimerEvent: {}
+[56.739461] (-) TimerEvent: {}
+[56.840207] (-) TimerEvent: {}
+[56.940952] (-) TimerEvent: {}
+[57.041718] (-) TimerEvent: {}
+[57.143039] (-) TimerEvent: {}
+[57.243855] (-) TimerEvent: {}
+[57.344751] (-) TimerEvent: {}
+[57.445623] (-) TimerEvent: {}
+[57.546474] (-) TimerEvent: {}
+[57.647245] (-) TimerEvent: {}
+[57.748081] (-) TimerEvent: {}
+[57.848860] (-) TimerEvent: {}
+[57.949661] (-) TimerEvent: {}
+[58.050404] (-) TimerEvent: {}
+[58.151167] (-) TimerEvent: {}
+[58.251893] (-) TimerEvent: {}
+[58.352615] (-) TimerEvent: {}
+[58.453408] (-) TimerEvent: {}
+[58.554149] (-) TimerEvent: {}
+[58.654834] (-) TimerEvent: {}
+[58.755596] (-) TimerEvent: {}
+[58.856367] (-) TimerEvent: {}
+[58.957101] (-) TimerEvent: {}
+[59.057830] (-) TimerEvent: {}
+[59.158559] (-) TimerEvent: {}
+[59.259353] (-) TimerEvent: {}
+[59.360137] (-) TimerEvent: {}
+[59.460878] (-) TimerEvent: {}
+[59.561615] (-) TimerEvent: {}
+[59.662332] (-) TimerEvent: {}
+[59.763085] (-) TimerEvent: {}
+[59.863826] (-) TimerEvent: {}
+[59.964573] (-) TimerEvent: {}
+[60.065301] (-) TimerEvent: {}
+[60.166085] (-) TimerEvent: {}
+[60.266860] (-) TimerEvent: {}
+[60.367624] (-) TimerEvent: {}
+[60.468378] (-) TimerEvent: {}
+[60.569130] (-) TimerEvent: {}
+[60.669906] (-) TimerEvent: {}
+[60.770653] (-) TimerEvent: {}
+[60.871452] (-) TimerEvent: {}
+[60.972232] (-) TimerEvent: {}
+[61.072976] (-) TimerEvent: {}
+[61.173727] (-) TimerEvent: {}
+[61.274492] (-) TimerEvent: {}
+[61.375223] (-) TimerEvent: {}
+[61.476025] (-) TimerEvent: {}
+[61.576775] (-) TimerEvent: {}
+[61.677530] (-) TimerEvent: {}
+[61.778302] (-) TimerEvent: {}
+[61.879545] (-) TimerEvent: {}
+[61.980807] (-) TimerEvent: {}
+[62.081973] (-) TimerEvent: {}
+[62.183265] (-) TimerEvent: {}
+[62.284048] (-) TimerEvent: {}
+[62.384778] (-) TimerEvent: {}
+[62.485549] (-) TimerEvent: {}
+[62.586320] (-) TimerEvent: {}
+[62.687068] (-) TimerEvent: {}
+[62.787836] (-) TimerEvent: {}
+[62.888596] (-) TimerEvent: {}
+[62.989319] (-) TimerEvent: {}
+[63.042657] (nav2_map_server) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable map_saver_server\x1b[0m\n'}
+[63.089552] (-) TimerEvent: {}
+[63.190839] (-) TimerEvent: {}
+[63.292141] (-) TimerEvent: {}
+[63.393402] (-) TimerEvent: {}
+[63.494703] (-) TimerEvent: {}
+[63.595906] (-) TimerEvent: {}
+[63.697142] (-) TimerEvent: {}
+[63.736131] (nav2_map_server) StdoutLine: {'line': b'[ 75%] Built target map_saver_server\n'}
+[63.765572] (nav2_map_server) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX executable costmap_filter_info_server\x1b[0m\n'}
+[63.797329] (-) TimerEvent: {}
+[63.803760] (nav2_map_server) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object test/component/CMakeFiles/test_map_saver_node.dir/test_map_saver_node.cpp.o\x1b[0m\n'}
+[63.897510] (-) TimerEvent: {}
+[63.962197] (nav2_map_server) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable map_saver_cli\x1b[0m\n'}
+[63.997718] (-) TimerEvent: {}
+[64.065460] (nav2_map_server) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking CXX executable map_server\x1b[0m\n'}
+[64.097935] (-) TimerEvent: {}
+[64.199266] (-) TimerEvent: {}
+[64.300639] (-) TimerEvent: {}
+[64.402680] (-) TimerEvent: {}
+[64.504361] (-) TimerEvent: {}
+[64.608455] (-) TimerEvent: {}
+[64.631536] (nav2_map_server) StdoutLine: {'line': b'[ 86%] Built target costmap_filter_info_server\n'}
+[64.664883] (nav2_map_server) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object test/component/CMakeFiles/test_map_saver_node.dir/__/test_constants.cpp.o\x1b[0m\n'}
+[64.708642] (-) TimerEvent: {}
+[64.767682] (nav2_map_server) StdoutLine: {'line': b'[ 88%] Built target map_server\n'}
+[64.789827] (nav2_map_server) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding CXX object test/component/CMakeFiles/test_map_server_node.dir/__/test_constants.cpp.o\x1b[0m\n'}
+[64.808827] (-) TimerEvent: {}
+[64.832818] (nav2_map_server) StdoutLine: {'line': b'[ 91%] Built target map_saver_cli\n'}
+[64.909025] (-) TimerEvent: {}
+[65.010243] (-) TimerEvent: {}
+[65.110946] (-) TimerEvent: {}
+[65.211672] (-) TimerEvent: {}
+[65.312390] (-) TimerEvent: {}
+[65.413110] (-) TimerEvent: {}
+[65.513791] (-) TimerEvent: {}
+[65.614465] (-) TimerEvent: {}
+[65.715154] (-) TimerEvent: {}
+[65.815850] (-) TimerEvent: {}
+[65.916607] (-) TimerEvent: {}
+[66.017292] (-) TimerEvent: {}
+[66.117993] (-) TimerEvent: {}
+[66.218690] (-) TimerEvent: {}
+[66.319420] (-) TimerEvent: {}
+[66.420132] (-) TimerEvent: {}
+[66.520847] (-) TimerEvent: {}
+[66.621623] (-) TimerEvent: {}
+[66.722326] (-) TimerEvent: {}
+[66.823026] (-) TimerEvent: {}
+[66.923727] (-) TimerEvent: {}
+[67.024504] (-) TimerEvent: {}
+[67.125180] (-) TimerEvent: {}
+[67.225879] (-) TimerEvent: {}
+[67.326630] (-) TimerEvent: {}
+[67.427319] (-) TimerEvent: {}
+[67.528053] (-) TimerEvent: {}
+[67.628763] (-) TimerEvent: {}
+[67.729448] (-) TimerEvent: {}
+[67.830195] (-) TimerEvent: {}
+[67.930931] (-) TimerEvent: {}
+[68.031602] (-) TimerEvent: {}
+[68.132326] (-) TimerEvent: {}
+[68.233032] (-) TimerEvent: {}
+[68.333712] (-) TimerEvent: {}
+[68.434434] (-) TimerEvent: {}
+[68.535111] (-) TimerEvent: {}
+[68.635794] (-) TimerEvent: {}
+[68.736532] (-) TimerEvent: {}
+[68.837279] (-) TimerEvent: {}
+[68.937961] (-) TimerEvent: {}
+[69.038671] (-) TimerEvent: {}
+[69.139394] (-) TimerEvent: {}
+[69.240063] (-) TimerEvent: {}
+[69.340729] (-) TimerEvent: {}
+[69.441420] (-) TimerEvent: {}
+[69.542095] (-) TimerEvent: {}
+[69.642775] (-) TimerEvent: {}
+[69.743478] (-) TimerEvent: {}
+[69.844195] (-) TimerEvent: {}
+[69.944895] (-) TimerEvent: {}
+[70.045595] (-) TimerEvent: {}
+[70.146271] (-) TimerEvent: {}
+[70.246971] (-) TimerEvent: {}
+[70.347683] (-) TimerEvent: {}
+[70.448445] (-) TimerEvent: {}
+[70.549152] (-) TimerEvent: {}
+[70.649897] (-) TimerEvent: {}
+[70.750600] (-) TimerEvent: {}
+[70.851317] (-) TimerEvent: {}
+[70.952032] (-) TimerEvent: {}
+[71.052727] (-) TimerEvent: {}
+[71.153411] (-) TimerEvent: {}
+[71.254101] (-) TimerEvent: {}
+[71.354771] (-) TimerEvent: {}
+[71.455436] (-) TimerEvent: {}
+[71.556124] (-) TimerEvent: {}
+[71.656808] (-) TimerEvent: {}
+[71.757513] (-) TimerEvent: {}
+[71.858264] (-) TimerEvent: {}
+[71.958951] (-) TimerEvent: {}
+[72.059632] (-) TimerEvent: {}
+[72.160336] (-) TimerEvent: {}
+[72.261044] (-) TimerEvent: {}
+[72.361743] (-) TimerEvent: {}
+[72.462454] (-) TimerEvent: {}
+[72.563134] (-) TimerEvent: {}
+[72.663817] (-) TimerEvent: {}
+[72.764585] (-) TimerEvent: {}
+[72.865288] (-) TimerEvent: {}
+[72.965999] (-) TimerEvent: {}
+[73.066691] (-) TimerEvent: {}
+[73.167387] (-) TimerEvent: {}
+[73.237126] (nav2_map_server) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking CXX executable test_map_server_node\x1b[0m\n'}
+[73.267568] (-) TimerEvent: {}
+[73.368277] (-) TimerEvent: {}
+[73.469029] (-) TimerEvent: {}
+[73.569916] (-) TimerEvent: {}
+[73.670595] (-) TimerEvent: {}
+[73.769569] (nav2_map_server) StdoutLine: {'line': b'[ 94%] Built target test_map_server_node\n'}
+[73.770657] (-) TimerEvent: {}
+[73.871183] (-) TimerEvent: {}
+[73.971888] (-) TimerEvent: {}
+[74.072661] (-) TimerEvent: {}
+[74.173406] (-) TimerEvent: {}
+[74.274060] (-) TimerEvent: {}
+[74.374706] (-) TimerEvent: {}
+[74.475363] (-) TimerEvent: {}
+[74.576069] (-) TimerEvent: {}
+[74.676710] (-) TimerEvent: {}
+[74.777362] (-) TimerEvent: {}
+[74.878009] (-) TimerEvent: {}
+[74.978657] (-) TimerEvent: {}
+[75.079309] (-) TimerEvent: {}
+[75.179995] (-) TimerEvent: {}
+[75.280644] (-) TimerEvent: {}
+[75.381304] (-) TimerEvent: {}
+[75.481993] (-) TimerEvent: {}
+[75.582670] (-) TimerEvent: {}
+[75.683331] (-) TimerEvent: {}
+[75.784055] (-) TimerEvent: {}
+[75.884713] (-) TimerEvent: {}
+[75.985373] (-) TimerEvent: {}
+[76.086020] (-) TimerEvent: {}
+[76.186675] (-) TimerEvent: {}
+[76.287321] (-) TimerEvent: {}
+[76.388018] (-) TimerEvent: {}
+[76.488681] (-) TimerEvent: {}
+[76.589378] (-) TimerEvent: {}
+[76.690062] (-) TimerEvent: {}
+[76.790733] (-) TimerEvent: {}
+[76.891404] (-) TimerEvent: {}
+[76.992212] (-) TimerEvent: {}
+[77.092855] (-) TimerEvent: {}
+[77.193509] (-) TimerEvent: {}
+[77.294165] (-) TimerEvent: {}
+[77.394842] (-) TimerEvent: {}
+[77.495504] (-) TimerEvent: {}
+[77.596342] (-) TimerEvent: {}
+[77.697010] (-) TimerEvent: {}
+[77.797671] (-) TimerEvent: {}
+[77.898352] (-) TimerEvent: {}
+[77.999034] (-) TimerEvent: {}
+[78.099718] (-) TimerEvent: {}
+[78.200402] (-) TimerEvent: {}
+[78.301090] (-) TimerEvent: {}
+[78.401751] (-) TimerEvent: {}
+[78.429082] (nav2_map_server) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking CXX executable test_map_saver_node\x1b[0m\n'}
+[78.501937] (-) TimerEvent: {}
+[78.602633] (-) TimerEvent: {}
+[78.703324] (-) TimerEvent: {}
+[78.804203] (-) TimerEvent: {}
+[78.904860] (-) TimerEvent: {}
+[79.005530] (-) TimerEvent: {}
+[79.055389] (nav2_map_server) StdoutLine: {'line': b'[ 97%] Built target test_map_saver_node\n'}
+[79.105715] (-) TimerEvent: {}
+[79.206463] (-) TimerEvent: {}
+[79.307206] (-) TimerEvent: {}
+[79.408016] (-) TimerEvent: {}
+[79.508814] (-) TimerEvent: {}
+[79.609575] (-) TimerEvent: {}
+[79.710344] (-) TimerEvent: {}
+[79.811105] (-) TimerEvent: {}
+[79.911858] (-) TimerEvent: {}
+[80.012632] (-) TimerEvent: {}
+[80.113358] (-) TimerEvent: {}
+[80.214069] (-) TimerEvent: {}
+[80.314782] (-) TimerEvent: {}
+[80.415541] (-) TimerEvent: {}
+[80.516376] (-) TimerEvent: {}
+[80.617154] (-) TimerEvent: {}
+[80.717944] (-) TimerEvent: {}
+[80.818734] (-) TimerEvent: {}
+[80.919536] (-) TimerEvent: {}
+[81.020354] (-) TimerEvent: {}
+[81.121142] (-) TimerEvent: {}
+[81.221936] (-) TimerEvent: {}
+[81.322734] (-) TimerEvent: {}
+[81.423521] (-) TimerEvent: {}
+[81.524396] (-) TimerEvent: {}
+[81.625187] (-) TimerEvent: {}
+[81.725905] (-) TimerEvent: {}
+[81.826682] (-) TimerEvent: {}
+[81.927470] (-) TimerEvent: {}
+[82.028288] (-) TimerEvent: {}
+[82.129047] (-) TimerEvent: {}
+[82.229803] (-) TimerEvent: {}
+[82.330579] (-) TimerEvent: {}
+[82.431387] (-) TimerEvent: {}
+[82.532176] (-) TimerEvent: {}
+[82.632948] (-) TimerEvent: {}
+[82.733651] (-) TimerEvent: {}
+[82.834416] (-) TimerEvent: {}
+[82.935064] (-) TimerEvent: {}
+[83.035677] (-) TimerEvent: {}
+[83.136346] (-) TimerEvent: {}
+[83.141209] (nav2_map_server) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_costmap_filter_info_server\x1b[0m\n'}
+[83.236526] (-) TimerEvent: {}
+[83.337503] (-) TimerEvent: {}
+[83.438198] (-) TimerEvent: {}
+[83.538888] (-) TimerEvent: {}
+[83.639569] (-) TimerEvent: {}
+[83.740274] (-) TimerEvent: {}
+[83.840972] (-) TimerEvent: {}
+[83.894785] (nav2_map_server) StdoutLine: {'line': b'[100%] Built target test_costmap_filter_info_server\n'}
+[83.925788] (nav2_map_server) CommandEnded: {'returncode': 0}
+[83.929913] (nav2_map_server) JobProgress: {'identifier': 'nav2_map_server', 'progress': 'install'}
+[83.931519] (nav2_map_server) Command: {'cmd': ['/usr/bin/cmake', '--install', '/Pav-S_ws/build/nav2_map_server'], 'cwd': '/Pav-S_ws/build/nav2_map_server', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_map_server'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[83.941043] (-) TimerEvent: {}
+[83.955252] (nav2_map_server) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[83.955854] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/lib/libmap_server_core.so\n'}
+[83.960235] (nav2_map_server) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/libmap_server_core.so" to ""\n'}
+[83.960514] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/lib/libmap_io.so\n'}
+[83.961470] (nav2_map_server) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/libmap_io.so" to ""\n'}
+[83.961747] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_server\n'}
+[83.962466] (nav2_map_server) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_server" to ""\n'}
+[83.962707] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_saver_cli\n'}
+[83.963357] (nav2_map_server) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_saver_cli" to ""\n'}
+[83.963568] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_saver_server\n'}
+[83.964229] (nav2_map_server) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/map_saver_server" to ""\n'}
+[83.964446] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/costmap_filter_info_server\n'}
+[83.965084] (nav2_map_server) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_map_server/lib/nav2_map_server/costmap_filter_info_server" to ""\n'}
+[83.965290] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/include/\n'}
+[83.965486] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server\n'}
+[83.965678] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server/map_server.hpp\n'}
+[83.965863] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server/costmap_filter_info_server.hpp\n'}
+[83.966064] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server/map_saver.hpp\n'}
+[83.966271] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server/map_mode.hpp\n'}
+[83.966468] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/include//nav2_map_server/map_io.hpp\n'}
+[83.966751] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/launch\n'}
+[83.967286] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/launch/map_saver_server.launch.py\n'}
+[83.968079] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/library_path.sh\n'}
+[83.968533] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/library_path.dsv\n'}
+[83.969632] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/ament_index/resource_index/package_run_dependencies/nav2_map_server\n'}
+[83.970274] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/ament_index/resource_index/parent_prefix_path/nav2_map_server\n'}
+[83.970675] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/ament_prefix_path.sh\n'}
+[83.970953] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/ament_prefix_path.dsv\n'}
+[83.971318] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/path.sh\n'}
+[83.971588] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/environment/path.dsv\n'}
+[83.971969] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/local_setup.bash\n'}
+[83.972415] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/local_setup.sh\n'}
+[83.972854] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/local_setup.zsh\n'}
+[83.973286] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/local_setup.dsv\n'}
+[83.973662] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/package.dsv\n'}
+[83.974233] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/ament_index/resource_index/packages/nav2_map_server\n'}
+[83.974688] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/ament_index/resource_index/rclcpp_components/nav2_map_server\n'}
+[83.975422] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[83.975985] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[83.976560] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[83.977159] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/cmake/nav2_map_serverConfig.cmake\n'}
+[83.977501] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/cmake/nav2_map_serverConfig-version.cmake\n'}
+[83.978203] (nav2_map_server) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_map_server/share/nav2_map_server/package.xml\n'}
+[83.984742] (nav2_map_server) CommandEnded: {'returncode': 0}
+[84.039568] (nav2_map_server) JobEnded: {'identifier': 'nav2_map_server', 'rc': 0}
+[84.041891] (-) TimerEvent: {}
+[84.042157] (-) EventReactorShutdown: {}

@@ -1,0 +1,13 @@
+/Pav-S_ws/build/astra_camera/CMakeFiles/uninstall.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/astra_camera_uninstall.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/astra_camera.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/astra_camera_node.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/list_devices_node.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/clean_shm_node.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/test.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/edit_cache.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/rebuild_cache.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/list_install_components.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/install.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/install/local.dir
+/Pav-S_ws/build/astra_camera/CMakeFiles/install/strip.dir

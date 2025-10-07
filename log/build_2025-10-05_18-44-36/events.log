@@ -1,0 +1,1477 @@
+[0.000000] (-) TimerEvent: {}
+[0.000394] (-) JobUnselected: {'identifier': 'astra_camera'}
+[0.000663] (-) JobUnselected: {'identifier': 'astra_camera_msgs'}
+[0.001172] (-) JobUnselected: {'identifier': 'costmap_queue'}
+[0.001412] (-) JobUnselected: {'identifier': 'dwb_core'}
+[0.001661] (-) JobUnselected: {'identifier': 'dwb_critics'}
+[0.001749] (-) JobUnselected: {'identifier': 'dwb_msgs'}
+[0.001907] (-) JobUnselected: {'identifier': 'dwb_plugins'}
+[0.001980] (-) JobUnselected: {'identifier': 'fast_lio'}
+[0.002018] (-) JobUnselected: {'identifier': 'libuvc'}
+[0.002053] (-) JobUnselected: {'identifier': 'nav2_amcl'}
+[0.002110] (-) JobUnselected: {'identifier': 'nav2_behavior_tree'}
+[0.002151] (-) JobUnselected: {'identifier': 'nav2_behaviors'}
+[0.002201] (-) JobUnselected: {'identifier': 'nav2_bringup'}
+[0.002580] (-) JobUnselected: {'identifier': 'nav2_bt_navigator'}
+[0.002651] (-) JobUnselected: {'identifier': 'nav2_collision_monitor'}
+[0.002766] (-) JobUnselected: {'identifier': 'nav2_common'}
+[0.002829] (-) JobUnselected: {'identifier': 'nav2_constrained_smoother'}
+[0.002866] (-) JobUnselected: {'identifier': 'nav2_core'}
+[0.002903] (-) JobUnselected: {'identifier': 'nav2_costmap_2d'}
+[0.002953] (-) JobUnselected: {'identifier': 'nav2_graceful_controller'}
+[0.002991] (-) JobUnselected: {'identifier': 'nav2_lifecycle_manager'}
+[0.003216] (-) JobUnselected: {'identifier': 'nav2_map_server'}
+[0.003286] (-) JobUnselected: {'identifier': 'nav2_mppi_controller'}
+[0.003397] (-) JobUnselected: {'identifier': 'nav2_msgs'}
+[0.003458] (-) JobUnselected: {'identifier': 'nav2_navfn_planner'}
+[0.003493] (-) JobUnselected: {'identifier': 'nav2_regulated_pure_pursuit_controller'}
+[0.003531] (-) JobUnselected: {'identifier': 'nav2_rotation_shim_controller'}
+[0.003581] (-) JobUnselected: {'identifier': 'nav2_rviz_plugins'}
+[0.003616] (-) JobUnselected: {'identifier': 'nav2_smac_planner'}
+[0.003651] (-) JobUnselected: {'identifier': 'nav2_smoother'}
+[0.003947] (-) JobUnselected: {'identifier': 'nav2_theta_star_planner'}
+[0.004026] (-) JobUnselected: {'identifier': 'nav2_velocity_smoother'}
+[0.004093] (-) JobUnselected: {'identifier': 'nav2_voxel_grid'}
+[0.004156] (-) JobUnselected: {'identifier': 'nav2_waypoint_follower'}
+[0.004218] (-) JobUnselected: {'identifier': 'nav_2d_msgs'}
+[0.004279] (-) JobUnselected: {'identifier': 'nav_2d_utils'}
+[0.004340] (-) JobUnselected: {'identifier': 'navigation2'}
+[0.004401] (-) JobUnselected: {'identifier': 'navigation_manager'}
+[0.004462] (-) JobUnselected: {'identifier': 'robot_kcf'}
+[0.004525] (-) JobUnselected: {'identifier': 'serial'}
+[0.004586] (-) JobUnselected: {'identifier': 'turn_on_wheeltec_robot'}
+[0.004648] (-) JobUnselected: {'identifier': 'usb_cam'}
+[0.004710] (-) JobUnselected: {'identifier': 'wheeltec_robot_msg'}
+[0.004771] (-) JobUnselected: {'identifier': 'wheeltec_robot_urdf'}
+[0.004834] (-) JobUnselected: {'identifier': 'yolo_detector'}
+[0.004901] (-) JobUnselected: {'identifier': 'yolov5_lib'}
+[0.004974] (nav2_simple_commander) JobQueued: {'identifier': 'nav2_simple_commander', 'dependencies': OrderedDict([('nav2_common', '/Pav-S_ws/install/nav2_common'), ('nav2_msgs', '/Pav-S_ws/install/nav2_msgs')])}
+[0.005057] (nav2_util) JobQueued: {'identifier': 'nav2_util', 'dependencies': OrderedDict([('nav2_common', '/Pav-S_ws/install/nav2_common'), ('nav2_msgs', '/Pav-S_ws/install/nav2_msgs')])}
+[0.005135] (nav2_controller) JobQueued: {'identifier': 'nav2_controller', 'dependencies': OrderedDict([('nav2_common', '/Pav-S_ws/install/nav2_common'), ('nav_2d_msgs', '/Pav-S_ws/install/nav_2d_msgs'), ('nav2_msgs', '/Pav-S_ws/install/nav2_msgs'), ('nav2_voxel_grid', '/Pav-S_ws/install/nav2_voxel_grid'), ('nav2_util', '/Pav-S_ws/install/nav2_util'), ('nav2_lifecycle_manager', '/Pav-S_ws/install/nav2_lifecycle_manager'), ('nav2_map_server', '/Pav-S_ws/install/nav2_map_server'), ('nav_2d_utils', '/Pav-S_ws/install/nav_2d_utils'), ('nav2_costmap_2d', '/Pav-S_ws/install/nav2_costmap_2d'), ('nav2_core', '/Pav-S_ws/install/nav2_core')])}
+[0.005242] (nav2_planner) JobQueued: {'identifier': 'nav2_planner', 'dependencies': OrderedDict([('nav2_common', '/Pav-S_ws/install/nav2_common'), ('nav2_msgs', '/Pav-S_ws/install/nav2_msgs'), ('nav2_voxel_grid', '/Pav-S_ws/install/nav2_voxel_grid'), ('nav2_util', '/Pav-S_ws/install/nav2_util'), ('nav2_lifecycle_manager', '/Pav-S_ws/install/nav2_lifecycle_manager'), ('nav2_map_server', '/Pav-S_ws/install/nav2_map_server'), ('nav2_costmap_2d', '/Pav-S_ws/install/nav2_costmap_2d'), ('nav2_core', '/Pav-S_ws/install/nav2_core')])}
+[0.005322] (nav2_dwb_controller) JobQueued: {'identifier': 'nav2_dwb_controller', 'dependencies': OrderedDict([('nav2_common', '/Pav-S_ws/install/nav2_common'), ('nav_2d_msgs', '/Pav-S_ws/install/nav_2d_msgs'), ('dwb_msgs', '/Pav-S_ws/install/dwb_msgs'), ('nav2_msgs', '/Pav-S_ws/install/nav2_msgs'), ('nav2_voxel_grid', '/Pav-S_ws/install/nav2_voxel_grid'), ('nav2_util', '/Pav-S_ws/install/nav2_util'), ('nav2_lifecycle_manager', '/Pav-S_ws/install/nav2_lifecycle_manager'), ('nav2_map_server', '/Pav-S_ws/install/nav2_map_server'), ('nav_2d_utils', '/Pav-S_ws/install/nav_2d_utils'), ('nav2_costmap_2d', '/Pav-S_ws/install/nav2_costmap_2d'), ('costmap_queue', '/Pav-S_ws/install/costmap_queue'), ('nav2_core', '/Pav-S_ws/install/nav2_core'), ('dwb_core', '/Pav-S_ws/install/dwb_core'), ('dwb_critics', '/Pav-S_ws/install/dwb_critics'), ('dwb_plugins', '/Pav-S_ws/install/dwb_plugins')])}
+[0.005416] (nav2_util) JobStarted: {'identifier': 'nav2_util'}
+[0.020866] (nav2_simple_commander) JobStarted: {'identifier': 'nav2_simple_commander'}
+[0.040437] (nav2_util) JobProgress: {'identifier': 'nav2_util', 'progress': 'cmake'}
+[0.041780] (nav2_util) JobProgress: {'identifier': 'nav2_util', 'progress': 'build'}
+[0.043116] (nav2_util) Command: {'cmd': ['/usr/bin/cmake', '--build', '/Pav-S_ws/build/nav2_util', '--', '-j6', '-l6'], 'cwd': '/Pav-S_ws/build/nav2_util', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/costmap_queue/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_util'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[0.099299] (-) TimerEvent: {}
+[0.180560] (nav2_util) StdoutLine: {'line': b'[ 10%] Built target gtest\n'}
+[0.181069] (nav2_util) StdoutLine: {'line': b'[ 10%] Built target gtest_main\n'}
+[0.199399] (-) TimerEvent: {}
+[0.209121] (nav2_util) StdoutLine: {'line': b'[ 35%] Built target nav2_util_core\n'}
+[0.244433] (nav2_util) StdoutLine: {'line': b'[ 40%] Built target test_execution_timer\n'}
+[0.274889] (nav2_util) StdoutLine: {'line': b'[ 45%] Built target test_string_utils\n'}
+[0.282582] (nav2_util) StdoutLine: {'line': b'[ 50%] Built target lifecycle_bringup\n'}
+[0.284010] (nav2_util) StdoutLine: {'line': b'[ 60%] Built target test_node_utils\n'}
+[0.284239] (nav2_util) StdoutLine: {'line': b'[ 60%] Built target test_lifecycle_utils\n'}
+[0.292940] (nav2_util) StdoutLine: {'line': b'[ 65%] Built target test_service_client\n'}
+[0.299537] (-) TimerEvent: {}
+[0.322259] (nav2_util) StdoutLine: {'line': b'[ 70%] Built target test_actions\n'}
+[0.354292] (nav2_util) StdoutLine: {'line': b'[ 80%] Built target test_lifecycle_node\n'}
+[0.357922] (nav2_util) StdoutLine: {'line': b'[ 80%] Built target test_geometry_utils\n'}
+[0.360482] (nav2_util) StdoutLine: {'line': b'[ 85%] Built target test_lifecycle_cli_node\n'}
+[0.373368] (nav2_util) StdoutLine: {'line': b'[ 90%] Built target test_robot_utils\n'}
+[0.377089] (nav2_util) StdoutLine: {'line': b'[ 95%] Built target test_odometry_utils\n'}
+[0.388811] (nav2_util) StdoutLine: {'line': b'[100%] Built target test_validation_messages\n'}
+[0.399655] (-) TimerEvent: {}
+[0.500215] (-) TimerEvent: {}
+[0.600939] (-) TimerEvent: {}
+[0.701709] (-) TimerEvent: {}
+[0.718296] (nav2_util) CommandEnded: {'returncode': 0}
+[0.720461] (nav2_util) JobProgress: {'identifier': 'nav2_util', 'progress': 'install'}
+[0.750816] (nav2_util) Command: {'cmd': ['/usr/bin/cmake', '--install', '/Pav-S_ws/build/nav2_util'], 'cwd': '/Pav-S_ws/build/nav2_util', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/costmap_queue/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_util'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[0.774022] (nav2_util) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[0.774657] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include/\n'}
+[0.774932] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util\n'}
+[0.775173] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/node_utils.hpp\n'}
+[0.775410] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/costmap.hpp\n'}
+[0.775628] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/service_client.hpp\n'}
+[0.775793] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/node_thread.hpp\n'}
+[0.775927] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/line_iterator.hpp\n'}
+[0.776056] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/geometry_utils.hpp\n'}
+[0.776182] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/lifecycle_node.hpp\n'}
+[0.776317] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/execution_timer.hpp\n'}
+[0.776535] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/lifecycle_utils.hpp\n'}
+[0.776694] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/odometry_utils.hpp\n'}
+[0.776836] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/lifecycle_service_client.hpp\n'}
+[0.777003] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/clear_entirely_costmap_service_client.hpp\n'}
+[0.777156] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/occ_grid_values.hpp\n'}
+[0.777491] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/robot_utils.hpp\n'}
+[0.777984] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/simple_action_server.hpp\n'}
+[0.778140] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/validate_messages.hpp\n'}
+[0.778286] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/include//nav2_util/string_utils.hpp\n'}
+[0.778426] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/environment/library_path.sh\n'}
+[0.778566] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/environment/library_path.dsv\n'}
+[0.778735] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/ament_index/resource_index/package_run_dependencies/nav2_util\n'}
+[0.778931] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/ament_index/resource_index/parent_prefix_path/nav2_util\n'}
+[0.779063] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/environment/ament_prefix_path.sh\n'}
+[0.779189] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/environment/ament_prefix_path.dsv\n'}
+[0.779314] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/environment/path.sh\n'}
+[0.779437] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/environment/path.dsv\n'}
+[0.779558] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/local_setup.bash\n'}
+[0.779680] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/local_setup.sh\n'}
+[0.779803] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/local_setup.zsh\n'}
+[0.779924] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/local_setup.dsv\n'}
+[0.780048] (nav2_util) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_util/share/nav2_util/package.dsv\n'}
+[0.780168] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/ament_index/resource_index/packages/nav2_util\n'}
+[0.780293] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.780415] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.780535] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.780655] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/cmake/nav2_utilConfig.cmake\n'}
+[0.780775] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/cmake/nav2_utilConfig-version.cmake\n'}
+[0.780895] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/share/nav2_util/package.xml\n'}
+[0.781014] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/lib/libnav2_util_core.so\n'}
+[0.781134] (nav2_util) StdoutLine: {'line': b'-- Up-to-date: /Pav-S_ws/install/nav2_util/lib/nav2_util/lifecycle_bringup\n'}
+[0.783599] (nav2_util) CommandEnded: {'returncode': 0}
+[0.802016] (-) TimerEvent: {}
+[0.829636] (nav2_util) JobEnded: {'identifier': 'nav2_util', 'rc': 0}
+[0.831986] (nav2_controller) JobStarted: {'identifier': 'nav2_controller'}
+[0.844448] (nav2_planner) JobStarted: {'identifier': 'nav2_planner'}
+[0.857874] (nav2_dwb_controller) JobStarted: {'identifier': 'nav2_dwb_controller'}
+[0.894947] (nav2_controller) JobProgress: {'identifier': 'nav2_controller', 'progress': 'cmake'}
+[0.895343] (nav2_controller) Command: {'cmd': ['/usr/bin/cmake', '/Pav-S_ws/src/navigation2-humble/nav2_controller', '-DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/nav2_controller'], 'cwd': '/Pav-S_ws/build/nav2_controller', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/costmap_queue/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_controller'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/costmap_queue:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[0.900988] (nav2_planner) JobProgress: {'identifier': 'nav2_planner', 'progress': 'cmake'}
+[0.902042] (nav2_planner) Command: {'cmd': ['/usr/bin/cmake', '/Pav-S_ws/src/navigation2-humble/nav2_planner', '-DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/nav2_planner'], 'cwd': '/Pav-S_ws/build/nav2_planner', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/costmap_queue/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_planner'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/costmap_queue:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[0.904983] (-) TimerEvent: {}
+[0.947817] (nav2_dwb_controller) JobProgress: {'identifier': 'nav2_dwb_controller', 'progress': 'cmake'}
+[0.949069] (nav2_dwb_controller) Command: {'cmd': ['/usr/bin/cmake', '/Pav-S_ws/src/navigation2-humble/nav2_dwb_controller/nav2_dwb_controller', '-DCMAKE_INSTALL_PREFIX=/Pav-S_ws/install/nav2_dwb_controller'], 'cwd': '/Pav-S_ws/build/nav2_dwb_controller', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/costmap_queue/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_dwb_controller'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[1.005188] (-) TimerEvent: {}
+[1.028826] (nav2_planner) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.029438] (nav2_controller) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.075920] (nav2_dwb_controller) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.105351] (-) TimerEvent: {}
+[1.142836] (nav2_planner) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.145825] (nav2_controller) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.157732] (nav2_planner) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.161692] (nav2_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.197730] (nav2_dwb_controller) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.205589] (-) TimerEvent: {}
+[1.221087] (nav2_dwb_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.305702] (-) TimerEvent: {}
+[1.313438] (nav2_planner) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.316577] (nav2_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.326885] (nav2_planner) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.327375] (nav2_planner) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.328251] (nav2_planner) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.330135] (nav2_controller) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.330660] (nav2_controller) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.331324] (nav2_controller) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.337235] (nav2_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.338767] (nav2_planner) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.384403] (nav2_dwb_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.397627] (nav2_dwb_controller) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.398197] (nav2_dwb_controller) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.398873] (nav2_dwb_controller) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.404950] (nav2_dwb_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.405754] (-) TimerEvent: {}
+[1.506272] (-) TimerEvent: {}
+[1.515249] (nav2_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.522927] (nav2_planner) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.541463] (nav2_controller) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.542357] (nav2_controller) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.543948] (nav2_controller) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.549070] (nav2_planner) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.550479] (nav2_planner) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.551912] (nav2_planner) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.559849] (nav2_controller) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.566528] (nav2_planner) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.585539] (nav2_dwb_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.598733] (nav2_dwb_controller) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.599365] (nav2_dwb_controller) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.600030] (nav2_dwb_controller) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.606364] (-) TimerEvent: {}
+[1.610953] (nav2_dwb_controller) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.692396] (nav2_simple_commander) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../../build/nav2_simple_commander', 'build', '--build-base', '/Pav-S_ws/build/nav2_simple_commander/build', 'install', '--record', '/Pav-S_ws/build/nav2_simple_commander/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/Pav-S_ws/src/navigation2-humble/nav2_simple_commander', 'env': {'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'aic', 'SSH_CLIENT': '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/costmap_queue/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64', 'BROWSER': '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/aic', 'OLDPWD': '/Pav-S_ws/src/navigation2-humble', 'TERM_PROGRAM_VERSION': '1.104.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock', 'JETSON_L4T': '36.3.0', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Jetson Orin Nano Developer Kit', 'VSCODE_GIT_ASKPASS_MAIN': '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/Pav-S_ws/install:/ws_livox/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'aic', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421825000219', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/Pav-S_ws/install/libuvc/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'GAZEBO_MODEL_PATH': ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt', 'LANG': 'zh_CN.UTF-8', 'PYTHONSTARTUP': '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra234', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-f3ae43d0c4.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '6', 'AMENT_PREFIX_PATH': '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CMAKE_MODULE_PATH': '/Pav-S_ws/install/libuvc/lib/cmake/libuvc', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/Pav-S_ws/build/nav2_simple_commander', 'TURTLEBOT3_MODEL': 'waffle', 'SSH_CONNECTION': '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/Pav-S_ws/build/nav2_simple_commander/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'JETSON_JETPACK': '6.0', 'CMAKE_PREFIX_PATH': '/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[1.706496] (-) TimerEvent: {}
+[1.807181] (-) TimerEvent: {}
+[1.907876] (-) TimerEvent: {}
+[1.971299] (nav2_controller) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.993772] (nav2_planner) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.002784] (nav2_dwb_controller) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.007994] (-) TimerEvent: {}
+[2.108966] (-) TimerEvent: {}
+[2.210147] (-) TimerEvent: {}
+[2.244010] (nav2_controller) StdoutLine: {'line': b'-- Found nav2_core: 1.1.18 (/Pav-S_ws/install/nav2_core/share/nav2_core/cmake)\n'}
+[2.265870] (nav2_planner) StdoutLine: {'line': b'-- Found nav2_common: 1.1.18 (/Pav-S_ws/install/nav2_common/share/nav2_common/cmake)\n'}
+[2.272952] (nav2_planner) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.304472] (nav2_simple_commander) StdoutLine: {'line': b'running egg_info\n'}
+[2.305831] (nav2_simple_commander) StdoutLine: {'line': b'writing ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/PKG-INFO\n'}
+[2.306424] (nav2_simple_commander) StdoutLine: {'line': b'writing dependency_links to ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/dependency_links.txt\n'}
+[2.306936] (nav2_simple_commander) StdoutLine: {'line': b'writing entry points to ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/entry_points.txt\n'}
+[2.307205] (nav2_simple_commander) StdoutLine: {'line': b'writing requirements to ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/requires.txt\n'}
+[2.307415] (nav2_simple_commander) StdoutLine: {'line': b'writing top-level names to ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/top_level.txt\n'}
+[2.310195] (-) TimerEvent: {}
+[2.311645] (nav2_simple_commander) StdoutLine: {'line': b"reading manifest file '../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/SOURCES.txt'\n"}
+[2.313851] (nav2_simple_commander) StdoutLine: {'line': b"writing manifest file '../../../build/nav2_simple_commander/nav2_simple_commander.egg-info/SOURCES.txt'\n"}
+[2.314143] (nav2_simple_commander) StdoutLine: {'line': b'running build\n'}
+[2.314319] (nav2_simple_commander) StdoutLine: {'line': b'running build_py\n'}
+[2.315885] (nav2_simple_commander) StdoutLine: {'line': b'running install\n'}
+[2.316630] (nav2_simple_commander) StdoutLine: {'line': b'running install_lib\n'}
+[2.320542] (nav2_simple_commander) StdoutLine: {'line': b'running install_data\n'}
+[2.321111] (nav2_simple_commander) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.324620] (nav2_simple_commander) StdoutLine: {'line': b"removing '/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages/nav2_simple_commander-1.0.0-py3.10.egg-info' (and everything under it)\n"}
+[2.325342] (nav2_simple_commander) StdoutLine: {'line': b'Copying ../../../build/nav2_simple_commander/nav2_simple_commander.egg-info to /Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages/nav2_simple_commander-1.0.0-py3.10.egg-info\n'}
+[2.327281] (nav2_simple_commander) StdoutLine: {'line': b'running install_scripts\n'}
+[2.370961] (nav2_simple_commander) StdoutLine: {'line': b'Installing demo_inspection script to /Pav-S_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[2.371390] (nav2_simple_commander) StdoutLine: {'line': b'Installing demo_picking script to /Pav-S_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[2.371684] (nav2_simple_commander) StdoutLine: {'line': b'Installing demo_recoveries script to /Pav-S_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[2.372197] (nav2_simple_commander) StdoutLine: {'line': b'Installing demo_security script to /Pav-S_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[2.372482] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_assisted_teleop script to /Pav-S_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[2.372655] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_follow_path script to /Pav-S_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[2.372854] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_nav_through_poses script to /Pav-S_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[2.373028] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_nav_to_pose script to /Pav-S_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[2.373189] (nav2_simple_commander) StdoutLine: {'line': b'Installing example_waypoint_follower script to /Pav-S_ws/install/nav2_simple_commander/lib/nav2_simple_commander\n'}
+[2.374301] (nav2_simple_commander) StdoutLine: {'line': b"writing list of installed files to '/Pav-S_ws/build/nav2_simple_commander/install.log'\n"}
+[2.387887] (nav2_controller) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.406119] (nav2_planner) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.407413] (nav2_controller) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.410292] (-) TimerEvent: {}
+[2.416717] (nav2_dwb_controller) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.422493] (nav2_dwb_controller) StdoutLine: {'line': b'-- Generating done\n'}
+[2.425863] (nav2_planner) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.426280] (nav2_dwb_controller) StdoutLine: {'line': b'-- Build files have been written to: /Pav-S_ws/build/nav2_dwb_controller\n'}
+[2.434975] (nav2_controller) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.436429] (nav2_dwb_controller) CommandEnded: {'returncode': 0}
+[2.437611] (nav2_dwb_controller) JobProgress: {'identifier': 'nav2_dwb_controller', 'progress': 'build'}
+[2.438213] (nav2_dwb_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/Pav-S_ws/build/nav2_dwb_controller', '--', '-j6', '-l6'], 'cwd': '/Pav-S_ws/build/nav2_dwb_controller', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/costmap_queue/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_dwb_controller'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[2.446970] (nav2_simple_commander) CommandEnded: {'returncode': 0}
+[2.452486] (nav2_planner) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.460929] (nav2_simple_commander) JobEnded: {'identifier': 'nav2_simple_commander', 'rc': 0}
+[2.470670] (nav2_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.485108] (nav2_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.510490] (-) TimerEvent: {}
+[2.517821] (nav2_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.529534] (nav2_dwb_controller) CommandEnded: {'returncode': 0}
+[2.530678] (nav2_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.531466] (nav2_dwb_controller) JobProgress: {'identifier': 'nav2_dwb_controller', 'progress': 'install'}
+[2.531859] (nav2_dwb_controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/Pav-S_ws/build/nav2_dwb_controller'], 'cwd': '/Pav-S_ws/build/nav2_dwb_controller', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/costmap_queue/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_dwb_controller'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_common:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[2.550875] (nav2_dwb_controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.551326] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/ament_index/resource_index/package_run_dependencies/nav2_dwb_controller\n'}
+[2.551638] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/ament_index/resource_index/parent_prefix_path/nav2_dwb_controller\n'}
+[2.551970] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/ament_prefix_path.sh\n'}
+[2.552218] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/ament_prefix_path.dsv\n'}
+[2.552467] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/path.sh\n'}
+[2.552717] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/path.dsv\n'}
+[2.552938] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.bash\n'}
+[2.553170] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.sh\n'}
+[2.553431] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.zsh\n'}
+[2.553816] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.dsv\n'}
+[2.554050] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/package.dsv\n'}
+[2.554404] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/ament_index/resource_index/packages/nav2_dwb_controller\n'}
+[2.554711] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/cmake/nav2_dwb_controllerConfig.cmake\n'}
+[2.554906] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/cmake/nav2_dwb_controllerConfig-version.cmake\n'}
+[2.555134] (nav2_dwb_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/package.xml\n'}
+[2.565926] (nav2_dwb_controller) CommandEnded: {'returncode': 0}
+[2.583695] (nav2_dwb_controller) JobEnded: {'identifier': 'nav2_dwb_controller', 'rc': 0}
+[2.610629] (-) TimerEvent: {}
+[2.649057] (nav2_controller) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.657286] (nav2_planner) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.660250] (nav2_controller) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.667895] (nav2_planner) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.710722] (-) TimerEvent: {}
+[2.811259] (-) TimerEvent: {}
+[2.878142] (nav2_controller) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.888915] (nav2_planner) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.911390] (-) TimerEvent: {}
+[2.953023] (nav2_controller) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[2.956605] (nav2_planner) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[3.011564] (-) TimerEvent: {}
+[3.051127] (nav2_controller) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.053587] (nav2_planner) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.081167] (nav2_controller) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.082716] (nav2_planner) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.111730] (-) TimerEvent: {}
+[3.212845] (-) TimerEvent: {}
+[3.245153] (nav2_controller) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.245801] (nav2_controller) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.257967] (nav2_planner) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.258602] (nav2_planner) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.313041] (-) TimerEvent: {}
+[3.413989] (-) TimerEvent: {}
+[3.416267] (nav2_controller) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[3.418636] (nav2_controller) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.429287] (nav2_planner) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[3.433047] (nav2_planner) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.514121] (-) TimerEvent: {}
+[3.589175] (nav2_planner) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.15 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[3.614239] (-) TimerEvent: {}
+[3.669830] (nav2_planner) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.15 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[3.714376] (-) TimerEvent: {}
+[3.719504] (nav2_planner) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.15 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[3.788305] (nav2_planner) StdoutLine: {'line': b'-- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[3.814508] (-) TimerEvent: {}
+[3.890198] (nav2_planner) StdoutLine: {'line': b'-- Found nav2_util: 1.1.18 (/Pav-S_ws/install/nav2_util/share/nav2_util/cmake)\n'}
+[3.914634] (-) TimerEvent: {}
+[4.015218] (-) TimerEvent: {}
+[4.109977] (nav2_planner) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[4.112348] (nav2_planner) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[4.112570] (nav2_planner) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[4.115256] (-) TimerEvent: {}
+[4.135030] (nav2_controller) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[4.135418] (nav2_controller) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[4.186742] (nav2_planner) StdoutLine: {'line': b'-- Found nav2_costmap_2d: 1.1.18 (/Pav-S_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake)\n'}
+[4.215405] (-) TimerEvent: {}
+[4.315965] (-) TimerEvent: {}
+[4.371807] (nav2_planner) StdoutLine: {'line': b'-- Found nav2_core: 1.1.18 (/Pav-S_ws/install/nav2_core/share/nav2_core/cmake)\n'}
+[4.386434] (nav2_controller) StdoutLine: {'line': b'-- Found nav2_common: 1.1.18 (/Pav-S_ws/install/nav2_common/share/nav2_common/cmake)\n'}
+[4.390141] (nav2_controller) StdoutLine: {'line': b'-- Found nav_2d_utils: 1.1.18 (/Pav-S_ws/install/nav_2d_utils/share/nav_2d_utils/cmake)\n'}
+[4.394371] (nav2_planner) StdoutLine: {'line': b'-- Setting build type to Release as none was specified.\n'}
+[4.416049] (-) TimerEvent: {}
+[4.441527] (nav2_controller) StdoutLine: {'line': b'-- Setting build type to Release as none was specified.\n'}
+[4.516183] (-) TimerEvent: {}
+[4.616689] (-) TimerEvent: {}
+[4.717184] (-) TimerEvent: {}
+[4.817761] (-) TimerEvent: {}
+[4.829285] (nav2_planner) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[4.836903] (nav2_planner) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[4.917919] (-) TimerEvent: {}
+[5.018576] (-) TimerEvent: {}
+[5.072524] (nav2_planner) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[5.118704] (-) TimerEvent: {}
+[5.219329] (-) TimerEvent: {}
+[5.319927] (-) TimerEvent: {}
+[5.331410] (nav2_planner) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[5.335121] (nav2_planner) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[5.336646] (nav2_planner) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /Pav-S_ws/src/navigation2-humble/nav2_planner/include\n'}
+[5.336833] (nav2_planner) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[5.339248] (nav2_planner) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[5.339415] (nav2_planner) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[5.341334] (nav2_planner) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.344118] (nav2_planner) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[5.344283] (nav2_planner) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[5.345864] (nav2_planner) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.352717] (nav2_planner) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.420095] (-) TimerEvent: {}
+[5.520750] (-) TimerEvent: {}
+[5.621447] (-) TimerEvent: {}
+[5.624993] (nav2_planner) StdoutLine: {'line': b'-- Generating done\n'}
+[5.662233] (nav2_planner) StdoutLine: {'line': b'-- Build files have been written to: /Pav-S_ws/build/nav2_planner\n'}
+[5.700633] (nav2_planner) CommandEnded: {'returncode': 0}
+[5.702373] (nav2_planner) JobProgress: {'identifier': 'nav2_planner', 'progress': 'build'}
+[5.703432] (nav2_planner) Command: {'cmd': ['/usr/bin/cmake', '--build', '/Pav-S_ws/build/nav2_planner', '--', '-j6', '-l6'], 'cwd': '/Pav-S_ws/build/nav2_planner', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/costmap_queue/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_planner'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/costmap_queue:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[5.721706] (-) TimerEvent: {}
+[5.822332] (-) TimerEvent: {}
+[5.831822] (nav2_planner) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[5.832346] (nav2_planner) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[5.832535] (nav2_planner) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/planner_server_core.dir/src/planner_server.cpp.o\x1b[0m\n'}
+[5.922530] (-) TimerEvent: {}
+[6.023699] (-) TimerEvent: {}
+[6.124379] (-) TimerEvent: {}
+[6.225145] (-) TimerEvent: {}
+[6.325891] (-) TimerEvent: {}
+[6.368416] (nav2_controller) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[6.426050] (-) TimerEvent: {}
+[6.526724] (-) TimerEvent: {}
+[6.627420] (-) TimerEvent: {}
+[6.628942] (nav2_controller) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[6.727606] (-) TimerEvent: {}
+[6.828330] (-) TimerEvent: {}
+[6.929043] (-) TimerEvent: {}
+[6.948982] (nav2_controller) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[7.029230] (-) TimerEvent: {}
+[7.129976] (-) TimerEvent: {}
+[7.230704] (-) TimerEvent: {}
+[7.272405] (nav2_controller) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[7.275906] (nav2_controller) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /Pav-S_ws/src/navigation2-humble/nav2_controller/include\n'}
+[7.276159] (nav2_controller) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[7.279989] (nav2_controller) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[7.280212] (nav2_controller) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[7.282813] (nav2_controller) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[7.286935] (nav2_controller) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[7.287150] (nav2_controller) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[7.289063] (nav2_controller) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[7.297329] (nav2_controller) StdoutLine: {'line': b'-- Configuring done\n'}
+[7.330870] (-) TimerEvent: {}
+[7.431624] (-) TimerEvent: {}
+[7.532342] (-) TimerEvent: {}
+[7.633068] (-) TimerEvent: {}
+[7.733865] (-) TimerEvent: {}
+[7.834557] (-) TimerEvent: {}
+[7.912783] (nav2_planner) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[7.934738] (-) TimerEvent: {}
+[7.996183] (nav2_planner) StdoutLine: {'line': b'[ 40%] Built target gtest_main\n'}
+[8.034912] (-) TimerEvent: {}
+[8.135613] (-) TimerEvent: {}
+[8.154312] (nav2_controller) StdoutLine: {'line': b'-- Generating done\n'}
+[8.235804] (-) TimerEvent: {}
+[8.260236] (nav2_controller) StdoutLine: {'line': b'-- Build files have been written to: /Pav-S_ws/build/nav2_controller\n'}
+[8.310293] (nav2_controller) CommandEnded: {'returncode': 0}
+[8.312128] (nav2_controller) JobProgress: {'identifier': 'nav2_controller', 'progress': 'build'}
+[8.313114] (nav2_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/Pav-S_ws/build/nav2_controller', '--', '-j6', '-l6'], 'cwd': '/Pav-S_ws/build/nav2_controller', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/costmap_queue/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_controller'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/costmap_queue:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[8.335957] (-) TimerEvent: {}
+[8.436642] (-) TimerEvent: {}
+[8.454661] (nav2_controller) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object CMakeFiles/controller_server_core.dir/src/controller_server.cpp.o\x1b[0m\n'}
+[8.463001] (nav2_controller) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/position_goal_checker.dir/plugins/position_goal_checker.cpp.o\x1b[0m\n'}
+[8.464276] (nav2_controller) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/simple_progress_checker.dir/plugins/simple_progress_checker.cpp.o\x1b[0m\n'}
+[8.479778] (nav2_controller) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/simple_goal_checker.dir/plugins/simple_goal_checker.cpp.o\x1b[0m\n'}
+[8.486525] (nav2_controller) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[8.491612] (nav2_controller) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[8.536866] (-) TimerEvent: {}
+[8.638052] (-) TimerEvent: {}
+[8.739184] (-) TimerEvent: {}
+[8.840325] (-) TimerEvent: {}
+[8.941965] (-) TimerEvent: {}
+[9.042734] (-) TimerEvent: {}
+[9.143510] (-) TimerEvent: {}
+[9.244320] (-) TimerEvent: {}
+[9.345095] (-) TimerEvent: {}
+[9.445865] (-) TimerEvent: {}
+[9.546643] (-) TimerEvent: {}
+[9.647396] (-) TimerEvent: {}
+[9.748624] (-) TimerEvent: {}
+[9.849378] (-) TimerEvent: {}
+[9.950149] (-) TimerEvent: {}
+[10.051436] (-) TimerEvent: {}
+[10.152719] (-) TimerEvent: {}
+[10.253994] (-) TimerEvent: {}
+[10.355383] (-) TimerEvent: {}
+[10.456850] (-) TimerEvent: {}
+[10.558274] (-) TimerEvent: {}
+[10.659659] (-) TimerEvent: {}
+[10.760992] (-) TimerEvent: {}
+[10.861838] (-) TimerEvent: {}
+[10.963200] (-) TimerEvent: {}
+[11.064479] (-) TimerEvent: {}
+[11.165755] (-) TimerEvent: {}
+[11.267047] (-) TimerEvent: {}
+[11.367843] (-) TimerEvent: {}
+[11.468680] (-) TimerEvent: {}
+[11.569494] (-) TimerEvent: {}
+[11.670780] (-) TimerEvent: {}
+[11.743142] (nav2_controller) StdoutLine: {'line': b'[ 29%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[11.770978] (-) TimerEvent: {}
+[11.872217] (-) TimerEvent: {}
+[11.973465] (-) TimerEvent: {}
+[11.974481] (nav2_controller) StdoutLine: {'line': b'[ 29%] Built target gtest_main\n'}
+[12.073694] (-) TimerEvent: {}
+[12.174951] (-) TimerEvent: {}
+[12.276356] (-) TimerEvent: {}
+[12.377671] (-) TimerEvent: {}
+[12.478986] (-) TimerEvent: {}
+[12.579803] (-) TimerEvent: {}
+[12.681042] (-) TimerEvent: {}
+[12.781858] (-) TimerEvent: {}
+[12.882642] (-) TimerEvent: {}
+[12.983448] (-) TimerEvent: {}
+[13.084266] (-) TimerEvent: {}
+[13.185070] (-) TimerEvent: {}
+[13.285902] (-) TimerEvent: {}
+[13.387157] (-) TimerEvent: {}
+[13.488333] (-) TimerEvent: {}
+[13.589586] (-) TimerEvent: {}
+[13.690884] (-) TimerEvent: {}
+[13.792141] (-) TimerEvent: {}
+[13.893383] (-) TimerEvent: {}
+[13.994712] (-) TimerEvent: {}
+[14.095953] (-) TimerEvent: {}
+[14.197153] (-) TimerEvent: {}
+[14.298445] (-) TimerEvent: {}
+[14.399639] (-) TimerEvent: {}
+[14.500862] (-) TimerEvent: {}
+[14.602064] (-) TimerEvent: {}
+[14.703256] (-) TimerEvent: {}
+[14.804485] (-) TimerEvent: {}
+[14.905699] (-) TimerEvent: {}
+[15.006906] (-) TimerEvent: {}
+[15.108147] (-) TimerEvent: {}
+[15.208941] (-) TimerEvent: {}
+[15.309715] (-) TimerEvent: {}
+[15.410491] (-) TimerEvent: {}
+[15.511287] (-) TimerEvent: {}
+[15.612148] (-) TimerEvent: {}
+[15.712949] (-) TimerEvent: {}
+[15.814208] (-) TimerEvent: {}
+[15.914971] (-) TimerEvent: {}
+[16.015768] (-) TimerEvent: {}
+[16.116586] (-) TimerEvent: {}
+[16.217824] (-) TimerEvent: {}
+[16.318966] (-) TimerEvent: {}
+[16.419723] (-) TimerEvent: {}
+[16.520497] (-) TimerEvent: {}
+[16.621270] (-) TimerEvent: {}
+[16.722050] (-) TimerEvent: {}
+[16.822842] (-) TimerEvent: {}
+[16.924075] (-) TimerEvent: {}
+[17.025283] (-) TimerEvent: {}
+[17.126540] (-) TimerEvent: {}
+[17.228494] (-) TimerEvent: {}
+[17.329723] (-) TimerEvent: {}
+[17.430967] (-) TimerEvent: {}
+[17.531762] (-) TimerEvent: {}
+[17.632539] (-) TimerEvent: {}
+[17.733346] (-) TimerEvent: {}
+[17.834136] (-) TimerEvent: {}
+[17.935359] (-) TimerEvent: {}
+[18.036177] (-) TimerEvent: {}
+[18.137000] (-) TimerEvent: {}
+[18.237859] (-) TimerEvent: {}
+[18.339204] (-) TimerEvent: {}
+[18.439944] (-) TimerEvent: {}
+[18.540700] (-) TimerEvent: {}
+[18.641962] (-) TimerEvent: {}
+[18.743399] (-) TimerEvent: {}
+[18.844633] (-) TimerEvent: {}
+[18.945807] (-) TimerEvent: {}
+[19.047051] (-) TimerEvent: {}
+[19.148304] (-) TimerEvent: {}
+[19.249583] (-) TimerEvent: {}
+[19.353491] (-) TimerEvent: {}
+[19.455189] (-) TimerEvent: {}
+[19.556436] (-) TimerEvent: {}
+[19.657724] (-) TimerEvent: {}
+[19.758968] (-) TimerEvent: {}
+[19.860211] (-) TimerEvent: {}
+[19.961461] (-) TimerEvent: {}
+[20.062674] (-) TimerEvent: {}
+[20.163900] (-) TimerEvent: {}
+[20.265141] (-) TimerEvent: {}
+[20.350148] (nav2_controller) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking CXX shared library libsimple_progress_checker.so\x1b[0m\n'}
+[20.365399] (-) TimerEvent: {}
+[20.466717] (-) TimerEvent: {}
+[20.567935] (-) TimerEvent: {}
+[20.669150] (-) TimerEvent: {}
+[20.770370] (-) TimerEvent: {}
+[20.871179] (-) TimerEvent: {}
+[20.971984] (-) TimerEvent: {}
+[21.072807] (-) TimerEvent: {}
+[21.173675] (-) TimerEvent: {}
+[21.274835] (-) TimerEvent: {}
+[21.376035] (-) TimerEvent: {}
+[21.460811] (nav2_controller) StdoutLine: {'line': b'[ 33%] Built target simple_progress_checker\n'}
+[21.476261] (-) TimerEvent: {}
+[21.577478] (-) TimerEvent: {}
+[21.617245] (nav2_controller) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/pose_progress_checker.dir/plugins/pose_progress_checker.cpp.o\x1b[0m\n'}
+[21.677783] (-) TimerEvent: {}
+[21.778956] (-) TimerEvent: {}
+[21.880143] (-) TimerEvent: {}
+[21.981286] (-) TimerEvent: {}
+[22.082458] (-) TimerEvent: {}
+[22.183636] (-) TimerEvent: {}
+[22.285082] (-) TimerEvent: {}
+[22.386337] (-) TimerEvent: {}
+[22.487518] (-) TimerEvent: {}
+[22.588277] (-) TimerEvent: {}
+[22.689053] (-) TimerEvent: {}
+[22.790281] (-) TimerEvent: {}
+[22.891091] (-) TimerEvent: {}
+[22.992371] (-) TimerEvent: {}
+[23.093647] (-) TimerEvent: {}
+[23.194424] (-) TimerEvent: {}
+[23.295688] (-) TimerEvent: {}
+[23.396998] (-) TimerEvent: {}
+[23.498266] (-) TimerEvent: {}
+[23.599035] (-) TimerEvent: {}
+[23.699804] (-) TimerEvent: {}
+[23.801073] (-) TimerEvent: {}
+[23.902401] (-) TimerEvent: {}
+[24.003127] (-) TimerEvent: {}
+[24.103859] (-) TimerEvent: {}
+[24.204607] (-) TimerEvent: {}
+[24.305907] (-) TimerEvent: {}
+[24.407144] (-) TimerEvent: {}
+[24.508408] (-) TimerEvent: {}
+[24.609707] (-) TimerEvent: {}
+[24.710923] (-) TimerEvent: {}
+[24.812161] (-) TimerEvent: {}
+[24.913407] (-) TimerEvent: {}
+[25.014657] (-) TimerEvent: {}
+[25.115945] (-) TimerEvent: {}
+[25.217182] (-) TimerEvent: {}
+[25.318410] (-) TimerEvent: {}
+[25.419648] (-) TimerEvent: {}
+[25.482543] (nav2_controller) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library libsimple_goal_checker.so\x1b[0m\n'}
+[25.519860] (-) TimerEvent: {}
+[25.620642] (-) TimerEvent: {}
+[25.721412] (-) TimerEvent: {}
+[25.822188] (-) TimerEvent: {}
+[25.923491] (-) TimerEvent: {}
+[25.991876] (nav2_controller) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX shared library libposition_goal_checker.so\x1b[0m\n'}
+[26.023699] (-) TimerEvent: {}
+[26.124894] (-) TimerEvent: {}
+[26.226165] (-) TimerEvent: {}
+[26.327527] (-) TimerEvent: {}
+[26.428814] (-) TimerEvent: {}
+[26.437231] (nav2_controller) StdoutLine: {'line': b'[ 45%] Built target simple_goal_checker\n'}
+[26.529035] (-) TimerEvent: {}
+[26.598077] (nav2_controller) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/stopped_goal_checker.dir/plugins/stopped_goal_checker.cpp.o\x1b[0m\n'}
+[26.629267] (-) TimerEvent: {}
+[26.730553] (-) TimerEvent: {}
+[26.831850] (-) TimerEvent: {}
+[26.877260] (nav2_controller) StdoutLine: {'line': b'[ 50%] Built target position_goal_checker\n'}
+[26.932089] (-) TimerEvent: {}
+[27.033450] (-) TimerEvent: {}
+[27.135746] (-) TimerEvent: {}
+[27.236983] (-) TimerEvent: {}
+[27.338229] (-) TimerEvent: {}
+[27.439461] (-) TimerEvent: {}
+[27.545584] (-) TimerEvent: {}
+[27.647302] (-) TimerEvent: {}
+[27.748605] (-) TimerEvent: {}
+[27.849968] (-) TimerEvent: {}
+[27.951239] (-) TimerEvent: {}
+[28.052459] (-) TimerEvent: {}
+[28.153732] (-) TimerEvent: {}
+[28.255003] (-) TimerEvent: {}
+[28.357066] (-) TimerEvent: {}
+[28.458369] (-) TimerEvent: {}
+[28.559567] (-) TimerEvent: {}
+[28.660914] (-) TimerEvent: {}
+[28.762953] (-) TimerEvent: {}
+[28.864202] (-) TimerEvent: {}
+[28.965570] (-) TimerEvent: {}
+[29.066783] (-) TimerEvent: {}
+[29.168046] (-) TimerEvent: {}
+[29.269314] (-) TimerEvent: {}
+[29.370647] (-) TimerEvent: {}
+[29.471873] (-) TimerEvent: {}
+[29.573119] (-) TimerEvent: {}
+[29.674408] (-) TimerEvent: {}
+[29.719172] (nav2_planner) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[29.774625] (-) TimerEvent: {}
+[29.828034] (nav2_planner) StdoutLine: {'line': b'[ 50%] Built target gtest\n'}
+[29.874827] (-) TimerEvent: {}
+[29.975990] (-) TimerEvent: {}
+[30.077084] (-) TimerEvent: {}
+[30.178263] (-) TimerEvent: {}
+[30.279375] (-) TimerEvent: {}
+[30.380206] (-) TimerEvent: {}
+[30.481009] (-) TimerEvent: {}
+[30.581768] (-) TimerEvent: {}
+[30.682513] (-) TimerEvent: {}
+[30.783275] (-) TimerEvent: {}
+[30.883985] (-) TimerEvent: {}
+[30.984736] (-) TimerEvent: {}
+[31.085481] (-) TimerEvent: {}
+[31.186219] (-) TimerEvent: {}
+[31.286942] (-) TimerEvent: {}
+[31.331818] (nav2_controller) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[31.387141] (-) TimerEvent: {}
+[31.430351] (nav2_controller) StdoutLine: {'line': b'[ 54%] Built target gtest\n'}
+[31.487330] (-) TimerEvent: {}
+[31.505525] (nav2_controller) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libpose_progress_checker.so\x1b[0m\n'}
+[31.587509] (-) TimerEvent: {}
+[31.688623] (-) TimerEvent: {}
+[31.789761] (-) TimerEvent: {}
+[31.890804] (-) TimerEvent: {}
+[31.991789] (-) TimerEvent: {}
+[32.092532] (-) TimerEvent: {}
+[32.097962] (nav2_controller) StdoutLine: {'line': b'[ 58%] Built target pose_progress_checker\n'}
+[32.152546] (nav2_controller) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object plugins/test/CMakeFiles/pctest.dir/progress_checker.cpp.o\x1b[0m\n'}
+[32.192715] (-) TimerEvent: {}
+[32.293387] (-) TimerEvent: {}
+[32.394126] (-) TimerEvent: {}
+[32.494852] (-) TimerEvent: {}
+[32.595587] (-) TimerEvent: {}
+[32.696316] (-) TimerEvent: {}
+[32.797345] (-) TimerEvent: {}
+[32.898520] (-) TimerEvent: {}
+[32.999237] (-) TimerEvent: {}
+[33.100453] (-) TimerEvent: {}
+[33.201182] (-) TimerEvent: {}
+[33.302238] (-) TimerEvent: {}
+[33.403009] (-) TimerEvent: {}
+[33.503734] (-) TimerEvent: {}
+[33.604449] (-) TimerEvent: {}
+[33.705188] (-) TimerEvent: {}
+[33.805937] (-) TimerEvent: {}
+[33.906667] (-) TimerEvent: {}
+[34.007398] (-) TimerEvent: {}
+[34.108125] (-) TimerEvent: {}
+[34.208866] (-) TimerEvent: {}
+[34.309618] (-) TimerEvent: {}
+[34.410340] (-) TimerEvent: {}
+[34.511056] (-) TimerEvent: {}
+[34.611778] (-) TimerEvent: {}
+[34.712489] (-) TimerEvent: {}
+[34.813347] (-) TimerEvent: {}
+[34.914132] (-) TimerEvent: {}
+[35.014863] (-) TimerEvent: {}
+[35.115553] (-) TimerEvent: {}
+[35.216278] (-) TimerEvent: {}
+[35.316981] (-) TimerEvent: {}
+[35.417686] (-) TimerEvent: {}
+[35.518392] (-) TimerEvent: {}
+[35.619117] (-) TimerEvent: {}
+[35.719831] (-) TimerEvent: {}
+[35.820563] (-) TimerEvent: {}
+[35.921259] (-) TimerEvent: {}
+[36.021999] (-) TimerEvent: {}
+[36.122723] (-) TimerEvent: {}
+[36.223440] (-) TimerEvent: {}
+[36.324150] (-) TimerEvent: {}
+[36.424881] (-) TimerEvent: {}
+[36.525627] (-) TimerEvent: {}
+[36.626357] (-) TimerEvent: {}
+[36.727091] (-) TimerEvent: {}
+[36.827847] (-) TimerEvent: {}
+[36.929012] (-) TimerEvent: {}
+[37.029783] (-) TimerEvent: {}
+[37.130471] (-) TimerEvent: {}
+[37.231180] (-) TimerEvent: {}
+[37.331895] (-) TimerEvent: {}
+[37.432626] (-) TimerEvent: {}
+[37.533336] (-) TimerEvent: {}
+[37.634060] (-) TimerEvent: {}
+[37.734848] (-) TimerEvent: {}
+[37.835565] (-) TimerEvent: {}
+[37.936275] (-) TimerEvent: {}
+[38.036977] (-) TimerEvent: {}
+[38.137685] (-) TimerEvent: {}
+[38.238396] (-) TimerEvent: {}
+[38.339082] (-) TimerEvent: {}
+[38.439827] (-) TimerEvent: {}
+[38.540550] (-) TimerEvent: {}
+[38.641266] (-) TimerEvent: {}
+[38.741999] (-) TimerEvent: {}
+[38.842683] (-) TimerEvent: {}
+[38.943417] (-) TimerEvent: {}
+[39.044129] (-) TimerEvent: {}
+[39.144850] (-) TimerEvent: {}
+[39.245584] (-) TimerEvent: {}
+[39.346263] (-) TimerEvent: {}
+[39.446966] (-) TimerEvent: {}
+[39.547684] (-) TimerEvent: {}
+[39.648408] (-) TimerEvent: {}
+[39.749118] (-) TimerEvent: {}
+[39.849871] (-) TimerEvent: {}
+[39.950606] (-) TimerEvent: {}
+[39.958677] (nav2_controller) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libstopped_goal_checker.so\x1b[0m\n'}
+[40.050796] (-) TimerEvent: {}
+[40.151514] (-) TimerEvent: {}
+[40.252277] (-) TimerEvent: {}
+[40.352992] (-) TimerEvent: {}
+[40.453764] (-) TimerEvent: {}
+[40.554510] (-) TimerEvent: {}
+[40.561135] (nav2_controller) StdoutLine: {'line': b'[ 66%] Built target stopped_goal_checker\n'}
+[40.614652] (nav2_controller) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object plugins/test/CMakeFiles/gctest.dir/goal_checker.cpp.o\x1b[0m\n'}
+[40.654692] (-) TimerEvent: {}
+[40.755694] (-) TimerEvent: {}
+[40.856723] (-) TimerEvent: {}
+[40.957417] (-) TimerEvent: {}
+[41.058150] (-) TimerEvent: {}
+[41.158857] (-) TimerEvent: {}
+[41.259547] (-) TimerEvent: {}
+[41.360246] (-) TimerEvent: {}
+[41.460954] (-) TimerEvent: {}
+[41.561669] (-) TimerEvent: {}
+[41.662377] (-) TimerEvent: {}
+[41.763088] (-) TimerEvent: {}
+[41.863808] (-) TimerEvent: {}
+[41.964550] (-) TimerEvent: {}
+[42.065334] (-) TimerEvent: {}
+[42.166743] (-) TimerEvent: {}
+[42.267895] (-) TimerEvent: {}
+[42.368973] (-) TimerEvent: {}
+[42.470185] (-) TimerEvent: {}
+[42.571190] (-) TimerEvent: {}
+[42.672303] (-) TimerEvent: {}
+[42.772998] (-) TimerEvent: {}
+[42.873747] (-) TimerEvent: {}
+[42.974454] (-) TimerEvent: {}
+[43.075158] (-) TimerEvent: {}
+[43.175862] (-) TimerEvent: {}
+[43.276541] (-) TimerEvent: {}
+[43.377247] (-) TimerEvent: {}
+[43.478066] (-) TimerEvent: {}
+[43.578786] (-) TimerEvent: {}
+[43.679465] (-) TimerEvent: {}
+[43.780167] (-) TimerEvent: {}
+[43.880886] (-) TimerEvent: {}
+[43.981675] (-) TimerEvent: {}
+[44.082433] (-) TimerEvent: {}
+[44.183152] (-) TimerEvent: {}
+[44.283849] (-) TimerEvent: {}
+[44.384510] (-) TimerEvent: {}
+[44.485216] (-) TimerEvent: {}
+[44.585933] (-) TimerEvent: {}
+[44.686678] (-) TimerEvent: {}
+[44.746137] (nav2_controller) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable pctest\x1b[0m\n'}
+[44.786858] (-) TimerEvent: {}
+[44.887983] (-) TimerEvent: {}
+[44.988782] (-) TimerEvent: {}
+[45.089637] (-) TimerEvent: {}
+[45.190374] (-) TimerEvent: {}
+[45.291117] (-) TimerEvent: {}
+[45.356707] (nav2_controller) StdoutLine: {'line': b'[ 75%] Built target pctest\n'}
+[45.391294] (-) TimerEvent: {}
+[45.492001] (-) TimerEvent: {}
+[45.592726] (-) TimerEvent: {}
+[45.693448] (-) TimerEvent: {}
+[45.794183] (-) TimerEvent: {}
+[45.895344] (-) TimerEvent: {}
+[45.996052] (-) TimerEvent: {}
+[46.096744] (-) TimerEvent: {}
+[46.197441] (-) TimerEvent: {}
+[46.298155] (-) TimerEvent: {}
+[46.398857] (-) TimerEvent: {}
+[46.499550] (-) TimerEvent: {}
+[46.600234] (-) TimerEvent: {}
+[46.700927] (-) TimerEvent: {}
+[46.801636] (-) TimerEvent: {}
+[46.902333] (-) TimerEvent: {}
+[47.003046] (-) TimerEvent: {}
+[47.103720] (-) TimerEvent: {}
+[47.204412] (-) TimerEvent: {}
+[47.305101] (-) TimerEvent: {}
+[47.405834] (-) TimerEvent: {}
+[47.506510] (-) TimerEvent: {}
+[47.607187] (-) TimerEvent: {}
+[47.707855] (-) TimerEvent: {}
+[47.808530] (-) TimerEvent: {}
+[47.909194] (-) TimerEvent: {}
+[48.009899] (-) TimerEvent: {}
+[48.110615] (-) TimerEvent: {}
+[48.211310] (-) TimerEvent: {}
+[48.311988] (-) TimerEvent: {}
+[48.412667] (-) TimerEvent: {}
+[48.513348] (-) TimerEvent: {}
+[48.614034] (-) TimerEvent: {}
+[48.714716] (-) TimerEvent: {}
+[48.815394] (-) TimerEvent: {}
+[48.916057] (-) TimerEvent: {}
+[49.016734] (-) TimerEvent: {}
+[49.117443] (-) TimerEvent: {}
+[49.218149] (-) TimerEvent: {}
+[49.318844] (-) TimerEvent: {}
+[49.419536] (-) TimerEvent: {}
+[49.520246] (-) TimerEvent: {}
+[49.620939] (-) TimerEvent: {}
+[49.721647] (-) TimerEvent: {}
+[49.822299] (-) TimerEvent: {}
+[49.922977] (-) TimerEvent: {}
+[50.023669] (-) TimerEvent: {}
+[50.124351] (-) TimerEvent: {}
+[50.225046] (-) TimerEvent: {}
+[50.325761] (-) TimerEvent: {}
+[50.426445] (-) TimerEvent: {}
+[50.527134] (-) TimerEvent: {}
+[50.627829] (-) TimerEvent: {}
+[50.728540] (-) TimerEvent: {}
+[50.829277] (-) TimerEvent: {}
+[50.930045] (-) TimerEvent: {}
+[51.030759] (-) TimerEvent: {}
+[51.131476] (-) TimerEvent: {}
+[51.232192] (-) TimerEvent: {}
+[51.332892] (-) TimerEvent: {}
+[51.433617] (-) TimerEvent: {}
+[51.534368] (-) TimerEvent: {}
+[51.635086] (-) TimerEvent: {}
+[51.735772] (-) TimerEvent: {}
+[51.836461] (-) TimerEvent: {}
+[51.937412] (-) TimerEvent: {}
+[52.038115] (-) TimerEvent: {}
+[52.138789] (-) TimerEvent: {}
+[52.239453] (-) TimerEvent: {}
+[52.340157] (-) TimerEvent: {}
+[52.440834] (-) TimerEvent: {}
+[52.541516] (-) TimerEvent: {}
+[52.642177] (-) TimerEvent: {}
+[52.742843] (-) TimerEvent: {}
+[52.843515] (-) TimerEvent: {}
+[52.944180] (-) TimerEvent: {}
+[53.044847] (-) TimerEvent: {}
+[53.145568] (-) TimerEvent: {}
+[53.246227] (-) TimerEvent: {}
+[53.346898] (-) TimerEvent: {}
+[53.447576] (-) TimerEvent: {}
+[53.548265] (-) TimerEvent: {}
+[53.648950] (-) TimerEvent: {}
+[53.749671] (-) TimerEvent: {}
+[53.850351] (-) TimerEvent: {}
+[53.951051] (-) TimerEvent: {}
+[54.051749] (-) TimerEvent: {}
+[54.152456] (-) TimerEvent: {}
+[54.253136] (-) TimerEvent: {}
+[54.353878] (-) TimerEvent: {}
+[54.454547] (-) TimerEvent: {}
+[54.555264] (-) TimerEvent: {}
+[54.655961] (-) TimerEvent: {}
+[54.756641] (-) TimerEvent: {}
+[54.857329] (-) TimerEvent: {}
+[54.958030] (-) TimerEvent: {}
+[55.058735] (-) TimerEvent: {}
+[55.159424] (-) TimerEvent: {}
+[55.260087] (-) TimerEvent: {}
+[55.360785] (-) TimerEvent: {}
+[55.461481] (-) TimerEvent: {}
+[55.562197] (-) TimerEvent: {}
+[55.662851] (-) TimerEvent: {}
+[55.763515] (-) TimerEvent: {}
+[55.864209] (-) TimerEvent: {}
+[55.964904] (-) TimerEvent: {}
+[56.035943] (nav2_planner) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libplanner_server_core.so\x1b[0m\n'}
+[56.065097] (-) TimerEvent: {}
+[56.166066] (-) TimerEvent: {}
+[56.266803] (-) TimerEvent: {}
+[56.367519] (-) TimerEvent: {}
+[56.468242] (-) TimerEvent: {}
+[56.568961] (-) TimerEvent: {}
+[56.669684] (-) TimerEvent: {}
+[56.770389] (-) TimerEvent: {}
+[56.871100] (-) TimerEvent: {}
+[56.967842] (nav2_controller) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX executable gctest\x1b[0m\n'}
+[56.971185] (-) TimerEvent: {}
+[56.998648] (nav2_planner) StdoutLine: {'line': b'[ 60%] Built target planner_server_core\n'}
+[57.053281] (nav2_planner) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object test/CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o\x1b[0m\n'}
+[57.053858] (nav2_planner) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/planner_server.dir/src/main.cpp.o\x1b[0m\n'}
+[57.071426] (-) TimerEvent: {}
+[57.172730] (-) TimerEvent: {}
+[57.273425] (-) TimerEvent: {}
+[57.374169] (-) TimerEvent: {}
+[57.474860] (-) TimerEvent: {}
+[57.575549] (-) TimerEvent: {}
+[57.651377] (nav2_controller) StdoutLine: {'line': b'[ 79%] Built target gctest\n'}
+[57.675718] (-) TimerEvent: {}
+[57.776389] (-) TimerEvent: {}
+[57.877067] (-) TimerEvent: {}
+[57.977842] (-) TimerEvent: {}
+[58.078564] (-) TimerEvent: {}
+[58.179277] (-) TimerEvent: {}
+[58.279995] (-) TimerEvent: {}
+[58.380697] (-) TimerEvent: {}
+[58.481445] (-) TimerEvent: {}
+[58.582205] (-) TimerEvent: {}
+[58.682964] (-) TimerEvent: {}
+[58.783698] (-) TimerEvent: {}
+[58.884426] (-) TimerEvent: {}
+[58.985115] (-) TimerEvent: {}
+[59.085861] (-) TimerEvent: {}
+[59.186563] (-) TimerEvent: {}
+[59.287426] (-) TimerEvent: {}
+[59.388788] (-) TimerEvent: {}
+[59.489534] (-) TimerEvent: {}
+[59.590237] (-) TimerEvent: {}
+[59.690966] (-) TimerEvent: {}
+[59.791681] (-) TimerEvent: {}
+[59.892396] (-) TimerEvent: {}
+[59.993127] (-) TimerEvent: {}
+[60.093928] (-) TimerEvent: {}
+[60.194672] (-) TimerEvent: {}
+[60.295370] (-) TimerEvent: {}
+[60.396134] (-) TimerEvent: {}
+[60.496894] (-) TimerEvent: {}
+[60.597680] (-) TimerEvent: {}
+[60.698395] (-) TimerEvent: {}
+[60.799272] (-) TimerEvent: {}
+[60.900002] (-) TimerEvent: {}
+[61.000735] (-) TimerEvent: {}
+[61.101414] (-) TimerEvent: {}
+[61.202157] (-) TimerEvent: {}
+[61.302858] (-) TimerEvent: {}
+[61.403600] (-) TimerEvent: {}
+[61.504346] (-) TimerEvent: {}
+[61.605071] (-) TimerEvent: {}
+[61.705829] (-) TimerEvent: {}
+[61.806526] (-) TimerEvent: {}
+[61.907245] (-) TimerEvent: {}
+[62.008178] (-) TimerEvent: {}
+[62.108864] (-) TimerEvent: {}
+[62.209552] (-) TimerEvent: {}
+[62.310254] (-) TimerEvent: {}
+[62.410908] (-) TimerEvent: {}
+[62.511624] (-) TimerEvent: {}
+[62.612333] (-) TimerEvent: {}
+[62.712951] (-) TimerEvent: {}
+[62.813644] (-) TimerEvent: {}
+[62.914251] (-) TimerEvent: {}
+[63.014944] (-) TimerEvent: {}
+[63.115607] (-) TimerEvent: {}
+[63.216316] (-) TimerEvent: {}
+[63.316984] (-) TimerEvent: {}
+[63.417635] (-) TimerEvent: {}
+[63.518367] (-) TimerEvent: {}
+[63.619055] (-) TimerEvent: {}
+[63.719691] (-) TimerEvent: {}
+[63.820380] (-) TimerEvent: {}
+[63.920995] (-) TimerEvent: {}
+[64.021751] (-) TimerEvent: {}
+[64.122360] (-) TimerEvent: {}
+[64.222947] (-) TimerEvent: {}
+[64.323624] (-) TimerEvent: {}
+[64.424249] (-) TimerEvent: {}
+[64.524946] (-) TimerEvent: {}
+[64.625601] (-) TimerEvent: {}
+[64.726225] (-) TimerEvent: {}
+[64.826892] (-) TimerEvent: {}
+[64.927511] (-) TimerEvent: {}
+[65.028180] (-) TimerEvent: {}
+[65.128790] (-) TimerEvent: {}
+[65.229485] (-) TimerEvent: {}
+[65.330185] (-) TimerEvent: {}
+[65.430779] (-) TimerEvent: {}
+[65.531507] (-) TimerEvent: {}
+[65.632225] (-) TimerEvent: {}
+[65.733152] (-) TimerEvent: {}
+[65.834210] (-) TimerEvent: {}
+[65.934925] (-) TimerEvent: {}
+[66.035630] (-) TimerEvent: {}
+[66.136308] (-) TimerEvent: {}
+[66.236938] (-) TimerEvent: {}
+[66.337537] (-) TimerEvent: {}
+[66.438156] (-) TimerEvent: {}
+[66.538854] (-) TimerEvent: {}
+[66.639560] (-) TimerEvent: {}
+[66.740303] (-) TimerEvent: {}
+[66.840933] (-) TimerEvent: {}
+[66.941939] (-) TimerEvent: {}
+[67.042718] (-) TimerEvent: {}
+[67.143456] (-) TimerEvent: {}
+[67.244177] (-) TimerEvent: {}
+[67.344914] (-) TimerEvent: {}
+[67.445663] (-) TimerEvent: {}
+[67.546408] (-) TimerEvent: {}
+[67.647185] (-) TimerEvent: {}
+[67.747892] (-) TimerEvent: {}
+[67.848506] (-) TimerEvent: {}
+[67.949120] (-) TimerEvent: {}
+[68.049709] (-) TimerEvent: {}
+[68.150341] (-) TimerEvent: {}
+[68.250953] (-) TimerEvent: {}
+[68.351532] (-) TimerEvent: {}
+[68.452212] (-) TimerEvent: {}
+[68.552857] (-) TimerEvent: {}
+[68.653640] (-) TimerEvent: {}
+[68.754311] (-) TimerEvent: {}
+[68.854952] (-) TimerEvent: {}
+[68.955665] (-) TimerEvent: {}
+[69.056369] (-) TimerEvent: {}
+[69.157060] (-) TimerEvent: {}
+[69.257772] (-) TimerEvent: {}
+[69.358489] (-) TimerEvent: {}
+[69.459181] (-) TimerEvent: {}
+[69.559889] (-) TimerEvent: {}
+[69.617647] (nav2_planner) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable planner_server\x1b[0m\n'}
+[69.660090] (-) TimerEvent: {}
+[69.760780] (-) TimerEvent: {}
+[69.861477] (-) TimerEvent: {}
+[69.962167] (-) TimerEvent: {}
+[70.062853] (-) TimerEvent: {}
+[70.163583] (-) TimerEvent: {}
+[70.264239] (-) TimerEvent: {}
+[70.290063] (nav2_planner) StdoutLine: {'line': b'[ 90%] Built target planner_server\n'}
+[70.364427] (-) TimerEvent: {}
+[70.465363] (-) TimerEvent: {}
+[70.566075] (-) TimerEvent: {}
+[70.666781] (-) TimerEvent: {}
+[70.767478] (-) TimerEvent: {}
+[70.868190] (-) TimerEvent: {}
+[70.968933] (-) TimerEvent: {}
+[71.069648] (-) TimerEvent: {}
+[71.170585] (-) TimerEvent: {}
+[71.271282] (-) TimerEvent: {}
+[71.372011] (-) TimerEvent: {}
+[71.472949] (-) TimerEvent: {}
+[71.573670] (-) TimerEvent: {}
+[71.674382] (-) TimerEvent: {}
+[71.775074] (-) TimerEvent: {}
+[71.875777] (-) TimerEvent: {}
+[71.976473] (-) TimerEvent: {}
+[72.077189] (-) TimerEvent: {}
+[72.177919] (-) TimerEvent: {}
+[72.278654] (-) TimerEvent: {}
+[72.379398] (-) TimerEvent: {}
+[72.480125] (-) TimerEvent: {}
+[72.518413] (nav2_planner) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_dynamic_parameters\x1b[0m\n'}
+[72.580299] (-) TimerEvent: {}
+[72.680994] (-) TimerEvent: {}
+[72.781689] (-) TimerEvent: {}
+[72.882388] (-) TimerEvent: {}
+[72.983060] (-) TimerEvent: {}
+[73.083749] (-) TimerEvent: {}
+[73.184491] (-) TimerEvent: {}
+[73.285170] (-) TimerEvent: {}
+[73.343692] (nav2_planner) StdoutLine: {'line': b'[100%] Built target test_dynamic_parameters\n'}
+[73.373456] (nav2_planner) CommandEnded: {'returncode': 0}
+[73.375836] (nav2_planner) JobProgress: {'identifier': 'nav2_planner', 'progress': 'install'}
+[73.376482] (nav2_planner) Command: {'cmd': ['/usr/bin/cmake', '--install', '/Pav-S_ws/build/nav2_planner'], 'cwd': '/Pav-S_ws/build/nav2_planner', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/costmap_queue/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_planner'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/costmap_queue:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[73.385254] (-) TimerEvent: {}
+[73.400950] (nav2_planner) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[73.401481] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/lib/libplanner_server_core.so\n'}
+[73.404895] (nav2_planner) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_planner/lib/libplanner_server_core.so" to ""\n'}
+[73.405177] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/lib/nav2_planner/planner_server\n'}
+[73.406616] (nav2_planner) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_planner/lib/nav2_planner/planner_server" to ""\n'}
+[73.406837] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/include/\n'}
+[73.407096] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/include//nav2_planner\n'}
+[73.407250] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/include//nav2_planner/planner_server.hpp\n'}
+[73.407447] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/environment/library_path.sh\n'}
+[73.407725] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/environment/library_path.dsv\n'}
+[73.408237] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/ament_index/resource_index/package_run_dependencies/nav2_planner\n'}
+[73.408575] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/ament_index/resource_index/parent_prefix_path/nav2_planner\n'}
+[73.408869] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/environment/ament_prefix_path.sh\n'}
+[73.409138] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/environment/ament_prefix_path.dsv\n'}
+[73.409407] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/environment/path.sh\n'}
+[73.409863] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/environment/path.dsv\n'}
+[73.410057] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/local_setup.bash\n'}
+[73.410259] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/local_setup.sh\n'}
+[73.410485] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/local_setup.zsh\n'}
+[73.410731] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/local_setup.dsv\n'}
+[73.410960] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/package.dsv\n'}
+[73.411327] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/ament_index/resource_index/packages/nav2_planner\n'}
+[73.411654] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/ament_index/resource_index/rclcpp_components/nav2_planner\n'}
+[73.411979] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[73.412254] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[73.412517] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[73.412806] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/cmake/nav2_plannerConfig.cmake\n'}
+[73.413004] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/cmake/nav2_plannerConfig-version.cmake\n'}
+[73.413245] (nav2_planner) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_planner/share/nav2_planner/package.xml\n'}
+[73.418143] (nav2_planner) CommandEnded: {'returncode': 0}
+[73.461437] (nav2_planner) JobEnded: {'identifier': 'nav2_planner', 'rc': 0}
+[73.485439] (-) TimerEvent: {}
+[73.586076] (-) TimerEvent: {}
+[73.686685] (-) TimerEvent: {}
+[73.787508] (-) TimerEvent: {}
+[73.888248] (-) TimerEvent: {}
+[73.988959] (-) TimerEvent: {}
+[74.089910] (-) TimerEvent: {}
+[74.190667] (-) TimerEvent: {}
+[74.291397] (-) TimerEvent: {}
+[74.392096] (-) TimerEvent: {}
+[74.492815] (-) TimerEvent: {}
+[74.593491] (-) TimerEvent: {}
+[74.694261] (-) TimerEvent: {}
+[74.795000] (-) TimerEvent: {}
+[74.895677] (-) TimerEvent: {}
+[74.996328] (-) TimerEvent: {}
+[75.097017] (-) TimerEvent: {}
+[75.197778] (-) TimerEvent: {}
+[75.298442] (-) TimerEvent: {}
+[75.399062] (-) TimerEvent: {}
+[75.499662] (-) TimerEvent: {}
+[75.600259] (-) TimerEvent: {}
+[75.700914] (-) TimerEvent: {}
+[75.802254] (-) TimerEvent: {}
+[75.902945] (-) TimerEvent: {}
+[76.003653] (-) TimerEvent: {}
+[76.104371] (-) TimerEvent: {}
+[76.205111] (-) TimerEvent: {}
+[76.305880] (-) TimerEvent: {}
+[76.406595] (-) TimerEvent: {}
+[76.507340] (-) TimerEvent: {}
+[76.608064] (-) TimerEvent: {}
+[76.708778] (-) TimerEvent: {}
+[76.809552] (-) TimerEvent: {}
+[76.910494] (-) TimerEvent: {}
+[77.011458] (-) TimerEvent: {}
+[77.112360] (-) TimerEvent: {}
+[77.213286] (-) TimerEvent: {}
+[77.314243] (-) TimerEvent: {}
+[77.414925] (-) TimerEvent: {}
+[77.515605] (-) TimerEvent: {}
+[77.616480] (-) TimerEvent: {}
+[77.717440] (-) TimerEvent: {}
+[77.818224] (-) TimerEvent: {}
+[77.919035] (-) TimerEvent: {}
+[78.020025] (-) TimerEvent: {}
+[78.120798] (-) TimerEvent: {}
+[78.221868] (-) TimerEvent: {}
+[78.322867] (-) TimerEvent: {}
+[78.423838] (-) TimerEvent: {}
+[78.524587] (-) TimerEvent: {}
+[78.625317] (-) TimerEvent: {}
+[78.726111] (-) TimerEvent: {}
+[78.826889] (-) TimerEvent: {}
+[78.927697] (-) TimerEvent: {}
+[79.028451] (-) TimerEvent: {}
+[79.129201] (-) TimerEvent: {}
+[79.229994] (-) TimerEvent: {}
+[79.330766] (-) TimerEvent: {}
+[79.431528] (-) TimerEvent: {}
+[79.532315] (-) TimerEvent: {}
+[79.633010] (-) TimerEvent: {}
+[79.733652] (-) TimerEvent: {}
+[79.834282] (-) TimerEvent: {}
+[79.934929] (-) TimerEvent: {}
+[80.035535] (-) TimerEvent: {}
+[80.136134] (-) TimerEvent: {}
+[80.236725] (-) TimerEvent: {}
+[80.337347] (-) TimerEvent: {}
+[80.438020] (-) TimerEvent: {}
+[80.538713] (-) TimerEvent: {}
+[80.555191] (nav2_controller) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX shared library libcontroller_server_core.so\x1b[0m\n'}
+[80.638901] (-) TimerEvent: {}
+[80.739584] (-) TimerEvent: {}
+[80.840264] (-) TimerEvent: {}
+[80.941192] (-) TimerEvent: {}
+[81.042010] (-) TimerEvent: {}
+[81.142813] (-) TimerEvent: {}
+[81.243534] (-) TimerEvent: {}
+[81.344249] (-) TimerEvent: {}
+[81.444992] (-) TimerEvent: {}
+[81.545787] (-) TimerEvent: {}
+[81.611584] (nav2_controller) StdoutLine: {'line': b'[ 83%] Built target controller_server_core\n'}
+[81.645978] (-) TimerEvent: {}
+[81.669383] (nav2_controller) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding CXX object CMakeFiles/controller_server.dir/src/main.cpp.o\x1b[0m\n'}
+[81.669870] (nav2_controller) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding CXX object test/CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o\x1b[0m\n'}
+[81.746143] (-) TimerEvent: {}
+[81.846818] (-) TimerEvent: {}
+[81.947476] (-) TimerEvent: {}
+[82.048135] (-) TimerEvent: {}
+[82.148794] (-) TimerEvent: {}
+[82.249431] (-) TimerEvent: {}
+[82.350093] (-) TimerEvent: {}
+[82.450736] (-) TimerEvent: {}
+[82.551398] (-) TimerEvent: {}
+[82.652097] (-) TimerEvent: {}
+[82.752781] (-) TimerEvent: {}
+[82.853469] (-) TimerEvent: {}
+[82.954160] (-) TimerEvent: {}
+[83.054842] (-) TimerEvent: {}
+[83.155521] (-) TimerEvent: {}
+[83.256179] (-) TimerEvent: {}
+[83.356842] (-) TimerEvent: {}
+[83.457495] (-) TimerEvent: {}
+[83.558190] (-) TimerEvent: {}
+[83.658863] (-) TimerEvent: {}
+[83.759536] (-) TimerEvent: {}
+[83.860272] (-) TimerEvent: {}
+[83.960957] (-) TimerEvent: {}
+[84.061663] (-) TimerEvent: {}
+[84.162351] (-) TimerEvent: {}
+[84.263047] (-) TimerEvent: {}
+[84.363730] (-) TimerEvent: {}
+[84.464413] (-) TimerEvent: {}
+[84.565094] (-) TimerEvent: {}
+[84.665830] (-) TimerEvent: {}
+[84.766506] (-) TimerEvent: {}
+[84.867169] (-) TimerEvent: {}
+[84.967858] (-) TimerEvent: {}
+[85.068546] (-) TimerEvent: {}
+[85.169252] (-) TimerEvent: {}
+[85.269967] (-) TimerEvent: {}
+[85.370668] (-) TimerEvent: {}
+[85.471337] (-) TimerEvent: {}
+[85.572056] (-) TimerEvent: {}
+[85.672741] (-) TimerEvent: {}
+[85.773411] (-) TimerEvent: {}
+[85.874108] (-) TimerEvent: {}
+[85.974797] (-) TimerEvent: {}
+[86.075489] (-) TimerEvent: {}
+[86.176176] (-) TimerEvent: {}
+[86.276840] (-) TimerEvent: {}
+[86.377620] (-) TimerEvent: {}
+[86.478286] (-) TimerEvent: {}
+[86.578965] (-) TimerEvent: {}
+[86.679640] (-) TimerEvent: {}
+[86.780319] (-) TimerEvent: {}
+[86.880995] (-) TimerEvent: {}
+[86.981657] (-) TimerEvent: {}
+[87.082374] (-) TimerEvent: {}
+[87.183050] (-) TimerEvent: {}
+[87.283717] (-) TimerEvent: {}
+[87.384401] (-) TimerEvent: {}
+[87.485067] (-) TimerEvent: {}
+[87.585786] (-) TimerEvent: {}
+[87.686457] (-) TimerEvent: {}
+[87.787135] (-) TimerEvent: {}
+[87.887808] (-) TimerEvent: {}
+[87.988468] (-) TimerEvent: {}
+[88.089163] (-) TimerEvent: {}
+[88.189979] (-) TimerEvent: {}
+[88.290657] (-) TimerEvent: {}
+[88.391340] (-) TimerEvent: {}
+[88.492056] (-) TimerEvent: {}
+[88.592744] (-) TimerEvent: {}
+[88.693433] (-) TimerEvent: {}
+[88.794127] (-) TimerEvent: {}
+[88.894916] (-) TimerEvent: {}
+[88.995595] (-) TimerEvent: {}
+[89.096274] (-) TimerEvent: {}
+[89.196959] (-) TimerEvent: {}
+[89.297656] (-) TimerEvent: {}
+[89.398329] (-) TimerEvent: {}
+[89.498994] (-) TimerEvent: {}
+[89.599661] (-) TimerEvent: {}
+[89.700339] (-) TimerEvent: {}
+[89.800992] (-) TimerEvent: {}
+[89.901663] (-) TimerEvent: {}
+[90.002314] (-) TimerEvent: {}
+[90.102971] (-) TimerEvent: {}
+[90.203629] (-) TimerEvent: {}
+[90.304297] (-) TimerEvent: {}
+[90.404964] (-) TimerEvent: {}
+[90.505669] (-) TimerEvent: {}
+[90.606337] (-) TimerEvent: {}
+[90.707017] (-) TimerEvent: {}
+[90.807684] (-) TimerEvent: {}
+[90.908362] (-) TimerEvent: {}
+[91.009047] (-) TimerEvent: {}
+[91.109781] (-) TimerEvent: {}
+[91.210454] (-) TimerEvent: {}
+[91.311159] (-) TimerEvent: {}
+[91.411856] (-) TimerEvent: {}
+[91.512563] (-) TimerEvent: {}
+[91.613245] (-) TimerEvent: {}
+[91.713995] (-) TimerEvent: {}
+[91.814682] (-) TimerEvent: {}
+[91.915384] (-) TimerEvent: {}
+[92.016083] (-) TimerEvent: {}
+[92.116758] (-) TimerEvent: {}
+[92.217529] (-) TimerEvent: {}
+[92.318196] (-) TimerEvent: {}
+[92.418877] (-) TimerEvent: {}
+[92.519555] (-) TimerEvent: {}
+[92.620235] (-) TimerEvent: {}
+[92.720910] (-) TimerEvent: {}
+[92.821607] (-) TimerEvent: {}
+[92.922294] (-) TimerEvent: {}
+[93.022972] (-) TimerEvent: {}
+[93.123650] (-) TimerEvent: {}
+[93.224333] (-) TimerEvent: {}
+[93.325018] (-) TimerEvent: {}
+[93.425677] (-) TimerEvent: {}
+[93.526363] (-) TimerEvent: {}
+[93.627048] (-) TimerEvent: {}
+[93.727741] (-) TimerEvent: {}
+[93.828424] (-) TimerEvent: {}
+[93.929157] (-) TimerEvent: {}
+[94.029872] (-) TimerEvent: {}
+[94.130561] (-) TimerEvent: {}
+[94.231237] (-) TimerEvent: {}
+[94.331939] (-) TimerEvent: {}
+[94.432625] (-) TimerEvent: {}
+[94.533342] (-) TimerEvent: {}
+[94.634062] (-) TimerEvent: {}
+[94.734765] (-) TimerEvent: {}
+[94.835467] (-) TimerEvent: {}
+[94.936147] (-) TimerEvent: {}
+[95.036836] (-) TimerEvent: {}
+[95.137545] (-) TimerEvent: {}
+[95.238222] (-) TimerEvent: {}
+[95.338907] (-) TimerEvent: {}
+[95.439594] (-) TimerEvent: {}
+[95.540299] (-) TimerEvent: {}
+[95.640992] (-) TimerEvent: {}
+[95.741700] (-) TimerEvent: {}
+[95.842397] (-) TimerEvent: {}
+[95.943113] (-) TimerEvent: {}
+[96.043827] (-) TimerEvent: {}
+[96.144546] (-) TimerEvent: {}
+[96.245232] (-) TimerEvent: {}
+[96.345941] (-) TimerEvent: {}
+[96.446629] (-) TimerEvent: {}
+[96.547330] (-) TimerEvent: {}
+[96.648025] (-) TimerEvent: {}
+[96.748732] (-) TimerEvent: {}
+[96.849425] (-) TimerEvent: {}
+[96.950114] (-) TimerEvent: {}
+[97.050781] (-) TimerEvent: {}
+[97.151453] (-) TimerEvent: {}
+[97.252126] (-) TimerEvent: {}
+[97.352844] (-) TimerEvent: {}
+[97.453552] (-) TimerEvent: {}
+[97.554259] (-) TimerEvent: {}
+[97.655002] (-) TimerEvent: {}
+[97.755711] (-) TimerEvent: {}
+[97.856392] (-) TimerEvent: {}
+[97.957090] (-) TimerEvent: {}
+[98.057795] (-) TimerEvent: {}
+[98.158476] (-) TimerEvent: {}
+[98.259190] (-) TimerEvent: {}
+[98.359866] (-) TimerEvent: {}
+[98.460551] (-) TimerEvent: {}
+[98.561260] (-) TimerEvent: {}
+[98.661978] (-) TimerEvent: {}
+[98.762670] (-) TimerEvent: {}
+[98.863365] (-) TimerEvent: {}
+[98.964582] (-) TimerEvent: {}
+[99.065287] (-) TimerEvent: {}
+[99.166001] (-) TimerEvent: {}
+[99.266675] (-) TimerEvent: {}
+[99.367344] (-) TimerEvent: {}
+[99.468035] (-) TimerEvent: {}
+[99.568712] (-) TimerEvent: {}
+[99.669412] (-) TimerEvent: {}
+[99.770123] (-) TimerEvent: {}
+[99.783266] (nav2_controller) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX executable controller_server\x1b[0m\n'}
+[99.870310] (-) TimerEvent: {}
+[99.971002] (-) TimerEvent: {}
+[100.071706] (-) TimerEvent: {}
+[100.172388] (-) TimerEvent: {}
+[100.273062] (-) TimerEvent: {}
+[100.373789] (-) TimerEvent: {}
+[100.474461] (-) TimerEvent: {}
+[100.575147] (-) TimerEvent: {}
+[100.580327] (nav2_controller) StdoutLine: {'line': b'[ 95%] Built target controller_server\n'}
+[100.675342] (-) TimerEvent: {}
+[100.776107] (-) TimerEvent: {}
+[100.876836] (-) TimerEvent: {}
+[100.977630] (-) TimerEvent: {}
+[101.078328] (-) TimerEvent: {}
+[101.179033] (-) TimerEvent: {}
+[101.279766] (-) TimerEvent: {}
+[101.380503] (-) TimerEvent: {}
+[101.481182] (-) TimerEvent: {}
+[101.581883] (-) TimerEvent: {}
+[101.682522] (-) TimerEvent: {}
+[101.783146] (-) TimerEvent: {}
+[101.883872] (-) TimerEvent: {}
+[101.984652] (-) TimerEvent: {}
+[102.085374] (-) TimerEvent: {}
+[102.186122] (-) TimerEvent: {}
+[102.286878] (-) TimerEvent: {}
+[102.318798] (nav2_controller) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_dynamic_parameters\x1b[0m\n'}
+[102.386995] (-) TimerEvent: {}
+[102.487569] (-) TimerEvent: {}
+[102.588119] (-) TimerEvent: {}
+[102.688703] (-) TimerEvent: {}
+[102.789307] (-) TimerEvent: {}
+[102.889905] (-) TimerEvent: {}
+[102.990418] (-) TimerEvent: {}
+[103.090898] (-) TimerEvent: {}
+[103.190754] (nav2_controller) StdoutLine: {'line': b'[100%] Built target test_dynamic_parameters\n'}
+[103.191294] (-) TimerEvent: {}
+[103.222809] (nav2_controller) CommandEnded: {'returncode': 0}
+[103.225331] (nav2_controller) JobProgress: {'identifier': 'nav2_controller', 'progress': 'install'}
+[103.226725] (nav2_controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/Pav-S_ws/build/nav2_controller'], 'cwd': '/Pav-S_ws/build/nav2_controller', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aic'), ('SSH_CLIENT', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/nav2_map_server/lib:/Pav-S_ws/install/nav2_lifecycle_manager/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/dwb_plugins/lib:/Pav-S_ws/install/dwb_critics/lib:/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/costmap_queue/lib:/usr/local/cuda-12.2/lib64:/ws_livox/install/pointcloud_to_laserscan/lib:/ws_livox/install/livox_ros_driver2/lib:/Pav-S_ws/install/turn_on_wheeltec_robot/lib:/Pav-S_ws/install/wheeltec_robot_msg/lib:/Pav-S_ws/install/usb_cam/lib:/Pav-S_ws/install/serial/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/libuvc/lib:/Pav-S_ws/install/fast_lio/lib:/Pav-S_ws/install/astra_camera/lib:/Pav-S_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.2/lib64'), ('BROWSER', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/aic'), ('OLDPWD', '/Pav-S_ws/src/navigation2-humble'), ('TERM_PROGRAM_VERSION', '1.104.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cf058618-26dd-45fd-b111-a48a3907cd9e.sock'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Developer Kit'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/Pav-S_ws/install:/ws_livox/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'aic'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421825000219'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/Pav-S_ws/install/libuvc/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('GAZEBO_MODEL_PATH', ':/share/turtlebot3_gazebo/models/:/share/turtlebot3_gazebo/models/'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.2/bin:/home/aic/.vscode-server/cli/servers/Stable-385651c938df8a906869babee516bffd0ddb9829/server/bin/remote-cli:/home/aic/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/aic/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/aic/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8a5edab282632443.txt'), ('LANG', 'zh_CN.UTF-8'), ('PYTHONSTARTUP', '/home/aic/.vscode-server/data/User/workspaceStorage/3fc959b84c7c464b26177cc6c3a04e0d/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f3ae43d0c4.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/costmap_queue:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_simple_commander:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/Pav-S_ws/install/libuvc/lib/cmake/libuvc'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/Pav-S_ws/build/nav2_controller'), ('TURTLEBOT3_MODEL', 'waffle'), ('SSH_CONNECTION', '2400:dd01:103a:4032:6d73:ff71:b0eb:b928 55868 2400:dd01:103a:4009::ab4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/ws_livox/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/Pav-S_ws/install/yolo_detector/lib/python3.10/site-packages:/Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages:/Pav-S_ws/install/turn_on_wheeltec_robot/local/lib/python3.10/dist-packages:/Pav-S_ws/install/wheeltec_robot_msg/local/lib/python3.10/dist-packages:/Pav-S_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/Pav-S_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/Pav-S_ws/install/nav2_common/local/lib/python3.10/dist-packages:/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages:/Pav-S_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/Pav-S_ws/install/nav2_core:/Pav-S_ws/install/nav2_costmap_2d:/Pav-S_ws/install/nav_2d_utils:/Pav-S_ws/install/nav2_map_server:/Pav-S_ws/install/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_util:/Pav-S_ws/install/nav2_voxel_grid:/Pav-S_ws/install/nav2_msgs:/Pav-S_ws/install/nav_2d_msgs:/Pav-S_ws/install/nav2_common:/Pav-S_ws/install/dwb_plugins:/Pav-S_ws/install/dwb_critics:/Pav-S_ws/install/dwb_core:/Pav-S_ws/install/costmap_queue:/ws_livox/install/pointcloud_to_laserscan:/ws_livox/install/livox_ros_driver2:/Pav-S_ws/install/wheeltec_robot_urdf:/Pav-S_ws/install/turn_on_wheeltec_robot:/Pav-S_ws/install/wheeltec_robot_msg:/Pav-S_ws/install/usb_cam:/Pav-S_ws/install/serial:/Pav-S_ws/install/robot_kcf:/Pav-S_ws/install/dwb_msgs:/Pav-S_ws/install/libuvc:/Pav-S_ws/install/fast_lio:/Pav-S_ws/install/astra_camera:/Pav-S_ws/install/astra_camera_msgs:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[103.251905] (nav2_controller) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[103.252364] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/lib/libsimple_progress_checker.so\n'}
+[103.253298] (nav2_controller) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_controller/lib/libsimple_progress_checker.so" to ""\n'}
+[103.253671] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/lib/libpose_progress_checker.so\n'}
+[103.254563] (nav2_controller) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_controller/lib/libpose_progress_checker.so" to ""\n'}
+[103.254895] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/lib/libsimple_goal_checker.so\n'}
+[103.255444] (nav2_controller) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_controller/lib/libsimple_goal_checker.so" to ""\n'}
+[103.255759] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/lib/libstopped_goal_checker.so\n'}
+[103.256322] (nav2_controller) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_controller/lib/libstopped_goal_checker.so" to ""\n'}
+[103.256627] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/lib/libposition_goal_checker.so\n'}
+[103.257190] (nav2_controller) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_controller/lib/libposition_goal_checker.so" to ""\n'}
+[103.257495] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/lib/libcontroller_server_core.so\n'}
+[103.264142] (nav2_controller) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_controller/lib/libcontroller_server_core.so" to ""\n'}
+[103.264468] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/lib/nav2_controller/controller_server\n'}
+[103.265098] (nav2_controller) StdoutLine: {'line': b'-- Set runtime path of "/Pav-S_ws/install/nav2_controller/lib/nav2_controller/controller_server" to ""\n'}
+[103.265438] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/include/\n'}
+[103.265737] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/include//nav2_controller\n'}
+[103.265969] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/include//nav2_controller/controller_server.hpp\n'}
+[103.266298] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/include//nav2_controller/plugins\n'}
+[103.266614] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/include//nav2_controller/plugins/simple_progress_checker.hpp\n'}
+[103.266908] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/include//nav2_controller/plugins/stopped_goal_checker.hpp\n'}
+[103.267187] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/include//nav2_controller/plugins/simple_goal_checker.hpp\n'}
+[103.267502] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/include//nav2_controller/plugins/pose_progress_checker.hpp\n'}
+[103.267775] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/include//nav2_controller/plugins/position_goal_checker.hpp\n'}
+[103.268053] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/environment/library_path.sh\n'}
+[103.268276] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/environment/library_path.dsv\n'}
+[103.268499] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/plugins.xml\n'}
+[103.268783] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/ament_index/resource_index/package_run_dependencies/nav2_controller\n'}
+[103.269060] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/ament_index/resource_index/parent_prefix_path/nav2_controller\n'}
+[103.269330] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/environment/ament_prefix_path.sh\n'}
+[103.269662] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/environment/ament_prefix_path.dsv\n'}
+[103.269964] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/environment/path.sh\n'}
+[103.270252] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/environment/path.dsv\n'}
+[103.270536] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/local_setup.bash\n'}
+[103.270841] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/local_setup.sh\n'}
+[103.271171] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/local_setup.zsh\n'}
+[103.271463] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/local_setup.dsv\n'}
+[103.271694] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/package.dsv\n'}
+[103.272019] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/ament_index/resource_index/packages/nav2_controller\n'}
+[103.272307] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_controller\n'}
+[103.272593] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/ament_index/resource_index/rclcpp_components/nav2_controller\n'}
+[103.272883] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[103.273170] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[103.273443] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[103.273742] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/cmake/nav2_controllerConfig.cmake\n'}
+[103.274073] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/cmake/nav2_controllerConfig-version.cmake\n'}
+[103.274311] (nav2_controller) StdoutLine: {'line': b'-- Installing: /Pav-S_ws/install/nav2_controller/share/nav2_controller/package.xml\n'}
+[103.278800] (nav2_controller) CommandEnded: {'returncode': 0}
+[103.291402] (-) TimerEvent: {}
+[103.334960] (nav2_controller) JobEnded: {'identifier': 'nav2_controller', 'rc': 0}
+[103.337354] (-) EventReactorShutdown: {}

@@ -1,0 +1,14 @@
+{
+  "package_name": "dwb_msgs",
+  "non_idl_tuples": [
+    "/Pav-S_ws/src/navigation2-humble/nav2_dwb_controller/dwb_msgs:msg/CriticScore.msg",
+    "/Pav-S_ws/src/navigation2-humble/nav2_dwb_controller/dwb_msgs:msg/LocalPlanEvaluation.msg",
+    "/Pav-S_ws/src/navigation2-humble/nav2_dwb_controller/dwb_msgs:msg/Trajectory2D.msg",
+    "/Pav-S_ws/src/navigation2-humble/nav2_dwb_controller/dwb_msgs:msg/TrajectoryScore.msg",
+    "/Pav-S_ws/src/navigation2-humble/nav2_dwb_controller/dwb_msgs:srv/DebugLocalPlan.srv",
+    "/Pav-S_ws/src/navigation2-humble/nav2_dwb_controller/dwb_msgs:srv/GenerateTrajectory.srv",
+    "/Pav-S_ws/src/navigation2-humble/nav2_dwb_controller/dwb_msgs:srv/GenerateTwists.srv",
+    "/Pav-S_ws/src/navigation2-humble/nav2_dwb_controller/dwb_msgs:srv/GetCriticScore.srv",
+    "/Pav-S_ws/src/navigation2-humble/nav2_dwb_controller/dwb_msgs:srv/ScoreTrajectory.srv"
+  ]
+}

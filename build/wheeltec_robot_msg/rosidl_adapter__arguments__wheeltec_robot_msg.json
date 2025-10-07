@@ -1,0 +1,7 @@
+{
+  "package_name": "wheeltec_robot_msg",
+  "non_idl_tuples": [
+    "/Pav-S_ws/src/wheeltec_robot_msg:msg/Data.msg",
+    "/Pav-S_ws/src/wheeltec_robot_msg:msg/Supersonic.msg"
+  ]
+}

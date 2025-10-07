@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/isspa/disk/Pav-L_ws/install/yhs_can_interfaces/include/**",
+        "/home/isspa/disk/Pav-L_ws/install/serial/include/**",
+        "/home/isspa/disk/Pav-L_ws/install/lslidar_msgs/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/isspa/disk/Pav-L_ws/src/FR-mid-chassis/yhs_can_control/include/**",
+        "/home/isspa/disk/Pav-L_ws/src/fdilink_ahrs_ROS2/include/**",
+        "/home/isspa/disk/Pav-L_ws/src/lslidar_ros/lslidar_driver/include/**",
+        "/home/isspa/disk/Pav-L_ws/src/serial_ros2/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-arm64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

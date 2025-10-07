@@ -1,0 +1,157 @@
+[0.038s] Invoking command in '/Pav-S_ws/build/fast_lio': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/fast_lio -- -j6 -l6
+[0.220s] [  8%] Built target fast_lio__rosidl_generator_c
+[0.282s] [  8%] Built target ament_cmake_python_copy_fast_lio
+[0.282s] [ 11%] Built target fast_lio__cpp
+[0.332s] [ 20%] Built target fast_lio__rosidl_typesupport_fastrtps_c
+[0.332s] [ 28%] Built target fast_lio__rosidl_typesupport_introspection_c
+[0.368s] [ 37%] Built target fast_lio__rosidl_typesupport_c
+[0.394s] [ 45%] Built target fast_lio__rosidl_typesupport_cpp
+[0.417s] [ 54%] Built target fast_lio__rosidl_typesupport_fastrtps_cpp
+[0.474s] [ 62%] Built target fast_lio__rosidl_typesupport_introspection_cpp
+[0.576s] [ 62%] Built target fast_lio
+[0.591s] [ 74%] Built target fastlio_mapping
+[0.738s] [ 77%] Built target fast_lio__py
+[0.833s] [ 82%] Built target fast_lio__rosidl_generator_py
+[0.953s] [ 88%] Built target fast_lio__rosidl_typesupport_introspection_c__pyext
+[0.994s] [ 94%] Built target fast_lio__rosidl_typesupport_fastrtps_c__pyext
+[1.006s] [100%] Built target fast_lio__rosidl_typesupport_c__pyext
+[1.062s] running egg_info
+[1.065s] writing fast_lio.egg-info/PKG-INFO
+[1.066s] writing dependency_links to fast_lio.egg-info/dependency_links.txt
+[1.067s] writing top-level names to fast_lio.egg-info/top_level.txt
+[1.074s] reading manifest file 'fast_lio.egg-info/SOURCES.txt'
+[1.083s] writing manifest file 'fast_lio.egg-info/SOURCES.txt'
+[1.287s] [100%] Built target ament_cmake_python_build_fast_lio_egg
+[1.375s] Invoked command in '/Pav-S_ws/build/fast_lio' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/fast_lio -- -j6 -l6
+[1.390s] Invoking command in '/Pav-S_ws/build/fast_lio': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/fast_lio
+[1.428s] -- Install configuration: "Release"
+[1.428s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/ament_index/resource_index/rosidl_interfaces/fast_lio
+[1.429s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio
+[1.429s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[1.429s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_c__visibility_control.h
+[1.429s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.h
+[1.429s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[1.429s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.h
+[1.429s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.h
+[1.430s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.c
+[1.430s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.h
+[1.430s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/environment/library_path.sh
+[1.430s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/environment/library_path.dsv
+[1.430s] -- Up-to-date: /Pav-S_ws/install/fast_lio/lib/libfast_lio__rosidl_generator_c.so
+[1.436s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio
+[1.437s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[1.437s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.437s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[1.437s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_c.h
+[1.437s] -- Up-to-date: /Pav-S_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_c.so
+[1.437s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio
+[1.438s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[1.438s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.hpp
+[1.438s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.438s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[1.438s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__builder.hpp
+[1.438s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__traits.hpp
+[1.438s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.hpp
+[1.438s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.hpp
+[1.438s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio
+[1.439s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[1.439s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[1.439s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_cpp.hpp
+[1.439s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/dds_fastrtps
+[1.439s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.439s] -- Up-to-date: /Pav-S_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_cpp.so
+[1.439s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio
+[1.443s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[1.444s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.444s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[1.444s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.c
+[1.457s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_c.h
+[1.457s] -- Up-to-date: /Pav-S_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_c.so
+[1.457s] -- Up-to-date: /Pav-S_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_c.so
+[1.457s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio
+[1.458s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[1.458s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[1.458s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_cpp.hpp
+[1.458s] -- Up-to-date: /Pav-S_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.cpp
+[1.458s] -- Up-to-date: /Pav-S_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_cpp.so
+[1.458s] -- Up-to-date: /Pav-S_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_cpp.so
+[1.458s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/environment/pythonpath.sh
+[1.458s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/environment/pythonpath.dsv
+[1.458s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info
+[1.459s] -- Installing: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.459s] -- Installing: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.459s] -- Installing: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/PKG-INFO
+[1.459s] -- Installing: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/top_level.txt
+[1.459s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio
+[1.459s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[1.459s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[1.459s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_c.c
+[1.460s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_introspection_c.c
+[1.460s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg
+[1.460s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d.py
+[1.460s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/__init__.py
+[1.460s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d_s.c
+[1.460s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/__init__.py
+[1.460s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[1.460s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/libfast_lio__rosidl_generator_py.so
+[1.461s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.558s] Listing '/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio'...
+[1.559s] Listing '/Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg'...
+[1.575s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[1.576s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[1.576s] -- Up-to-date: /Pav-S_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[1.578s] -- Up-to-date: /Pav-S_ws/install/fast_lio/lib/libfast_lio__rosidl_generator_py.so
+[1.578s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/msg/Pose6D.idl
+[1.578s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/msg/Pose6D.msg
+[1.579s] -- Up-to-date: /Pav-S_ws/install/fast_lio/lib/fast_lio/fastlio_mapping
+[1.580s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/config
+[1.580s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/config/mid360.yaml
+[1.580s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/config/horizon.yaml
+[1.580s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/config/ouster64.yaml
+[1.580s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/config/avia.yaml
+[1.580s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/config/velodyne.yaml
+[1.581s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/launch
+[1.581s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/launch/mapping.launch.py
+[1.581s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/launch/gdb_debug_example.launch
+[1.581s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/rviz
+[1.581s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/rviz/fastlio.rviz
+[1.581s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/ament_index/resource_index/package_run_dependencies/fast_lio
+[1.581s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/ament_index/resource_index/parent_prefix_path/fast_lio
+[1.582s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.sh
+[1.582s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.dsv
+[1.582s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/environment/path.sh
+[1.582s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/environment/path.dsv
+[1.582s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/local_setup.bash
+[1.582s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/local_setup.sh
+[1.582s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/local_setup.zsh
+[1.582s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/local_setup.dsv
+[1.583s] -- Installing: /Pav-S_ws/install/fast_lio/share/fast_lio/package.dsv
+[1.583s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/ament_index/resource_index/packages/fast_lio
+[1.583s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport.cmake
+[1.583s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport-release.cmake
+[1.589s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport.cmake
+[1.590s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport-release.cmake
+[1.590s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cppExport.cmake
+[1.590s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.591s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[1.591s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport.cmake
+[1.592s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport-release.cmake
+[1.592s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport.cmake
+[1.592s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport-release.cmake
+[1.593s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport.cmake
+[1.593s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport-release.cmake
+[1.593s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport.cmake
+[1.594s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport-release.cmake
+[1.594s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport.cmake
+[1.594s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport-release.cmake
+[1.595s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake-extras.cmake
+[1.595s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.595s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_libraries-extras.cmake
+[1.595s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_targets-extras.cmake
+[1.595s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.595s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.595s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.596s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig.cmake
+[1.596s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig-version.cmake
+[1.596s] -- Up-to-date: /Pav-S_ws/install/fast_lio/share/fast_lio/package.xml
+[1.605s] Invoked command in '/Pav-S_ws/build/fast_lio' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/fast_lio

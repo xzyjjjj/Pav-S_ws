@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-11ccd282ed8e19343044.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "navigation_manager",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cruise_perception_navigator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cruise_perception_navigator-Release-f5d9de76182d3c92067f.json",
+					"name" : "cruise_perception_navigator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dynamic_speed_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dynamic_speed_controller-Release-ef443d0e4dcbcd86d98b.json",
+					"name" : "dynamic_speed_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "navigation_behavior_nodes::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-navigation_behavior_nodes-Release-944383e306d54d9cdc92.json",
+					"name" : "navigation_behavior_nodes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "navigation_manager_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-navigation_manager_uninstall-Release-3f99204ddcb88e6bcf42.json",
+					"name" : "navigation_manager_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "stop_line_detection::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-stop_line_detection-Release-ca24fc90ad07f9e34326.json",
+					"name" : "stop_line_detection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-e98451f804003a78f043.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Pav-S_ws/build/navigation_manager",
+		"source" : "/Pav-S_ws/src/navigation2-humble/navigation_manager"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

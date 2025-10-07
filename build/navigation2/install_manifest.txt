@@ -1,0 +1,15 @@
+/Pav-S_ws/install/navigation2/share/ament_index/resource_index/package_run_dependencies/navigation2
+/Pav-S_ws/install/navigation2/share/ament_index/resource_index/parent_prefix_path/navigation2
+/Pav-S_ws/install/navigation2/share/navigation2/environment/ament_prefix_path.sh
+/Pav-S_ws/install/navigation2/share/navigation2/environment/ament_prefix_path.dsv
+/Pav-S_ws/install/navigation2/share/navigation2/environment/path.sh
+/Pav-S_ws/install/navigation2/share/navigation2/environment/path.dsv
+/Pav-S_ws/install/navigation2/share/navigation2/local_setup.bash
+/Pav-S_ws/install/navigation2/share/navigation2/local_setup.sh
+/Pav-S_ws/install/navigation2/share/navigation2/local_setup.zsh
+/Pav-S_ws/install/navigation2/share/navigation2/local_setup.dsv
+/Pav-S_ws/install/navigation2/share/navigation2/package.dsv
+/Pav-S_ws/install/navigation2/share/ament_index/resource_index/packages/navigation2
+/Pav-S_ws/install/navigation2/share/navigation2/cmake/navigation2Config.cmake
+/Pav-S_ws/install/navigation2/share/navigation2/cmake/navigation2Config-version.cmake
+/Pav-S_ws/install/navigation2/share/navigation2/package.xml

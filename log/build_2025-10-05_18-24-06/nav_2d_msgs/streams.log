@@ -1,0 +1,273 @@
+[0.070s] Invoking command in '/Pav-S_ws/build/nav_2d_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/nav_2d_msgs -- -j6 -l6
+[0.163s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.747s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.752s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.763s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.789s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.821s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.902s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.951s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[3.287s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.674s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.733s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.790s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.791s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.791s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[3.974s] -- Configuring done
+[4.090s] -- Generating done
+[4.117s] -- Build files have been written to: /Pav-S_ws/build/nav_2d_msgs
+[4.237s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_generator_c[0m
+[4.288s] [  1%] Built target nav_2d_msgs__cpp
+[4.313s] [ 12%] Built target nav_2d_msgs__rosidl_generator_c
+[4.334s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_typesupport_cpp[0m
+[4.369s] [ 12%] Built target ament_cmake_python_copy_nav_2d_msgs
+[4.371s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[4.381s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_typesupport_introspection_cpp[0m
+[4.406s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_typesupport_fastrtps_c[0m
+[4.412s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_typesupport_introspection_c[0m
+[4.423s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_typesupport_c[0m
+[4.444s] [ 23%] Built target nav_2d_msgs__rosidl_typesupport_cpp
+[4.459s] [ 35%] Built target nav_2d_msgs__rosidl_typesupport_introspection_c
+[4.464s] [ 46%] Built target nav_2d_msgs__rosidl_typesupport_c
+[4.474s] [ 57%] Built target nav_2d_msgs__rosidl_typesupport_fastrtps_cpp
+[4.499s] [ 69%] Built target nav_2d_msgs__rosidl_typesupport_introspection_cpp
+[4.505s] [ 80%] Built target nav_2d_msgs__rosidl_typesupport_fastrtps_c
+[4.612s] [ 80%] Built target nav_2d_msgs
+[4.687s] [ 81%] Built target nav_2d_msgs__py
+[4.753s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_generator_py[0m
+[4.828s] [ 91%] Built target nav_2d_msgs__rosidl_generator_py
+[4.874s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_typesupport_c__pyext[0m
+[4.883s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[4.907s] [35m[1mConsolidate compiler generated dependencies of target nav_2d_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[4.942s] [ 94%] Built target nav_2d_msgs__rosidl_typesupport_c__pyext
+[4.962s] [ 97%] Built target nav_2d_msgs__rosidl_typesupport_fastrtps_c__pyext
+[4.996s] [100%] Built target nav_2d_msgs__rosidl_typesupport_introspection_c__pyext
+[5.489s] running egg_info
+[5.489s] writing nav_2d_msgs.egg-info/PKG-INFO
+[5.489s] writing dependency_links to nav_2d_msgs.egg-info/dependency_links.txt
+[5.489s] writing top-level names to nav_2d_msgs.egg-info/top_level.txt
+[5.489s] reading manifest file 'nav_2d_msgs.egg-info/SOURCES.txt'
+[5.489s] writing manifest file 'nav_2d_msgs.egg-info/SOURCES.txt'
+[5.568s] [100%] Built target ament_cmake_python_build_nav_2d_msgs_egg
+[5.623s] Invoked command in '/Pav-S_ws/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --build /Pav-S_ws/build/nav_2d_msgs -- -j6 -l6
+[5.626s] Invoking command in '/Pav-S_ws/build/nav_2d_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/nav_2d_msgs
+[5.651s] -- Install configuration: "Release"
+[5.652s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/ament_index/resource_index/rosidl_interfaces/nav_2d_msgs
+[5.652s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs
+[5.653s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg
+[5.653s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/rosidl_generator_c__visibility_control.h
+[5.653s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/twist2_d.h
+[5.653s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/twist2_d32.h
+[5.653s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail
+[5.654s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__functions.h
+[5.654s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__functions.h
+[5.654s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__functions.c
+[5.654s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__functions.h
+[5.655s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__struct.h
+[5.655s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__functions.c
+[5.656s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__struct.h
+[5.656s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__type_support.h
+[5.657s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__functions.c
+[5.657s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__struct.h
+[5.657s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__functions.h
+[5.658s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__functions.c
+[5.658s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__struct.h
+[5.658s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__struct.h
+[5.658s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__type_support.h
+[5.658s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__type_support.h
+[5.659s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__functions.h
+[5.659s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__functions.h
+[5.659s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__type_support.h
+[5.660s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__functions.c
+[5.660s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__struct.h
+[5.660s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__functions.c
+[5.660s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__type_support.h
+[5.660s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__type_support.h
+[5.660s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/path2_d.h
+[5.661s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/twist2_d_stamped.h
+[5.661s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/pose2_d_stamped.h
+[5.661s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/pose2_d32.h
+[5.670s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/environment/library_path.sh
+[5.670s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/environment/library_path.dsv
+[5.670s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/lib/libnav_2d_msgs__rosidl_generator_c.so
+[5.670s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs
+[5.670s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg
+[5.671s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.671s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail
+[5.671s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__rosidl_typesupport_fastrtps_c.h
+[5.671s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__rosidl_typesupport_fastrtps_c.h
+[5.671s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__rosidl_typesupport_fastrtps_c.h
+[5.671s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__rosidl_typesupport_fastrtps_c.h
+[5.671s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__rosidl_typesupport_fastrtps_c.h
+[5.672s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__rosidl_typesupport_fastrtps_c.h
+[5.672s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/lib/libnav_2d_msgs__rosidl_typesupport_fastrtps_c.so
+[5.672s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs
+[5.672s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg
+[5.672s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/twist2_d_stamped.hpp
+[5.672s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[5.672s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/pose2_d32.hpp
+[5.672s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/pose2_d_stamped.hpp
+[5.672s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/path2_d.hpp
+[5.673s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail
+[5.673s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__builder.hpp
+[5.673s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__type_support.hpp
+[5.673s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__traits.hpp
+[5.673s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__struct.hpp
+[5.673s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__type_support.hpp
+[5.673s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__type_support.hpp
+[5.673s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__builder.hpp
+[5.674s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__traits.hpp
+[5.674s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__struct.hpp
+[5.674s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__builder.hpp
+[5.674s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__traits.hpp
+[5.674s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__builder.hpp
+[5.674s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__type_support.hpp
+[5.674s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__type_support.hpp
+[5.674s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__type_support.hpp
+[5.675s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__builder.hpp
+[5.675s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__struct.hpp
+[5.675s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__struct.hpp
+[5.675s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__traits.hpp
+[5.675s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__traits.hpp
+[5.675s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__builder.hpp
+[5.675s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__struct.hpp
+[5.675s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__struct.hpp
+[5.675s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__traits.hpp
+[5.676s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/twist2_d32.hpp
+[5.676s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/twist2_d.hpp
+[5.676s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs
+[5.676s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg
+[5.676s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail
+[5.676s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[5.676s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__rosidl_typesupport_fastrtps_cpp.hpp
+[5.676s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[5.676s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__rosidl_typesupport_fastrtps_cpp.hpp
+[5.677s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__rosidl_typesupport_fastrtps_cpp.hpp
+[5.677s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/dds_fastrtps
+[5.677s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__rosidl_typesupport_fastrtps_cpp.hpp
+[5.677s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.677s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/lib/libnav_2d_msgs__rosidl_typesupport_fastrtps_cpp.so
+[5.677s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs
+[5.677s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg
+[5.678s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.678s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail
+[5.678s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__rosidl_typesupport_introspection_c.h
+[5.678s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__type_support.c
+[5.678s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__type_support.c
+[5.678s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__type_support.c
+[5.678s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__type_support.c
+[5.678s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__type_support.c
+[5.678s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__rosidl_typesupport_introspection_c.h
+[5.679s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__rosidl_typesupport_introspection_c.h
+[5.679s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__type_support.c
+[5.679s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__rosidl_typesupport_introspection_c.h
+[5.679s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__rosidl_typesupport_introspection_c.h
+[5.679s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__rosidl_typesupport_introspection_c.h
+[5.679s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/lib/libnav_2d_msgs__rosidl_typesupport_introspection_c.so
+[5.680s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/lib/libnav_2d_msgs__rosidl_typesupport_c.so
+[5.680s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs
+[5.680s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg
+[5.680s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail
+[5.680s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__rosidl_typesupport_introspection_cpp.hpp
+[5.680s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__type_support.cpp
+[5.680s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__type_support.cpp
+[5.680s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/path2_d__rosidl_typesupport_introspection_cpp.hpp
+[5.681s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__type_support.cpp
+[5.681s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d_stamped__rosidl_typesupport_introspection_cpp.hpp
+[5.681s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d__rosidl_typesupport_introspection_cpp.hpp
+[5.681s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d32__type_support.cpp
+[5.681s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__rosidl_typesupport_introspection_cpp.hpp
+[5.681s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__rosidl_typesupport_introspection_cpp.hpp
+[5.681s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/pose2_d32__type_support.cpp
+[5.681s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs/nav_2d_msgs/msg/detail/twist2_d_stamped__type_support.cpp
+[5.682s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/lib/libnav_2d_msgs__rosidl_typesupport_introspection_cpp.so
+[5.682s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/lib/libnav_2d_msgs__rosidl_typesupport_cpp.so
+[5.682s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/environment/pythonpath.sh
+[5.682s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/environment/pythonpath.dsv
+[5.682s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs-1.1.18-py3.10.egg-info
+[5.682s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs-1.1.18-py3.10.egg-info/dependency_links.txt
+[5.682s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs-1.1.18-py3.10.egg-info/SOURCES.txt
+[5.682s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs-1.1.18-py3.10.egg-info/PKG-INFO
+[5.683s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs-1.1.18-py3.10.egg-info/top_level.txt
+[5.683s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs
+[5.683s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/nav_2d_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[5.683s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/_nav_2d_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[5.683s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/nav_2d_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[5.683s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/_nav_2d_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.683s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg
+[5.683s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_path2_d_s.c
+[5.683s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_twist2_d32_s.c
+[5.684s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_path2_d.py
+[5.684s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_twist2_d.py
+[5.684s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_twist2_d_stamped.py
+[5.684s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_pose2_d32_s.c
+[5.684s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_pose2_d_stamped.py
+[5.684s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_pose2_d_stamped_s.c
+[5.684s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/__init__.py
+[5.684s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_pose2_d32.py
+[5.685s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_twist2_d_s.c
+[5.685s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_twist2_d_stamped_s.c
+[5.685s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg/_twist2_d32.py
+[5.685s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/_nav_2d_msgs_s.ep.rosidl_typesupport_c.c
+[5.685s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/nav_2d_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[5.685s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/__init__.py
+[5.685s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/libnav_2d_msgs__rosidl_generator_py.so
+[5.755s] Listing '/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs'...
+[5.756s] Compiling '/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/__init__.py'...
+[5.756s] Listing '/Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/msg'...
+[5.768s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/nav_2d_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[5.768s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/nav_2d_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[5.769s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages/nav_2d_msgs/nav_2d_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[5.769s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/lib/libnav_2d_msgs__rosidl_generator_py.so
+[5.770s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Path2D.idl
+[5.770s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Pose2D32.idl
+[5.771s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Pose2DStamped.idl
+[5.771s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Twist2D.idl
+[5.771s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Twist2D32.idl
+[5.771s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Twist2DStamped.idl
+[5.771s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Path2D.msg
+[5.772s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Pose2D32.msg
+[5.772s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Pose2DStamped.msg
+[5.772s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Twist2D.msg
+[5.772s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Twist2D32.msg
+[5.772s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/msg/Twist2DStamped.msg
+[5.773s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/ament_index/resource_index/package_run_dependencies/nav_2d_msgs
+[5.773s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/ament_index/resource_index/parent_prefix_path/nav_2d_msgs
+[5.773s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/environment/ament_prefix_path.sh
+[5.773s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/environment/ament_prefix_path.dsv
+[5.774s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/environment/path.sh
+[5.774s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/environment/path.dsv
+[5.774s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/local_setup.bash
+[5.775s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/local_setup.sh
+[5.775s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/local_setup.zsh
+[5.775s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/local_setup.dsv
+[5.775s] -- Installing: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/package.dsv
+[5.776s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/ament_index/resource_index/packages/nav_2d_msgs
+[5.776s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/export_nav_2d_msgs__rosidl_generator_cExport.cmake
+[5.776s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/export_nav_2d_msgs__rosidl_generator_cExport-release.cmake
+[5.776s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/export_nav_2d_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[5.776s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/export_nav_2d_msgs__rosidl_typesupport_fastrtps_cExport-release.cmake
+[5.776s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/export_nav_2d_msgs__rosidl_generator_cppExport.cmake
+[5.777s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/export_nav_2d_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.777s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/export_nav_2d_msgs__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[5.777s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/nav_2d_msgs__rosidl_typesupport_introspection_cExport.cmake
+[5.777s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/nav_2d_msgs__rosidl_typesupport_introspection_cExport-release.cmake
+[5.777s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/nav_2d_msgs__rosidl_typesupport_cExport.cmake
+[5.777s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/nav_2d_msgs__rosidl_typesupport_cExport-release.cmake
+[5.777s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/nav_2d_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[5.777s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/nav_2d_msgs__rosidl_typesupport_introspection_cppExport-release.cmake
+[5.778s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/nav_2d_msgs__rosidl_typesupport_cppExport.cmake
+[5.778s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/nav_2d_msgs__rosidl_typesupport_cppExport-release.cmake
+[5.778s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/export_nav_2d_msgs__rosidl_generator_pyExport.cmake
+[5.778s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/export_nav_2d_msgs__rosidl_generator_pyExport-release.cmake
+[5.778s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/rosidl_cmake-extras.cmake
+[5.778s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.778s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.778s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[5.779s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[5.779s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.779s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.779s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/nav_2d_msgsConfig.cmake
+[5.779s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/cmake/nav_2d_msgsConfig-version.cmake
+[5.779s] -- Up-to-date: /Pav-S_ws/install/nav_2d_msgs/share/nav_2d_msgs/package.xml
+[5.794s] Invoked command in '/Pav-S_ws/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Pav-S_ws/install/yolo_detector:/Pav-S_ws/install/yolov5_lib:/Pav-S_ws/install/nav2_simple_commander:/opt/ros/humble /usr/bin/cmake --install /Pav-S_ws/build/nav_2d_msgs
