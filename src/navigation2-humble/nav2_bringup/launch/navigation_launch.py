@@ -199,7 +199,7 @@ def generate_launch_description():
                 name='cmd_vel_limiter',
                 output='screen',
                 parameters=[{
-                    'input_cmd_vel': '/cmd_vel_nav',
+                    'input_cmd_vel': '/cmd_vel_nav2',
                     'output_cmd_vel': '/cmd_vel',
                     'detections_topic': '/yolo_detections', # yolo_node publish
                     'stop_line_distance_topic': '/stop_line_distance',  # distance topic from stop_line_detection node
@@ -264,7 +264,7 @@ def generate_launch_description():
                 parameters=[configured_params],
                 remappings=remappings +
                         #    [('cmd_vel', 'cmd_vel_nav'), ('cmd_vel_smoothed', 'cmd_vel')]),
-                           [('cmd_vel', 'cmd_vel_nav'), ('cmd_vel_smoothed', 'cmd_vel_nav')]),
+                           [('cmd_vel', 'cmd_vel_nav'), ('cmd_vel_smoothed', 'cmd_vel_nav2')]),
             ComposableNode(
                 package='nav2_lifecycle_manager',
                 plugin='nav2_lifecycle_manager::LifecycleManager',
@@ -277,7 +277,7 @@ def generate_launch_description():
                     plugin='cmd_vel_limiter::CmdVelLimiter',
                     name='cmd_vel_limiter',
                     parameters=[{
-                        'input_cmd_vel': '/cmd_vel_nav',
+                        'input_cmd_vel': '/cmd_vel_nav2',
                         'output_cmd_vel': '/cmd_vel',
                         'detections_topic': '/yolo_detections',
                         'stop_line_distance_topic': '/stop_line_distance',
