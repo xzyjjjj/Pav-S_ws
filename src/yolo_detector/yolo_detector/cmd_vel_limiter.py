@@ -121,29 +121,29 @@ class CmdVelLimiter(Node):
     # -----------------------------------------
         self.force_stop_line_enabled = False
 
-    # def publish_test(self):
-    #     # 创建 Detection2D 和 BoundingBox2D
-    #     detection = Detection2D()
-    #     detection.bbox = BoundingBox2D()
-    #     detection.bbox.center = Pose2D()
-    #     detection.bbox.center.theta = 0.0
-    #     detection.bbox.center.position = Point2D()
-    #     detection.bbox.center.position.x = 320.0
-    #     detection.bbox.center.position.y = 240.0
+    def publish_test(self):
+        # 创建 Detection2D 和 BoundingBox2D
+        detection = Detection2D()
+        detection.bbox = BoundingBox2D()
+        detection.bbox.center = Pose2D()
+        detection.bbox.center.theta = 0.0
+        detection.bbox.center.position = Point2D()
+        detection.bbox.center.position.x = 320.0
+        detection.bbox.center.position.y = 240.0
 
-    #     detection.bbox.size_x = 100.0
-    #     detection.bbox.size_y = 100.0
+        detection.bbox.size_x = 100.0
+        detection.bbox.size_y = 100.0
 
-    #     # 添加检测结果
-    #     hyp = ObjectHypothesisWithPose()
-    #     hyp.hypothesis.class_id = "yellow"
-    #     hyp.hypothesis.score = 1.0
-    #     detection.results.append(hyp)
+        # 添加检测结果
+        hyp = ObjectHypothesisWithPose()
+        hyp.hypothesis.class_id = "yellow"
+        hyp.hypothesis.score = 1.0
+        detection.results.append(hyp)
 
-        # # 发布
-        # msg = Detection2DArray()
-        # msg.detections.append(detection)
-        # self.detection_pub.publish(msg)
+        # 发布
+        msg = Detection2DArray()
+        msg.detections.append(detection)
+        self.detection_pub.publish(msg)
 
 
     def on_force_stop_line(self, request: SetBool.Request, response: SetBool.Response) -> SetBool.Response:

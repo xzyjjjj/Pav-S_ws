@@ -16,5 +16,6 @@ test/test_flake8.py
 test/test_pep257.py
 yolo_detector/__init__.py
 yolo_detector/cmd_vel_limiter.py
+yolo_detector/debug_node.py
 yolo_detector/detector_module.py
 yolo_detector/yolo_node.py

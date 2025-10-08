@@ -11,7 +11,7 @@ def generate_launch_description():
     yolov5_lib_share_dir = get_package_share_directory('yolov5_lib')
     # --- 动态构建跨包文件路径 ---
     weights_path = PathJoinSubstitution(
-        [yolov5_lib_share_dir, 'weights', 'best.pt']
+        [yolov5_lib_share_dir, 'runs/weights', 'best.pt']
     )
     config_path = PathJoinSubstitution(
         [yolov5_lib_share_dir, 'config', 'competition_dataset.yaml']

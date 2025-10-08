@@ -1,4 +1,5 @@
 [console_scripts]
 cmd_vel_limiter = yolo_detector.cmd_vel_limiter:main
+debug_node = yolo_detector.debug_node:main
 yolo_node = yolo_detector.yolo_node:main
 
