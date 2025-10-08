@@ -10,8 +10,8 @@ from vision_msgs.msg import Detection2DArray
 from std_msgs.msg import Float32
 from enum import Enum
 from std_srvs.srv import SetBool
-
-
+from vision_msgs.msg import Detection2D, ObjectHypothesisWithPose, BoundingBox2D
+from vision_msgs.msg import Pose2D, Point2D
 
 class RobotState(Enum):
     CLEAR = "CLEAR"           # 无危险，全速
@@ -25,7 +25,7 @@ class CmdVelLimiter(Node):
         super().__init__('cmd_vel_limiter')
 
         # Topics
-        self.declare_parameter('input_cmd_vel', '/cmd_vel')  # match existing topic
+        self.declare_parameter('input_cmd_vel', '/cmd_vel_nav2')  # match existing topic
         self.declare_parameter('output_cmd_vel', '/cmd_vel')
         self.declare_parameter('detections_topic', '/yolo_detections')
         self.declare_parameter('stop_line_distance_topic', '')  # 停车线距离话题(Float32: m)
@@ -49,9 +49,9 @@ class CmdVelLimiter(Node):
         self.declare_parameter('obstacle_height_ratio_trigger', 0.35)  # 障碍框高比例触发阈值
 
         # Class labels
-        self.declare_parameter('stop_line_labels', ['yellow_stop_line'])
+        self.declare_parameter('stop_line_labels', ['yellow_zone'])
         self.declare_parameter('obstacle_labels', ['red_cone', 'red_zone'])
-        self.declare_parameter('ignore_labels', ['bonus'])
+        self.declare_parameter('ignore_labels', ['num_1', 'num_2', 'num_3', 'num_4', 'num_5', 'num_6', 'num_7', 'num_8'])
 
         # Params fetch
         in_topic = self.get_parameter('input_cmd_vel').get_parameter_value().string_value
@@ -92,7 +92,7 @@ class CmdVelLimiter(Node):
             durability=DurabilityPolicy.VOLATILE,
         )
         det_qos = QoSProfile(
-            reliability=ReliabilityPolicy.BEST_EFFORT,
+            reliability=ReliabilityPolicy.RELIABLE,
             history=HistoryPolicy.KEEP_LAST,
             depth=5,
             durability=DurabilityPolicy.VOLATILE,
@@ -108,15 +108,43 @@ class CmdVelLimiter(Node):
             self.obs_dist_sub = self.create_subscription(Float32, obs_dist_topic, self.on_obstacle_distance, det_qos)
 
         # --------------------
-        self.detection_pub = self.create_publisher(Detection2DArray, "/yolo_detections", 10)
+        # self.detection_pub = self.create_publisher(Detection2DArray, "/yolo_detections", 10)
+        # self.timer_test = self.create_timer(0.02, self.publish_test)
+        self.debug_service_ = self.create_service(SetBool, 'debug_service', self.on_force_stop_line) 
+        self.force_stop_line_enabled = False
+
         # --------------------
 
         self.get_logger().info('CmdVelLimiter started. in=%s out=%s det=%s stop_dist=%s obs_dist=%s' % 
                               (in_topic, out_topic, det_topic, (dist_topic or 'disabled'), (obs_dist_topic or 'disabled')))
 
-    # -----------------------------
-        self.debug_service_ = self.create_service(SetBool, 'debug_service', self.on_force_stop_line)
+    # -----------------------------------------
         self.force_stop_line_enabled = False
+
+    # def publish_test(self):
+    #     # 创建 Detection2D 和 BoundingBox2D
+    #     detection = Detection2D()
+    #     detection.bbox = BoundingBox2D()
+    #     detection.bbox.center = Pose2D()
+    #     detection.bbox.center.theta = 0.0
+    #     detection.bbox.center.position = Point2D()
+    #     detection.bbox.center.position.x = 320.0
+    #     detection.bbox.center.position.y = 240.0
+
+    #     detection.bbox.size_x = 100.0
+    #     detection.bbox.size_y = 100.0
+
+    #     # 添加检测结果
+    #     hyp = ObjectHypothesisWithPose()
+    #     hyp.hypothesis.class_id = "yellow"
+    #     hyp.hypothesis.score = 1.0
+    #     detection.results.append(hyp)
+
+        # # 发布
+        # msg = Detection2DArray()
+        # msg.detections.append(detection)
+        # self.detection_pub.publish(msg)
+
 
     def on_force_stop_line(self, request: SetBool.Request, response: SetBool.Response) -> SetBool.Response:
         self.force_stop_line_enabled = request.data
@@ -124,7 +152,7 @@ class CmdVelLimiter(Node):
         response.message = f"force_stop_line set to {request.data}"
         self.get_logger().info(response.message)
         return response
-    # -----------------------------
+    # ------------------------------------------
 
 
     def on_stopline_distance(self, msg: Float32) -> None:
@@ -170,8 +198,7 @@ class CmdVelLimiter(Node):
 
         # 状态机更新逻辑
         # self.update_state_machine(saw_stop_line, saw_obstacle, max_stopline_height_px, max_obstacle_height_px, now)
-        self.get_logger().info(f"force_stop_line_enabled set, now calling update_state_machine manually")
-        self.update_state_machine(False, False, 0, 0, self.get_clock().now())
+        self.update_state_machine(saw_stop_line, saw_obstacle, 0, 0, now)
 
     def update_state_machine(self, saw_stop_line, saw_obstacle, max_stopline_height_px, max_obstacle_height_px, now):
         """状态机更新逻辑"""
@@ -202,6 +229,7 @@ class CmdVelLimiter(Node):
         # 状态转换逻辑
         if self.current_state == RobotState.CLEAR:
             if stop_line_triggered:
+                self.get_logger().info('Stop line detected, begin to stop.')
                 self.current_state = RobotState.STOPPING
                 self.state_start_time = now
             elif obstacle_triggered:
@@ -219,6 +247,7 @@ class CmdVelLimiter(Node):
         elif self.current_state == RobotState.STOPPING:
             dt = (now - self.state_start_time).nanoseconds / 1e9
             if dt >= self.decel_duration:
+                self.force_stop_line_enabled = False    # For debug
                 self.current_state = RobotState.HOLDING
                 self.state_start_time = now
 
@@ -230,8 +259,6 @@ class CmdVelLimiter(Node):
                 else:
                     self.current_state = RobotState.CLEAR
                 self.state_start_time = now
-        self.get_logger().info('Current state: %s' % self.current_state)
-
 
     def on_cmd_vel(self, msg: Twist) -> None:
         now = self.get_clock().now()
@@ -243,7 +270,6 @@ class CmdVelLimiter(Node):
             desired_cap = self.cautious_linear
         elif self.current_state == RobotState.STOPPING:
             # 平滑减速
-            self.get_logger().info('Begin to stop...')
             dt = (now - self.state_start_time).nanoseconds / 1e9
             if dt <= self.decel_duration:
                 ratio = max(0.0, 1.0 - dt / self.decel_duration)
