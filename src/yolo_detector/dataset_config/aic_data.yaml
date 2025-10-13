@@ -1,0 +1,21 @@
+# Dataset root directory relative to the yolov5 directory
+path: data/aic_data_v1
+
+# Train/val/test sets: specify directories, *.txt files, or lists
+train: images/train 
+val: images/val
+test: # Optional path to test images
+
+# Classes
+names:
+  0: red_cone
+  1: red_zone
+  2: yellow_zone
+  3: num_1
+  4: num_2
+  5: num_3
+  6: num_4
+  7: num_5
+  8: num_6
+  9: num_7
+  10: num_8

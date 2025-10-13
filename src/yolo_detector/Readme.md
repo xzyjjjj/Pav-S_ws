@@ -8,8 +8,8 @@
 1. enable_vis：是否开启 opencv 可视化窗口（调试时使用）
 2. skip_frames: 跳帧数，每隔多少图片处理一张，可根据算力调整  
 3. target_class：默认为''空字符串，可指定为数据集中的某特定类别，则只会检测此类物品（调试时使用）
-
-使用 ros2 launch yolo_detector yolo_detect.launch.py 启动，其中 **模型权重路径** 和 **数据集yaml文件路径** 在该launch文件中指定。
+4. weights_path：**模型权重路径** 
+5. config_path：**数据集yaml文件路径** 
 
 ## 3. 启动命令
 ```bash
