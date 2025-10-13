@@ -17,6 +17,7 @@ class RosYOLODetector(Node):
         self.declare_parameter('weights_path', 'yolov5l.pt')
         self.declare_parameter('config_path', './data/coco.yaml')
         self.declare_parameter('image_topic', '/camera/color/image_raw')
+        self.declare_parameter('depth_topic', '/camera/depth/image_raw')
         self.declare_parameter('target_lab_name', '') # ? 设置一个目标检测类别。用于检测对单个类别物体的识别效果。
         self.declare_parameter('enable_vis', False)
         self.declare_parameter('skip_frames', 3)
@@ -25,6 +26,7 @@ class RosYOLODetector(Node):
         weights_path = self.get_parameter('weights_path').get_parameter_value().string_value
         config_path = self.get_parameter('config_path').get_parameter_value().string_value
         image_topic = self.get_parameter('image_topic').get_parameter_value().string_value
+        depth_topic = self.get_parameter('depth_topic').get_parameter_value().string_value
         target_lab_name = self.get_parameter('target_lab_name').get_parameter_value().string_value
         enable_vis = self.get_parameter('enable_vis').get_parameter_value().bool_value
         skip_frames = self.get_parameter('skip_frames').get_parameter_value().integer_value
@@ -49,15 +51,33 @@ class RosYOLODetector(Node):
         # 订阅图像话题
         self.image_sub = self.create_subscription(
             Image, image_topic, self.image_callback, 10)
+        
+        # 订阅深度图像话题
+        self.depth_sub = self.create_subscription(
+            Image, depth_topic, self.depth_callback, 10)
 
         # 发布检测框（只保留 vehicle）
         self.detection_pub = self.create_publisher(Detection2DArray, "/yolo_detections", 10)
+        
+        # 发布RGB图像
+        self.rgb_pub = self.create_publisher(Image, "/rgb_img", 10)
+        
+        # 发布深度图像
+        self.depth_pub = self.create_publisher(Image, "/depth_img", 10)
 
         self.enable_vis = enable_vis
 
         # 控制帧率
         self.frame_count = 0  # 初始化接收的图片总数
         self.skip_frames = skip_frames  # 每第3帧处理一次
+        
+        # 存储最新的深度图像
+        self.latest_depth_image = None
+        self.latest_depth_header = None
+
+    def depth_callback(self, depth_msg):
+        """深度图像回调函数，存储最新的深度图像"""
+        self.latest_depth_image = depth_msg
 
     def image_callback(self, ros_img):
         self.frame_count += 1
@@ -77,6 +97,13 @@ class RosYOLODetector(Node):
         #* 调用模型进行检测
         result_image, bbox = self.model.detect(image_pil)
         bbox = bbox.cpu().detach().numpy()
+
+        # 发布 RGB 图像
+        self.rgb_pub.publish(ros_img)
+        
+        # 发布深度图像（如果存在）
+        if self.latest_depth_image is not None:
+            self.depth_pub.publish(self.latest_depth_image)
 
         # 发布 Detection2DArray 消息
         msg_array = Detection2DArray()
@@ -137,20 +164,6 @@ class RosYOLODetector(Node):
             detection.results.append(hypothesis)
 
             msg_array.detections.append(detection)
-        # for box in top_boxes:
-        #     center_x, center_y, width, height = box
-        #     detection = Detection2D()
-        #     detection.bbox.center.position.x = float(center_x)
-        #     detection.bbox.center.position.y = float(center_y)
-        #     detection.bbox.size_x = float(width)
-        #     detection.bbox.size_y = float(height)
-
-        #     hypothesis = ObjectHypothesisWithPose()
-        #     hypothesis.hypothesis.class_id = self.model.id2name(cls_id)  
-        #     hypothesis.hypothesis.score = float(conf) 
-        #     detection.results.append(hypothesis)
-
-        #     msg_array.detections.append(detection)
 
         self.detection_pub.publish(msg_array)
 
