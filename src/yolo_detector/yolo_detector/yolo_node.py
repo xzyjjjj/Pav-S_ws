@@ -1,3 +1,7 @@
+# TO FUCKING DO:
+# 1) 不要再继续发布深度信息
+
+
 #!/usr/bin/env python3
 # coding=utf-8
 from yolo_detector.detector_module import *
@@ -7,6 +11,10 @@ from sensor_msgs.msg import Image
 from vision_msgs.msg import Detection2DArray, Detection2D, BoundingBox2D, ObjectHypothesisWithPose
 from std_msgs.msg import Header
 
+import cv2 
+import numpy as np
+from cv_bridge import CvBridge, CvBridgeError
+import PIL.Image as PILImage
 
 #* 封装ros交互，订阅图像、发布检测结果
 class RosYOLODetector(Node):
@@ -21,6 +29,12 @@ class RosYOLODetector(Node):
         self.declare_parameter('target_lab_name', '') # ? 设置一个目标检测类别。用于检测对单个类别物体的识别效果。
         self.declare_parameter('enable_vis', False)
         self.declare_parameter('skip_frames', 3)
+        
+        # --- 新增参数：用于预处理 ---
+        self.declare_parameter('enable_preprocessing', False) # 是否启用预处理
+        self.declare_parameter('glare_threshold', 245)      # 高光检测的亮度阈值 (0-255)
+        self.declare_parameter('clahe_clip_limit', 2.0)     # CLAHE 对比度限制
+        self.declare_parameter('clahe_tile_grid_size', 8)   # CLAHE 网格大小
 
         # 2. 获取参数值
         weights_path = self.get_parameter('weights_path').get_parameter_value().string_value
@@ -30,6 +44,24 @@ class RosYOLODetector(Node):
         target_lab_name = self.get_parameter('target_lab_name').get_parameter_value().string_value
         enable_vis = self.get_parameter('enable_vis').get_parameter_value().bool_value
         skip_frames = self.get_parameter('skip_frames').get_parameter_value().integer_value
+        
+        # --- 获取预处理参数 ---
+        enable_preprocessing = self.get_parameter('enable_preprocessing').get_parameter_value().bool_value
+        glare_threshold = self.get_parameter('glare_threshold').get_parameter_value().integer_value
+        clahe_clip_limit = self.get_parameter('clahe_clip_limit').get_parameter_value().double_value
+        clahe_tile_size = (self.get_parameter('clahe_tile_grid_size').get_parameter_value().integer_value, 
+                                self.get_parameter('clahe_tile_grid_size').get_parameter_value().integer_value)
+        
+        self.enable_preprocessing = enable_preprocessing
+        self.glare_threshold = glare_threshold
+        self.clahe_clip_limit = clahe_clip_limit
+        self.clahe_tile_size = clahe_tile_size
+        if self.enable_preprocessing:
+            self.get_logger().info(f"Use preprocess!--")
+
+        # --- 初始化 CLAHE 对象 ---
+        self.clahe = cv2.createCLAHE(clipLimit=self.clahe_clip_limit, tileGridSize=self.clahe_tile_size)
+
 
         # 3. 使用获取到的变量来初始化模型对象
         self.model = DetectorYolov5(cfgfile=config_path, weightfile=weights_path)
@@ -67,6 +99,12 @@ class RosYOLODetector(Node):
 
         self.enable_vis = enable_vis
 
+        # --- (可选) 发布预处理后的图像，用于调试 ---
+        if self.enable_vis:
+            self.get_logger().info(f"✅ preprocessed image publisher init.")
+            self.preprocessed_pub = self.create_publisher(Image, "/preprocessed_image", 10)
+
+
         # 控制帧率
         self.frame_count = 0  # 初始化接收的图片总数
         self.skip_frames = skip_frames  # 每第3帧处理一次
@@ -85,13 +123,71 @@ class RosYOLODetector(Node):
         if self.frame_count % (self.skip_frames + 1) != 0:
             return
 
+        self.get_logger().info(f"\n--- ⚡️ Processing Frame: {self.frame_count} (Seq: {ros_img.header.stamp.sec}.{ros_img.header.stamp.nanosec}) ---")
         try: # 将 ROS 图像消息转换为 OpenCV 的 BGR8 格式图像
             cv_image = self.bridge.imgmsg_to_cv2(ros_img, "bgr8")
         except CvBridgeError as e:
             self.get_logger().error(f"CvBridge Error: {e}")
             return
+
+        # # ================================================================
+        # # --- 开始：新增的图像预处理逻辑 ---
+        # # ================================================================
+
+        # if self.enable_preprocessing:
+        #     # 步骤 1: 高光去除 (Inpainting)
+        #     # 将图像转为灰度图，用于寻找高光区域
+        #     gray_img = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
+            
+        #     # 创建高光区域的掩码 (Mask)
+        #     # self.glare_threshold 是一个可调参数，例如 245
+        #     _, glare_mask = cv2.threshold(gray_img, self.glare_threshold, 255, cv2.THRESH_BINARY)
+            
+        #     # (可选) 对掩码进行膨胀，确保覆盖高光边缘
+        #     kernel = np.ones((2,2), np.uint8)
+        #     glare_mask_dilated = cv2.dilate(glare_mask, kernel, iterations=1)
+            
+        #     # 使用掩码对原始 BGR 图像进行修复
+        #     # cv2.INPAINT_NS (Navier-Stokes) 速度较快，适合此类修复
+        #     inpainted_image = cv2.inpaint(cv_image, glare_mask_dilated, 3, cv2.INPAINT_NS)
+
+        #     # 步骤 2: CLAHE (自适应直方图均衡化)
+        #     # 最好在 LAB 色彩空间的 L (亮度) 通道上应用 CLAHE，以避免颜色失真
+        #     lab_image = cv2.cvtColor(inpainted_image, cv2.COLOR_BGR2LAB)
+        #     l_channel, a_channel, b_channel = cv2.split(lab_image)
+
+        #     # 应用 CLAHE
+        #     clahe_l_channel = self.clahe.apply(l_channel)
+
+        #     # 合并处理后的通道
+        #     merged_lab_image = cv2.merge([clahe_l_channel, a_channel, b_channel])
+
+        #     # 将图像从 LAB 转回 BGR
+        #     preprocessed_bgr_image = cv2.cvtColor(merged_lab_image, cv2.COLOR_LAB2BGR)
+            
+        #     # --- (可选) 发布预处理后的图像，用于调试 ---
+        #     if self.enable_vis:
+        #         try:
+        #             preprocessed_msg = self.bridge.cv2_to_imgmsg(preprocessed_bgr_image, "bgr8")
+        #             preprocessed_msg.header = ros_img.header
+        #             self.preprocessed_pub.publish(preprocessed_msg)
+        #         except CvBridgeError as e:
+        #             self.get_logger().warn(f"Failed to publish preprocessed image: {e}")
+
+        # else:
+        #     # 如果不启用预处理，则直接使用原始图像
+        #     preprocessed_bgr_image = cv_image
+            
+        # # ================================================================
+        # # --- 结束：新增的图像预处理逻辑 ---
+        # # ================================================================
+
+
         # 将 BGR 图像转为 RGB 图像，因为 YOLOv5 和 PIL 库通常使用 RGB 格式
-        image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2RGB)
+        # 注意：我们使用 preprocessed_bgr_image 而不是 cv_image
+        # image = cv2.cvtColor(preprocessed_bgr_image, cv2.COLOR_BGR2RGB)
+        image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2RGB) #*switch
+
         image_pil = PILImage.fromarray(image) # 将 NumPy 数组格式的图像转换为 PIL 图像对象，以供 DetectorYolov5 类使用。
         
         #* 调用模型进行检测
@@ -111,17 +207,17 @@ class RosYOLODetector(Node):
 
         # # 没有检测到目标时，填充一个无效的目标信息到数组中
         # if len(bbox) == 0:
-        #     detection = Detection2D()
-        #     detection.bbox.center.position.x = 99999.0 # TODO：表示未检测到目标
-        #     detection.bbox.center.position.y = 99999.0
-        #     detection.bbox.size_x = 99999.0
-        #     detection.bbox.size_y = 99999.0
+        #     detection = Detection2D()
+        #     detection.bbox.center.position.x = 99999.0 # TODO：表示未检测到目标
+        #     detection.bbox.center.position.y = 99999.0
+        #     detection.bbox.size_x = 99999.0
+        #     detection.bbox.size_y = 99999.0
 
-        #     hypothesis = ObjectHypothesisWithPose()
-        #     hypothesis.hypothesis.class_id = "0"  # vehicle 类别ID
-        #     hypothesis.hypothesis.score = 1.0
-        #     detection.results.append(hypothesis)
-        #     msg_array.detections.append(detection)
+        #     hypothesis = ObjectHypothesisWithPose()
+        #     hypothesis.hypothesis.class_id = "None"  # vehicle 类别ID
+        #     hypothesis.hypothesis.score = 1.0
+        #     detection.results.append(hypothesis)
+        #     msg_array.detections.append(detection)
 
         top_label = bbox[:, 5]  # 从 bbox 数组中提取所有检测框的类别 ID
         top_conf = bbox[:, 4]   # 提取置信度信息
@@ -137,12 +233,14 @@ class RosYOLODetector(Node):
             target_class_mask = (top_label == target_class_id)
 
             if not np.any(target_class_mask):
-                self.get_logger().info(f"No {self.target_lab_name} detected, skipping publish.")
+                self.get_logger().info(f"--- 🚫 Result: No {self.target_lab_name} detected ---")
 
             top_label = top_label[target_class_mask]
             top_conf = top_conf[target_class_mask]
             top_boxes = top_boxes[target_class_mask]
 
+        # 用于日志输出的列表
+        detected_classes = []
         # 填充并发布消息
         for i in range(len(top_boxes)):
             box = top_boxes[i]
@@ -150,7 +248,9 @@ class RosYOLODetector(Node):
             cls_id = top_label[i]   
 
             detection = Detection2D()
-            
+            class_name = self.model.id2name(cls_id)
+            detected_classes.append(f"{class_name} ({conf:.2f})") # 添加到日志列表
+
             # 填充bbox
             detection.bbox.center.position.x = float(box[0])
             detection.bbox.center.position.y = float(box[1])
@@ -159,18 +259,25 @@ class RosYOLODetector(Node):
             
             # 填充类别和置信度
             hypothesis = ObjectHypothesisWithPose()
-            hypothesis.hypothesis.class_id = self.model.id2name(cls_id)
+            hypothesis.hypothesis.class_id = class_name
             hypothesis.hypothesis.score = float(conf)
             detection.results.append(hypothesis)
-
+            
             msg_array.detections.append(detection)
 
         self.detection_pub.publish(msg_array)
+        # 2. 输出检测结果 (有目标检测)
+        if len(detected_classes) > 0:
+            self.get_logger().info(f"--- ✅ Result: Detected {len(detected_classes)} items ---")
+            for item in detected_classes:
+                self.get_logger().info(f"   -> {item}")
+
 
         # 可视化检测结果（如果启用）
-        result_image = cv2.cvtColor(np.asarray(result_image), cv2.COLOR_RGB2BGR)
+        # 注意：result_image 是基于 PIL 图像（预处理后）绘制的
+        result_image_bgr = cv2.cvtColor(np.asarray(result_image), cv2.COLOR_RGB2BGR)
         if self.enable_vis:
-            cv2.imshow("YOLO Detection", result_image)
+            cv2.imshow("YOLO Detection", result_image_bgr)
             cv2.waitKey(1)
 
 def main(args=None):
