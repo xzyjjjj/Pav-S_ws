@@ -35,7 +35,7 @@ class calculate_xyz:
 		numerator = (CAMERA_PRIORI['height']**2 + X**2) ** 0.5
 		denominator = (fx**2 + (cy - v)**2) ** 0.5
 		Y = numerator / denominator * abs(cx - u)
-		return Y
+		return -Y
 	def calc_xyz(self, u, v):
 		# 使用实例方法调用，保证 self 正确传递给 calc_X 和 calc_Y
 		X = self.calc_X(v)

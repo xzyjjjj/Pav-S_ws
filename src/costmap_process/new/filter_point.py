@@ -84,9 +84,9 @@ class FilterPoints:
         # 颜色分割掩膜
         final_mask = self.segment_mask(img, type)
         # bbox 掩膜（若提供）
-        bbox_mask = self.yolo_mask(img, bbox)
-        if bbox_mask is not None:
-            final_mask = cv2.bitwise_and(final_mask, bbox_mask)
+        # bbox_mask = self.yolo_mask(img, bbox)
+        # if bbox_mask is not None:
+        # final_mask = cv2.bitwise_and(final_mask, bbox_mask)
         
         # 应用掩膜并返回圖像
         masked_img = cv2.bitwise_and(img, img, mask=final_mask)

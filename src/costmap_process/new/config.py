@@ -7,10 +7,10 @@ from pathlib import Path
 # 相机内参（可覆盖 camera_para.txt 中的值或用于没有文件时的默认值）
 # 单位：fx,fy 像素；cx,cy 像素；factor 为深度缩放（depth_raw / factor = meters）
 CAMERA = {
-    'fx': 543.73,
-    'fy': 543.73,
-    'cx': 318.34,
-    'cy': 247.11,
+    'fx': 543.72991943,
+    'fy': 543.72991943,
+    'cx': 318.33929443,
+    'cy': 247.10844421,
     'factor': 1.0,
 }
 # map 平面 ROI 区域（单位米，左下角和右上角）
@@ -58,7 +58,7 @@ DEFAULT_OCCUPANCY_RESOLUTION = None
 # key 可以是类别名（如 'red_zone'）或字符串化的数字 '1'..'8'
 OCCUPANCY_COLOR_MAP = {
     # 注：rgb 为 (R, G, B) 三元组。下面注释给出常见颜色名称（中文/英文）便于识别。
-    'red_zone':   {'rgb': (220, 20, 60),  'occ': 100, 'priority': 1},   # 深红 / Crimson
+    'red':   {'rgb': (220, 20, 60),  'occ': 100, 'priority': 1},   # 深红 / Crimson
     'red_cone':   {'rgb': (255, 69, 0),   'occ': 100, 'priority': 2},   # 橙红 / OrangeRed
     'yellow_zone':{'rgb': (255, 215, 0),  'occ': 80,  'priority': 3},   # 金黄 / Gold
     '1':          {'rgb': (31, 119, 180), 'occ': 60,  'priority': 4},   # 蓝色 / Blue (tableau-like)

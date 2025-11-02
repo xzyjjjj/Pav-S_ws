@@ -252,9 +252,9 @@ class TfTransformer:
         if not (isinstance(T_map_to_body, np.ndarray) and T_map_to_body.shape == (4,4)):
             raise ValueError('T_map_to_body 必须是 4x4 numpy.ndarray')
         map_xyz = self.camera_to_map(cam_xyz, T_map_to_body, count)
-        print(f"map_xyz:{map_xyz}")
+        # print(f"map_xyz:{map_xyz}")
         map_pixel = self.map_to_originmap_pixel(map_xyz)
-        print(f"map_pixel:{map_pixel}")
+        # print(f"map_pixel:{map_pixel}")
         return {'cam_xyz': cam_xyz, 'map_xyz': map_xyz, 'map_pixel': map_pixel}
 
     def draw_point_on_map(self, points, origin_map_path: str = '/Users/xuzhenyu/Desktop/reutrn_stage/Pav-S_ws/src/costmap_process/scripts/red_zone_proj_assets/map_origin.jpg', color=(0,0,255), radius=1, out_path: str = None):
