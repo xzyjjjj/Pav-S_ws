@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Pav-S_ws/src/usb_cam-ros2/include -isystem /opt/ros/humble/src/gtest_vendor/include -isystem /usr/include/opencv4
 
-CXX_FLAGS = -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -std=gnu++14
+CXX_FLAGS = -Wall -Wextra -Wpedantic -Werror -std=gnu++14
 

@@ -54,7 +54,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libstandard_traj_generator.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libstandard_traj_generator.so"
-         OLD_RPATH "/Pav-S_ws/install/dwb_core/lib:/opt/ros/humble/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav_2d_utils/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:"
+         OLD_RPATH "/Pav-S_ws/install/dwb_core/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_msgs/lib:/opt/ros/humble/lib:/Pav-S_ws/install/dwb_msgs/lib:/Pav-S_ws/install/nav_2d_msgs/lib:/Pav-S_ws/install/nav2_costmap_2d/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:/Pav-S_ws/install/nav_2d_utils/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libstandard_traj_generator.so")

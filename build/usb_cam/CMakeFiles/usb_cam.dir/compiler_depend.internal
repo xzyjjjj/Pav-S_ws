@@ -26,7 +26,6 @@ CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o
  /usr/include/aarch64-linux-gnu/bits/types/struct_timespec.h
  /usr/include/aarch64-linux-gnu/bits/endian.h
  /usr/include/aarch64-linux-gnu/bits/endianness.h
- /usr/include/aarch64-linux-gnu/bits/select2.h
  /usr/include/linux/ioctl.h
  /usr/include/aarch64-linux-gnu/asm/ioctl.h
  /usr/include/asm-generic/ioctl.h
@@ -58,8 +57,6 @@ CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h
  /usr/include/aarch64-linux-gnu/bits/floatn.h
  /usr/include/aarch64-linux-gnu/bits/floatn-common.h
- /usr/include/aarch64-linux-gnu/bits/stdio.h
- /usr/include/aarch64-linux-gnu/bits/stdio2.h
  /usr/include/aarch64-linux-gnu/sys/mman.h
  /usr/include/aarch64-linux-gnu/bits/mman.h
  /usr/include/aarch64-linux-gnu/bits/mman-map-flags-generic.h
@@ -79,7 +76,6 @@ CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o
  /usr/include/aarch64-linux-gnu/bits/confname.h
  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h
  /usr/include/aarch64-linux-gnu/bits/getopt_core.h
- /usr/include/aarch64-linux-gnu/bits/unistd.h
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h
  /usr/include/linux/close_range.h
  /usr/include/fcntl.h
@@ -87,7 +83,6 @@ CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o
  /usr/include/aarch64-linux-gnu/bits/fcntl-linux.h
  /usr/include/aarch64-linux-gnu/bits/types/struct_iovec.h
  /usr/include/linux/falloc.h
- /usr/include/aarch64-linux-gnu/bits/fcntl2.h
  /usr/include/c++/11/chrono
  /usr/include/c++/11/ratio
  /usr/include/c++/11/type_traits
@@ -127,7 +122,6 @@ CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o
  /usr/include/wchar.h
  /usr/include/aarch64-linux-gnu/bits/types/wint_t.h
  /usr/include/aarch64-linux-gnu/bits/types/mbstate_t.h
- /usr/include/aarch64-linux-gnu/bits/wchar2.h
  /usr/include/c++/11/exception
  /usr/include/c++/11/bits/exception.h
  /usr/include/c++/11/bits/exception_ptr.h
@@ -202,9 +196,7 @@ CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o
  /usr/include/aarch64-linux-gnu/bits/byteswap.h
  /usr/include/aarch64-linux-gnu/bits/uintn-identity.h
  /usr/include/alloca.h
- /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h
- /usr/include/aarch64-linux-gnu/bits/stdlib.h
  /usr/include/c++/11/bits/std_abs.h
  /usr/include/c++/11/cstdio
  /usr/include/c++/11/cerrno
@@ -295,8 +287,6 @@ CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o
  /usr/include/c++/11/cstring
  /usr/include/string.h
  /usr/include/strings.h
- /usr/include/aarch64-linux-gnu/bits/strings_fortified.h
- /usr/include/aarch64-linux-gnu/bits/string_fortified.h
  /usr/include/c++/11/cmath
  /usr/include/math.h
  /usr/include/aarch64-linux-gnu/bits/math-vector.h

@@ -6,5 +6,5 @@ C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"dwb_msgs\" -Dd
 
 C_INCLUDES = -I/Pav-S_ws/build/dwb_msgs/rosidl_generator_c -I/Pav-S_ws/build/dwb_msgs/rosidl_generator_py -I/usr/include/python3.10 -isystem /opt/ros/humble/include/geometry_msgs -isystem /opt/ros/humble/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /Pav-S_ws/install/nav_2d_msgs/include/nav_2d_msgs -isystem /opt/ros/humble/include/nav_msgs
 
-C_FLAGS = -O3 -DNDEBUG -fPIC -Wall -Wextra
+C_FLAGS = -fPIC -Wall -Wextra
 

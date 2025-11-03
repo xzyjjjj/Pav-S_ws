@@ -6,5 +6,5 @@ C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"turn_on_wheelt
 
 C_INCLUDES = -I/Pav-S_ws/build/turn_on_wheeltec_robot/rosidl_generator_c -I/Pav-S_ws/build/turn_on_wheeltec_robot/rosidl_generator_py -I/usr/include/python3.10 -I/Pav-S_ws/src/turn_on_wheeltec_robot/include -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_typesupport_interface
 
-C_FLAGS = -O3 -DNDEBUG -fPIC -Wall -Wextra -std=gnu99
+C_FLAGS = -fPIC -Wall -Wextra -std=gnu99
 

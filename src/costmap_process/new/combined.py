@@ -44,7 +44,7 @@ from . import data_interface as data_utils # 重命名的工具模块
 from .draw_map import DrawMap
 from .tf_transformer import TfTransformer
 from .filter_point import FilterPoints
-
+from .extract_red_point import RedExtracter
 
 class PerceptionMappingNode(Node):
     """
@@ -61,6 +61,7 @@ class PerceptionMappingNode(Node):
         self.transformer = TfTransformer()
         self.filter = FilterPoints()
         self.frame_count = 0
+        self.red_extracter = RedExtracter()
 
         # 2. 初始化 TF 监听器
         try:
@@ -96,6 +97,14 @@ class PerceptionMappingNode(Node):
             self.image_sub = message_filters.Subscriber(self, Image, 'rgb_img')
             self.detect_sub = message_filters.Subscriber(self, Detection2DArray, 'yolo_detections')
             
+            # 再单独给rgb_img创建一个回调函数
+            self.raw_image_sub = self.create_subscription(
+                Image,
+                'rgb_img',
+                self.image_callback,
+                10
+            )
+
             # 2. 创建时间同步器 (使用近似时间同步)
             self.ts = message_filters.ApproximateTimeSynchronizer(
                 [self.image_sub, self.detect_sub],
@@ -110,6 +119,89 @@ class PerceptionMappingNode(Node):
             # (可选) 调试用：显示实时图像
             if SHOW_ORIGIN_MAP_WINDOW:
                 self.create_subscription(Image, 'rgb_img', self._show_img_cb, 10)
+    
+    def image_callback(self, img_msg):
+         # 单独处理 rgb_img（不会影响同步器）
+        self.get_logger().info('收到独立的 rgb_img 消息')
+        
+        # 1. 解析图像
+        try:
+            img = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding='bgr8')
+            if img is None or img.shape[0] == 0 or img.shape[1] == 0:
+                self.get_logger().warn("收到的图像为空或无效。")
+                return
+        except Exception as e:
+            self.get_logger().error(f"CvBridge 转换图像失败: {e}")
+            return
+
+
+        # 3. 获取 TF 变换 (使用消息头的时间戳)
+        T_map_to_body = self.get_tf_matrix('map', 'body', img_msg.header.stamp)
+        if T_map_to_body is None:
+            self.get_logger().warn("获取 TF(map -> body) 失败，跳过此帧。")
+            return
+            
+        # 4. 
+        masked_img = self.red_extracter.extract_red_points(img)
+        non_black = np.any(masked_img != 0, axis=2)
+        ys, xs = np.where(non_black)
+        pts_2d = list(zip(xs, ys)) # (u, v) 像素坐标
+        
+        originmap_pixels = []
+            
+        # 使用 self.transformer 实例
+        for u, v in pts_2d:
+            try:
+                res = self.transformer.calc_point_on_origin_map((u, v), T_map_to_body, count=0) # count 参数似乎没用，保持为0
+                pixel = res.get('map_pixel')
+                if pixel is not None:
+                    originmap_pixels.append(pixel)
+            except Exception as e:
+                self.get_logger().warn(f"calc_point_on_origin_map 失败: {e}")
+                continue
+            
+        self.get_logger().info(f"类型 'red_zone / red_cone' 投影了 {len(originmap_pixels)} 个点。")
+
+        # 3. 绘制地图并发布
+        any_drawn = False
+        drawn_img_for_debug = None
+            
+        color_info = OCCUPANCY_COLOR_MAP.get('red_zone') # 红色的东西全当 red_zone 去做
+        rgb = tuple(int(x) for x in color_info['rgb'])
+            
+        try:
+            # 使用 self.drawer 实例
+            drawn_img_for_debug = self.drawer.draw_point_on_map(
+                originmap_pixels, 
+                color=rgb, 
+                radius=2
+            )
+            any_drawn = True
+            
+        except Exception as e:
+            self.get_logger().warn(f"draw_point_on_map 失败 (type red_zone / red_cone): {e}")
+
+        # 4. 发布调试图和占据地图
+        if any_drawn:
+            self.get_logger().info("绘制了新点，发布调试图像和占据地图...")
+            # 发布 debug 绘制结果
+            try:
+                if drawn_img_for_debug is not None:
+                    msg = self.bridge.cv2_to_imgmsg(drawn_img_for_debug, encoding='bgr8')
+                    msg.header.stamp = self.get_clock().now().to_msg()
+                    self._debug_img_pub.publish(msg)
+            except Exception as e:
+                self.get_logger().warn(f"发布 debug drawn_img 失败: {e}")
+
+            # 发布占据地图
+            try:
+                # 将 self (节点实例) 传递给发布函数
+                self.drawer.publish_occupancy_from_png(node=self, topic=None, show=False)
+            except Exception as e:
+                self.get_logger().warn(f"publish_occupancy_from_png 失败: {e}")
+        else:
+            self.get_logger().info("没有新的点被绘制。")
+
 
 
     def _show_img_cb(self, msg: 'Image'):
@@ -229,7 +321,7 @@ class PerceptionMappingNode(Node):
         # 1. (原 process_frame) 分割出所有感兴趣的区域
         masked_imgs = []
         types = data_utils.get_all_type(bboxes_list)
-        
+
         for type_m in types:
             pts_corners = data_utils.get_specific_bbox(type_m, bboxes_list)
             bboxes_int = []
@@ -275,10 +367,14 @@ class PerceptionMappingNode(Node):
 
         # 3. 绘制地图并发布
         any_drawn = False
-        drawn_img_for_debug = None
+        drawn_imgs_for_debug = []
         
         for _originmap_pixels, type_m in maps_data:
             if not _originmap_pixels:
+                continue
+
+            # 不用这个逻辑处理red_zone和red_cone
+            if type_m == 'red_zone' or type_m == 'red_cone': 
                 continue
             
             color_info = OCCUPANCY_COLOR_MAP.get(str(type_m)) or OCCUPANCY_COLOR_MAP.get(type_m)
@@ -289,11 +385,11 @@ class PerceptionMappingNode(Node):
             
             try:
                 # 使用 self.drawer 实例
-                drawn_img_for_debug = self.drawer.draw_point_on_map(
+                drawn_imgs_for_debug.append( self.drawer.draw_point_on_map(
                     _originmap_pixels, 
                     color=rgb, 
                     radius=2
-                )
+                ) )
                 any_drawn = True
                 
             except Exception as e:
@@ -304,10 +400,11 @@ class PerceptionMappingNode(Node):
             self.get_logger().info("绘制了新点，发布调试图像和占据地图...")
             # 发布 debug 绘制结果
             try:
-                if drawn_img_for_debug is not None:
-                    msg = self.bridge.cv2_to_imgmsg(drawn_img_for_debug, encoding='bgr8')
-                    msg.header.stamp = self.get_clock().now().to_msg()
-                    self._debug_img_pub.publish(msg)
+                if drawn_imgs_for_debug is not None:
+                    for img in drawn_imgs_for_debug:
+                        msg = self.bridge.cv2_to_imgmsg(img, encoding='bgr8')
+                        msg.header.stamp = self.get_clock().now().to_msg()
+                        self._debug_img_pub.publish(msg)
             except Exception as e:
                 self.get_logger().warn(f"发布 debug drawn_img 失败: {e}")
 

@@ -28,8 +28,6 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 CMAKE_BUILD_TARGET:STRING=Both
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.

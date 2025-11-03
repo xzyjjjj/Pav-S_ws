@@ -13,7 +13,6 @@ resource/yolov5_lib
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
-weights/best.pt
 yolov5_lib/export.py
 yolov5_lib/models/__init__.py
 yolov5_lib/models/common.py

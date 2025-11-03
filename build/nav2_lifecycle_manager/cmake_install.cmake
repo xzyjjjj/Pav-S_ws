@@ -54,7 +54,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_lifecycle_manager_core.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_lifecycle_manager_core.so"
-         OLD_RPATH "/Pav-S_ws/install/nav2_msgs/lib:/opt/ros/humble/lib:/Pav-S_ws/install/nav2_util/lib:"
+         OLD_RPATH "/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_util/lib:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_lifecycle_manager_core.so")
@@ -77,7 +77,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/nav2_lifecycle_manager/lifecycle_manager")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/nav2_lifecycle_manager/lifecycle_manager"
-         OLD_RPATH "/Pav-S_ws/build/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_msgs/lib:/opt/ros/humble/lib:/Pav-S_ws/install/nav2_util/lib:"
+         OLD_RPATH "/Pav-S_ws/build/nav2_lifecycle_manager:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_util/lib:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/nav2_lifecycle_manager/lifecycle_manager")

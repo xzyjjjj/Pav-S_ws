@@ -46,7 +46,7 @@ def generate_launch_description():
                        'behavior_server',
                        'bt_navigator',
                        'waypoint_follower',
-                       'velocity_smoother']
+                       'velocity_smoother',]
 
     # Map fully qualified names to relative ones so the node's namespace can be prepended.
     # In case of the transforms (tf), currently, there doesn't seem to be a better alternative
@@ -150,6 +150,7 @@ def generate_launch_description():
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
+                # remappings=remappings + [('cmd_vel', 'cmd_vel_nav')]),
             Node(
                 package='nav2_bt_navigator',
                 executable='bt_navigator',
@@ -160,6 +161,7 @@ def generate_launch_description():
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
+                # remappings=remappings + [('cmd_vel', 'cmd_vel_nav')]),
             Node(
                 package='nav2_waypoint_follower',
                 executable='waypoint_follower',
@@ -170,6 +172,7 @@ def generate_launch_description():
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
+                # remappings=remappings + [('cmd_vel', 'cmd_vel_nav')]),
             Node(
                 package='nav2_velocity_smoother',
                 executable='velocity_smoother',
@@ -181,7 +184,7 @@ def generate_launch_description():
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings +
                         # [('cmd_vel', 'cmd_vel_nav'), ('cmd_vel_smoothed', 'cmd_vel')]),
-                        [('cmd_vel', 'cmd_vel_nav'), ('cmd_vel_smoothed', 'cmd_vel_nav2')]),
+                         [('cmd_vel', 'cmd_vel_nav'), ('cmd_vel_smoothed', 'cmd_vel_nav2')]),
             Node(
                 package='nav2_lifecycle_manager',
                 executable='lifecycle_manager',
@@ -194,23 +197,19 @@ def generate_launch_description():
 
             # cmd_vel limiter bridging between controller output and base
             Node(
-                package='yolo_detector',
+                package='cmd_vel_tools',
                 executable='cmd_vel_limiter',
                 name='cmd_vel_limiter',
                 output='screen',
                 parameters=[{
                     'input_cmd_vel': '/cmd_vel_nav2',
                     'output_cmd_vel': '/cmd_vel',
-                    'detections_topic': '/yolo_detections', # yolo_node publish
-                    'stop_line_distance_topic': '/stop_line_distance',  # distance topic from stop_line_detection node
-                    'obstacle_distance_topic': '/obstacle_distance',  # distance topic for obstacles
-                    'max_linear_clear': 0.6,
-                    'cautious_linear': 0.25,
-                    'decel_duration': 1.0,
-                    'stop_line_hold_time': 2.0,
-                    'stop_line_trigger_distance_m': 0.4,
-                    'obstacle_trigger_distance_m': 0.6,
-                    'obstacle_height_ratio_trigger': 0.35
+                    # 'detections_topic': '/yolo_detections', # yolo_node publish
+                    'stop_line_topic': '/object_in_proximity',  # Bool: is stop or not
+                    'max_linear_clear': 0.5,
+                    'stop_line_trigger_time': 0.05,
+                    'stop_line_hold_time': 1.5,
+                    'obstacle_topic': '/obstacle_cv',
                 }],
                 arguments=['--ros-args', '--log-level', log_level],
             ),
@@ -245,25 +244,28 @@ def generate_launch_description():
                 name='behavior_server',
                 parameters=[configured_params],
                 remappings=remappings),
+                # remappings=remappings + [('cmd_vel', 'cmd_vel_nav')]),
             ComposableNode(
                 package='nav2_bt_navigator',
                 plugin='nav2_bt_navigator::BtNavigator',
                 name='bt_navigator',
                 parameters=[configured_params],
                 remappings=remappings),
+                # remappings=remappings + [('cmd_vel', 'cmd_vel_nav')]),
             ComposableNode(
                 package='nav2_waypoint_follower',
                 plugin='nav2_waypoint_follower::WaypointFollower',
                 name='waypoint_follower',
                 parameters=[configured_params],
                 remappings=remappings),
+                # remappings=remappings + [('cmd_vel', 'cmd_vel_nav')]),
             ComposableNode(
                 package='nav2_velocity_smoother',
                 plugin='nav2_velocity_smoother::VelocitySmoother',
                 name='velocity_smoother',
                 parameters=[configured_params],
                 remappings=remappings +
-                        #    [('cmd_vel', 'cmd_vel_nav'), ('cmd_vel_smoothed', 'cmd_vel')]),
+                            # [('cmd_vel', 'cmd_vel_nav'), ('cmd_vel_smoothed', 'cmd_vel')]),
                            [('cmd_vel', 'cmd_vel_nav'), ('cmd_vel_smoothed', 'cmd_vel_nav2')]),
             ComposableNode(
                 package='nav2_lifecycle_manager',
@@ -273,23 +275,20 @@ def generate_launch_description():
                              'autostart': autostart,
                              'node_names': lifecycle_nodes}]),
                 ComposableNode(
-                    package='yolo_detector',
+                    package='cmd_vel_tools',
                     plugin='cmd_vel_limiter::CmdVelLimiter',
                     name='cmd_vel_limiter',
                     parameters=[{
-                        'input_cmd_vel': '/cmd_vel_nav2',
-                        'output_cmd_vel': '/cmd_vel',
-                        'detections_topic': '/yolo_detections',
-                        'stop_line_distance_topic': '/stop_line_distance',
-                        'obstacle_distance_topic': '/obstacle_distance',
-                        'max_linear_clear': 0.6,
-                        'cautious_linear': 0.25,
-                        'decel_duration': 1.0,
-                        'stop_line_hold_time': 2.0,
-                        'stop_line_trigger_distance_m': 0.4,
-                        'obstacle_trigger_distance_m': 0.6,
-                        'obstacle_height_ratio_trigger': 0.35
-                }]),
+                    'input_cmd_vel': '/cmd_vel_nav2',
+                    'output_cmd_vel': '/cmd_vel',
+                    # 'detections_topic': '/yolo_detections', # yolo_node publish
+                    'stop_line_topic': '/object_in_proximity',  # Bool: is stop or not
+                    'max_linear_clear': 0.5,
+                    'cautious_linear': 0.25,
+                    'stop_line_trigger_time': 0.05,
+                    'stop_line_hold_time': 1.5,
+                    'obstacle_topic': '/obstacle_cv'
+                }],)
         ],
     )
 

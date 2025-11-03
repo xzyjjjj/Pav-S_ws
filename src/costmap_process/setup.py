@@ -24,8 +24,11 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'costmap_num_node = costmap_num.costmap_num:main',
-            'costmap_stage_node = costmap_stage.costmap_stage:main',
+            # 'costmap_num_node = costmap_num.costmap_selector:main',
+            # 'costmap_stage_node = costmap_stage.costmap_stage:main',
+            'topic_saver_node = scripts.topic_saver:main',
+            'senamic_node = new.combined:main',
+            'costmap_pub_node = costmap_pub.costmap_pub:main'
         ],
     },
 )

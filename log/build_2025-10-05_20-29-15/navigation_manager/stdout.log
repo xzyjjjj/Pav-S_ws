@@ -1,7 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target navigation_behavior_nodes[0m
-[35m[1mConsolidate compiler generated dependencies of target stop_line_detection[0m
-[35m[1mConsolidate compiler generated dependencies of target cruise_perception_navigator[0m
-[ 12%] [32mBuilding CXX object CMakeFiles/dynamic_speed_controller.dir/src/dynamic_speed_controller.cpp.o[0m
-[ 25%] [32mBuilding CXX object CMakeFiles/stop_line_detection.dir/src/stop_line_detection.cpp.o[0m
-[ 37%] [32mBuilding CXX object CMakeFiles/navigation_behavior_nodes.dir/src/navigation_behavior_nodes.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/cruise_perception_navigator.dir/src/cruise_perception_navigator.cpp.o[0m

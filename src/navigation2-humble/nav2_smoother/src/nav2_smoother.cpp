@@ -45,7 +45,8 @@ SmootherServer::SmootherServer(const rclcpp::NodeOptions & options)
   declare_parameter(
     "costmap_topic", rclcpp::ParameterValue(
       std::string(
-        "global_costmap/costmap_raw")));
+        // "global_costmap/costmap_raw")));
+      "processed_costmap")))
   declare_parameter(
     "footprint_topic",
     rclcpp::ParameterValue(

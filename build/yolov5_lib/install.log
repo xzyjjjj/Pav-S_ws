@@ -87,7 +87,7 @@
 /Pav-S_ws/install/yolov5_lib/share/ament_index/resource_index/packages/yolov5_lib
 /Pav-S_ws/install/yolov5_lib/share/yolov5_lib/package.xml
 /Pav-S_ws/install/yolov5_lib/share/yolov5_lib/config/competition_dataset.yaml
-/Pav-S_ws/install/yolov5_lib/share/yolov5_lib/weights/best.pt
+/Pav-S_ws/install/yolov5_lib/share/yolov5_lib/weights
 /Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages/yolov5_lib-0.0.0-py3.10.egg-info/requires.txt
 /Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages/yolov5_lib-0.0.0-py3.10.egg-info/dependency_links.txt
 /Pav-S_ws/install/yolov5_lib/lib/python3.10/site-packages/yolov5_lib-0.0.0-py3.10.egg-info/zip-safe

@@ -6,5 +6,5 @@ CXX_DEFINES = -Dusb_cam_EXPORTS
 
 CXX_INCLUDES = -I/Pav-S_ws/src/usb_cam-ros2/include -isystem /usr/include/opencv4
 
-CXX_FLAGS = -O3 -DNDEBUG -fPIC -Wall -Wextra -Wpedantic -Werror -std=gnu++14
+CXX_FLAGS = -fPIC -Wall -Wextra -Wpedantic -Werror -std=gnu++14
 

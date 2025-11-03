@@ -16,6 +16,7 @@
 /Pav-S_ws/install/nav2_bringup/share/nav2_bringup/params/nav2_multirobot_params_1.yaml
 /Pav-S_ws/install/nav2_bringup/share/nav2_bringup/params/nav2_multirobot_params_all.yaml
 /Pav-S_ws/install/nav2_bringup/share/nav2_bringup/params/nav2_multirobot_params_2.yaml
+/Pav-S_ws/install/nav2_bringup/share/nav2_bringup/params/new.yaml
 /Pav-S_ws/install/nav2_bringup/share/nav2_bringup/urdf/turtlebot3_waffle.urdf
 /Pav-S_ws/install/nav2_bringup/share/ament_index/resource_index/package_run_dependencies/nav2_bringup
 /Pav-S_ws/install/nav2_bringup/share/ament_index/resource_index/parent_prefix_path/nav2_bringup

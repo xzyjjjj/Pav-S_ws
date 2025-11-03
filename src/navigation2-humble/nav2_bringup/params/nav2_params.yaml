@@ -1,7 +1,7 @@
 amcl:
   ros__parameters:
     use_sim_time: False
-    alpha1: 0.5   #里程计的旋转估计中来自旋转的预期过程噪声
+    alpha1: 0.5
     alpha2: 0.2   #里程计的旋转估计中来自平移的预期过程噪声
     alpha3: 0.2  #里程计的翻译估计中来自translation的预期过程噪声
     alpha4: 0.4  #里程计的平移估计中因旋转而产生的预期过程噪声
@@ -19,7 +19,8 @@ amcl:
     laser_model_type: "likelihood_field" #使用哪种模型，
     #beam、likelihood_field 或 unlikely_field_prob。与 unlikely_field 相同，但如果启用，则包含 beamskip 功能
     max_beams: 60                   #更新过滤器时每次扫描要使用多少个均匀分布的光束。
-    max_particles: 2000             #允许的最大粒子数
+    # max_particles: 2000             #允许的最大粒子数
+    max_particles: 2600
     min_particles: 500              #允许的最小粒子数
     odom_frame_id: "camera_init"  #使用哪个框架进行里程计
     pf_err: 0.02                    #粒子过滤器群体误差
@@ -66,7 +67,8 @@ bt_navigator:
     global_frame: map
     robot_base_frame: body
     odom_topic: /camera_init
-    bt_loop_duration: 10        #BT 执行每次迭代的持续时间（以毫秒为单位
+    bt_loop_duration: 15        #BT 执行每次迭代的持续时间（以毫秒为单位
+    # bt_loop_duration: 100
     default_server_timeout: 20  #BT 操作节点等待操作服务器确认时的默认超时值（以毫秒为单位）
     # 'default_nav_through_poses_bt_xml' and 'default_nav_to_pose_bt_xml' are use defaults:
     # nav2_bt_navigator/navigate_to_pose_w_replanning_and_recovery.xml
@@ -103,48 +105,130 @@ controller_server:
       xy_goal_tolerance: 0.15
       yaw_goal_tolerance: 1.75
       stateful: True
-    # DWB parameters
-    FollowPath:
-      plugin: "dwb_core::DWBLocalPlanner"
-      debug_trajectory_details: True
-      min_vel_x: -0.20
-      min_vel_y: 0.0
-      max_vel_x: 0.35
-      max_vel_y: 0.0
-      max_vel_theta: 1.0
-      min_speed_xy: 0.0
-      max_speed_xy: 0.7
-      min_speed_theta: 0.0
-      # Add high threshold velocity for turtlebot 3 issue.
-      # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75
-      acc_lim_x: 1.0
-      acc_lim_y: -1.0
-      acc_lim_theta: 1.5
-      decel_lim_x: -0.6
-      decel_lim_y: 0.0
-      decel_lim_theta: -1.5
-      vx_samples: 35
-      vy_samples: 0
-      vtheta_samples: 60
-      sim_time: 1.2
-      linear_granularity: 0.05
-      angular_granularity: 0.01
-      transform_tolerance: 0.3
-      xy_goal_tolerance: 0.25
-      trans_stopped_velocity: 0.05
-      short_circuit_trajectory_evaluation: True
-      stateful: True
-      critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
-      BaseObstacle.scale: 0.6
-      PathAlign.scale: 4.0
-      PathAlign.forward_point_distance: 0.1
-      GoalAlign.scale: 3.0
-      GoalAlign.forward_point_distance: 0.1
-      PathDist.scale: 5.0
-      GoalDist.scale: 4.0
-      RotateToGoal.scale: 6.0
-      RotateToGoal.slowing_factor: 3.0
-      RotateToGoal.lookahead_time: 0.3
+
+    FollowPath: # 此局部规划器实例的名称（在 controller_server 的参数列表中定义）
+        plugin: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController" # 指定插件为“受控纯追踪控制器”(RPP)
+        
+        # --- 纯追踪 (Pure Pursuit) 核心参数 ---
+        desired_linear_vel: 0.45     # 机器人期望的（或基础的）直线行驶速度 (m/s)
+        # lookahead_dist: 0.2           # 固定的前瞻距离 (m)。即路径上那个“胡萝卜”的距离。
+        lookahead_dist: 0.45
+                                      # (注意：仅在 use_velocity_scaled_lookahead_dist 为 false 时使用)
+        min_lookahead_dist: 0.1       # 最小前瞻距离 (m)。用于动态调整时（或作为速度缩放的下限）
+        max_lookahead_dist: 0.6       # 最大前瞻距离 (m)。用于动态调整时
+        lookahead_time: 1.0           # 前瞻时间 (s)。如果 use_velocity_scaled_lookahead_dist 为 true, 
+                                      # 实际前瞻距离 = 机器人当前速度 * lookahead_time (并限制在 min/max 之间)
+        use_velocity_scaled_lookahead_dist: false # 是否使用基于速度的动态前瞻距离。(false 表示使用固定的 lookahead_dist: 0.6)
+
+        # --- 速度调节 (Regulation) 参数 ---
+        # RPP 的“受控”(Regulated) 部分，用于根据路径曲率或障碍物自动减速
+        use_regulated_linear_velocity_scaling: true # 是否启用“曲率速度缩放”？(RPP 的核心功能)
+                                                    # (true 表示在转弯时自动减速)
+        # regulated_linear_scaling_min_radius: 0.9  # 触发“曲率减速”的最小路径曲率半径 (m)。半径小于此值时开始减速。
+        regulated_linear_scaling_min_radius: 1.0
+        regulated_linear_scaling_min_speed: 0.25  # 因曲率过大（急转弯）而减速时的最小速度 (m/s)
+        
+        use_cost_regulated_linear_velocity_scaling: false # 是否启用“代价速度缩放”？
+                                                          # (true 表示在靠近代价地图上的障碍物时自动减速)
+        cost_scaling_dist: 0.3                # (如果 use_cost_regulated... 为 true) 开始基于代价减速的距离 (m)
+        cost_scaling_gain: 1.0                # (如果 use_cost_regulated... 为 true) 代价减速的增益因子
+        inflation_cost_scaling_factor: 3.0    # (如果 use_cost_regulated... 为 true) 膨胀层代价的缩放系数，用于计算减速
+
+        # --- 碰撞检测 (Collision Detection) 参数 ---
+        use_collision_detection: true # 是否启用碰撞检测（检查从机器人到前瞻点之间的路径段）
+        max_allowed_time_to_collision_up_to_carrot: 1.0 # 允许的到碰撞点的最小时间 (s)。如果预测碰撞时间小于此值，将停止。
+
+        # --- 目标接近 (Goal Approach) 参数 ---
+        min_approach_linear_velocity: 0.05    # 当接近目标点时，允许的最小线性速度 (m/s)
+        approach_velocity_scaling_dist: 1.0 # 距离目标点多远时开始减速 (m)（从 desired_linear_vel 线性降至 min_approach...）
+
+        # --- 航向对准 (Rotate to Heading) 参数 ---
+        # (在开始循迹前，先原地旋转对准路径)
+        use_rotate_to_heading: true           # 是否启用“开始时旋转对准航向”的行为
+        rotate_to_heading_angular_vel: 1.8  # (如果 use_rotate_to_heading 为 true) 执行原地旋转时的角速度 (rad/s)
+        rotate_to_heading_min_angle: 0.785  # (如果 use_rotate_to_heading 为 true) 触发原地旋转的最小角度差 (rad)。(约 45 度)
+
+        # --- 其他高级/辅助参数 ---
+        transform_tolerance: 0.1      # TF 坐标变换的容忍时间 (s)，用于查询机器人位姿
+        # max_angular_accel: 3.2        # 最大角加速度 (rad/s²)，用于平滑旋转指令
+        max_angular_accel: 4.0
+        max_robot_pose_search_dist: 10.0 # 在全局路径上搜索机器人最近点的最大距离 (m)（从路径起点开始搜索）
+        use_fixed_curvature_lookahead: false # 是否使用一个固定的、单独的前瞻距离来计算曲率（而不是使用主 lookahead_dist）
+        curvature_lookahead_dist: 1.0 # (如果 use_fixed_curvature... 为 true) 用于计算曲率的固定前瞻距离 (m)
+        interpolate_curvature_after_goal: false # 是否在路径终点后继续插值计算曲率（通常不需要）
+  #   # DWB parameters
+  #   FollowPath:
+  #     plugin: "dwb_core::DWBLocalPlanner" # 指定使用的局部路径规划器插件为 DWB (Dynamic Window Broker)
+  # # --- 速度限制 (Velocity Limits) ---
+  #     min_vel_x: -0.20 # 机器人 X 轴（前进/后退）的最小速度（m/s），允许后退
+  #     min_vel_y: 0.0 # 机器人 Y 轴（平移）的最小速度（m/s）。（差速机器人通常为 0）
+  #     max_vel_x: 0.35 # 机器人 X 轴（前进）的最大速度（m/s）
+  #     max_vel_y: 0.0 # 机器人 Y 轴（平移）的最大速度（m/s）。（差速机器人通常为 0）
+  #     max_vel_theta: 1.0 # 机器人的最大角速度（rad/s）
+  #     min_speed_xy: 0.0 # 机器人在 X-Y 平面上的最小平移速度（m/s）
+  #     max_speed_xy: 0.7 # 机器人在 X-Y 平面上的最大平移速度（m/s），即 sqrt(vx^2 + vy^2) 的上限
+  #     min_speed_theta: 0.0 # 机器人的最小角速度（rad/s），允许停止旋转
+      
+  #     # Add high threshold velocity for turtlebot 3 issue. # (原始注释) 为 Turtlebot3 的特定问题添加高阈值速度
+  #     # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75 # (原始注释) 相关的 GitHub issue 链接
+
+  #     # --- 加速度限制 (Acceleration Limits) ---
+  #     acc_lim_x: 1.0 # X 轴的最大加速度（m/s²）
+  #     acc_lim_y: -1.0 # Y 轴的最大加速度（m/s²）。（注意：此设置-1.0很奇怪，且鉴于vy限制为0，此参数可能无效或被忽略）
+  #     acc_lim_theta: 1.5 # 最大角加速度（rad/s²）
+  #     decel_lim_x: -0.6 # X 轴的最大减速度（m/s²）。（DWB 中减速度用负值表示）
+  #     decel_lim_y: 0.0 # Y 轴的最大减速度（m/s²）。（鉴于vy限制为0，设为0）
+  #     decel_lim_theta: -1.5 # 最大角减速度（rad/s²）。（用负值表示）
+
+  #     # --- 轨迹采样 (Trajectory Sampling) ---
+  #     vx_samples: 20 # 在 X 轴速度（vx）上采样的数量
+  #     vy_samples: 0 # 在 Y 轴速度（vy）上采样的数量。（差速机器人设为 0 或 1）
+  #     vtheta_samples: 45 # 在角速度（vtheta）上采样的数量
+  #     sim_time: 1.0 # 向前模拟轨迹的时间（秒）。DWB 将预测未来 1.2 秒的运动
+      
+  #     # --- 采样粒度 (Granularity) ---
+  #     # （注意：如果设置了 *_samples 参数，粒度参数可能被覆盖或用于计算实际样本数）
+  #     linear_granularity: 0.06 # 线性速度采样的粒度或步长（m/s）
+  #     angular_granularity: 0.02 # 角速度采样的粒度或步长（rad/s）
+
+  #     # --- 容忍度 (Tolerances) & 阈值 ---
+  #     transform_tolerance: 0.3 # TF 变换的容忍时间（秒），允许 0.3 秒的数据延迟
+  #     xy_goal_tolerance: 0.25 # 到达目标点时的 X-Y 平面位置容忍度（米）
+  #     trans_stopped_velocity: 0.05 # 定义“停止”状态的平移速度阈值（m/s），低于此速度视为停止
+
+  #     # --- 评估器配置 (Evaluator Configuration) ---
+  #     short_circuit_trajectory_evaluation: True # 是否启用“短路”评估。如果为 True，轨迹一旦无效（如碰撞）就停止评估，提高效率
+  #     stateful: True # 是否使代价函数 (critics) 保持状态。用于需要跨周期数据的评估器（如振荡检测）
+
+  #     # --- 代价函数列表 (Critics List) ---
+  #     # DWB 通过这些 "critics" 的加权总和来评价每条轨迹
+  #     critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
+      
+  #     # --- 代价函数权重 (Critic Weights & Parameters) ---
+  #     # BaseObstacle: 惩罚靠近障碍物的轨迹
+  #     BaseObstacle.scale: 32.0 # BaseObstacle 评估器的权重
+      
+  #     # PathAlign: 奖励与全局路径方向一致的轨迹
+  #     PathAlign.scale: 30.0 # PathAlign 评估器的权重
+  #     PathAlign.forward_point_distance: 0.1 # PathAlign 评估器向前看的距离（米），用于计算对齐方向
+      
+  #     # GoalAlign: 奖励朝向局部目标点的轨迹
+  #     GoalAlign.scale: 3.0 # GoalAlign 评估器的权重
+  #     GoalAlign.forward_point_distance: 0.1 # GoalAlign 评估器向前看的距离（米）
+      
+  #     # PathDist: 惩罚偏离全局路径的轨迹
+  #     PathDist.scale: 30.0 # PathDist 评估器的权重
+      
+  #     # GoalDist: 奖励靠近最终目标的轨迹
+  #     GoalDist.scale: 4.0 # GoalDist 评估器的权重
+      
+  #     # RotateToGoal: 当接近目标点时，鼓励机器人旋转到最终朝向
+  #     RotateToGoal.scale: 6.0 # RotateToGoal 评估器的权重（通常在快到达时才起作用）
+  #     RotateToGoal.slowing_factor: 3.0 # RotateToGoal 评估器的减速因子，在原地旋转时降低平移速度
+  #     RotateToGoal.lookahead_time: 0.3 # RotateToGoal 评估器的前瞻时间（秒）
+
+
+
     # FollowPath:
     #   plugin: "nav2_mppi_controller::MPPIController" #MPPI控制器
     #   time_steps: 56    #候选轨迹中的时间步长（点）数
@@ -253,14 +337,14 @@ local_costmap:
       width: 3             #代价地图的宽度（m）
       height: 3            #代价地图的高度（m）
       resolution: 0.05     #代价地图1像素的分辨率，以米为单位
-      #robot_radius: 0.20   #机器人半径，如果未提供足迹坐标，则使用机器人半径。
+      robot_radius: 0.10   #机器人半径，如果未提供足迹坐标，则使用机器人半径。
       footprint: "[ [-0.03, -0.0900], [-0.03, 0.0900], [0.2, 0.0900], [0.2, -0.0900] ]"
       plugins: ["voxel_layer","inflation_layer"] #插件包括:{“体素层”，“膨胀层”}
       inflation_layer:                             #膨胀层参数
         plugin: "nav2_costmap_2d::InflationLayer"  #膨胀层插件。
-        cost_scaling_factor: 5.0                   #成本缩放因子，决定障碍物成本随距离的递减速度。
-        inflation_radius: 0.23                     #膨胀半径
-        # inflation_radius: 0.05                     #膨胀半径
+        cost_scaling_factor: 10.0                 #成本缩放因子，决定障碍物成本随距离的递减速度。
+        # inflation_radius: 0.17                     #膨胀半径
+        inflation_radius: 0.20
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"      #体素层插件。
         enabled: True
@@ -298,7 +382,7 @@ global_costmap:
       global_frame: map                 #全局框架
       robot_base_frame: body  #机器人底座框架
       use_sim_time: False               #仿真时间 
-      #robot_radius: 0.20                #机器人半径
+      robot_radius: 0.11                #机器人半径
       footprint: "[ [-0.03, -0.0900], [-0.03, 0.0900], [0.2, 0.0900], [0.2, -0.0900] ]"
       resolution: 0.05                  #全局地图1像素的分辨率，以米为单位
       track_unknown_space: true
@@ -322,8 +406,9 @@ global_costmap:
         map_subscribe_transient_local: True
       inflation_layer: #膨胀层参数
         plugin: "nav2_costmap_2d::InflationLayer"  #膨胀层插件
-        cost_scaling_factor: 10.0                   #成本缩放因子，决定障碍物成本随距离的递减速度。
-        inflation_radius: 0.15                     #膨胀半径
+        cost_scaling_factor: 9.0                  #成本缩放因子，决定障碍物成本随距离的递减速度。
+        # inflation_radius: 0.15                     #膨胀半径
+        inflation_radius: 0.19
       always_send_full_costmap: True               #是否每次更新时都发送完整的成本图，而不是更新
   global_costmap_client:
     ros__parameters:
@@ -356,6 +441,14 @@ planner_server: #规划器服务器参数
       use_astar: false
       allow_unknown: true
       use_final_approach_orientation: False
+    # GridBased:
+    #   plugin: "nav2_smac_planner/SmacPlanner2D"  # <-- 切换到 SMAC 2D
+    #   tolerance: 0.25
+    #   allow_unknown: true
+      
+    #   # --- 关键参数 ---
+    #   # 增大这个值，会使路径被“推”向远离障碍物（膨胀区）的中心
+    #   cost_travel_multiplier: 2.0  # 尝试 2.0, 3.0 或 5.0
 
 # planner_server: #规划器服务器参数
 #   ros__parameters:

@@ -58,7 +58,7 @@ DEFAULT_OCCUPANCY_RESOLUTION = None
 # key 可以是类别名（如 'red_zone'）或字符串化的数字 '1'..'8'
 OCCUPANCY_COLOR_MAP = {
     # 注：rgb 为 (R, G, B) 三元组。下面注释给出常见颜色名称（中文/英文）便于识别。
-    'red':   {'rgb': (220, 20, 60),  'occ': 100, 'priority': 1},   # 深红 / Crimson
+    'red_zone':   {'rgb': (220, 20, 60),  'occ': 100, 'priority': 1},   # 深红 / Crimson
     'red_cone':   {'rgb': (255, 69, 0),   'occ': 100, 'priority': 2},   # 橙红 / OrangeRed
     'yellow_zone':{'rgb': (255, 215, 0),  'occ': 80,  'priority': 3},   # 金黄 / Gold
     '1':          {'rgb': (31, 119, 180), 'occ': 60,  'priority': 4},   # 蓝色 / Blue (tableau-like)

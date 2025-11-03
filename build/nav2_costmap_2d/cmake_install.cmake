@@ -100,7 +100,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_costmap_2d_core.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_costmap_2d_core.so"
-         OLD_RPATH "/opt/ros/humble/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:"
+         OLD_RPATH "/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_util/lib:/opt/ros/humble/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_costmap_2d_core.so")
@@ -146,7 +146,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/nav2_costmap_2d/nav2_costmap_2d_markers")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/nav2_costmap_2d/nav2_costmap_2d_markers"
-         OLD_RPATH "/Pav-S_ws/build/nav2_costmap_2d:/opt/ros/humble/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:"
+         OLD_RPATH "/Pav-S_ws/build/nav2_costmap_2d:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_util/lib:/opt/ros/humble/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/nav2_costmap_2d/nav2_costmap_2d_markers")
@@ -166,7 +166,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/nav2_costmap_2d/nav2_costmap_2d_cloud")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/nav2_costmap_2d/nav2_costmap_2d_cloud"
-         OLD_RPATH "/Pav-S_ws/build/nav2_costmap_2d:/opt/ros/humble/lib:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_util/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:"
+         OLD_RPATH "/Pav-S_ws/build/nav2_costmap_2d:/Pav-S_ws/install/nav2_msgs/lib:/Pav-S_ws/install/nav2_util/lib:/opt/ros/humble/lib:/Pav-S_ws/install/nav2_voxel_grid/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/nav2_costmap_2d/nav2_costmap_2d_cloud")

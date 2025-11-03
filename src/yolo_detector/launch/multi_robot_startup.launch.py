@@ -160,7 +160,11 @@ def generate_launch_description():
     
     nav2_bringup_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
+<<<<<<< Updated upstream
             os.path.join(get_package_share_directory('nav2_bringup'), 'launch', 'navigation_launch.py')
+=======
+            os.path.join(get_package_share_directory('nav2_bringup'), 'launch_ROS2', 'navigation_launch.py')
+>>>>>>> Stashed changes
         ]),
         launch_arguments={
             'use_map_server': 'false', 
@@ -174,7 +178,11 @@ def generate_launch_description():
 
     livox_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
+<<<<<<< Updated upstream
             os.path.join(get_package_share_directory('livox_ros_driver2'), 'launch_ROS2', 'msg_MID360_map_launch.py')
+=======
+            os.path.join(get_package_share_directory('livox_ros_driver2'), 'launch', 'msg_MID360_map_launch.py')
+>>>>>>> Stashed changes
         ]),
         condition=IfCondition(LaunchConfiguration('launch_lidar'))
     )

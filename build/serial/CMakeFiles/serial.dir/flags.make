@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Pav-S_ws/src/serial_ros2/include
 
-CXX_FLAGS =  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -std=gnu++14
+CXX_FLAGS =  -Wall -Wextra -Wpedantic -std=gnu++14
 

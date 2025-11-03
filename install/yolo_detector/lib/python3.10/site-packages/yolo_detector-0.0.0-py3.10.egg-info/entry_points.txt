@@ -1,5 +1,7 @@
 [console_scripts]
 cmd_vel_limiter = yolo_detector.cmd_vel_limiter:main
 debug_node = yolo_detector.debug_node:main
+image_saver = yolo_detector.image_saver:main
+image_saver_byhand = yolo_detector.image_saver_byhand:main
 yolo_node = yolo_detector.yolo_node:main
 

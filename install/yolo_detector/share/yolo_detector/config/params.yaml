@@ -6,14 +6,15 @@ yolo_node:
     # weights_path: "/yolov5/yolov5s.pt"  # 指向训练好的模型
     # config_path: "/yolov5/data/coco.yaml" #<-- 指向数据集配置文件
     # 临时的占位符，真实路径将由启动文件在运行时提供。
-    weights_path: "placeholder/path/to/weights.pt"
-    config_path: "placeholder/path/to/config.yaml"
+    weights_path: "/Pav-S_ws/src/yolo_detector/runs/train/v4_nofreeze_lrf0.00008_best/weights/best.pt"
+    config_path: "/Pav-S_ws/src/yolo_detector/dataset_config/new_aic_data.yaml"
     
     # --- 订阅话题名 ---
     image_topic: "/camera/color/image_raw"
     
     # --- 节点逻辑控制 ---
-    enable_vis: true    # 调试时设为true，可以看到识别结果窗口
+    enable_preprocessing: True # 开启识别前预处理
+    enable_vis: True    # 调试时设为true，可以看到识别结果窗口
     skip_frames: 3      # 跳帧数，可以根据算力调整
     
     # 在比赛时设为空字符串""来检测所有11个类别

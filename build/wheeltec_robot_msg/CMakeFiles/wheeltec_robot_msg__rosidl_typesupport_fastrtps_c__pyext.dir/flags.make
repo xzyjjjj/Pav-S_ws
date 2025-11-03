@@ -6,5 +6,5 @@ C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"wheeltec_robot
 
 C_INCLUDES = -I/Pav-S_ws/build/wheeltec_robot_msg/rosidl_generator_c -I/Pav-S_ws/build/wheeltec_robot_msg/rosidl_generator_py -I/usr/include/python3.10 -I/Pav-S_ws/build/wheeltec_robot_msg/rosidl_typesupport_fastrtps_c -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rosidl_typesupport_c -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /opt/ros/humble/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces -isystem /opt/ros/humble/include/rmw -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/fastcdr -isystem /opt/ros/humble/include/rosidl_runtime_cpp -isystem /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/humble/include/rosidl_typesupport_fastrtps_c -isystem /opt/ros/humble/include/rosidl_typesupport_introspection_c -isystem /opt/ros/humble/include/rosidl_typesupport_introspection_cpp
 
-C_FLAGS = -O3 -DNDEBUG -fPIC -Wall -Wextra -std=gnu99
+C_FLAGS = -fPIC -Wall -Wextra -std=gnu99
 
