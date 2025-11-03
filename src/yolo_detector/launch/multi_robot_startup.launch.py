@@ -1,154 +1,251 @@
 import os
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess, RegisterEventHandler, LogInfo
-from launch.event_handlers import OnProcessStart, OnProcessExit
-from launch_ros.actions import Node
+from launch_ros.actions import Node, LifecycleNode
+from launch.actions import (
+    IncludeLaunchDescription, DeclareLaunchArgument, RegisterEventHandler, EmitEvent,
+    TimerAction, LogInfo
+)
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
+from launch.conditions import IfCondition
+
+# --- 用于生命周期管理的关键 imports ---
+from launch.event_handlers import OnProcessStart
+from launch_ros.event_handlers import OnStateTransition
+from launch_ros.events.lifecycle import ChangeState
+from launch.events.matchers import matches_action
+from lifecycle_msgs.msg import Transition
+# ------------------------------------
 
 def generate_launch_description():
-    """
-    生成一个LaunchDescription对象，用于启动机器人和导航相关节点。
 
-    该启动文件会：
-    1. 为每个主要命令打开一个独立的xterm终端。
-    2. 自动管理map_server的生命周期（configure -> activate）。
-    3. 在其他所有节点启动后，最后启动Livox雷达驱动。
-    """
-    # --- 配置 ---
-    # 定义用于在新终端中启动命令的前缀。可根据你的系统更换 (e.g., 'gnome-terminal -- ')
-    terminal_prefix = 'xterm -e'
-    
-    # 地图文件的绝对路径，请确保路径正确
-    map_yaml_path = '/Map_yaml/crossing/map_chalu.yaml'
+    # ---------------- 1. 声明参数 ----------------
 
-    # --- 定义所有需要执行的动作 ---
-
-    # 1. 启动机器人底层驱动
-    # 使用ExecuteProcess可以确保'prefix'参数生效
-    base_serial_cmd = ExecuteProcess(
-        cmd=['ros2', 'launch', 'turn_on_wheeltec_robot', 'base_serial.launch.py'],
-        prefix=terminal_prefix,
-        shell=True,
-        name='wheeltec_base'
+    map_yaml_file_arg = DeclareLaunchArgument(
+        'map_yaml_file',
+        default_value='/Map_yaml/circuit/map_huandao.yaml',
+        description='Full path to map file to load'
     )
 
-    # 2. 启动地图服务器节点
-    map_server_node = Node(
+    nav2_params_file_arg = DeclareLaunchArgument(
+        'params_file',
+        default_value=os.path.join(
+            get_package_share_directory('nav2_bringup'), 'params', 'nav2_params.yaml'
+        ),
+        description='Full path to the NAV2 params file to use'
+    )
+
+    use_rviz_arg = DeclareLaunchArgument(
+        'use_rviz', default_value='true', description='Whether to start RVIZ'
+    )
+    launch_camera_arg = DeclareLaunchArgument(
+        'launch_camera', default_value='true', description='Whether to launch the Astra camera'
+    )
+    launch_lidar_arg = DeclareLaunchArgument(
+        'launch_lidar', default_value='true', description='Whether to launch the Livox MID360'
+    )
+
+    yolo_vis_arg = DeclareLaunchArgument(
+        'yolo_vis', default_value='true', description='Whether to use yolo_detector\'s visualization'
+    )
+
+    distance_vis_arg = DeclareLaunchArgument(
+        'distance_vis', default_value='true', description='Whether to use distance_detector\'s visualization'
+    )
+
+    # --- 新增：传感器启动延迟参数 ---
+    sensor_delay_arg = DeclareLaunchArgument(
+        'sensor_startup_delay',
+        default_value='10.0', # 默认延迟10秒
+        description='Delay in seconds after Nav2 launch before starting sensors (Lidar/Camera)'
+    )
+    # ------------------------------------
+
+
+    # ---------------- 2. 定义第一批启动的节点 ----------------
+    # (底盘, TF, LIO, 和其他应用节点)
+    
+    base_serial_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('turn_on_wheeltec_robot'), 'launch', 'base_serial.launch.py')
+        ])
+    )
+
+    static_tf_node = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=['4.6', '0.81', '0.20', '3.1415926', '0', '0', 'map', 'camera_init']
+    )
+
+    fast_lio_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('fast_lio'), 'launch', 'mapping.launch.py')
+        ])
+    )
+
+    yolo_detect_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('yolo_detector'), 'launch', 'yolo_detect.launch.py')
+        ])
+    )
+
+    distance_detector_node = Node(
+        package='distance_detector',
+        executable='distance_node_cv',
+        output='screen'
+    )
+
+    semantic_node = Node(
+        package='costmap_process',
+        executable='senamic_node',
+        output='screen'
+    )
+    costmap_pub_node = Node(
+        package='costmap_process',
+        executable='costmap_pub_node',
+        output='screen'
+    )
+
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        arguments=['-d', '/nav2_default_view.rviz'],
+        condition=IfCondition(LaunchConfiguration('use_rviz'))
+    )
+
+    # ---------------- 3. 定义 Map Server (第二阶段) ----------------
+    
+    map_server_node = LifecycleNode(
         package='nav2_map_server',
         executable='map_server',
         name='map_server',
+        namespace='',
         output='screen',
-        prefix=terminal_prefix,
-        parameters=[{'yaml_filename': map_yaml_path}]
+        parameters=[{'yaml_filename': LaunchConfiguration('map_yaml_file')}]
     )
 
-    # 3. 配置map_server的命令
-    configure_map_server_cmd = ExecuteProcess(
-        cmd=['ros2', 'lifecycle', 'set', '/map_server', 'configure'],
-        shell=True,
-        name='configure_map_server'
-    )
-
-    # 4. 激活map_server的命令
-    activate_map_server_cmd = ExecuteProcess(
-        cmd=['ros2', 'lifecycle', 'set', '/map_server', 'activate'],
-        shell=True,
-        name='activate_map_server'
-    )
-
-    # 5.1 启动静态坐标变换发布器
-    static_tf_pub_node1 = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='static_transform_publisher_map_to_camera',
-        output='screen',
-        prefix=terminal_prefix,
-        arguments=['4.6', '0.77', '0.25', '3.1415926', '0', '0', 'map', 'camera_init']
-    )
-
-    # 5.2 启动静态坐标变换发布器
-    static_tf_pub_node2 = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='static_transform_publisher_body_to_cameralink',
-        output='screen',
-        prefix=terminal_prefix,
-        arguments=['0.11365', '0.00016542', '0.076204', '0', '0', '0', 'body', 'camera_link']
-    )
-
-    # 6. 启动Fast-LIO
-    fast_lio_cmd = ExecuteProcess(
-        cmd=['ros2', 'launch', 'fast_lio', 'mapping.launch.py'],
-        prefix=terminal_prefix,
-        shell=True,
-        name='fast_lio_mapping'
-    )
-
-    # 7. 启动Navigation2
-    navigation_cmd = ExecuteProcess(
-        cmd=['ros2', 'launch', 'nav2_bringup', 'navigation_launch.py'],
-        prefix=terminal_prefix,
-        shell=True,
-        name='nav2_bringup'
-    )
-
-    # 8. 启动Livox雷达驱动 (此命令会被事件处理器延迟启动)
-    livox_driver_cmd = ExecuteProcess(
-        cmd=['ros2', 'launch', 'livox_ros_driver2', 'msg_MID360_map_launch.py'],
-        prefix=terminal_prefix,
-        shell=True,
-        name='livox_driver'
-    )
-
-    # --- 定义事件处理器以管理启动顺序 ---
-
-    # 事件1: 当map_server_node进程启动后，执行configure命令
-    on_map_server_start_handler = RegisterEventHandler(
+    on_map_server_start = RegisterEventHandler(
         event_handler=OnProcessStart(
             target_action=map_server_node,
             on_start=[
-                LogInfo(msg='Map server started. Configuring...'),
-                configure_map_server_cmd
+                EmitEvent(
+                    event=ChangeState(
+                        lifecycle_node_matcher=matches_action(map_server_node),
+                        transition_id=Transition.TRANSITION_CONFIGURE,
+                    )
+                ),
             ]
         )
     )
 
-    # 事件2: 当configure命令成功退出后，执行activate命令
-    on_configure_exit_handler = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=configure_map_server_cmd,
-            # condition=lambda event: event.return_code == 0, # 可选：仅在成功时执行
-            on_exit=[
-                LogInfo(msg='Map server configured. Activating...'),
-                activate_map_server_cmd
+    on_map_server_configure_success = RegisterEventHandler(
+        event_handler=OnStateTransition(
+            target_lifecycle_node=map_server_node,
+            start_state='configuring',
+            goal_state='inactive',
+            entities=[
+                EmitEvent(
+                    event=ChangeState(
+                        lifecycle_node_matcher=matches_action(map_server_node),
+                        transition_id=Transition.TRANSITION_ACTIVATE,
+                    )
+                ),
             ]
         )
     )
 
-    # 事件3: 当Navigation2进程启动后，再启动Livox雷达驱动
-    # 我们选择navigation_cmd作为“其他所有命令”的代表
-    on_navigation_start_handler = RegisterEventHandler(
-        event_handler=OnProcessStart(
-            target_action=navigation_cmd,
-            on_start=[
-                LogInfo(msg='Core systems started. Launching Livox driver...'),
-                livox_driver_cmd
+    # ---------------- 4. 定义 Nav2 (第三阶段) ----------------
+    
+    nav2_bringup_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('nav2_bringup'), 'launch', 'navigation_launch.py')
+        ]),
+        launch_arguments={
+            'use_map_server': 'false', 
+            'map_subscribe_transient_local': 'true',
+            'autostart': 'true',
+            'params_file': LaunchConfiguration('params_file')
+        }.items()
+    )
+
+    # ---------------- 5. 定义传感器 (第四阶段 - Lidar/Camera) ----------------
+
+    livox_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('livox_ros_driver2'), 'launch_ROS2', 'msg_MID360_map_launch.py')
+        ]),
+        condition=IfCondition(LaunchConfiguration('launch_lidar'))
+    )
+
+    astra_camera_launch = IncludeLaunchDescription(
+        XMLLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('astra_camera'), 'launch', 'astro_pro_plus.launch.xml')
+        ]),
+        launch_arguments={
+            'enable_point_cloud': 'false', 'enable_depth': 'false', 'enable_ir': 'false', 
+            'enable_color': 'true', 'depth_registration': 'false'
+        }.items(),
+        condition=IfCondition(LaunchConfiguration('launch_camera'))
+    )
+
+    # [事件 D]：定义一个计时器，用于启动传感器
+    # --- 修改：使用 LaunchConfiguration 读取延迟时间 ---
+    delayed_sensors_launch = TimerAction(
+        period=LaunchConfiguration('sensor_startup_delay'),
+        actions=[
+            LogInfo(msg='Nav2 startup delay complete. Launching Lidar and Camera.'),
+            livox_launch,
+            astra_camera_launch
+        ]
+    )
+    # ---------------------------------------------
+
+    # ---------------- 6. 定义启动链 (核心) ----------------
+
+    # [事件 C]：当 map_server 'activate' 成功 (进入 'active' 状态) 时...
+    on_map_server_activate_success = RegisterEventHandler(
+        event_handler=OnStateTransition(
+            target_lifecycle_node=map_server_node,
+            start_state='activating',
+            goal_state='active',
+            entities=[
+                LogInfo(msg='Map server is active. Launching Nav2 and starting sensor delay timer.'),
+                # 1. 启动 Nav2
+                nav2_bringup_launch,
+                # 2. 启动传感器的倒计时
+                delayed_sensors_launch
             ]
         )
     )
 
-    # --- 返回LaunchDescription ---
-    # 将所有事件处理器和需要立即启动的动作放入列表中
+    # ---------------- 7. 组合并返回 LaunchDescription ----------------
+
     return LaunchDescription([
-        # 事件处理器
-        on_map_server_start_handler,
-        on_configure_exit_handler,
-        on_navigation_start_handler,
+        # 声明所有参数
+        map_yaml_file_arg,
+        nav2_params_file_arg,
+        use_rviz_arg,
+        launch_camera_arg,
+        launch_lidar_arg,
+        sensor_delay_arg, # <-- 添加新声明的参数
 
-        # 立即启动的动作 (其他动作由事件触发)
-        base_serial_cmd,
+        # 立即启动第一批节点
+        base_serial_launch,
+        static_tf_node,
+        fast_lio_launch,
+        yolo_detect_launch,
+        distance_detector_node,
+        semantic_node,
+        costmap_pub_node,
+        rviz_node,
+
+        # 立即启动 map_server
         map_server_node,
-        static_tf_pub_node1,
-        static_tf_pub_node2,
-        fast_lio_cmd,
-        navigation_cmd,
+        
+        # 注册所有事件处理器
+        on_map_server_start,
+        on_map_server_configure_success,
+        on_map_server_activate_success
     ])

@@ -35,6 +35,8 @@ setup(
             # 格式： 'ros2 run时使用的命令名 = Python 包名.Python 文件名:入口函数名'
             'yolo_node = yolo_detector.yolo_node:main',
             'cmd_vel_limiter = yolo_detector.cmd_vel_limiter:main',
+            'image_saver_byhand = yolo_detector.image_saver_byhand:main',
+            'image_saver = yolo_detector.image_saver:main',
             'debug_node = yolo_detector.debug_node:main',
         ],
     },

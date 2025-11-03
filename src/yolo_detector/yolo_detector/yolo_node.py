@@ -123,7 +123,6 @@ class RosYOLODetector(Node):
         if self.frame_count % (self.skip_frames + 1) != 0:
             return
 
-        self.get_logger().info(f"\n--- ⚡️ Processing Frame: {self.frame_count} (Seq: {ros_img.header.stamp.sec}.{ros_img.header.stamp.nanosec}) ---")
         try: # 将 ROS 图像消息转换为 OpenCV 的 BGR8 格式图像
             cv_image = self.bridge.imgmsg_to_cv2(ros_img, "bgr8")
         except CvBridgeError as e:
@@ -135,6 +134,7 @@ class RosYOLODetector(Node):
         # # ================================================================
 
         # if self.enable_preprocessing:
+        #     self.get_logger().info(f"\n--- ⚡️ Processing Frame: {self.frame_count} (Seq: {ros_img.header.stamp.sec}.{ros_img.header.stamp.nanosec}) ---")
         #     # 步骤 1: 高光去除 (Inpainting)
         #     # 将图像转为灰度图，用于寻找高光区域
         #     gray_img = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
