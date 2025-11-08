@@ -21,6 +21,8 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
         # 包含config文件夹下的所有.yaml文件
         (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
+        (os.path.join('share', package_name, 'models'), glob('models/*')),
+        (os.path.join('share', package_name, 'utils'), glob('utils/*')),
     ],
     install_requires=['setuptools'],
     # install_requires=['setuptools', 'PyYAML', 'opencv-python', 'Pillow', 'torch', 'torchvision'],
