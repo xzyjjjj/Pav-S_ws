@@ -13,7 +13,7 @@ class ProximityDetectorNode(Node):
         super().__init__('distance_node_cv')
 
         # 声明参数
-        self.declare_parameter('mask_file_name', '90.png')
+        self.declare_parameter('mask_file_name', 'mask90.png')
         self.declare_parameter('image_width', 640)
         self.declare_parameter('image_height', 480)
         self.declare_parameter('image_topic', '/camera/color/image_raw') 
