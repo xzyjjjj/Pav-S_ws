@@ -1,0 +1,18 @@
+# config/merger_params.yaml
+pointcloud_merger_node:
+  ros__parameters:
+    # --- 1. 话题配置 (Topics) ---
+    input_topic_lidar: "/registered_pointcloud"  # Lidar 输入话题 (来自 Fast-LIO)
+    input_topic_bev: "/bev/obstacles"            # BEV 视觉点云输入话题
+    output_topic_fused: "/fused_pointcloud"      # 融合后的点云输出话题
+
+    # --- 2. 坐标系配置 (Frames) ---
+    # 融合后的点云最终的目标坐标系 (Costmap 预期接收的坐标系)
+    target_frame: "base_link" 
+    
+    # --- 3. 融合和 TF 设置 ---
+    # TF 变换的等待时间 (秒)。如果 TF 变换失败，节点将等待这么长时间。
+    tf_timeout_seconds: 0.05 
+    
+    # 融合时间容忍度 (秒)。用于判断两个传感器数据是否足够接近，可以一起融合。
+    fusion_time_tolerance: 0.01

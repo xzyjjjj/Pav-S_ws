@@ -26,7 +26,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'ipm_node = bev_obstacle_detector.ipm_node:main'
+            'ipm_node = bev_obstacle_detector.ipm_node:main',
+            'pointcloud_merger_node = bev_obstacle_detector.pointcloud_merger_node:main'
         ],
     },
 )

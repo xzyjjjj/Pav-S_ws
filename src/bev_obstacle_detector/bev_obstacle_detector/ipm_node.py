@@ -206,7 +206,7 @@ class IPMNode(Node):
 
         # 【新增】如果启用可视化，显示鸟瞰图和处理结果
         if self.enable_vis:
-            cv2.imshow("2. BEV Image", bev_image)
+            cv2.imshow("2. BEV Result (Whole Image)", bev_image)
             cv2.imshow("3. BEV Result (Color Overlay)", debug_bev_display)
             # 必须调用 waitKey 来刷新窗口和处理事件
             cv2.waitKey(1)

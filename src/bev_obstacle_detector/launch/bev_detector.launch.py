@@ -2,7 +2,8 @@ import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 # 导入 DeclareLaunchArgument 和 LaunchConfiguration
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
@@ -34,7 +35,15 @@ def generate_launch_description():
         ]
     )
 
+    # 启动点云融合
+    pointcloud_merger_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(pkg_dir, 'launch', 'merger.launch.py')
+        ])
+    )
+
     return LaunchDescription([
         vis_arg, # 必须将 Argument 添加到 LaunchDescription 中
-        ipm_node
+        ipm_node,
+        pointcloud_merger_launch
     ])
