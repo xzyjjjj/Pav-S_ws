@@ -1,0 +1,19 @@
+# C: distance_detector/config/detector_params.yaml
+
+distance_node_cv:
+  ros__parameters:
+    enable_visualization: true
+    
+    # 图像和主题
+    image_topic: "/camera/color/image_raw"
+    proximity_topic: "/object_in_proximity"
+    image_width: 640
+    image_height: 480
+    
+    # 掩码
+    mask_file_name: "90.png"
+    viz_alpha: 0.3
+    
+    # HSV 阈值
+    hsv_yellow_min: [22, 95, 120]
+    hsv_yellow_max: [38, 255, 255]

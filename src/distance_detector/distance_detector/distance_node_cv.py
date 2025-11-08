@@ -13,7 +13,7 @@ class ProximityDetectorNode(Node):
         super().__init__('distance_node_cv')
 
         # 声明参数
-        self.declare_parameter('mask_file_name', 'saved_binary_image_plt.png')
+        self.declare_parameter('mask_file_name', '90.png')
         self.declare_parameter('image_width', 640)
         self.declare_parameter('image_height', 480)
         self.declare_parameter('image_topic', '/camera/color/image_raw') 
@@ -21,7 +21,7 @@ class ProximityDetectorNode(Node):
         self.declare_parameter('viz_alpha', 0.3) # 掩码的透明度
         
         # --- 新增：可视化开关参数 ---
-        self.declare_parameter('enable_visualization', True) # 默认开启
+        self.declare_parameter('enable_vis', True) # 默认开启
 
         # --- 新增：HSV颜色阈值参数 ---
         # 这些是黄色的典型范围 (在OpenCV H=0-179 范围内)
@@ -41,7 +41,7 @@ class ProximityDetectorNode(Node):
         self.viz_alpha = self.get_parameter('viz_alpha').get_parameter_value().double_value
 
         # --- 新增：获取可视化开关 ---
-        self.enable_viz = self.get_parameter('enable_visualization').get_parameter_value().bool_value
+        self.enable_viz = self.get_parameter('enable_vis').get_parameter_value().bool_value
 
 
         # 初始化 CV Bridge 和可视化窗口
