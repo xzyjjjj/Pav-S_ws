@@ -9,7 +9,6 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/msg', ['msg/ObstacleInfo.msg']),  # 如果有本地 msg 也可以放这里
     ],
     install_requires=['setuptools', 'rclpy', 'red_segment_msg'],
     zip_safe=True,
