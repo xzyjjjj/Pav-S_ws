@@ -20,7 +20,7 @@ setup(
     entry_points={
         'console_scripts': [
             'cmd_vel_limiter = cmd_vel_tools.cmd_vel_limiter:main',
-            'odom_distance_tracker = cmd_vel_tools.odom_distance_tracker:main',
+            'obstacle_analyzer = cmd_vel_tools.obstacle_analyzer:main',
             'debug_node = cmd_vel_tools.debug_node:main',
             'red_segment = cmd_vel_tools.red_segment:main',
         ],

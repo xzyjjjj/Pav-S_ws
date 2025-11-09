@@ -33,7 +33,7 @@ class CmdVelLimiter(Node):
         self.declare_parameter('input_cmd_vel', '/cmd_vel_nav2')
         self.declare_parameter('output_cmd_vel', '/cmd_vel')
         self.declare_parameter('stop_line_topic', '/object_in_proximity')   # Bool topic
-        self.declare_parameter('obstacle_topic', '/obstacle_cv')     # optional Float32 topic
+        self.declare_parameter('obstacle_topic', '/bev/obstacle_info')     # optional Float32 topic
         # self.declare_parameter('detections_topic', '')            # optional Detection2DArray topic (if used)
 
         # Speed caps (m/s, rad/s)
@@ -242,14 +242,8 @@ class CmdVelLimiter(Node):
         else:   
             scaled.angular.z = ang_z
             # 检查是否接近障碍物，如果接近调整角速度
-            # if  hasattr(self, 'obstacle_info') and self.obstacle_info.bottom:
-            #     turn_adjust = 0.1
-            #     if(self.obstacle_info.left):    # 障碍物在左侧
-            #         # 增加右转角速度
-            #         scaled.angular.z += turn_adjust
-            #     elif(self.obstacle_info.right):
-            #         # 增加左转角速度
-            #         scaled.angular.z -= turn_adjust
+            if  hasattr(self, 'obstacle_info') and self.obstacle_info.find:
+                scaled.angular.z += self.obstacle_info.angular_change*0.1
                 
 
         scaled.angular.x = ang_x
