@@ -8,7 +8,12 @@ from PIL import Image, ImageOps
 
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import QoSProfile, QoSHistoryPolicy, QoSReliabilityPolicy
+from rclpy.qos import (
+    QoSProfile,
+    QoSHistoryPolicy,
+    QoSReliabilityPolicy,
+    QoSDurabilityPolicy,
+)
 
 from geometry_msgs.msg import Pose, Quaternion
 from nav2_msgs.msg import Costmap, CostmapMetaData
@@ -28,7 +33,7 @@ class PngCostmapPublisher(Node):
         self.declare_parameter('costmap_topic', 'processed_costmap')
         self.declare_parameter('map_frame', 'map')
         self.declare_parameter('layer_name', 'png_layer')
-        self.declare_parameter('resolution', 0.05)
+        self.declare_parameter('resolution', 0.01)
         self.declare_parameter('origin', [0.0, 0.0, 0.0])
         self.declare_parameter('publish_frequency', 5.0)
         self.declare_parameter('occupied_threshold', 50)
@@ -40,6 +45,7 @@ class PngCostmapPublisher(Node):
         self.declare_parameter('watch_file', True)
         self.declare_parameter('alpha_unknown_threshold', 1)
         self.declare_parameter('qos_reliability', 'reliable')
+        self.declare_parameter('mirror_y', True)
 
         self._lock = threading.Lock()
 
@@ -60,6 +66,7 @@ class PngCostmapPublisher(Node):
         self.free_value = int(self.get_parameter('free_value').value)
         self.unknown_value = int(self.get_parameter('unknown_value').value)
         self.alpha_unknown_threshold = int(self.get_parameter('alpha_unknown_threshold').value)
+        self.mirror_y = bool(self.get_parameter('mirror_y').value)
 
         origin_param = self.get_parameter('origin').value
         if not isinstance(origin_param, (list, tuple)) or len(origin_param) != 3:
@@ -76,13 +83,15 @@ class PngCostmapPublisher(Node):
             history=QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
             depth=1,
             reliability=reliability_policy,
+            durability=QoSDurabilityPolicy.RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL,
         )
 
         topic_name = self.get_parameter('costmap_topic').get_parameter_value().string_value
-        self.publisher_ = self.create_publisher(Costmap, topic_name, qos_profile)
-        # also publish a nav_msgs/OccupancyGrid so RViz can visualize it directly
-        occ_topic = topic_name + '_occupancy'
-        self.occupancy_publisher_ = self.create_publisher(OccupancyGrid, occ_topic, qos_profile)
+        raw_topic = topic_name + '_raw'
+        # nav2 Costmap message kept on a "raw" topic for optional consumers
+        self.publisher_ = self.create_publisher(Costmap, raw_topic, qos_profile)
+        # publish nav_msgs/OccupancyGrid on the configured topic for Nav2 static layer consumption
+        self.occupancy_publisher_ = self.create_publisher(OccupancyGrid, topic_name, qos_profile)
 
         self.map_load_time = self.get_clock().now().to_msg()
         self.metadata_template: Optional[CostmapMetaData] = None
@@ -94,7 +103,9 @@ class PngCostmapPublisher(Node):
         period = 1.0 / self.publish_frequency if self.publish_frequency > 0 else 1.0
         self.timer = self.create_timer(period, self._publish_costmap)
         self.get_logger().info(
-            f'Publishing PNG-based costmap on topic "{topic_name}" at {self.publish_frequency:.2f} Hz')
+            f'Publishing PNG-based costmap as OccupancyGrid on "{topic_name}" '
+            f'and Costmap on "{raw_topic}" at {self.publish_frequency:.2f} Hz'
+        )
 
     def _reload_costmap(self, initial: bool = False) -> None:
         try:
@@ -137,7 +148,8 @@ class PngCostmapPublisher(Node):
         costmap_array[free_mask] = self.free_value
         costmap_array[unknown_mask] = self.unknown_value
 
-        costmap_array = np.flipud(costmap_array)
+        if not self.mirror_y:
+            costmap_array = np.flipud(costmap_array)
 
         metadata = CostmapMetaData()
         metadata.resolution = float(self.resolution)
