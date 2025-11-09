@@ -128,7 +128,7 @@ controller_server:
         regulated_linear_scaling_min_radius: 1.0
         regulated_linear_scaling_min_speed: 0.25  # 因曲率过大（急转弯）而减速时的最小速度 (m/s)
         
-        ; use_cost_regulated_linear_velocity_scaling: false # 是否启用“代价速度缩放”？
+        # use_cost_regulated_linear_velocity_scaling: false # 是否启用“代价速度缩放”？
                                                           # (true 表示在靠近代价地图上的障碍物时自动减速)
         use_cost_regulated_linear_velocity_scaling: true
         cost_scaling_dist: 0.3                # (如果 use_cost_regulated... 为 true) 开始基于代价减速的距离 (m)
@@ -338,14 +338,14 @@ local_costmap:
       width: 3             #代价地图的宽度（m）
       height: 3            #代价地图的高度（m）
       resolution: 0.05     #代价地图1像素的分辨率，以米为单位
-      robot_radius: 0.10   #机器人半径，如果未提供足迹坐标，则使用机器人半径。
+      robot_radius: 0.12   #机器人半径，如果未提供足迹坐标，则使用机器人半径。
       footprint: "[ [-0.03, -0.0900], [-0.03, 0.0900], [0.2, 0.0900], [0.2, -0.0900] ]"
       plugins: ["voxel_layer","inflation_layer"] #插件包括:{“体素层”，“膨胀层”}
       inflation_layer:                             #膨胀层参数
         plugin: "nav2_costmap_2d::InflationLayer"  #膨胀层插件。
         cost_scaling_factor: 10.0                 #成本缩放因子，决定障碍物成本随距离的递减速度。
         # inflation_radius: 0.17                     #膨胀半径
-        inflation_radius: 0.20
+        inflation_radius: 0.18
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"      #体素层插件。
         enabled: True
@@ -362,9 +362,11 @@ local_costmap:
           clearing: True                            #是否启用障碍物清除功能
           marking: True                             #是否启用障碍物标记功能
           data_type: "LaserScan"                    #数据类型
-          raytrace_max_range: 10.0                  #控制光线追踪从代价地图中清除障碍物的最大范围 
+          # raytrace_max_range: 10.0                  #控制光线追踪从代价地图中清除障碍物的最大范围 
+          raytrace_max_range: 5.0                  #控制光线追踪从代价地图中清除障碍物的最大范围 
           raytrace_min_range: 0.0                  #控制光线追踪从代价地图中清除障碍物的最大范围 
-          obstacle_max_range: 2.5                   #控制代价地图上标记障碍物的最大范围
+          # obstacle_max_range: 2.5                   #控制代价地图上标记障碍物的最大范围
+          obstacle_max_range: 1.5                   #控制代价地图上标记障碍物的最大范围
           obstacle_min_range: 0.0                   #控制代价地图上标记障碍物的最小范围
 
       always_send_full_costmap: True                 #是否每次更新时都发送完整的成本图，而不是更新
@@ -383,7 +385,7 @@ global_costmap:
       global_frame: map                 #全局框架
       robot_base_frame: body  #机器人底座框架
       use_sim_time: False               #仿真时间 
-      robot_radius: 0.11                #机器人半径
+      robot_radius: 0.12                #机器人半径
       footprint: "[ [-0.03, -0.0900], [-0.03, 0.0900], [0.2, 0.0900], [0.2, -0.0900] ]"
       resolution: 0.05                  #全局地图1像素的分辨率，以米为单位
       track_unknown_space: true
@@ -431,17 +433,17 @@ map_saver:
     occupied_thresh_default: 0.65        #占用网格的占用空间最小概率阈值
     map_subscribe_transient_local: True  #地图话题的 QoS 设置
 
-; planner_server: #规划器服务器参数
-;   ros__parameters:
-;     expected_planner_frequency: 20.0     #预期的规划器频率。如果当前频率小于预期频率，则显示警告消息。
-;     use_sim_time: False
-;     planner_plugins: ["GridBased"] #规划器插件类型，需要与BT Tree文件匹配
-;     GridBased:
-;       plugin: "nav2_navfn_planner/NavfnPlanner"
-;       tolerance: 0.5
-;       use_astar: false
-;       allow_unknown: true
-;       use_final_approach_orientation: False
+planner_server: #规划器服务器参数
+  ros__parameters:
+    expected_planner_frequency: 20.0     #预期的规划器频率。如果当前频率小于预期频率，则显示警告消息。
+    use_sim_time: False
+    planner_plugins: ["GridBased"] #规划器插件类型，需要与BT Tree文件匹配
+    GridBased:
+      plugin: "nav2_navfn_planner/NavfnPlanner"
+      tolerance: 0.5
+      use_astar: false
+      allow_unknown: true
+      use_final_approach_orientation: False
     # GridBased:
     #   plugin: "nav2_smac_planner/SmacPlanner2D"  # <-- 切换到 SMAC 2D
     #   tolerance: 0.25
@@ -451,39 +453,39 @@ map_saver:
     #   # 增大这个值，会使路径被“推”向远离障碍物（膨胀区）的中心
     #   cost_travel_multiplier: 2.0  # 尝试 2.0, 3.0 或 5.0
 
-planner_server: #规划器服务器参数
-  ros__parameters:
-    expected_planner_frequency: 20.0     #预期的规划器频率。如果当前频率小于预期频率，则显示警告消息。
-    use_sim_time: False
-    planner_server.debug: true
-    planner_plugins: ["GridBased"] #规划器插件类型，需要与BT Tree文件匹配
-    GridBased:
-      plugin: "nav2_smac_planner/SmacPlannerHybrid"
-      tolerance: 0.25                     # tolerance for planning if unable to reach exact pose, in meters, for 2D node
-      downsample_costmap: true            # whether or not to downsample the map
-      downsampling_factor: 1              # multiplier for the resolution of the costmap layer (e.g. 2 on a 5cm costmap would be 10cm)
-      allow_unknown: false                 # allow traveling in unknown space
-      max_iterations: 1000000             # maximum total iterations to search for before failing (in case unreachable), set to -1 to disable
-      max_on_approach_iterations: 1000    # maximum number of iterations to attempt to reach goal once in tolerance, 2D only
-      max_planning_time: 5.0              # max time in s for planner to plan, smooth, and upsample. Will scale maximum smoothing and upsampling times based on remaining time after planning.
-      motion_model_for_search: "REEDS_SHEPP"   # 2D Moore, Von Neumann; Hybrid Dubin, Redds-Shepp; State Lattice set internally
-      cost_travel_multiplier: 2.0         # For 2D: Cost multiplier to apply to search to steer away from high cost areas. Larger values will place in the center of aisles more exactly (if non-`FREE` cost potential field exists) but take slightly longer to compute. To optimize for speed, a value of 1.0 is reasonable. A reasonable tradeoff value is 2.0. A value of 0.0 effective disables steering away from obstacles and acts like a naive binary search A*.
-      angle_quantization_bins: 72         # For Hybrid/Lattice nodes: Number of angle bins for search, must be 1 for 2D node (no angle search)
-      analytic_expansion_ratio: 3.5       # For Hybrid/Lattice nodes: The ratio to attempt analytic expansions during search for final approach.
-      analytic_expansion_max_cost: 200.0
-      minimum_turning_radius: 0.4        # For Hybrid/Lattice nodes: minimum turning radius in m of path / vehicle
-      reverse_penalty: 1.2                # For Reeds-Shepp model: penalty to apply if motion is reversing, must be => 1
-      change_penalty: 0.2                 # For Hybrid nodes: penalty to apply if motion is changing directions, must be >= 0
-      non_straight_penalty: 1.5          # For Hybrid nodes: penalty to apply if motion is non-straight, must be => 1
-      cost_penalty: 2.5                   # For Hybrid nodes: penalty to apply to higher cost areas when adding into the obstacle map dynamic programming distance expansion heuristic. This drives the robot more towards the center of passages. A value between 1.3 - 3.5 is reasonable.
-      lookup_table_size: 20.0             # For Hybrid nodes: Size of the dubin/reeds-sheep distance window to cache, in meters.
-      cache_obstacle_heuristic: True      # For Hybrid nodes: Cache the obstacle map dynamic programming distance expansion heuristic between subsiquent replannings of the same goal location. Dramatically speeds up replanning performance (40x) if costmap is largely static.     
-      smooth_path: false
-      smoother:
-        max_iterations: 1000
-        w_smooth: 0.5
-        w_data: 0.1
-        tolerance: 1.0e-10
+# planner_server: #规划器服务器参数
+#   ros__parameters:
+#     expected_planner_frequency: 20.0     #预期的规划器频率。如果当前频率小于预期频率，则显示警告消息。
+#     use_sim_time: False
+#     planner_server.debug: true
+#     planner_plugins: ["GridBased"] #规划器插件类型，需要与BT Tree文件匹配
+#     GridBased:
+#       plugin: "nav2_smac_planner/SmacPlannerHybrid"
+#       tolerance: 0.25                     # tolerance for planning if unable to reach exact pose, in meters, for 2D node
+#       downsample_costmap: true            # whether or not to downsample the map
+#       downsampling_factor: 1              # multiplier for the resolution of the costmap layer (e.g. 2 on a 5cm costmap would be 10cm)
+#       allow_unknown: false                 # allow traveling in unknown space
+#       max_iterations: 1000000             # maximum total iterations to search for before failing (in case unreachable), set to -1 to disable
+#       max_on_approach_iterations: 1000    # maximum number of iterations to attempt to reach goal once in tolerance, 2D only
+#       max_planning_time: 5.0              # max time in s for planner to plan, smooth, and upsample. Will scale maximum smoothing and upsampling times based on remaining time after planning.
+#       motion_model_for_search: "REEDS_SHEPP"   # 2D Moore, Von Neumann; Hybrid Dubin, Redds-Shepp; State Lattice set internally
+#       cost_travel_multiplier: 2.0         # For 2D: Cost multiplier to apply to search to steer away from high cost areas. Larger values will place in the center of aisles more exactly (if non-`FREE` cost potential field exists) but take slightly longer to compute. To optimize for speed, a value of 1.0 is reasonable. A reasonable tradeoff value is 2.0. A value of 0.0 effective disables steering away from obstacles and acts like a naive binary search A*.
+#       angle_quantization_bins: 72         # For Hybrid/Lattice nodes: Number of angle bins for search, must be 1 for 2D node (no angle search)
+#       analytic_expansion_ratio: 3.5       # For Hybrid/Lattice nodes: The ratio to attempt analytic expansions during search for final approach.
+#       analytic_expansion_max_cost: 200.0
+#       minimum_turning_radius: 0.4        # For Hybrid/Lattice nodes: minimum turning radius in m of path / vehicle
+#       reverse_penalty: 1.2                # For Reeds-Shepp model: penalty to apply if motion is reversing, must be => 1
+#       change_penalty: 0.2                 # For Hybrid nodes: penalty to apply if motion is changing directions, must be >= 0
+#       non_straight_penalty: 1.5          # For Hybrid nodes: penalty to apply if motion is non-straight, must be => 1
+#       cost_penalty: 2.5                   # For Hybrid nodes: penalty to apply to higher cost areas when adding into the obstacle map dynamic programming distance expansion heuristic. This drives the robot more towards the center of passages. A value between 1.3 - 3.5 is reasonable.
+#       lookup_table_size: 20.0             # For Hybrid nodes: Size of the dubin/reeds-sheep distance window to cache, in meters.
+#       cache_obstacle_heuristic: True      # For Hybrid nodes: Cache the obstacle map dynamic programming distance expansion heuristic between subsiquent replannings of the same goal location. Dramatically speeds up replanning performance (40x) if costmap is largely static.     
+#       smooth_path: false
+#       smoother:
+#         max_iterations: 1000
+#         w_smooth: 0.5
+#         w_data: 0.1
+#         tolerance: 1.0e-10
 
 planner_server_rclcpp_node:
   ros__parameters:
