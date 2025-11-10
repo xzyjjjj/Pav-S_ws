@@ -35,15 +35,15 @@ def generate_launch_description():
         ]
     )
 
-    # 启动点云融合
-    pointcloud_merger_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([
-            os.path.join(pkg_dir, 'launch', 'merger.launch.py')
-        ])
-    )
+    # # 启动点云融合
+    # pointcloud_merger_launch = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource([
+    #         os.path.join(pkg_dir, 'launch', 'merger.launch.py')
+    #     ])
+    # )
 
     return LaunchDescription([
         vis_arg, # 必须将 Argument 添加到 LaunchDescription 中
         ipm_node,
-        pointcloud_merger_launch
+        # pointcloud_merger_launch
     ])
