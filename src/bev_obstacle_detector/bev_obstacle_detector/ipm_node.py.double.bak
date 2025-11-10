@@ -1,0 +1,235 @@
+import rclpy
+from rclpy.node import Node
+from rclpy.parameter import Parameter
+from sensor_msgs.msg import Image, PointCloud2, PointField
+from std_msgs.msg import Header
+from cv_bridge import CvBridge
+import cv2
+import numpy as np
+from sensor_msgs_py import point_cloud2
+
+class IPMConfig:
+    """一个辅助类，用于存储每套IPM配置"""
+    def __init__(self, node: Node, config_id: int):
+        id_str = f"_{config_id}"
+        
+        self.bev_width = node.get_parameter(f'bev_width{id_str}').value
+        self.bev_height = node.get_parameter(f'bev_height{id_str}').value
+        self.bev_size = (self.bev_width, self.bev_height)
+
+        src_pts_1d = np.float32(node.get_parameter(f'src_points{id_str}').value)
+        dst_pts_1d = np.float32(node.get_parameter(f'dst_points{id_str}').value)
+
+        self.src_pts = src_pts_1d.reshape(4, 2)
+        dst_pts = dst_pts_1d.reshape(4, 2)
+
+        self.H = cv2.getPerspectiveTransform(self.src_pts, dst_pts)
+        
+        world_width_m = node.get_parameter(f'world_width_m{id_str}').value
+        world_height_m = node.get_parameter(f'world_height_m{id_str}').value
+        
+        self.meters_per_pixel_x = world_width_m / self.bev_width
+        self.meters_per_pixel_y = world_height_m / self.bev_height
+        
+        self.origin_offset_x_m = node.get_parameter(f'origin_offset_x_m{id_str}').value
+        self.origin_offset_y_m = node.get_parameter(f'origin_offset_y_m{id_str}').value
+
+        node.get_logger().info(f"成功加载 IPM 配置 {config_id} (尺寸: {self.bev_size})")
+
+class IPMNode(Node):
+
+    def __init__(self):
+        super().__init__('ipm_node')
+
+        # --- 1. 声明所有参数 (为两套配置) ---
+        base_parameters = [
+            ('image_topic', '/camera/image_raw'),
+            ('pointcloud_topic', '/bev/obstacles'),
+            ('bev_debug_image_topic', '/bev/debug_image'),
+            ('enable_vis', False),
+            ('camera_matrix', Parameter.Type.DOUBLE_ARRAY),
+            ('distortion_coeffs', Parameter.Type.DOUBLE_ARRAY),
+            ('morph_kernel_size', 5)
+        ]
+        
+        # 动态声明两套 IPM 参数
+        ipm_param_names = [
+            'bev_width', 'bev_height', 'src_points', 'dst_points',
+            'world_width_m', 'world_height_m', 'origin_offset_x_m', 'origin_offset_y_m'
+        ]
+        ipm_param_types = {
+            'bev_width': Parameter.Type.INTEGER, # 修正: 明确使用 INTEGER 类型
+            'bev_height': Parameter.Type.INTEGER,
+            'src_points': Parameter.Type.DOUBLE_ARRAY, # 列表类型
+            'dst_points': Parameter.Type.DOUBLE_ARRAY, # 列表类型
+            'world_width_m': Parameter.Type.DOUBLE,    # 修正: 明确使用 DOUBLE 类型
+            'world_height_m': Parameter.Type.DOUBLE,
+            'origin_offset_x_m': Parameter.Type.DOUBLE,
+            'origin_offset_y_m': Parameter.Type.DOUBLE
+        }
+
+        # 修正声明逻辑：为避免类型错误，我们现在使用安全的 Parameter.Type
+        for i in [1, 2]:
+            for name in ipm_param_names:
+                param_type = ipm_param_types.get(name, Parameter.Type.STRING) # 查找类型
+                
+                # 针对列表和标量类型提供安全的默认值
+                if param_type == Parameter.Type.DOUBLE_ARRAY:
+                    default_value = [] # 空列表
+                elif param_type == Parameter.Type.INTEGER:
+                    default_value = 0
+                else: # DOUBLE
+                    default_value = 0.0
+
+                # 使用 (name, default_value, type) 格式进行声明
+                base_parameters.append((f'{name}_{i}', default_value, param_type))
+
+        self.declare_parameters(namespace='', parameters=base_parameters)
+
+        # --- 2. 获取通用参数 ---
+        self.enable_vis = self.get_parameter('enable_vis').value
+        self.image_topic = self.get_parameter('image_topic').value
+        self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
+        self.bev_debug_image_topic = self.get_parameter('bev_debug_image_topic').value
+
+        kernel_size = self.get_parameter('morph_kernel_size').value
+        self.morph_kernel = np.ones((kernel_size, kernel_size), np.uint8) # 使用方形核
+
+        self.camera_matrix = np.array(self.get_parameter('camera_matrix').value).reshape(3, 3)
+        self.dist_coeffs = np.array(self.get_parameter('distortion_coeffs').value)
+
+        # --- 3. 加载两套 IPM 配置 ---
+        self.ipm_configs = []
+        try:
+            self.ipm_configs.append(IPMConfig(self, 1))
+            self.ipm_configs.append(IPMConfig(self, 2))
+        except Exception as e:
+            self.get_logger().error(f"加载 IPM 配置失败: {e}. 请检查你的 YAML 文件是否包含 _1 和 _2 后缀的所有参数。")
+            return
+
+        # --- 4. 初始化 ROS 接口 ---
+        self.bridge = CvBridge()
+        self.image_sub = self.create_subscription(
+            Image, self.image_topic, self.image_callback, 10
+        )
+        self.pointcloud_pub = self.create_publisher(
+            PointCloud2, self.pointcloud_topic, 10
+        )
+        self.bev_image_pub = self.create_publisher(
+            Image, self.bev_debug_image_topic, 10
+        )
+        
+    def destroy_node(self):
+        """重写 destroy_node 以关闭 OpenCV 窗口"""
+        if self.enable_vis:
+            cv2.destroyAllWindows()
+        super().destroy_node()
+
+    def image_callback(self, msg: Image):
+        try:
+            cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
+        except Exception as e:
+            self.get_logger().error(f'CV Bridge 转换失败: {e}')
+            return
+
+        # 1. 畸变校正 (只需执行一次)
+        undistorted_img = cv2.undistort(
+            cv_image, self.camera_matrix, self.dist_coeffs, None, None
+        )
+
+        # 【可视化】在原始图像上绘制 *所有* 源点
+        if self.enable_vis:
+            vis_img = undistorted_img.copy()
+            colors = [(0, 255, 0), (0, 0, 255)] # 绿色, 红色
+            for i, cfg in enumerate(self.ipm_configs):
+                for pt in cfg.src_pts:
+                     cv2.circle(vis_img, (int(pt[0]), int(pt[1])), 5, colors[i % len(colors)], -1)
+            cv2.imshow("1. Undistorted Image (All Src Pts)", vis_img)
+
+        # 存储所有配置生成的点
+        master_points_list = []
+        
+        # --- 循环处理每一套 IPM 配置 ---
+        for i, cfg in enumerate(self.ipm_configs):
+            
+            # 2. 逆透视变换 (IPM) -> 鸟瞰图
+            bev_image = cv2.warpPerspective(
+                undistorted_img, cfg.H, cfg.bev_size, flags=cv2.INTER_LINEAR
+            )
+
+            # 3. 颜色分割 (提取红色) - (注意: 这里的阈值是硬编码的)
+            hsv = cv2.cvtColor(bev_image, cv2.COLOR_BGR2HSV)
+            mean_v = np.mean(hsv[:, :, 2])
+            v_thresh = max(50, int(mean_v * 0.5))
+
+            lower_red_1 = np.array([0, 90, v_thresh])
+            upper_red_1 = np.array([10, 255, 255])
+            lower_red_2 = np.array([170, 80, v_thresh])
+            upper_red_2 = np.array([180, 255, 255])
+
+            mask1 = cv2.inRange(hsv, lower_red_1, upper_red_1)
+            mask2 = cv2.inRange(hsv, lower_red_2, upper_red_2)
+            red_mask = cv2.bitwise_or(mask1, mask2)
+            
+            # 4. 形态学操作 (去噪)
+            red_mask = cv2.morphologyEx(red_mask, cv2.MORPH_OPEN, self.morph_kernel)
+            red_mask = cv2.morphologyEx(red_mask, cv2.MORPH_CLOSE, self.morph_kernel)
+
+            # 5. 查找障碍物像素
+            obstacle_pixels = cv2.findNonZero(red_mask)
+
+            # 6. 转换为 PointCloud2 (使用特定配置的参数)
+            current_points_list = []
+            if obstacle_pixels is not None:
+                for point in obstacle_pixels:
+                    u, v = point[0]
+                    
+                    # --- 使用 cfg 中的特定参数进行转换 ---
+                    robot_x = cfg.origin_offset_x_m + (cfg.bev_height - v) * cfg.meters_per_pixel_y
+                    robot_y = cfg.origin_offset_y_m - u * cfg.meters_per_pixel_x
+                    robot_z = 0.0
+                    current_points_list.append([robot_x, robot_y, robot_z])
+
+            # 7. 将当前列表的点添加到主列表
+            master_points_list.extend(current_points_list)
+            
+            # 8. 发布调试图像 (只发布第一个配置的)
+            header = Header(stamp=self.get_clock().now().to_msg(), frame_id="body")
+            if i == 0:
+                # bev_img_msg = self.bridge.cv2_to_imgmsg(bev_image, "bgr8")
+                debug_bev_display_main = cv2.bitwise_and(bev_image, bev_image, mask=red_mask)
+                bev_img_msg = self.bridge.cv2_to_imgmsg(debug_bev_display_main, "bgr8")
+                bev_img_msg.header = header
+                self.bev_image_pub.publish(bev_img_msg)
+
+            # 9. 【可视化】显示两个配置的 BEV 结果
+            if self.enable_vis:
+                debug_bev_display = cv2.bitwise_and(bev_image, bev_image, mask=red_mask)
+                cv2.imshow(f"2. BEV Result (Config {i+1})", bev_image)
+                cv2.imshow(f"3. BEV Overlay (Config {i+1})", debug_bev_display)
+
+        # --- 循环结束 ---
+
+        # 10. 创建并发布 *融合* 后的点云
+        header = Header(stamp=self.get_clock().now().to_msg(), frame_id="body")
+        fields = [
+            PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
+            PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
+            PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1)
+        ]
+        point_cloud_msg = point_cloud2.create_cloud(header, fields, master_points_list)
+        self.pointcloud_pub.publish(point_cloud_msg)
+            
+        # 11. 【可视化】刷新 OpenCV 窗口
+        if self.enable_vis:
+            cv2.waitKey(1)
+
+def main(args=None):
+    rclpy.init(args=args)
+    ipm_node = IPMNode()
+    rclpy.spin(ipm_node)
+    ipm_node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

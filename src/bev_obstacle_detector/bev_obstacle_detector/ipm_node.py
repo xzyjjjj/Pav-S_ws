@@ -34,14 +34,21 @@ class IPMNode(Node):
                 ('bev_height', 480),
                 
                 # IPM 点 (1D 浮点数列表)
-                ('src_points', Parameter.Type.DOUBLE_ARRAY),
-                ('dst_points', Parameter.Type.DOUBLE_ARRAY),
+                ('src_points_1', Parameter.Type.DOUBLE_ARRAY),
+                ('dst_points_1', Parameter.Type.DOUBLE_ARRAY),
+                ('src_points_2', Parameter.Type.DOUBLE_ARRAY),
+                ('dst_points_2', Parameter.Type.DOUBLE_ARRAY),
+
 
                 # 物理尺寸
-                ('world_width_m', 2.0),
-                ('world_height_m', 3.0),
-                ('origin_offset_x_m', 0.5),
-                ('origin_offset_y_m', 1.0),
+                ('world_width_m_1', 2.0),
+                ('world_height_m_1', 3.0),
+                ('origin_offset_x_m_1', 0.5),
+                ('origin_offset_y_m_1', 1.0),
+                ('world_width_m_2', 2.0),
+                ('world_height_m_2', 3.0),
+                ('origin_offset_x_m_2', 0.5),
+                ('origin_offset_y_m_2', 1.0),
 
                 # # HSV (1D 整数列表)
                 # ('hsv_lower_red1', Parameter.Type.INTEGER_ARRAY),
@@ -67,13 +74,17 @@ class IPMNode(Node):
         self.bev_size = (self.bev_width, self.bev_height)
 
         # 物理尺寸
-        world_width_m = self.get_parameter('world_width_m').value
-        world_height_m = self.get_parameter('world_height_m').value
+        world_width_m_1 = self.get_parameter('world_width_m_1').value
+        world_height_m_1 = self.get_parameter('world_height_m_1').value
+        world_width_m_2 = self.get_parameter('world_width_m_2').value
+        world_height_m_2 = self.get_parameter('world_height_m_2').value
         
         # 坐标系
-        self.origin_offset_x_m = self.get_parameter('origin_offset_x_m').value
-        self.origin_offset_y_m = self.get_parameter('origin_offset_y_m').value
-        
+        self.origin_offset_x_m_1 = self.get_parameter('origin_offset_x_m_1').value
+        self.origin_offset_y_m_1 = self.get_parameter('origin_offset_y_m_1').value
+        self.origin_offset_x_m_2 = self.get_parameter('origin_offset_x_m_2').value
+        self.origin_offset_y_m_2 = self.get_parameter('origin_offset_y_m_2').value
+                
         # # HSV (转换为 NumPy 数组)
         # self.lower_red1 = np.array(self.get_parameter('hsv_lower_red1').value)
         # self.upper_red1 = np.array(self.get_parameter('hsv_upper_red1').value)
@@ -88,23 +99,33 @@ class IPMNode(Node):
         self.camera_matrix = np.array(self.get_parameter('camera_matrix').value).reshape(3, 3)
         self.dist_coeffs = np.array(self.get_parameter('distortion_coeffs').value)
         
-        src_pts_1d = np.float32(self.get_parameter('src_points').value)
-        dst_pts_1d = np.float32(self.get_parameter('dst_points').value)
+        src_pts_1d_1 = np.float32(self.get_parameter('src_points_1').value)
+        dst_pts_1d_1 = np.float32(self.get_parameter('dst_points_1').value)
+        src_pts_1d_2 = np.float32(self.get_parameter('src_points_2').value)
+        dst_pts_1d_2 = np.float32(self.get_parameter('dst_points_2').value)
 
         # ** 关键：将 1D 列表重塑为 4x2 矩阵 **
-        self.src_pts = src_pts_1d.reshape(4, 2)
-        self.dst_pts = dst_pts_1d.reshape(4, 2)
+        self.src_pts_1 = src_pts_1d_1.reshape(4, 2)
+        self.dst_pts_1 = dst_pts_1d_1.reshape(4, 2)
+        self.src_pts_2 = src_pts_1d_2.reshape(4, 2)
+        self.dst_pts_2 = dst_pts_1d_2.reshape(4, 2)
 
-        self.H = cv2.getPerspectiveTransform(self.src_pts, self.dst_pts)
+        self.H_1 = cv2.getPerspectiveTransform(self.src_pts_1, self.dst_pts_1)
+        self.H_2 = cv2.getPerspectiveTransform(self.src_pts_2, self.dst_pts_2)
         
         # --- 4. 计算物理比例 ---
-        self.meters_per_pixel_x = world_width_m / self.bev_width
-        self.meters_per_pixel_y = world_height_m / self.bev_height
+        self.meters_per_pixel_x_1 = world_width_m_1 / self.bev_width
+        self.meters_per_pixel_y_1 = world_height_m_1 / self.bev_height
+        self.meters_per_pixel_x_2 = world_width_m_2 / self.bev_width
+        self.meters_per_pixel_y_2 = world_height_m_2 / self.bev_height
         
         self.get_logger().info(f"IPM 节点启动。BEV 尺寸: {self.bev_width}x{self.bev_height}")
-        self.get_logger().info(f"物理比例 Y (前进): {self.meters_per_pixel_y:.4f} m/pixel")
-        self.get_logger().info(f"物理比例 X (侧向): {self.meters_per_pixel_x:.4f} m/pixel")
-
+        self.get_logger().info(f"鸟瞰图 1 号: ")
+        self.get_logger().info(f"物理比例 Y (前进): {self.meters_per_pixel_y_1:.4f} m/pixel")
+        self.get_logger().info(f"物理比例 X (侧向): {self.meters_per_pixel_x_1:.4f} m/pixel")
+        self.get_logger().info(f"鸟瞰图 2 号: ")
+        self.get_logger().info(f"物理比例 Y (前进): {self.meters_per_pixel_y_2:.4f} m/pixel")
+        self.get_logger().info(f"物理比例 X (侧向): {self.meters_per_pixel_x_2:.4f} m/pixel")
         # --- 5. 初始化 ROS 接口 ---
         self.bridge = CvBridge()
         self.image_sub = self.create_subscription(
@@ -113,7 +134,7 @@ class IPMNode(Node):
         self.pointcloud_pub = self.create_publisher(
             PointCloud2, self.pointcloud_topic, 10
         )
-        self.bev_image_pub = self.create_publisher(
+        self.bev_image_1_pub = self.create_publisher(
             Image, self.bev_debug_image_topic, 10
         )
 
@@ -135,42 +156,62 @@ class IPMNode(Node):
         if self.enable_vis:
             # 复制图像并在上面画出 IPM 源点，方便调试
             vis_img = undistorted_img.copy()
-            for pt in self.src_pts:
+            for pt in self.src_pts_1:
                  cv2.circle(vis_img, (int(pt[0]), int(pt[1])), 5, (0, 255, 0), -1)
+            for pt in self.src_pts_2:
+                 cv2.circle(vis_img, (int(pt[0]), int(pt[1])), 5, (0, 0, 255), -1)
             cv2.imshow("1. Undistorted Image (with Src Pts)", vis_img)
 
 
         # 2. 逆透视变换 (IPM) -> 鸟瞰图
-        bev_image = cv2.warpPerspective(
-            undistorted_img, self.H, self.bev_size, flags=cv2.INTER_LINEAR
+        bev_image_1 = cv2.warpPerspective(
+            undistorted_img, self.H_1, self.bev_size, flags=cv2.INTER_LINEAR
+        )
+        bev_image_2 = cv2.warpPerspective(
+            undistorted_img, self.H_2, self.bev_size, flags=cv2.INTER_LINEAR
         )
 
         # 3. 颜色分割 (提取红色)
-        hsv = cv2.cvtColor(bev_image, cv2.COLOR_BGR2HSV)
-        mean_v = np.mean(hsv[:, :, 2])
-        v_thresh = max(50, int(mean_v * 0.5))
+        hsv_1 = cv2.cvtColor(bev_image_1, cv2.COLOR_BGR2HSV)
+        hsv_2 = cv2.cvtColor(bev_image_2, cv2.COLOR_BGR2HSV)
+        mean_v_1 = np.mean(hsv_1[:, :, 2])
+        mean_v_2 = np.mean(hsv_2[:, :, 2])
+        v_thresh_1 = max(50, int(mean_v_1 * 0.5))
+        v_thresh_2 = max(50, int(mean_v_2 * 0.5))
+        v_thresh = (v_thresh_1 + v_thresh_2) / 2.0
 
-        lower_red_1 = np.array([0, 90, v_thresh])
-        upper_red_1 = np.array([10, 255, 255])
-        lower_red_2 = np.array([170, 80, v_thresh])
-        upper_red_2 = np.array([180, 255, 255])
+        lower_red_1_1 = np.array([0, 90, v_thresh_1])
+        upper_red_1_1 = np.array([10, 255, 255])
+        lower_red_2_1 = np.array([170, 80, v_thresh_1])
+        upper_red_2_1 = np.array([180, 255, 255])
+        lower_red_1_2 = np.array([0, 90, v_thresh_2])
+        upper_red_1_2 = np.array([10, 255, 255])
+        lower_red_2_2 = np.array([170, 80, v_thresh_2])
+        upper_red_2_2 = np.array([180, 255, 255])
 
-        hsv_image = cv2.cvtColor(bev_image, cv2.COLOR_BGR2HSV)
-        mask1 = cv2.inRange(hsv_image, lower_red_1, upper_red_1)
-        mask2 = cv2.inRange(hsv_image, lower_red_2, upper_red_2)
-        red_mask = cv2.bitwise_or(mask1, mask2)
+        hsv_image_1 = cv2.cvtColor(bev_image_1, cv2.COLOR_BGR2HSV)
+        hsv_image_2 = cv2.cvtColor(bev_image_2, cv2.COLOR_BGR2HSV)
+        mask1_1 = cv2.inRange(hsv_image_1, lower_red_1_1, upper_red_1_1)
+        mask2_1 = cv2.inRange(hsv_image_1, lower_red_2_1, upper_red_2_1)
+        mask1_2 = cv2.inRange(hsv_image_2, lower_red_1_2, upper_red_1_2)
+        mask2_2 = cv2.inRange(hsv_image_2, lower_red_2_2, upper_red_2_2)
+        red_mask_1 = cv2.bitwise_or(mask1_1, mask2_1)
+        red_mask_2 = cv2.bitwise_or(mask1_2, mask2_2)
         
         # 4. 形态学操作 (去噪)
-        red_mask = cv2.morphologyEx(red_mask, cv2.MORPH_OPEN, self.morph_kernel)
-        red_mask = cv2.morphologyEx(red_mask, cv2.MORPH_CLOSE, self.morph_kernel)
+        red_mask_1 = cv2.morphologyEx(red_mask_1, cv2.MORPH_OPEN, self.morph_kernel)
+        red_mask_1 = cv2.morphologyEx(red_mask_1, cv2.MORPH_CLOSE, self.morph_kernel)
+        red_mask_2 = cv2.morphologyEx(red_mask_2, cv2.MORPH_OPEN, self.morph_kernel)
+        red_mask_2 = cv2.morphologyEx(red_mask_2, cv2.MORPH_CLOSE, self.morph_kernel)
 
         # 5. 查找障碍物像素
-        obstacle_pixels = cv2.findNonZero(red_mask)
+        obstacle_pixels_1 = cv2.findNonZero(red_mask_1)
+        obstacle_pixels_2 = cv2.findNonZero(red_mask_2)
 
         # 6. 转换为 PointCloud2
         points_list = []
-        if obstacle_pixels is not None:
-            for point in obstacle_pixels:
+        if obstacle_pixels_1 is not None:
+            for point in obstacle_pixels_1:
                 u, v = point[0] # BEV 图像中的像素坐标 (u, v)
                 
                 # 将 (u, v) 转换为 base_link 中的坐标 (x, y)
@@ -179,14 +220,22 @@ class IPMNode(Node):
                 
                 # Y (前): v=bev_height 对应 x=origin_offset_x_m
                 #           v=0 对应 x=origin_offset_x_m + world_height_m
-                robot_x = self.origin_offset_x_m + (self.bev_height - v) * self.meters_per_pixel_y
+                robot_x = self.origin_offset_x_m_1 + (self.bev_height - v) * self.meters_per_pixel_y_1
                 
                 # X (左): u=0 对应 y=origin_offset_y_m
                 #           u=bev_width 对应 y=origin_offset_y_m - world_width_m
-                robot_y = self.origin_offset_y_m - u * self.meters_per_pixel_x
+                robot_y = self.origin_offset_y_m_1 - u * self.meters_per_pixel_x_1
                 
                 robot_z = 0.0 # 假设所有障碍物在地面
                 points_list.append([robot_x, robot_y, robot_z])
+        if obstacle_pixels_2 is not None:
+            for point in obstacle_pixels_2:
+                u, v = point[0] 
+                robot_x = self.origin_offset_x_m_2 + (self.bev_height - v) * self.meters_per_pixel_y_2
+                robot_y = self.origin_offset_y_m_2 - u * self.meters_per_pixel_x_2
+                robot_z = 0.0 # 假设所有障碍物在地面
+                points_list.append([robot_x, robot_y, robot_z])
+
 
         # 7. 创建并发布点云
         header = Header(stamp=self.get_clock().now().to_msg(), frame_id="body")
@@ -201,14 +250,15 @@ class IPMNode(Node):
         self.pointcloud_pub.publish(point_cloud_msg)
             
         # 8. (可选) 发布调试图像
-        debug_bev_display = cv2.bitwise_and(bev_image, bev_image, mask=red_mask)
-        bev_img_msg = self.bridge.cv2_to_imgmsg(bev_image, "bgr8")
+        debug_bev_display = cv2.bitwise_and(bev_image_2, bev_image_2, mask=red_mask_2)
+        bev_img_msg = self.bridge.cv2_to_imgmsg(bev_image_2, "bgr8")
         bev_img_msg.header = header # 使用相同的时间戳和 frame_id
-        self.bev_image_pub.publish(bev_img_msg)
+        self.bev_image_1_pub.publish(bev_img_msg)
 
         # 【新增】如果启用可视化，显示鸟瞰图和处理结果
         if self.enable_vis:
-            cv2.imshow("2. BEV Result (Whole Image)", bev_image)
+            cv2.imshow("2.1 BEV Result (Whole Image)", bev_image_1)
+            cv2.imshow("2.2 BEV Result (Whole Image)", bev_image_2)
             cv2.imshow("3. BEV Result (Color Overlay)", debug_bev_display)
             # 必须调用 waitKey 来刷新窗口和处理事件
             cv2.waitKey(1)
