@@ -189,7 +189,9 @@ class IPMNode(Node):
                 points_list.append([robot_x, robot_y, robot_z])
 
         # 7. 创建并发布点云
-        header = Header(stamp=self.get_clock().now().to_msg(), frame_id="base_link")
+        header = Header(stamp=self.get_clock().now().to_msg(), frame_id="body")
+        # TODO: try body
+        
         fields = [
             PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
             PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
@@ -200,7 +202,7 @@ class IPMNode(Node):
             
         # 8. (可选) 发布调试图像
         debug_bev_display = cv2.bitwise_and(bev_image, bev_image, mask=red_mask)
-        bev_img_msg = self.bridge.cv2_to_imgmsg(debug_bev_display, "bgr8")
+        bev_img_msg = self.bridge.cv2_to_imgmsg(bev_image, "bgr8")
         bev_img_msg.header = header # 使用相同的时间戳和 frame_id
         self.bev_image_pub.publish(bev_img_msg)
 

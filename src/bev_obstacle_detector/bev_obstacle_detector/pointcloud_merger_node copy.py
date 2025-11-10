@@ -4,7 +4,9 @@ from sensor_msgs.msg import PointCloud2
 from sensor_msgs_py import point_cloud2
 from std_msgs.msg import Header
 
-# 不再需要导入 tf2_ros 和 TransformException
+# TF2 库用于坐标系变换
+import tf2_ros
+from tf2_ros import TransformException
 
 import numpy as np
 
@@ -14,18 +16,13 @@ class PointCloudMerger(Node):
         super().__init__('pointcloud_merger_node')
         
         self.get_logger().info('PointCloudMerger Node has started.')
-        
-        # --- 1. 声明和获取参数 ---
         self.declare_parameters(
             namespace='',
             parameters=[
-                # 注意：Lidar 话题已更新为你提供的 /cloud_registered
-                ('input_topic_lidar', '/cloud_registered'), 
+                ('input_topic_lidar', '/cloud_registered'),
                 ('input_topic_bev', '/bev/obstacles'),
                 ('output_topic_fused', '/fused_pointcloud'),
-                # 目标坐标系已改为 body
-                ('target_frame', 'body'), 
-                # TF 参数虽然不再使用，但为了防止外部调用，保留声明
+                ('target_frame', 'body'),
                 ('tf_timeout_seconds', 0.05),
                 ('fusion_time_tolerance', 0.01)
             ]
@@ -38,17 +35,20 @@ class PointCloudMerger(Node):
         self.tf_timeout_seconds = self.get_parameter('tf_timeout_seconds').value
         self.fusion_time_tolerance = self.get_parameter('fusion_time_tolerance').value
 
-        # --- 移除 TF 监听器初始化 ---
-        # self.tf_buffer = tf2_ros.Buffer()
-        # self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
+
+        # --- 1. 初始化 TF 监听器 ---
+        # 用于监听 body -> base_link 的变换
+        self.tf_buffer = tf2_ros.Buffer()
+        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
         # --- 2. 初始化点云存储 ---
+        # 存储最近收到的两个点云，确保它们在同一时间戳附近
         self.bev_pc_msg = None
         self.lidar_pc_msg = None
         
         # --- 3. 初始化 ROS 接口 ---
         
-        # 订阅 BEV 障碍物点云 (已在 body 坐标系)
+        # 订阅 BEV 障碍物点云 (已在 base_link)
         self.create_subscription(
             PointCloud2, 
             self.input_topic_bev,
@@ -56,7 +56,7 @@ class PointCloudMerger(Node):
             10
         )
         
-        # 订阅 Lidar 原始点云 (已在 body 坐标系)
+        # 订阅 Lidar 原始点云 (在 body 坐标系)
         self.create_subscription(
             PointCloud2, 
             self.input_topic_lidar,
@@ -70,28 +70,21 @@ class PointCloudMerger(Node):
             self.output_topic_fused,
             10
         )
-        self.get_logger().info(f"Fusion Node publishing to: {self.output_topic_fused} in frame: {self.target_frame}")
+        self.get_logger().info(f"Fusion Node publishing to: {self.output_topic_fused}")
 
-    # --- 移除 transform_pointcloud 函数 ---
-    # 由于不需要 TF 变换，此函数不再需要。
-    
     def bev_callback(self, msg: PointCloud2):
         """处理 BEV 点云的回调函数"""
-        # 确保话题的 frame_id 与目标 frame 一致，否则发出警告
-        if msg.header.frame_id != self.target_frame:
-             self.get_logger().warn(f"BEV点云的Frame ID ({msg.header.frame_id}) 与目标 Frame ID ({self.target_frame}) 不匹配！")
+        # BEV 点云已经在目标坐标系 base_link 下，直接存储
         self.bev_pc_msg = msg
         self.try_fuse_pointclouds()
 
     def lidar_callback(self, msg: PointCloud2):
         """处理 Lidar 点云的回调函数"""
-        if msg.header.frame_id != self.target_frame:
-             self.get_logger().warn(f"Lidar点云的Frame ID ({msg.header.frame_id}) 与目标 Frame ID ({self.target_frame}) 不匹配！")
         self.lidar_pc_msg = msg
         self.try_fuse_pointclouds()
 
     def try_fuse_pointclouds(self):
-        """尝试融合两个点云 (无需 TF 变换)"""
+        """尝试融合两个点云"""
         # 确保两个传感器都有数据
         if self.bev_pc_msg is None or self.lidar_pc_msg is None:
             return
@@ -99,25 +92,39 @@ class PointCloudMerger(Node):
         # 优先使用 LiDAR 的时间戳作为融合点云的基准时间
         fusion_stamp = self.lidar_pc_msg.header.stamp
         
-        # 1. 提取两个点云的 (x, y, z) 坐标
-        # **直接使用原始消息，因为它们已在同一坐标系 (body)**
+        # 1. 尝试将 LiDAR 点云从 'body' 变换到 'base_link'
+        transformed_lidar_pc = self.transform_pointcloud(
+            self.lidar_pc_msg, 
+            target_frame='base_link', 
+            source_frame=self.lidar_pc_msg.header.frame_id
+        )
+
+        if transformed_lidar_pc is None:
+            # 变换失败，等待下一个 TF 变换或点云
+            self.get_logger().warn("变换失败，等待下一个 TF 变换或点云")
+            return
+
+        # 2. 提取两个点云的 (x, y, z) 坐标
+        # BEV 点云已经是 base_link 坐标系
         bev_points = self.extract_points(self.bev_pc_msg)
-        lidar_points = self.extract_points(self.lidar_pc_msg)
+        lidar_points = self.extract_points(transformed_lidar_pc)
         
         if len(lidar_points) == 0:
             self.get_logger().warn("Lidar点云为空，跳过融合。")
             return
 
-        # 2. 合并点云 (NumPy 数组)
+        # 3. 合并点云 (NumPy 数组)
+        # 注意：这里我们假设 BEV 点云不会包含太多的点，以避免巨大的内存开销
         if len(bev_points) > 0:
             fused_points_np = np.concatenate((lidar_points, bev_points), axis=0)
         else:
             fused_points_np = lidar_points
         
-        # 3. 创建并发布融合后的 PointCloud2 消息
+        # 4. 创建并发布融合后的 PointCloud2 消息
+        self.get_logger().warn("成功创建并发布融合后的 PointCloud2 消息")
         fused_header = Header(
             stamp=fusion_stamp, 
-            frame_id=self.target_frame  # <--- 使用配置的 'body' 作为目标 frame_id
+            frame_id='base_link'
         )
         
         # 定义点云的字段 (只包含 x, y, z)
@@ -127,6 +134,7 @@ class PointCloudMerger(Node):
             point_cloud2.PointField(name='z', offset=8, datatype=point_cloud2.PointField.FLOAT32, count=1)
         ]
         
+        # 将 NumPy 数组转换回 PointCloud2 消息
         fused_pc_msg = point_cloud2.create_cloud(
             fused_header, 
             fields, 
@@ -140,8 +148,32 @@ class PointCloudMerger(Node):
         self.bev_pc_msg = None
 
 
+    def transform_pointcloud(self, pc_msg: PointCloud2, target_frame: str, source_frame: str) -> PointCloud2:
+        """使用 tf2_ros 变换点云坐标系"""
+        if target_frame == source_frame:
+            return pc_msg
+            
+        try:
+            # 等待变换可用
+            self.tf_buffer.can_transform(
+                target_frame, 
+                source_frame, 
+                pc_msg.header.stamp, 
+                timeout=rclpy.duration.Duration(self.tf_timeout_seconds)
+            )
+            # 执行变换
+            pc_transformed = self.tf_buffer.transform(pc_msg, target_frame)
+            return pc_transformed
+            
+        except TransformException as ex:
+            self.get_logger().warn(f'TF 变换失败 ({source_frame} -> {target_frame}): {ex}')
+            return None
+
+
     def extract_points(self, pc_msg: PointCloud2) -> np.ndarray:
         """从 PointCloud2 消息中提取 (x, y, z) 数组"""
+        
+        # 使用 sensor_msgs_py 库的 read_points 简化提取
         points_generator = point_cloud2.read_points(pc_msg, field_names=('x', 'y', 'z'), skip_nans=True)
         points_list = list(points_generator)
         
