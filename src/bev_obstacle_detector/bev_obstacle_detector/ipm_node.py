@@ -129,11 +129,11 @@ class IPMNode(Node):
         # --- 5. 初始化 ROS 接口 ---
         self.bridge = CvBridge()
         self.image_sub = self.create_subscription(
-            Image, self.image_topic, self.image_callback, 10
-        )
+            Image, self.image_topic, self.image_callback, 15
+        ) # !增加图像缓冲队列
         self.pointcloud_pub = self.create_publisher(
-            PointCloud2, self.pointcloud_topic, 10
-        )
+            PointCloud2, self.pointcloud_topic, 5
+        ) # !减少点云发布延迟，节省内存
         self.bev_image_1_pub = self.create_publisher(
             Image, self.bev_debug_image_topic, 10
         )

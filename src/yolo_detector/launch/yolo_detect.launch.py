@@ -15,7 +15,7 @@ def generate_launch_description():
     params_file = os.path.join(
         yolo_detector_share_dir,
         'config',
-        'params.yaml'
+        'yolo_params.yaml'
     )
 
     # --- 关键改动点 开始 ---

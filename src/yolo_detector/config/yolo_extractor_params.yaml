@@ -1,0 +1,21 @@
+# config/yolo_extractor_params.yaml
+yolo_goal_extractor:
+  ros__parameters:
+
+    # --- 1. 话题配置 (Topics) ---
+    detection_topic: "/yolo_detections"
+    bonus_goal_topic: "/bonus_goals"
+
+    # --- 2. 坐标系配置 (Frames) ---
+    robot_base_frame: "body"  # 机器人本体坐标系 (IPM 转换的目标)
+    global_frame: "map"       # 全局坐标系 (Nav2 规划的目标)
+    tf_timeout_seconds: 0.1   # TF 变换等待超时
+
+    # --- 3. IPM 标定参数 (必须与 YOLO 使用的 BEV 图像源一致) ---
+    # (此处复制自 bev_params.yaml 的 Config 1)
+    bev_width: 640
+    bev_height: 480
+    world_width_m: 0.448  
+    world_height_m: 0.324  
+    origin_offset_x_m: 0.457  
+    origin_offset_y_m: 0.229  

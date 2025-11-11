@@ -1,0 +1,18 @@
+# config/mission_manager_params.yaml
+mission_manager:
+  ros__parameters:
+    
+    # --- 1. 话题配置 (Topics) ---
+    # 订阅 RViz 设置的终点话题
+    final_goal_topic: "/rviz_final_goal"
+    
+    # 订阅 YOLO 提取器发布的加分点 (MarkerArray)
+    bonus_goal_topic: "/bonus_goals"
+
+    # --- 2. Nav2 Action 配置 ---
+    # Nav2 动作服务器的名称
+    nav_action_server: "/navigate_to_pose"
+
+    # --- 3. 决策逻辑 ---
+    # 终点的“价值”。必须低于任何可能的加分项。
+    final_goal_value: -1
