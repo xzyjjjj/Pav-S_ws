@@ -1,7 +1,3 @@
-# TO FUCKING DO:
-# 1) 不要再继续发布深度信息
-
-
 #!/usr/bin/env python3
 # coding=utf-8
 from yolo_detector.detector_module import *

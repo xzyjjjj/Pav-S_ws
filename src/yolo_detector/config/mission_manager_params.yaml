@@ -4,7 +4,7 @@ mission_manager:
     
     # --- 1. 话题配置 (Topics) ---
     # 订阅 RViz 设置的终点话题
-    final_goal_topic: "/rviz_final_goal"
+    final_goal_topic: "/goal_pose"
     
     # 订阅 YOLO 提取器发布的加分点 (MarkerArray)
     bonus_goal_topic: "/bonus_goals"

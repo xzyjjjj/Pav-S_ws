@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.duration import Duration
+from rclpy.time import Time
 from rclpy.parameter import Parameter
 
 # 消息类型
@@ -90,6 +91,7 @@ class YoloGoalExtractor(Node):
             try:
                 # class_id 是 'num_1', 'num_2', ..., 'num_8'
                 # 访问路径：Detection2D -> ObjectHypothesisWithPose -> ObjectHypothesis -> class_id
+                # self.get_logger().info(f"class_id:{det.results[0].hypothesis.class_id[4]}\n")
                 value = int(det.results[0].hypothesis.class_id[4])
                 if value > max_value:
                     max_value = value
@@ -112,11 +114,17 @@ class YoloGoalExtractor(Node):
         # 2. 创建 'body' 坐标系下的 PoseStamped
         pose_in_body = PoseStamped()
         pose_in_body.header.frame_id = self.robot_base_frame
-        pose_in_body.header.stamp = msg.header.stamp
+
+        # 假设 50 毫秒的滞后足以保证 TF 数据已到达
+        stamp_rclpy = Time.from_msg(msg.header.stamp)
+        safe_stamp_rclpy = stamp_rclpy - Duration(seconds=0.1)
+        safe_stamp_msg = safe_stamp_rclpy.to_msg()
+        pose_in_body.header.stamp = safe_stamp_msg # 替换为安全时间戳
+        # pose_in_body.header.stamp = msg.header.stamp
+
         pose_in_body.pose.position.x = robot_x
         pose_in_body.pose.position.y = robot_y
         pose_in_body.pose.orientation.w = 1.0
-
         # 3. (修改点 #1) 变换到 'map' 坐标系
         try:
             pose_in_map = self.tf_buffer.transform(

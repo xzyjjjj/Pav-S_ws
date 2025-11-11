@@ -10,7 +10,7 @@ yolo_node:
     config_path: "/Pav-S_ws/src/yolo_detector/dataset_config/new_aic_data.yaml"
     
     # --- 订阅话题名 ---
-    image_topic: "/camera/color/image_raw"
+    image_topic: "/bev/debug_image"
     
     # --- 节点逻辑控制 ---
     enable_preprocessing: True # 开启识别前预处理

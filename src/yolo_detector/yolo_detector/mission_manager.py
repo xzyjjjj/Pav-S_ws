@@ -22,7 +22,7 @@ class MissionManager(Node):
         self.declare_parameters(
             namespace='',
             parameters=[
-                ('final_goal_topic', '/rviz_final_goal'),
+                ('final_goal_topic', '/goal_pose'),
                 ('bonus_goal_topic', '/bonus_goals'),
                 ('nav_action_server', '/navigate_to_pose'),
                 ('final_goal_value', -1)
@@ -48,6 +48,11 @@ class MissionManager(Node):
             self.rviz_final_goal_callback,
             10
         )
+        self.goal_pub =self.create_publisher(
+            PoseStamped,
+            final_goal_topic,
+            10
+        )
         
         # (Input) 订阅 YOLO 识别的加分点
         self.create_subscription(
@@ -65,15 +70,15 @@ class MissionManager(Node):
         )
 
         self.get_logger().info("Mission Manager 已启动。")
-        self.get_logger().info("请在 RViz 中设置终点 (发布到 /rviz_final_goal)")
+        self.get_logger().info(f"请在 RViz 中设置终点 (发布到 {final_goal_topic})")
 
     # --- 核心回调 ---
 
     def rviz_final_goal_callback(self, msg: PoseStamped):
         """(输入1) 收到 RViz 终点目标"""
-        # if self.state != self.STATE_IDLE:
-        #      self.get_logger().warn("比赛已在进行中，忽略新的终点设置。")
-        #      return
+        if self.state != self.STATE_IDLE:
+
+             return
              
         self.get_logger().info("收到最终目标！开始导航...")
         self.final_goal_pose = msg
@@ -131,28 +136,33 @@ class MissionManager(Node):
 
     def send_new_goal(self, pose_stamped: PoseStamped, value: int, goal_type: str):
         """核心函数：取消旧目标，发送新目标给 Nav2"""
-        
-        # 1. (如果需要) 取消当前正在执行的目标
-        if self.current_active_goal_handle is not None and \
-           self.current_active_goal_handle.status == GoalStatus.STATUS_EXECUTING:
-            
-            self.get_logger().warn("正在取消旧目标...")
-            self.current_active_goal_handle.cancel_goal_async()
-
-        # 2. 准备新目标
-        goal_msg = NavigateToPose.Goal()
-        goal_msg.pose = pose_stamped
-
-        # 3. 更新内部状态
-        self.current_active_goal_value = value
-        self.current_active_goal_type = goal_type
-        
-        # 4. 发送目标
         self.get_logger().info(f"正在发送新目标 (Type: {goal_type}, Value: {value})...")
-        send_goal_future = self.nav_to_pose_client.send_goal_async(goal_msg)
+        self.goal_pub.publish(pose_stamped)
+
+
+        # # 1. (如果需要) 取消当前正在执行的目标
+        # if self.current_active_goal_handle is not None and \
+        #    self.current_active_goal_handle.status == GoalStatus.STATUS_EXECUTING:
+            
+        #     self.get_logger().warn("正在取消旧目标...")
+        #     self.current_active_goal_handle.cancel_goal_async()
+
+        # # 2. 准备新目标
+        # goal_msg = NavigateToPose.Goal()
+        # goal_msg.pose = pose_stamped
+
+        # # 3. 更新内部状态
+        # self.current_active_goal_value = value
+        # self.current_active_goal_type = goal_type
         
-        # 5. 注册“目标已接受”的回调
-        send_goal_future.add_done_callback(self.goal_response_callback)
+        # # 4. 发送目标
+        # self.get_logger().info(f"正在发送新目标 (Type: {goal_type}, Value: {value})...")
+
+        # send_goal_future = self.nav_to_pose_client.send_goal_async(goal_msg)
+        
+        
+        # # 5. 注册“目标已接受”的回调
+        # send_goal_future.add_done_callback(self.goal_response_callback)
 
     def goal_response_callback(self, future: Future):
         """Nav2 接受或拒绝了我们的目标"""

@@ -41,6 +41,7 @@ setup(
             'image_saver = yolo_detector.image_saver:main',
             'yolo_goal_extractor = yolo_detector.yolo_goal_extractor:main',
             'mission_manager = yolo_detector.mission_manager:main',
+            'test_node = yolo_detector.test_node:main',
         ],
     },
 )
