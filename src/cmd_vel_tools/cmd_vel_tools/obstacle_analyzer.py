@@ -13,7 +13,7 @@ class ObstacleAnalyzerNode(Node):
         self.bridge = CvBridge()
         self.subscription = self.create_subscription(
             Image,
-            '/bev/debug_image',
+            '/bev/to_cmd_vel',
             self.image_callback,
             10)
         
@@ -29,8 +29,15 @@ class ObstacleAnalyzerNode(Node):
             '/bev/obstacle_info', 
             10)
         # PID 参数
-        self.declare_parameter('kp_angular', 0.005) # 比例增益 (P)
+        self.declare_parameter('kp_angular', 0.0008) # 比例增益 (P)
         self.declare_parameter('kd_angular', 0.1)    # 微分增益 (D) (阻尼)
+
+        # 远处的权重 (避免过度反应)
+        self.declare_parameter('dist_weight_far', 0.5) 
+        # 近处的权重 (需要紧急避让)
+        self.declare_parameter('dist_weight_near', 1.5) 
+        self.w_far = self.get_parameter('dist_weight_far').value
+        self.w_near = self.get_parameter('dist_weight_near').value
 
         # 障碍检测参数
         self.declare_parameter('min_obstacle_area', 20)
@@ -88,60 +95,31 @@ class ObstacleAnalyzerNode(Node):
         pixel_error = 0.0
         critical_y = 0
 
-        if results['lane_found']:
-            # 策略 1: 赛道已找到
-            lane_model = results['fitted_lane_model']
-            critical_y = int(results.get('bottom_y', cv_image.shape[0] - 1))
-            critical_y = max(0, min(critical_y, cv_image.shape[0] - 1))
-            
-            # (命名变更) 这不是 "车道设定点", 这是 "车道参考"
-            lane_reference_x = lane_model[critical_y]
-        else:
-            # 策略 2: 赛道未找到 (回退)
-            if msg_out.left:
-                lane_reference_x = cv_image.shape[1] - 1
-            elif msg_out.right: 
-                lane_reference_x = 0.0
+        if msg_out.left:
+            lane_reference_x = cv_image.shape[1] - 1
+        else : 
+            lane_reference_x = 0.0
             
         
         # 2. (核心) 根据 "analyze" 函数的决策，计算误差
         # PD 控制器 *执行* 决策，而不是 *推翻* 决策
-        
         if results['decision'] == "TURN_LEFT":
             # 决策: 向左转 (意味着障碍物在右侧, 或在赛道左侧)
-            
-            if results['lane_found']:
-                # (赛道模式: 障碍在赛道左侧, 我们要向左转)
-                # 您的逻辑: "根据障碍最左边位置进行左转"
-                # 误差 = "赛道参考" - "障碍物左边缘" (这代表了左侧的 "安全空间"?)
-                # 让我们用一个更鲁棒的逻辑：
-                # 误差 = 赛道参考(300) - 障碍物左边缘(270) = +30 
-                # (这是一个正误差 -> 导致左转。这符合您的要求！)
-                pixel_error = lane_reference_x - results.get('left_x', lane_reference_x)
-            else:
-                # (回退模式: 障碍物在右侧)
-                # 误差 = 图像右边界640-障碍物左边缘(210) = 430
-                pixel_error = lane_reference_x - results.get('left_x', lane_reference_x)
-            
-            # (移除安全钳)
-            # pixel_error = max(0.0, pixel_error) # <--- 这个是 Bug 的根源
+            pixel_error = lane_reference_x - results['left_x']       
 
         elif results['decision'] == "TURN_RIGHT":
             # 决策: 向右转 (意味着障碍物在左侧, 或在赛道右侧)
+            pixel_error = lane_reference_x - results['right_x']
             
-            if results['lane_found']:
-                # (赛道模式: 障碍在赛道右侧, 我们要向右转)
-                # 误差 = 赛道参考(300) - 障碍右边界(320) = -20
-                pixel_error = lane_reference_x - results.get('right_x', lane_reference_x)
-            else:
-                # (回退模式: 障碍物在左侧)
-                # 误差 = 图像左边界-障碍物右边缘(190) = -10
-                pixel_error = lane_reference_x - results.get('right_x', lane_reference_x)
-        # else: (decision is "GO_STRAIGHT" or "No Obstacle Found")
-            # pixel_error 保持为 0.0
-            
+        # 像素底部距离加权
+        if msg_out.find:
+            obs_bottom_y = results.get('bottom_y', 0.0)
+            img_height = results.get('img_height', 100)
+            normalized_dist = obs_bottom_y / float(img_height)    # [0,1]
+            distance_weight = self.w_far + (self.w_near - self.w_far) * normalized_dist
+
         # P 项 (比例):
-        target_angular_z = self.kp_angular * pixel_error
+        target_angular_z = self.kp_angular * pixel_error * distance_weight
 
         # D 项 (阻尼): 
         dampening_term = self.kd_angular * self.current_angular_z
@@ -151,37 +129,18 @@ class ObstacleAnalyzerNode(Node):
         
         # 填充消息
         if msg_out.find:
-            msg_out.angular_change = final_angular_command 
+            msg_out.angular_change = final_angular_command
+            if results['lane_found']:
+                self.get_logger().info(f'Lane found at y={critical_y}') 
+            self.get_logger().info(f'Computed angular_change: {msg_out.angular_change:.3f} rad/s')
+            self.get_logger().info(f'pixel_error: {pixel_error:.1f} px')
         else:
             msg_out.angular_change = 0.0
-
 
         # 8. 发布消息
         self.publisher_.publish(msg_out)
         
-        if msg_out.find:
-            log_reason = results["decision_reason"]
-            self.get_logger().info(
-                f'Obstacle! Decision: {results["decision"]} ({log_reason})'
-            )
-            if results['lane_found']:
-                self.get_logger().info(
-                    f'  LANE_MODE: Setpoint {lane_reference_x:.1f} @ Y={critical_y}'
-                )
-            else:
-                 self.get_logger().info(
-                    f'  FALLBACK_MODE: Setpoint {lane_reference_x:.1f} (Img Center)'
-                )
-            self.get_logger().info(
-                f'  P_Term (Target): {target_angular_z:.3f} (Err: {pixel_error:.1f}px)'
-            )
-            self.get_logger().info(
-                f'  D_Term (Dampen): {dampening_term:.3f} (Current: {self.current_angular_z:.3f})'
-            )
-            self.get_logger().info(
-                f'  FINAL COMMAND: {final_angular_command:.3f} rad/s'
-            )
-
+        
         # --- (更新) 打印分析结果 ---
         # print(f"  障碍物检测: {results['obstacle_found']}")
         # print(f"  赛道线检测: {results['lane_found']}")
@@ -265,6 +224,35 @@ def create_red_mask(bev_image, morph_kernel_size=5):
 
     return red_mask
 
+def find_dominant_track_side(black_mask, min_pixel_thresh=80):
+    """
+    分析黑色赛道掩码，判断赛道主要在左侧、右侧还是中间。
+    """
+
+    # 获取图像宽度并计算中点
+    h, w = black_mask.shape
+    mid_x = w // 2
+
+    # 分割掩码为左右两半
+    left_mask = black_mask[:, 0:mid_x]
+    right_mask = black_mask[:, mid_x:w]
+
+    # 统计两侧的 "赛道" 像素数量
+    left_pixels = cv2.countNonZero(left_mask)
+    right_pixels = cv2.countNonZero(right_mask)
+
+    total_pixels = left_pixels + right_pixels
+
+    
+    # 如果总像素太少 (可能是噪声)，返回 "none"
+    if total_pixels < min_pixel_thresh:
+        return "none" 
+    left_ratio = left_pixels / total_pixels
+    if left_ratio > 0.5:
+        return "left"
+    else:
+        return "right"
+
 
 # 函数: 黑色赛道掩码生成 (鲁棒)
 def create_black_mask(bev_image, morph_kernel_size=5):  # morph_kernel_size 实际上被覆盖了
@@ -345,15 +333,12 @@ def create_black_mask(bev_image, morph_kernel_size=5):  # morph_kernel_size 实�
     return final_black_mask
 
 
-
 def analyze_obstacle_image(obstacle_mask, lane_mask, min_obstacle_area=100, min_lane_area=5, min_total_lane_area=100):
-    """
-    (优化) 核心逻辑：使用 NumPy 矢量化操作。
-    (新) 使用二阶多项式拟合 (Polyfit) 来延伸赛道曲线。
-    """
 
     h, w = obstacle_mask.shape[:2]
     results = {}
+    mid_x_pixel = w // 2  # <-- BUG 1 修复: 在顶部定义
+
     # --- A. 分析障碍物 (Obstacles) ---
     contours_obs, _ = cv2.findContours(obstacle_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -365,61 +350,48 @@ def analyze_obstacle_image(obstacle_mask, lane_mask, min_obstacle_area=100, min_
     if not significant_obs_contours:
         # 1. (回退) 没有障碍物
         results['obstacle_found'] = False
-        results['lane_found'] = False
+        results['lane_found'] = False # (假设无障碍也无需检查赛道)
         results['decision'] = "GO_STRAIGHT"
         results['decision_reason'] = "No Obstacle Found"
         results['left_x'] = 0.0
         results['right_x'] = 0.0
-        results['mid_x_pixel'] = w // 2
+        results['bottom_y'] = 0.0
+        results['mid_x_pixel'] = mid_x_pixel
         results['img_height'] = h
         results['img_width'] = w
-        return results, np.zeros_like(obstacle_mask)
+        
+        # 修正逻辑: 如果没有障碍物, 返回的 "cleaned_mask" 应该是赛道掩码
+        return results, lane_mask
 
-        # 找到障碍物了
+    # 找到障碍物了
     results['obstacle_found'] = True
     cleaned_obs_mask = np.zeros_like(obstacle_mask)
     cv2.drawContours(cleaned_obs_mask, significant_obs_contours, -1, 255, thickness=cv2.FILLED)
 
     all_obs_points = np.concatenate(significant_obs_contours)
     x_obs_coords = all_obs_points[:, 0, 0]
+    y_obs_coords = all_obs_points[:, 0, 1]
     results['left_x'] = float(np.min(x_obs_coords))
     results['right_x'] = float(np.max(x_obs_coords))
+    results['bottom_y'] = float(np.max(y_obs_coords))
 
     # --- B. 分析赛道 (Lanes) ---
-    contours_lane, _ = cv2.findContours(lane_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    
+    # *** BUG 2 修复: 在这里定义 combined_cleaned_mask ***
+    # 这是你想要的掩码: 合并了"有效障碍物" (cleaned_obs_mask) 和 "有效赛道" (lane_mask)
+    combined_cleaned_mask = cv2.bitwise_or(cleaned_obs_mask, lane_mask)
 
-    significant_lane_contours = []
-    total_significant_lane_area = 0
-    for contour in contours_lane:
-        area = cv2.contourArea(contour)
-        if area > min_lane_area:
-            significant_lane_contours.append(contour)
-            total_significant_lane_area += area
+    # (现在 mid_x_pixel 已经定义了)
+    is_find_lane = find_dominant_track_side(lane_mask, min_pixel_thresh=50)
+    left_obs_mask = cleaned_obs_mask[:, :mid_x_pixel]
+    right_obs_mask = cleaned_obs_mask[:, mid_x_pixel:]
+    left_obs_area = cv2.countNonZero(left_obs_mask)
+    right_obs_area = cv2.countNonZero(right_obs_mask)
 
-    # (修改) 增加一个安全阈值，防止拟合点太少
-    # 至少需要（例如）80个像素点才能进行有意义的拟合
-    MIN_LANE_POINTS_FOR_FIT = 80
-
-    if not significant_lane_contours or total_significant_lane_area < min_total_lane_area:
-        trigger_fallback = True
-    else:
-        # 检查总点数
-        all_lane_points = np.concatenate(significant_lane_contours)
-        if all_lane_points.shape[0] < MIN_LANE_POINTS_FOR_FIT:
-            trigger_fallback = True
-        else:
-            trigger_fallback = False
-
-    if trigger_fallback:
+    if is_find_lane == "none":
         # 2. (回退) 有障碍物，但没有赛道 (或赛道点太少无法拟合)
         results['lane_found'] = False
-        mid_x_pixel = w // 2
-        left_obs_mask = cleaned_obs_mask[:, :mid_x_pixel]
-        right_obs_mask = cleaned_obs_mask[:, mid_x_pixel:]
-        left_obs_area = cv2.countNonZero(left_obs_mask)
-        right_obs_area = cv2.countNonZero(right_obs_mask)
-
-        results['decision_reason'] = "Fallback: No Lane Found (or Lane too small to fit curve)"
+        results['decision_reason'] = "Fallback: No Lane Found (or Lane too small)"
         if left_obs_area > right_obs_area:
             results['decision'] = "TURN_RIGHT"
         else:
@@ -428,99 +400,21 @@ def analyze_obstacle_image(obstacle_mask, lane_mask, min_obstacle_area=100, min_
         results['mid_x_pixel'] = mid_x_pixel
         results['img_height'] = h
         results['img_width'] = w
-        return results, cleaned_obs_mask
-
-    # --- C. (*** 重大修改 ***) 构建赛道曲线模型 (Polynomial Fit) ---
-    results['lane_found'] = True
-    # (all_lane_points 已经在上面的检查中计算过了)
-    cleaned_all_lanes_mask = np.zeros_like(lane_mask)
-    cv2.drawContours(cleaned_all_lanes_mask, significant_lane_contours, -1, 255, thickness=cv2.FILLED)
-
-    lane_y = all_lane_points[:, 0, 1]
-    lane_x = all_lane_points[:, 0, 0]
-
-    # (核心) 使用二阶多项式拟合 (x = ay^2 + by + c)
-    # 我们拟合 y -> x，因为我们想为每个 y 预测 x
-    try:
-        lane_model = np.polyfit(lane_y, lane_x, 2)
-    except np.linalg.LinAlgError:
-        # (简单地复制上面的回退逻辑)
-        results['lane_found'] = False
-        mid_x_pixel = w // 2
-        left_obs_mask = cleaned_obs_mask[:, :mid_x_pixel]
-        right_obs_mask = cleaned_obs_mask[:, mid_x_pixel:]
-        left_obs_area = cv2.countNonZero(left_obs_mask)
-        right_obs_area = cv2.countNonZero(right_obs_mask)
-        results['decision_reason'] = "Fallback: Lane curve fitting failed (LinAlgError)"
-        results['decision'] = "TURN_RIGHT" if left_obs_area > right_obs_area else "TURN_LEFT"
-        results['mid_x_pixel'] = mid_x_pixel
-        results['img_height'] = h
-        results['img_width'] = w
-        return results, cleaned_obs_mask
-
-    # --- 3. 比较障碍物像素和赛道曲线模型 (快速版) ---
-
-    # 3a. 创建一个完整的 Y-lookup 数组 (大小 h)，使用拟合的模型
-    # 创建一个 0 到 h-1 的 y 值数组
-    y_values_full = np.arange(h)
-
-    # (矢量化) 计算 *所有* y 对应的 x 坐标
-    # 这就是 "延伸" 后的曲线
-    full_lane_lookup = np.polyval(lane_model, y_values_full)
-    # 3b. (核心) 矢量化比较 (此部分不变)
-    obs_y, obs_x = np.where(cleaned_obs_mask > 0)
-
-    results['bottom_y'] = float(np.max(obs_y))
-    results['fitted_lane_model'] = full_lane_lookup
-
-    # (快速) 查找所有障碍物像素对应的*拟合*赛道X坐标
-    corresponding_lane_x_values = full_lane_lookup[obs_y]
-
-    # (快速) 矢量化比较，并计算总和
-    area_left_of_lane = np.sum(obs_x < corresponding_lane_x_values)
-    area_right_of_lane = np.sum(obs_x > corresponding_lane_x_values)
-
-    # 4. 做出最终决策 (已修复逻辑)
-    if area_left_of_lane == 0 and area_right_of_lane == 0:
-        # 这种情况很少见，但可能发生：障碍物被检测到，但所有障碍物像素
-        # *恰好* 都在拟合的赛道线上 (例如垂直线障碍物)
-        # 或者 obs_y, obs_x 为空 (虽然前面有检查)
-        # 此时，我们退回到 "无赛道" 逻辑
-        results['decision_reason'] = "Context: Obstacle perfectly on lane (or error), fallback"
-        mid_x_pixel = w // 2
-        left_obs_mask = cleaned_obs_mask[:, :mid_x_pixel]
-        right_obs_mask = cleaned_obs_mask[:, mid_x_pixel:]
-        left_obs_area = cv2.countNonZero(left_obs_mask)
-        right_obs_area = cv2.countNonZero(right_obs_mask)
-        results['decision'] = "TURN_RIGHT" if left_obs_area > right_obs_area else "TURN_LEFT"
-
-    elif area_left_of_lane > area_right_of_lane:
-        results['decision'] = "TURN_LEFT"
-        results['decision_reason'] = "Context: Obstacle is LEFT of Fitted Lane Curve"
+        
+        # 修正逻辑: 即使没有赛道, 也要返回包含障碍物的 combined_mask
+        return results, combined_cleaned_mask
     else:
-        results['decision'] = "TURN_RIGHT"
-        results['decision_reason'] = "Context: Obstacle is RIGHT of Fitted Lane Curve"
-
-    # --- D. 存储最终结果 ---
-    results['dominant_obstacle_side_vs_lane'] = "LEFT" if area_left_of_lane > area_right_of_lane else "RIGHT"
-    results['area_left_of_lane'] = float(area_left_of_lane)  # 转换为 float
-    results['area_right_of_lane'] = float(area_right_of_lane)  # 转换为 float
-    results['mid_x_pixel'] = w // 2
-    results['img_height'] = h
-    results['img_width'] = w
-
-    combined_cleaned_mask = cv2.bitwise_or(cleaned_obs_mask, cleaned_all_lanes_mask)
-
-    # # (新) (可选) 绘制拟合的曲线以供调试
-    # for y in y_values_full:
-    #     x = int(full_lane_lookup[y])
-    #     if 0 <= x < w:
-    #         # 在 combined_cleaned_mask 上用灰色(128)绘制
-    #         cv2.circle(combined_cleaned_mask, (x, y), 1, 128, -1)
-
-    return results, combined_cleaned_mask
-
-
+        results['lane_found'] = True
+        if is_find_lane == "left":
+            # 由于视野受限，赛道在左侧时如果发现障碍，则一定右转
+            results['decision'] = "TURN_RIGHT"
+            results['decision_reason'] = "Context: Lane is DOMINANT on LEFT"
+        else:
+            results['decision'] = "TURN_LEFT"
+            results['decision_reason'] = "Context: Lane is DOMINANT on RIGHT"
+            
+        # 修正逻辑: 决策完成后, 返回正确的 combined_mask
+        return results, combined_cleaned_mask
 
 def main(args=None):
     rclpy.init(args=args)

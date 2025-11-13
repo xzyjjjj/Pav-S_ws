@@ -26,7 +26,7 @@ class CmdVelLimiter(Node):
 
         # --- 默认配置 ---
         # 停车后冷却时间（秒）: 在停完车后这段时间内不再触发停车
-        self.declare_parameter('stop_line_cooldown', 3.0)
+        self.declare_parameter('stop_line_cooldown', 5.0)
         self.stop_line_cooldown = float(self.get_parameter('stop_line_cooldown').get_parameter_value().double_value)
 
         # Topics
@@ -172,8 +172,6 @@ class CmdVelLimiter(Node):
                     since_last_stop = (now - self.last_stop_time).nanoseconds / 1e9
                     if since_last_stop >= self.stop_line_cooldown:
                         stop_line_triggered = True
-        # 2) 检查障碍触发条件
-        obstacle_triggered = False
         
 
 
@@ -241,9 +239,12 @@ class CmdVelLimiter(Node):
             scaled.angular.z = 0.0
         else:   
             scaled.angular.z = ang_z
-            # 检查是否接近障碍物，如果接近调整角速度
+            # 检查是否接近障碍物，如果接近调整角速度，并且降低线速度
             if  hasattr(self, 'obstacle_info') and self.obstacle_info.find:
-                scaled.angular.z += self.obstacle_info.angular_change*0.1
+                scaled.angular.z += self.obstacle_info.angular_change
+                # scaled.linear.x = min(scaled.linear.x * 0.4, 0.2)
+                # scaled.linear.y = min(scaled.linear.y * 0.4, 0.2)
+                self.get_logger().info(f"Obstacle detected, adjusting speeds.")
                 
 
         scaled.angular.x = ang_x
