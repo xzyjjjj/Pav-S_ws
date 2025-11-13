@@ -55,12 +55,12 @@ ipm_node:
     # # --- 配置 1 (例如：近场) ---
     # bev_width_1: 640
     # bev_height_1: 480
-    src_points_1: [201.0, 357.0, 442.0, 356.0, 558.0, 447.0, 89.0, 452.0]
-    dst_points_1: [0.0, 0.0, 640.0, 0.0, 640.0, 480.0, 0.0, 480.0]
-    world_width_m_1: 0.244
-    world_height_m_1: 0.273
-    origin_offset_x_m_1: 0.325
-    origin_offset_y_m_1: 0.122
+    # src_points_1: [201.0, 357.0, 442.0, 356.0, 558.0, 447.0, 89.0, 452.0]
+    # dst_points_1: [0.0, 0.0, 640.0, 0.0, 640.0, 480.0, 0.0, 480.0]
+    # world_width_m_1: 0.244
+    # world_height_m_1: 0.273
+    # origin_offset_x_m_1: 0.325
+    # origin_offset_y_m_1: 0.122
 
     # # --- 配置 2 (例如：远场) ---
     # bev_width_2: 640
@@ -70,7 +70,29 @@ ipm_node:
     world_width_m_2: 0.448  
     world_height_m_2: 0.324  
     origin_offset_x_m_2: 0.457  
-    origin_offset_y_m_2: 0.229  
+    # origin_offset_y_m_2: 0.229  
+    origin_offset_y_m_2: 0.22  
+
+    # # --- 配置 3 (例如：中场) ---
+    # bev_width_3: 640
+    # bev_height_3: 480
+    src_points_3: [197.0, 308.0, 438.0, 310.0, 628.0, 390.0, 3.0, 398.0] # 左上、右上、右下、左下
+    dst_points_3: [0.0, 0.0, 640.0, 0.0, 640.0, 480.0, 0.0, 480.0] 
+    world_width_m_3: 0.45  
+    world_height_m_3: 0.625
+    origin_offset_x_m_3: 0.498
+    # origin_offset_y_m_3: 0.229  
+    origin_offset_y_m_3: 0.225
+
+    # # --- 配置 4 (例如：cmd_vel场) ---
+    # bev_width_4: 640
+    # bev_height_4: 480
+    src_points_1: [210.0, 340.0, 429.0, 341.0, 611.0, 467.0, 49.0, 469.0]
+    dst_points_1: [0.0, 0.0, 640.0, 0.0, 640.0, 480.0, 0.0, 480.0]
+    world_width_m_1: 0.265
+    world_height_m_1: 0.5
+    origin_offset_x_m_1: 0.359
+    origin_offset_y_m_1: 0.1325
 
     # # ----------------------------------------------------
     # # 3. 逆透视变换 (IPM) 标定 (!!! 必须自定义 !!!)

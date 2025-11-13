@@ -21,6 +21,7 @@ class IPMNode(Node):
                 ('image_topic', '/camera/image_raw'),
                 ('pointcloud_topic', '/bev/obstacles'),
                 ('bev_debug_image_topic', '/bev/debug_image'),
+                ('bev_to_cmd_vel_topic', '/bev/to_cmd_vel'),
                 
                 # 可视化控制参数
                 ('enable_vis', False),  # 默认设置为 False
@@ -67,6 +68,7 @@ class IPMNode(Node):
         self.image_topic = self.get_parameter('image_topic').value
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
         self.bev_debug_image_topic = self.get_parameter('bev_debug_image_topic').value
+        self.bev_to_cmd_vel_topic = self.get_parameter('bev_to_cmd_vel_topic').value
 
         # BEV 尺寸
         self.bev_width = self.get_parameter('bev_width').value
@@ -131,11 +133,14 @@ class IPMNode(Node):
         self.image_sub = self.create_subscription(
             Image, self.image_topic, self.image_callback, 15
         ) # !增加图像缓冲队列
-        self.pointcloud_pub = self.create_publisher(
-            PointCloud2, self.pointcloud_topic, 5
-        ) # !减少点云发布延迟，节省内存
+        # self.pointcloud_pub = self.create_publisher(
+        #     PointCloud2, self.pointcloud_topic, 5
+        # ) # !减少点云发布延迟，节省内存
         self.bev_image_1_pub = self.create_publisher(
             Image, self.bev_debug_image_topic, 10
+        )
+        self.bev_to_cmd_vel_pub = self.create_publisher(
+            Image, self.bev_to_cmd_vel_topic, 10
         )
 
     def image_callback(self, msg: Image):
@@ -228,7 +233,7 @@ class IPMNode(Node):
                 
                 robot_z = 0.0 # 假设所有障碍物在地面
                 points_list.append([robot_x, robot_y, robot_z])
-        if obstacle_pixels_2 is not None:
+        if obstacle_pixels_1 is None and obstacle_pixels_2 is not None:
             for point in obstacle_pixels_2:
                 u, v = point[0] 
                 robot_x = self.origin_offset_x_m_2 + (self.bev_height - v) * self.meters_per_pixel_y_2
@@ -247,13 +252,15 @@ class IPMNode(Node):
             PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1)
         ]
         point_cloud_msg = point_cloud2.create_cloud(header, fields, points_list)
-        self.pointcloud_pub.publish(point_cloud_msg)
+        # self.pointcloud_pub.publish(point_cloud_msg)
             
         # 8. (可选) 发布调试图像
-        debug_bev_display = cv2.bitwise_and(bev_image_2, bev_image_2, mask=red_mask_2)
-        bev_img_msg = self.bridge.cv2_to_imgmsg(bev_image_2, "bgr8")
+        debug_bev_display = cv2.bitwise_and(bev_image_1, bev_image_1, mask=red_mask_1)
+        bev_img_msg = self.bridge.cv2_to_imgmsg(bev_image_1, "bgr8")
         bev_img_msg.header = header # 使用相同的时间戳和 frame_id
         self.bev_image_1_pub.publish(bev_img_msg)
+
+        self.bev_to_cmd_vel_pub.publish(bev_img_msg)
 
         # 【新增】如果启用可视化，显示鸟瞰图和处理结果
         if self.enable_vis:
