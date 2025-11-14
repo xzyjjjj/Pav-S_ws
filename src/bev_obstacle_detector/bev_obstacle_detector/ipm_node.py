@@ -118,14 +118,41 @@ class IPMNode(Node):
 
         # --- 3. 获取通用参数 ---
         self.enable_vis = self.get_parameter('enable_vis').value
+
+        # 话题
         self.image_topic = self.get_parameter('image_topic').value
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
         self.bev_debug_image_topic = self.get_parameter('bev_debug_image_topic').value
+        self.to_cmd_vel_topic = self.get_parameter('to_cmd_vel_topic').value
 
+        # BEV 尺寸
+        self.bev_width = self.get_parameter('bev_width').value
+        self.bev_height = self.get_parameter('bev_height').value
+        self.bev_size = (self.bev_width, self.bev_height)
+
+        # 物理尺寸
+        world_width_m_1 = self.get_parameter('world_width_m_1').value
+        world_height_m_1 = self.get_parameter('world_height_m_1').value
+        world_width_m_2 = self.get_parameter('world_width_m_2').value
+        world_height_m_2 = self.get_parameter('world_height_m_2').value
+        
+        # 坐标系
+        self.origin_offset_x_m_1 = self.get_parameter('origin_offset_x_m_1').value
+        self.origin_offset_y_m_1 = self.get_parameter('origin_offset_y_m_1').value
+        self.origin_offset_x_m_2 = self.get_parameter('origin_offset_x_m_2').value
+        self.origin_offset_y_m_2 = self.get_parameter('origin_offset_y_m_2').value
+                
+        # # HSV (转换为 NumPy 数组)
+        # self.lower_red1 = np.array(self.get_parameter('hsv_lower_red1').value)
+        # self.upper_red1 = np.array(self.get_parameter('hsv_upper_red1').value)
+        # self.lower_red2 = np.array(self.get_parameter('hsv_lower_red2').value)
+        # self.upper_red2 = np.array(self.get_parameter('hsv_upper_red2').value)
+
+        # 形态学
         kernel_size = self.get_parameter('morph_kernel_size').value
-        # 【修正】使用方形内核
-        self.morph_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_size, kernel_size))
+        self.morph_kernel = np.ones((1, kernel_size), np.uint8)
 
+        # --- 3. 处理相机和 IPM 矩阵 ---
         self.camera_matrix = np.array(self.get_parameter('camera_matrix').value).reshape(3, 3)
         self.dist_coeffs = np.array(self.get_parameter('distortion_coeffs').value)
         
@@ -209,13 +236,16 @@ class IPMNode(Node):
         # --- 5. 初始化 ROS 接口 (使用 QoS) ---
         self.bridge = CvBridge()
         self.image_sub = self.create_subscription(
-            Image, self.image_topic, self.image_callback, qos_profile_sensor_data
-        )
+            Image, self.image_topic, self.image_callback, 15
+        ) # !增加图像缓冲队列
         self.pointcloud_pub = self.create_publisher(
-            PointCloud2, self.pointcloud_topic, qos_profile_sensor_data
+            PointCloud2, self.pointcloud_topic, 5
+        ) # !减少点云发布延迟，节省内存
+        self.bev_image_1_pub = self.create_publisher(
+            Image, self.bev_debug_image_topic, 10
         )
-        self.bev_image_pub = self.create_publisher(
-            Image, self.bev_debug_image_topic, qos_profile_sensor_data
+        self.to_cmd_vel_topic = self.create_publisher(
+            Image, self.to_cmd_vel_topic, 10
         )
         
     def destroy_node(self):
@@ -398,13 +428,13 @@ class IPMNode(Node):
         # --- 【CPU】10. 创建并发布点云 ---
         header = Header(stamp=msg.header.stamp, frame_id="body")
         
-        fields = [
-            PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
-            PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
-            PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1)
-        ]
-        point_cloud_msg = point_cloud2.create_cloud(header, fields, points_list)
-        self.pointcloud_pub.publish(point_cloud_msg)
+        # fields = [
+        #     PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
+        #     PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
+        #     PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1)
+        # ]
+        # point_cloud_msg = point_cloud2.create_cloud(header, fields, points_list)
+        # self.pointcloud_pub.publish(point_cloud_msg)
             
         # --- 【CPU】11. 可选的可视化和调试图像发布 ---
         if self.enable_vis or self.bev_image_pub.get_subscription_count() > 0:
@@ -436,6 +466,7 @@ class IPMNode(Node):
                 cv2.imshow("2.1 BEV Result (Config 1)", debug_bev_display_1)
                 cv2.imshow("2.2 BEV Result (Config 2)", debug_bev_display_2)
                 cv2.waitKey(1)
+
 
 def main(args=None):
     rclpy.init(args=args)

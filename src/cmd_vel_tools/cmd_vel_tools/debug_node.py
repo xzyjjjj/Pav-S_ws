@@ -10,7 +10,7 @@ class TestPublisher(Node):
 
         # 发布者
         self.cmd_pub = self.create_publisher(Twist, '/cmd_vel_nav2', 10)
-        self.stop_pub = self.create_publisher(Bool, '/object_in_proximity', 10)
+        # self.stop_pub = self.create_publisher(Bool, '/object_in_proximity', 10)
 
         # 定时器：10 Hz
         self.timer_period = 0.1
@@ -31,17 +31,17 @@ class TestPublisher(Node):
         self.cmd_pub.publish(twist)
 
         # --- 控制 stop_line ---
-        stop = Bool()
-        # 10~13s、30~33s 置 true
-        if (10 <= elapsed <= 13) or (30 <= elapsed <= 33):
-            stop.data = True
-        else:
-            stop.data = False
-        self.stop_pub.publish(stop)
+        # stop = Bool()
+        # # 10~13s、30~33s 置 true
+        # if (10 <= elapsed <= 13) or (30 <= elapsed <= 33):
+        #     stop.data = True
+        # else:
+        #     stop.data = False
+        # self.stop_pub.publish(stop)
 
-        # --- 输出状态 ---
-        if int(elapsed) % 2 == 0:  # 每 5 秒打印一次
-            self.get_logger().info(f"Time: {elapsed:.1f}s | stop_line={stop.data}")
+        # # --- 输出状态 ---
+        # if int(elapsed) % 2 == 0:  # 每 5 秒打印一次
+        #     self.get_logger().info(f"Time: {elapsed:.1f}s | stop_line={stop.data}")
 
 def main(args=None):
     rclpy.init(args=args)

@@ -15,7 +15,7 @@ def click_event(event, u, v, flags, params):
         cv2.imshow("Image Viewer", img)
 
 # 3. 读取你的 PNG 文件
-img = cv2.imread("./2.png")
+img = cv2.imread("/Pav-S_ws/src/bev_obstacle_detector/scripts/cmdvel.png")
 
 if img is None:
     print("Error: Could not load image.")
