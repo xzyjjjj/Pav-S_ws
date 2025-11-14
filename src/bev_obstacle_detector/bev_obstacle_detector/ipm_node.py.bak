@@ -23,6 +23,7 @@ class IPMNode(Node):
                 ('image_topic', '/camera/image_raw'),
                 ('pointcloud_topic', '/bev/obstacles'),
                 ('bev_debug_image_topic', '/bev/debug_image'),
+                ('to_cmd_vel_topic', '/bev/to_cmd_vel'),
                 
                 # 可视化控制参数
                 ('enable_vis', False),  # 默认设置为 False
@@ -73,6 +74,7 @@ class IPMNode(Node):
         self.image_topic = self.get_parameter('image_topic').value
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
         self.bev_debug_image_topic = self.get_parameter('bev_debug_image_topic').value
+        self.to_cmd_vel_topic = self.get_parameter('to_cmd_vel_topic').value
 
         # BEV 尺寸
         self.bev_width = self.get_parameter('bev_width').value
@@ -91,11 +93,15 @@ class IPMNode(Node):
         self.origin_offset_x_m_2 = self.get_parameter('origin_offset_x_m_2').value
         self.origin_offset_y_m_2 = self.get_parameter('origin_offset_y_m_2').value
                 
-        # # HSV (转换为 NumPy 数组)
-        # self.lower_red1 = np.array(self.get_parameter('hsv_lower_red1').value)
-        # self.upper_red1 = np.array(self.get_parameter('hsv_upper_red1').value)
-        # self.lower_red2 = np.array(self.get_parameter('hsv_lower_red2').value)
-        # self.upper_red2 = np.array(self.get_parameter('hsv_upper_red2').value)
+        # HSV (转换为 NumPy 数组)
+        self.lower_red1_1 = np.array(self.get_parameter('hsv_lower_red1_1').value)
+        self.upper_red1_1 = np.array(self.get_parameter('hsv_upper_red1_1').value)
+        self.lower_red2_1 = np.array(self.get_parameter('hsv_lower_red2_1').value)
+        self.upper_red2_1 = np.array(self.get_parameter('hsv_upper_red2_1').value)
+        self.lower_red1_2 = np.array(self.get_parameter('hsv_lower_red1_2').value)
+        self.upper_red1_2 = np.array(self.get_parameter('hsv_upper_red1_2').value)
+        self.lower_red2_2 = np.array(self.get_parameter('hsv_lower_red2_2').value)
+        self.upper_red2_2 = np.array(self.get_parameter('hsv_upper_red2_2').value)
 
         # 形态学
         kernel_size = self.get_parameter('morph_kernel_size').value
@@ -138,10 +144,13 @@ class IPMNode(Node):
             Image, self.image_topic, self.image_callback, 15
         ) # !增加图像缓冲队列
         self.pointcloud_pub = self.create_publisher(
-            PointCloud2, self.pointcloud_topic, 5
+            PointCloud2, self.pointcloud_topic, qos_profile_sensor_data
         ) # !减少点云发布延迟，节省内存
         self.bev_image_1_pub = self.create_publisher(
-            Image, self.bev_debug_image_topic, 10
+            Image, self.bev_debug_image_topic, qos_profile_sensor_data
+        )
+        self.to_cmd_vel_topic = self.create_publisher(
+            Image, self.to_cmd_vel_topic, qos_profile_sensor_data
         )
 
     def image_callback(self, msg: Image):
@@ -197,10 +206,10 @@ class IPMNode(Node):
 
         hsv_image_1 = cv2.cvtColor(bev_image_1, cv2.COLOR_BGR2HSV)
         hsv_image_2 = cv2.cvtColor(bev_image_2, cv2.COLOR_BGR2HSV)
-        mask1_1 = cv2.inRange(hsv_image_1, lower_red_1_1, upper_red_1_1)
-        mask2_1 = cv2.inRange(hsv_image_1, lower_red_2_1, upper_red_2_1)
-        mask1_2 = cv2.inRange(hsv_image_2, lower_red_1_2, upper_red_1_2)
-        mask2_2 = cv2.inRange(hsv_image_2, lower_red_2_2, upper_red_2_2)
+        mask1_1 = cv2.inRange(hsv_image_1, self.lower_red_1_1, self.upper_red_1_1)
+        mask2_1 = cv2.inRange(hsv_image_1, self.lower_red_2_1, self.upper_red_2_1)
+        mask1_2 = cv2.inRange(hsv_image_2, self.lower_red_1_2, self.upper_red_1_2)
+        mask2_2 = cv2.inRange(hsv_image_2, self.lower_red_2_2, self.upper_red_2_2)
         red_mask_1 = cv2.bitwise_or(mask1_1, mask2_1)
         red_mask_2 = cv2.bitwise_or(mask1_2, mask2_2)
         
@@ -243,23 +252,25 @@ class IPMNode(Node):
                 points_list.append([robot_x, robot_y, robot_z])
 
 
-        # 7. 创建并发布点云
+        # # 7. 创建并发布点云
         header = Header(stamp=self.get_clock().now().to_msg(), frame_id="body")
-        # TODO: try body
         
-        fields = [
-            PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
-            PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
-            PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1)
-        ]
-        point_cloud_msg = point_cloud2.create_cloud(header, fields, points_list)
-        self.pointcloud_pub.publish(point_cloud_msg)
+        # fields = [
+        #     PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
+        #     PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
+        #     PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1)
+        # ]
+        # point_cloud_msg = point_cloud2.create_cloud(header, fields, points_list)
+        # self.pointcloud_pub.publish(point_cloud_msg)
             
         # 8. (可选) 发布调试图像
         debug_bev_display = cv2.bitwise_and(bev_image_2, bev_image_2, mask=red_mask_2)
         bev_img_msg = self.bridge.cv2_to_imgmsg(bev_image_2, "bgr8")
         bev_img_msg.header = header # 使用相同的时间戳和 frame_id
         self.bev_image_1_pub.publish(bev_img_msg)
+
+        to_cmd_vel_msg = self.bridge.cv2_to_imgmsg(bev_image_1, "bgr8")
+        self.to_cmd_vel_topic.publish(to_cmd_vel_msg)
 
         # 【新增】如果启用可视化，显示鸟瞰图和处理结果
         if self.enable_vis:

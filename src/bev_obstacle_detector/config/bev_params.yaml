@@ -103,11 +103,17 @@ ipm_node:
     # 6. 红色检测 (HSV 阈值) (!!! 需要微调 !!!)
     # ----------------------------------------------------
     # H (色相): 0-179, S (饱和度): 0-255, V (明度): 0-255
-    # hsv_lower_red1: [0, 100, 100]
-    # hsv_upper_red1: [10, 255, 255]
-    # hsv_lower_red2: [160, 100, 100]
-    # hsv_upper_red2: [179, 255, 255]
-
+    # --- 红色检测阈值 1 (用于 BEV 1) ---
+    hsv_lower_red1_1: [0, 90, 50]
+    hsv_upper_red1_1: [10, 255, 255]
+    hsv_lower_red2_1: [170, 80, 50]
+    hsv_upper_red2_1: [180, 255, 255]
+    
+    # --- 红色检测阈值 2 (用于 BEV 2) ---
+    hsv_lower_red1_2: [0, 90, 50]
+    hsv_upper_red1_2: [10, 255, 255]
+    hsv_lower_red2_2: [170, 80, 50]
+    hsv_upper_red2_2: [180, 255, 255]
 
     # hsv = cv2.cvtColor(img_eq, cv2.COLOR_BGR2HSV)
     # mean_v = np.mean(hsv[:, :, 2])
