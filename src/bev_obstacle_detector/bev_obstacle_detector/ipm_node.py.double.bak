@@ -110,10 +110,10 @@ class IPMNode(Node):
         # --- 4. 初始化 ROS 接口 ---
         self.bridge = CvBridge()
         self.image_sub = self.create_subscription(
-            Image, self.image_topic, self.image_callback, 10
+            Image, self.image_topic, self.image_callback, 15
         )
         self.pointcloud_pub = self.create_publisher(
-            PointCloud2, self.pointcloud_topic, 10
+            PointCloud2, self.pointcloud_topic, 5
         )
         self.bev_image_pub = self.create_publisher(
             Image, self.bev_debug_image_topic, 10
@@ -198,7 +198,7 @@ class IPMNode(Node):
             if i == 0:
                 # bev_img_msg = self.bridge.cv2_to_imgmsg(bev_image, "bgr8")
                 debug_bev_display_main = cv2.bitwise_and(bev_image, bev_image, mask=red_mask)
-                bev_img_msg = self.bridge.cv2_to_imgmsg(debug_bev_display_main, "bgr8")
+                bev_img_msg = self.bridge.cv2_to_imgmsg(bev_image, "bgr8")
                 bev_img_msg.header = header
                 self.bev_image_pub.publish(bev_img_msg)
 

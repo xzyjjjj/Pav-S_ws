@@ -9,8 +9,7 @@ import cv2
 import numpy as np
 from sensor_msgs_py import point_cloud2
 from rclpy.qos import QoSProfile, qos_profile_sensor_data
-from rcl_interfaces.msg import ParameterDescriptor
-from rcl_interfaces.msg import ParameterType
+
 # --- 【PyTorch】新增导入 ---
 try:
     import torch
@@ -123,34 +122,11 @@ class IPMNode(Node):
         self.image_topic = self.get_parameter('image_topic').value
         self.pointcloud_topic = self.get_parameter('pointcloud_topic').value
         self.bev_debug_image_topic = self.get_parameter('bev_debug_image_topic').value
-        self.to_cmd_vel_topic = self.get_parameter('to_cmd_vel_topic').value
 
-        # BEV 尺寸
-        self.bev_width = self.get_parameter('bev_width').value
-        self.bev_height = self.get_parameter('bev_height').value
-        self.bev_size = (self.bev_width, self.bev_height)
-
-        # 物理尺寸
-        world_width_m_1 = self.get_parameter('world_width_m_1').value
-        world_height_m_1 = self.get_parameter('world_height_m_1').value
-        world_width_m_2 = self.get_parameter('world_width_m_2').value
-        world_height_m_2 = self.get_parameter('world_height_m_2').value
-        
-        # 坐标系
-        self.origin_offset_x_m_1 = self.get_parameter('origin_offset_x_m_1').value
-        self.origin_offset_y_m_1 = self.get_parameter('origin_offset_y_m_1').value
-        self.origin_offset_x_m_2 = self.get_parameter('origin_offset_x_m_2').value
-        self.origin_offset_y_m_2 = self.get_parameter('origin_offset_y_m_2').value
-                
-        # # HSV (转换为 NumPy 数组)
-        # self.lower_red1 = np.array(self.get_parameter('hsv_lower_red1').value)
-        # self.upper_red1 = np.array(self.get_parameter('hsv_upper_red1').value)
-        # self.lower_red2 = np.array(self.get_parameter('hsv_lower_red2').value)
-        # self.upper_red2 = np.array(self.get_parameter('hsv_upper_red2').value)
 
         # 形态学
         kernel_size = self.get_parameter('morph_kernel_size').value
-        self.morph_kernel = np.ones((1, kernel_size), np.uint8)
+        self.morph_kernel = np.ones((kernel_size, kernel_size), np.uint8)
 
         # --- 3. 处理相机和 IPM 矩阵 ---
         self.camera_matrix = np.array(self.get_parameter('camera_matrix').value).reshape(3, 3)
@@ -236,16 +212,13 @@ class IPMNode(Node):
         # --- 5. 初始化 ROS 接口 (使用 QoS) ---
         self.bridge = CvBridge()
         self.image_sub = self.create_subscription(
-            Image, self.image_topic, self.image_callback, 15
-        ) # !增加图像缓冲队列
+            Image, self.image_topic, self.image_callback, qos_profile_sensor_data
+        ) # 15
         self.pointcloud_pub = self.create_publisher(
             PointCloud2, self.pointcloud_topic, 5
-        ) # !减少点云发布延迟，节省内存
-        self.bev_image_1_pub = self.create_publisher(
+        ) 
+        self.bev_image_pub = self.create_publisher(
             Image, self.bev_debug_image_topic, 10
-        )
-        self.to_cmd_vel_topic = self.create_publisher(
-            Image, self.to_cmd_vel_topic, 10
         )
         
     def destroy_node(self):
@@ -298,7 +271,6 @@ class IPMNode(Node):
         """在 PyTorch (GPU) 上将 BGR (0-1) 转换为 HSV (H:0-1, S:0-1, V:0-1)"""
         # BGR (0-1) -> RGB (0-1)
         img_rgb = img_bgr_float.flip(1) # [B, C, H, W]
-        B, C, H, W = img_rgb.shape
         
         r, g, b = img_rgb[:, 0, :, :], img_rgb[:, 1, :, :], img_rgb[:, 2, :, :]
         
@@ -314,7 +286,7 @@ class IPMNode(Node):
         
         hue[mask_r] = (g[mask_r] - b[mask_r]) / delta[mask_r]
         hue[mask_g] = 2.0 + (b[mask_g] - r[mask_g]) / delta[mask_g]
-        hue[mask_b] = 4.0 + (r[mask_g] - g[mask_g]) / delta[mask_g]
+        hue[mask_b] = 4.0 + (r[mask_b] - g[mask_b]) / delta[mask_b]
         
         hue = (hue / 6.0) % 1.0 # 归一化到 [0, 1]
         
@@ -335,7 +307,6 @@ class IPMNode(Node):
     def morph_torch(self, image, kernel, mode='opening'):
         """PyTorch 版形态学操作 (Open 或 Close)"""
         # (B, 1, H, W)
-        B, C, H, W = image.shape
         k_H, k_W = kernel.shape[-2:]
         padding = (k_H // 2, k_W // 2)
         
@@ -405,36 +376,78 @@ class IPMNode(Node):
         mask_np_1 = red_mask_1.squeeze().byte().cpu().numpy()
         mask_np_2 = red_mask_2.squeeze().byte().cpu().numpy()
 
+        # # --- 【CPU】8. 查找障碍物像素 ---
+        # obstacle_pixels_1 = cv2.findNonZero(mask_np_1)
+        # obstacle_pixels_2 = cv2.findNonZero(mask_np_2)
+
         # --- 【CPU】8. 查找障碍物像素 ---
-        obstacle_pixels_1 = cv2.findNonZero(mask_np_1)
-        obstacle_pixels_2 = cv2.findNonZero(mask_np_2)
+        # 使用 np.where 代替 cv2.findNonZero 以获取更友好的格式 (v, u)
+        v_coords_1, u_coords_1 = np.where(mask_np_1 == 1)
+        v_coords_2, u_coords_2 = np.where(mask_np_2 == 1)
 
-        # --- 【CPU】9. 转换为 PointCloud2 ---
-        points_list = []
-        if obstacle_pixels_1 is not None:
-            for point in obstacle_pixels_1:
-                u, v = point[0]
-                robot_x = self.origin_offset_x_m_1 + (self.bev_size_1[0] - v) * self.meters_per_pixel_y_1
-                robot_y = self.origin_offset_y_m_1 - u * self.meters_per_pixel_x_1
-                points_list.append([robot_x, robot_y, 0.0]) # Z=0.0 (X, Y, Z)
+        # # --- 【CPU】9. 转换为 PointCloud2 ---
+        # points_list = []
+        # if obstacle_pixels_1 is not None:
+        #     for point in obstacle_pixels_1:
+        #         u, v = point[0]
+        #         robot_x = self.origin_offset_x_m_1 + (self.bev_size_1[0] - v) * self.meters_per_pixel_y_1
+        #         robot_y = self.origin_offset_y_m_1 - u * self.meters_per_pixel_x_1
+        #         points_list.append([robot_x, robot_y, 0.0]) # Z=0.0 (X, Y, Z)
 
-        if obstacle_pixels_2 is not None:
-            for point in obstacle_pixels_2:
-                u, v = point[0]
-                robot_x = self.origin_offset_x_m_2 + (self.bev_size_2[0] - v) * self.meters_per_pixel_y_2
-                robot_y = self.origin_offset_y_m_2 - u * self.meters_per_pixel_x_2
-                points_list.append([robot_x, robot_y, 0.0])
+        # elif obstacle_pixels_2 is not None:
+        #     for point in obstacle_pixels_2:
+        #         u, v = point[0]
+        #         robot_x = self.origin_offset_x_m_2 + (self.bev_size_2[0] - v) * self.meters_per_pixel_y_2
+        #         robot_y = self.origin_offset_y_m_2 - u * self.meters_per_pixel_x_2
+        #         points_list.append([robot_x, robot_y, 0.0])
+
+
+        # --- 【CPU】9. 转换为 PointCloud2 (向量化！) ---
+        master_points_list = []
+
+        # --- 向量化处理配置 1 ---
+        if u_coords_1.size > 0:
+            cfg1 = self.ipm_configs[0]
+            
+            # 1. 向量化计算 X (前进方向)
+            robot_x_1 = cfg1.origin_offset_x_m + (cfg1.bev_size[0] - v_coords_1) * cfg1.meters_per_pixel_y
+            
+            # 2. 向量化计算 Y (侧向方向)
+            robot_y_1 = cfg1.origin_offset_y_m - u_coords_1 * cfg1.meters_per_pixel_x
+            
+            # 3. 合并为 NumPy 数组 (X, Y, Z=0)
+            new_points_1 = np.stack([robot_x_1, robot_y_1, np.zeros_like(robot_x_1)], axis=1)
+            master_points_list.append(new_points_1)
+
+        # --- 向量化处理配置 2 ---
+        if u_coords_2.size > 0:
+            cfg2 = self.ipm_configs[1]
+            
+            robot_x_2 = cfg2.origin_offset_x_m + (cfg2.bev_size[0] - v_coords_2) * cfg2.meters_per_pixel_y
+            robot_y_2 = cfg2.origin_offset_y_m - u_coords_2 * cfg2.meters_per_pixel_x
+            
+            new_points_2 = np.stack([robot_x_2, robot_y_2, np.zeros_like(robot_x_2)], axis=1)
+            master_points_list.append(new_points_2)
+
+        # 4. 融合所有点并创建 PointCloud
+        if master_points_list:
+            # 使用 np.concatenate 进行最终合并
+            final_points_np = np.concatenate(master_points_list, axis=0)
+        else:
+            final_points_np = np.empty((0, 3), dtype=np.float32)
 
         # --- 【CPU】10. 创建并发布点云 ---
         header = Header(stamp=msg.header.stamp, frame_id="body")
         
-        # fields = [
-        #     PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
-        #     PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
-        #     PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1)
-        # ]
+        fields = [
+            PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
+            PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
+            PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1)
+        ]
         # point_cloud_msg = point_cloud2.create_cloud(header, fields, points_list)
-        # self.pointcloud_pub.publish(point_cloud_msg)
+        # 使用 final_points_np.tolist() 传递数据
+        point_cloud_msg = point_cloud2.create_cloud(header, fields, final_points_np.tolist())
+        self.pointcloud_pub.publish(point_cloud_msg)
             
         # --- 【CPU】11. 可选的可视化和调试图像发布 ---
         if self.enable_vis or self.bev_image_pub.get_subscription_count() > 0:

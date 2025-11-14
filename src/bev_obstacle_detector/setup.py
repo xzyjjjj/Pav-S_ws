@@ -27,7 +27,8 @@ setup(
     entry_points={
         'console_scripts': [
             'ipm_node = bev_obstacle_detector.ipm_node:main',
-            'pointcloud_merger_node = bev_obstacle_detector.pointcloud_merger_node:main'
+            'pointcloud_merger_node = bev_obstacle_detector.pointcloud_merger_node:main',
+            'ipm_cmd_vel_node = bev_obstacle_detector.ipm_cmd_vel_node:main',
         ],
     },
 )
