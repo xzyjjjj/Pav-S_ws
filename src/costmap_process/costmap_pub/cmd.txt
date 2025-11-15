@@ -1,0 +1,21 @@
+# 在工作空间根目录（~/桌面/Pav-S_ws）运行
+colcon build --packages-select costmap_process
+source install/setup.bash
+
+ros2 run costmap_process png_costmap_publisher --ros-args \
+  -p image_path:=/Pav-S_ws/src/costmap_process/costmap_pub/test_img.png \
+  -p publish_frequency:=2.0 \
+  -p watch_file:=false
+
+# 列出话题，确认两个话题都存在
+ros2 topic list | grep processed_costmap
+
+# 查看话题类型
+ros2 topic info /processed_costmap
+ros2 topic info /processed_costmap_occupancy
+
+# 观察一次 OccupancyGrid 消息（确认 frame_id、尺寸、数据）
+ros2 topic echo /processed_costmap_occupancy -n 1
+
+# 观测发布频率
+ros2 topic hz /processed_costmap_occupancy

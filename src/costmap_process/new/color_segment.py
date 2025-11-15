@@ -39,47 +39,47 @@ def segment_red_road_sign(img):
     if img is None:
         return None
 
-    # 1. 将图像从 BGR 转换到 HSV 颜色空间
-    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    # # 1. 将图像从 BGR 转换到 HSV 颜色空间
+    # hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
-    # # 2. 定义红色在 HSV 空间中的阈值范围
-    # # 红色范围 1
-    # H：[0, 10]
-    # S：[95, 255]
-    # V：[150, 255]
-    lower_red_1 = np.array([0, 65, 100])
-    upper_red_1 = np.array([30, 255, 255])
+    # # # 2. 定义红色在 HSV 空间中的阈值范围
+    # # # 红色范围 1
+    # # H：[0, 10]
+    # # S：[95, 255]
+    # # V：[150, 255]
+    # lower_red_1 = np.array([0, 65, 100])
+    # upper_red_1 = np.array([30, 255, 255])
     
-    # # 红色范围 2
-    # H：[170, 180]
-    # S：[95, 255]
-    # V：[150, 255]
-    lower_red_2 = np.array([150, 65, 100])
-    upper_red_2 = np.array([180, 255, 255])
-
-    # 3. 创建掩膜 (Mask) 并合并
-    mask_red_1 = cv2.inRange(hsv, lower_red_1, upper_red_1)
-    mask_red_2 = cv2.inRange(hsv, lower_red_2, upper_red_2)
-    final_mask = cv2.bitwise_or(mask_red_1, mask_red_2)
-    
-    return final_mask
-    # # 亮度增强
-    # lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
-    # l, a, b = cv2.split(lab)
-    # l = cv2.equalizeHist(l)
-    # lab_eq = cv2.merge((l, a, b))
-    # img_eq = cv2.cvtColor(lab_eq, cv2.COLOR_LAB2BGR)
-
-    # hsv = cv2.cvtColor(img_eq, cv2.COLOR_BGR2HSV)
-    # mean_v = np.mean(hsv[:, :, 2])
-    # v_thresh = max(50, int(mean_v*0.5))  # 50~亮度一半
-
-    # # 红色掩膜
-    # lower_red_1 = np.array([0, 90, v_thresh])
-    # upper_red_1 = np.array([10, 255, 255])
-    # lower_red_2 = np.array([170, 80, v_thresh])
+    # # # 红色范围 2
+    # # H：[170, 180]
+    # # S：[95, 255]
+    # # V：[150, 255]
+    # lower_red_2 = np.array([150, 65, 100])
     # upper_red_2 = np.array([180, 255, 255])
-    # mask1 = cv2.inRange(hsv, lower_red_1, upper_red_1)
-    # mask2 = cv2.inRange(hsv, lower_red_2, upper_red_2)
-    # mask = cv2.bitwise_or(mask1, mask2)
-    # return mask
+
+    # # 3. 创建掩膜 (Mask) 并合并
+    # mask_red_1 = cv2.inRange(hsv, lower_red_1, upper_red_1)
+    # mask_red_2 = cv2.inRange(hsv, lower_red_2, upper_red_2)
+    # final_mask = cv2.bitwise_or(mask_red_1, mask_red_2)
+    
+    # return final_mask
+    # 亮度增强
+    lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+    l, a, b = cv2.split(lab)
+    l = cv2.equalizeHist(l)
+    lab_eq = cv2.merge((l, a, b))
+    img_eq = cv2.cvtColor(lab_eq, cv2.COLOR_LAB2BGR)
+
+    hsv = cv2.cvtColor(img_eq, cv2.COLOR_BGR2HSV)
+    mean_v = np.mean(hsv[:, :, 2])
+    v_thresh = max(50, int(mean_v*0.5))  # 50~亮度一半
+
+    # 红色掩膜
+    lower_red_1 = np.array([0, 90, v_thresh])
+    upper_red_1 = np.array([10, 255, 255])
+    lower_red_2 = np.array([170, 80, v_thresh])
+    upper_red_2 = np.array([180, 255, 255])
+    mask1 = cv2.inRange(hsv, lower_red_1, upper_red_1)
+    mask2 = cv2.inRange(hsv, lower_red_2, upper_red_2)
+    mask = cv2.bitwise_or(mask1, mask2)
+    return mask

@@ -43,7 +43,7 @@ CAMERA_PRIORI = {
 
 # 可选的 origin map 路径常量，供 draw_map 等模块使用。若你在其他位置使用不同路径，可覆盖此值。
 # 默认为项目内的示例地图文件（若不存在，请根据你的工作区调整路径）。
-MAP_ORIGIN_PATH = '/Pav-S_ws/src/costmap_process/assets/map/map_origin.jpg'
+MAP_ORIGIN_PATH = '/Pav-S_ws/src/costmap_process/assets/map/map_huandao.png'
 
 # 显示origin map上绘制内容的弹窗
 SHOW_ORIGIN_MAP_WINDOW = False
@@ -51,12 +51,16 @@ LOCAL = False
 
 # Occupancy map / publish settings
 # 默认发布 topic 名称
-OCCUPANCY_TOPIC = 'origin_map_occupancy'
+COSTMAP_RAW_TOPIC = '/global_costmap/costmap_raw'
+OCCUPANCY_TOPIC = '/global_costmap/costmap'
 # 默认分辨率（若为 None 则从 MAP_ROI 与图片尺寸计算）
 DEFAULT_OCCUPANCY_RESOLUTION = None
 # 颜色映射与占用值（方案 A：简洁高对比）
 # key 可以是类别名（如 'red_zone'）或字符串化的数字 '1'..'8'
 OCCUPANCY_COLOR_MAP = {
+    'white_background': {'rgb': (255, 255, 255), 'occ': 0, 'priority': 1000},
+    'black_obstacle': {'rgb': (0, 0, 0), 'occ': 100, 'priority': 0},
+    'debug_red':   {'rgb': (255, 0, 0),    'occ': 100, 'priority': 1},
     # 注：rgb 为 (R, G, B) 三元组。下面注释给出常见颜色名称（中文/英文）便于识别。
     'red_zone':   {'rgb': (220, 20, 60),  'occ': 100, 'priority': 1},   # 深红 / Crimson
     'red_cone':   {'rgb': (255, 69, 0),   'occ': 100, 'priority': 2},   # 橙红 / OrangeRed

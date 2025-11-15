@@ -23,6 +23,7 @@ setup(
             'obstacle_analyzer = cmd_vel_tools.obstacle_analyzer:main',
             'debug_node = cmd_vel_tools.debug_node:main',
             'red_segment = cmd_vel_tools.red_segment:main',
+            'red_stop = cmd_vel_tools.stop_control:main',
         ],
     },
 )

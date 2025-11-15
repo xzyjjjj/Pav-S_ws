@@ -33,7 +33,7 @@ class ObstacleAnalyzerNode(Node):
         self.declare_parameter('kd_angular', 0.1)    # 微分增益 (D) (阻尼)
 
         # 远处的权重 (避免过度反应)
-        self.declare_parameter('dist_weight_far', 0.5) 
+        self.declare_parameter('dist_weight_far', 0.1) 
         # 近处的权重 (需要紧急避让)
         self.declare_parameter('dist_weight_near', 1.5) 
         self.w_far = self.get_parameter('dist_weight_far').value
@@ -111,6 +111,7 @@ class ObstacleAnalyzerNode(Node):
             # 决策: 向右转 (意味着障碍物在左侧, 或在赛道右侧)
             pixel_error = lane_reference_x - results['right_x']
             
+        distance_weight = 1.0
         # 像素底部距离加权
         if msg_out.find:
             obs_bottom_y = results.get('bottom_y', 0.0)

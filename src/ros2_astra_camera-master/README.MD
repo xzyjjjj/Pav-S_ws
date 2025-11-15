@@ -17,6 +17,7 @@ official [ROS 2 installation guide](https://docs.ros.org/en/galactic/Installatio
  Assuming you have sourced the ros environment, same below
 sudo apt install libgflags-dev  ros-humble-image-geometry ros-humble-camera-info-manager \
 ros-humble-image-transport ros-humble-image-publisher libgoogle-glog-dev libusb-1.0-0-dev libeigen3-dev
+
 ```
 
 ● Install libuvc
@@ -54,7 +55,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```bash
  cd ~/ros2_ws
 source /opt/ros/galactic/setup.bash 
-colcon build --event-handlers  console_direct+  --cmake-args  -DCMAKE_BUILD_TYPE=Release --packages-select astra_camera
+colcon build --packages-select astra_camera --event-handlers  console_direct+  --cmake-args  -DCMAKE_BUILD_TYPE=Release
 ```
 
 Starting the camera

@@ -127,6 +127,7 @@ class IPMNode(Node):
         # 形态学
         kernel_size = self.get_parameter('morph_kernel_size').value
         self.morph_kernel = np.ones((kernel_size, kernel_size), np.uint8)
+        self.morph_kernel = np.ones((20, 20), np.uint8)
 
         # --- 3. 处理相机和 IPM 矩阵 ---
         self.camera_matrix = np.array(self.get_parameter('camera_matrix').value).reshape(3, 3)
@@ -199,6 +200,7 @@ class IPMNode(Node):
             self.u_red2_2 = convert_hsv_thresh(self.get_parameter('hsv_upper_red2_2').value)
 
             # --- 形态学内核 (上传到 GPU) ---
+            self.morph_kernel_tensor = torch.from_numpy(self.morph_kernel).to(self.device).float().unsqueeze(0).unsqueeze(0)
             self.morph_kernel_tensor = torch.from_numpy(self.morph_kernel).to(self.device).float().unsqueeze(0).unsqueeze(0)
             
             self.get_logger().info("GPU 资源初始化成功 (PyTorch)。")

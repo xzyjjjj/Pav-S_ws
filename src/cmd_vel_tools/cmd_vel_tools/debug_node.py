@@ -26,7 +26,7 @@ class TestPublisher(Node):
 
         # --- 发布 cmd_vel ---
         twist = Twist()
-        twist.linear.x = 0.2
+        twist.linear.x = 0.28
         twist.angular.z = 0.0
         self.cmd_pub.publish(twist)
 

@@ -6,7 +6,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image
 from vision_msgs.msg import Detection2DArray, Detection2D, BoundingBox2D, ObjectHypothesisWithPose
 from std_msgs.msg import Header
-
+from rclpy.qos import QoSProfile, qos_profile_sensor_data
 import cv2 
 import numpy as np
 from cv_bridge import CvBridge, CvBridgeError
@@ -78,7 +78,7 @@ class RosYOLODetector(Node):
 
         # 订阅图像话题
         self.image_sub = self.create_subscription(
-            Image, image_topic, self.image_callback, 10)
+            Image, image_topic, self.image_callback, qos_profile_sensor_data)
         
         # 订阅深度图像话题
         self.depth_sub = self.create_subscription(

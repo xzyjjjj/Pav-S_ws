@@ -23,7 +23,7 @@ def generate_launch_description():
 
     detector_node = Node(
         package='distance_detector',
-        executable='detector_node',  # 替换为您的可执行文件名
+        executable='distance_node_cv',  # 替换为您的可执行文件名
         name='distance_node_cv',     # 这是您在 __init__ 中设置的节点名
         output='screen',
         emulate_tty=True,

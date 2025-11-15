@@ -37,12 +37,12 @@ ipm_node:
     # origin_offset_x_m: 0.325  # BEV "最近边" 在车前多远
     # origin_offset_y_m: 0.122  # BEV "左侧边" 在车左多远
     # ######大矩形
-    # src_points: [180.0, 305.0, 453.0, 307.0, 632.0, 389.0, 23.0, 395.0]
-    # dst_points: [0.0, 0.0, 640.0, 0.0, 640.0, 480.0, 0.0, 480.0]    
-    # world_width_m: 0.436
-    # world_height_m: 0.5095
-    # origin_offset_x_m: 0.325  # BEV "最近边" 在车前多远
-    # origin_offset_y_m: 0.205 # BEV "左侧边" 在车左多远 0.218- 0.013
+    # src_points_2: [180.0, 305.0, 453.0, 307.0, 632.0, 389.0, 23.0, 395.0]
+    # dst_points_2: [0.0, 0.0, 640.0, 0.0, 640.0, 480.0, 0.0, 480.0]    
+    # world_width_m_2: 0.436
+    # world_height_m_2: 0.5095
+    # origin_offset_x_m_2: 0.325  # BEV "最近边" 在车前多远
+    # origin_offset_y_m_2: 0.205 # BEV "左侧边" 在车左多远 0.218- 0.013
 
     ######新避障矩形
     # src_points: [155.0, 311.0, 464.0, 313.0, 579.0, 358.0, 47.0, 360.0]
@@ -62,26 +62,26 @@ ipm_node:
     origin_offset_x_m_1: 0.325
     origin_offset_y_m_1: 0.122
 
-    # # # --- 配置 2 (例如：远场) ---
-    # bev_width_2: 640
-    # bev_height_2: 480
-    # src_points_2: [155.0, 311.0, 464.0, 313.0, 579.0, 358.0, 47.0, 360.0] 
-    # dst_points_2: [0.0, 0.0, 640.0, 0.0, 640.0, 480.0, 0.0, 480.0] 
-    # world_width_m_2: 0.448  
-    # world_height_m_2: 0.324  
-    # origin_offset_x_m_2: 0.457  
-    # # origin_offset_y_m_2: 0.229  
-    # origin_offset_y_m_2: 0.225  
-
-    # --- 配置 3 (例如：中场) ---
+    # # --- 配置 2 (例如：远场) ---
     bev_width_2: 640
     bev_height_2: 480
-    src_points_2: [197.0, 308.0, 438.0, 310.0, 628.0, 390.0, 3.0, 398.0] # 左上、右上、右下、左下
+    src_points_2: [155.0, 311.0, 464.0, 313.0, 579.0, 358.0, 47.0, 360.0] 
     dst_points_2: [0.0, 0.0, 640.0, 0.0, 640.0, 480.0, 0.0, 480.0] 
-    world_width_m_2: 0.45  
-    world_height_m_2: 0.625
-    origin_offset_x_m_2: 0.498 
-    origin_offset_y_m_2: 0.225
+    world_width_m_2: 0.448  
+    world_height_m_2: 0.324  
+    origin_offset_x_m_2: 0.457  
+    # origin_offset_y_m_2: 0.229  
+    origin_offset_y_m_2: 0.225  
+
+    # # --- 配置 3 (例如：中场) ---
+    # bev_width_2: 640
+    # bev_height_2: 480
+    # src_points_2: [197.0, 308.0, 438.0, 310.0, 628.0, 390.0, 3.0, 398.0] # 左上、右上、右下、左下
+    # dst_points_2: [0.0, 0.0, 640.0, 0.0, 640.0, 480.0, 0.0, 480.0] 
+    # world_width_m_2: 0.45  
+    # world_height_m_2: 0.625
+    # origin_offset_x_m_2: 0.498 
+    # origin_offset_y_m_2: 0.225
 
     # # # --- 配置 4 (例如：cmd_vel场) ---
     # src_points_1: [210.0, 340.0, 429.0, 341.0, 611.0, 467.0, 49.0, 469.0]

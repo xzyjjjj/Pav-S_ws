@@ -48,10 +48,9 @@
     <arg name="color_depth_synchronization" default="false"/>
     <arg name="use_uvc_camera" default="true"/>
     <arg name="uvc_vendor_id" default="0x2bc5"/>
-    <arg name="uvc_product_id" default="0x050f"/>
+    <arg name="uvc_product_id" default="0x0501"/>
     <arg name="uvc_retry_count" default="100"/>
-    <!-- <arg name="uvc_camera_format" default="mjpeg"/>  -->
-    <arg name="uvc_camera_format" default="yuyv"/> 
+    <arg name="uvc_camera_format" default="mjpeg"/>
     <arg name="uvc_flip" default="false"/>
     <arg name="oni_log_level" default="verbose"/>
     <arg name="oni_log_to_console" default="false"/>

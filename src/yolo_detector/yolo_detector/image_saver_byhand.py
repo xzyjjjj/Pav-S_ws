@@ -4,13 +4,14 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
 import os
+from rclpy.qos import QoSProfile, qos_profile_sensor_data
 
 class ImageSaver(Node):
     def __init__(self):
         super().__init__('image_saver_node')
     
         # 声明保存路径参数
-        self.declare_parameter('base_save_path', '/Pav-S_ws/src/yolo_detector/runs/data_collect')
+        self.declare_parameter('base_save_path', '/Pav-S_ws/src/yolo_detector/runs/bev/data_collect')
         
         # 获取参数
         self.base_path = self.get_parameter('base_save_path').get_parameter_value().string_value
@@ -23,7 +24,8 @@ class ImageSaver(Node):
         # 创建订阅者
         self.subscription = self.create_subscription(
             Image,
-            '/camera/color/image_raw',
+            # '/camera/color/image_raw',
+            '/bev/debug_image',
             self.image_callback,
             10)
         self.subscription
