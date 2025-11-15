@@ -81,7 +81,8 @@ class IPMNode(Node):
             ('enable_vis', False),
             ('camera_matrix', Parameter.Type.DOUBLE_ARRAY),
             ('distortion_coeffs', Parameter.Type.DOUBLE_ARRAY),
-            ('morph_kernel_size', 5)
+            ('morph_kernel_size', 5),
+            ('inflation_radius', 0.015), # 【新增】膨胀半径参数
         ]
         
         # 动态声明 IPM 参数
@@ -127,13 +128,12 @@ class IPMNode(Node):
         # 形态学
         kernel_size = self.get_parameter('morph_kernel_size').value
         self.morph_kernel = np.ones((kernel_size, kernel_size), np.uint8)
-        self.morph_kernel = np.ones((20, 20), np.uint8)
 
         # --- 3. 处理相机和 IPM 矩阵 ---
         self.camera_matrix = np.array(self.get_parameter('camera_matrix').value).reshape(3, 3)
         self.dist_coeffs = np.array(self.get_parameter('distortion_coeffs').value)
         
-        # --- 3. 加载两套 IPM 配置 ---
+        # --- 4. 加载两套 IPM 配置 ---
         self.ipm_configs = []
         try:
             self.ipm_configs.append(IPMConfig(self, 1))
@@ -142,8 +142,26 @@ class IPMNode(Node):
             self.get_logger().error(f"加载 IPM 配置失败: {e}. 请检查你的 YAML 文件。")
             return
 
+        # --- 5. 【新增】计算膨胀核尺寸 ---
+        inflation_radius_m = self.get_parameter('inflation_radius').value
+        
+        # 配置 1 膨胀核
+        cfg1 = self.ipm_configs[0]
+        avg_m_per_px_1 = (cfg1.meters_per_pixel_x + cfg1.meters_per_pixel_y) / 2.0
+        radius_px_1 = int(np.ceil(inflation_radius_m / avg_m_per_px_1))
+        self.inflation_kernel_size_1 = (radius_px_1 * 2) + 1
+        self.inflation_padding_1 = radius_px_1
+        self.get_logger().info(f"Config 1: 膨胀 {inflation_radius_m}m -> {radius_px_1}px (核: {self.inflation_kernel_size_1}x{self.inflation_kernel_size_1})")
 
-        # --- 4. 【PyTorch】加载并上传资源到 GPU ---
+        # 配置 2 膨胀核
+        cfg2 = self.ipm_configs[1]
+        avg_m_per_px_2 = (cfg2.meters_per_pixel_x + cfg2.meters_per_pixel_y) / 2.0
+        radius_px_2 = int(np.ceil(inflation_radius_m / avg_m_per_px_2))
+        self.inflation_kernel_size_2 = (radius_px_2 * 2) + 1
+        self.inflation_padding_2 = radius_px_2
+        self.get_logger().info(f"Config 2: 膨胀 {inflation_radius_m}m -> {radius_px_2}px (核: {self.inflation_kernel_size_2}x{self.inflation_kernel_size_2})")
+
+        # --- 6. 【PyTorch】加载并上传资源到 GPU ---
         self.get_logger().info("正在将资源上传到 GPU (PyTorch)...")
         try:
             # --- 替换 cv2.undistort ---
@@ -200,7 +218,6 @@ class IPMNode(Node):
             self.u_red2_2 = convert_hsv_thresh(self.get_parameter('hsv_upper_red2_2').value)
 
             # --- 形态学内核 (上传到 GPU) ---
-            self.morph_kernel_tensor = torch.from_numpy(self.morph_kernel).to(self.device).float().unsqueeze(0).unsqueeze(0)
             self.morph_kernel_tensor = torch.from_numpy(self.morph_kernel).to(self.device).float().unsqueeze(0).unsqueeze(0)
             
             self.get_logger().info("GPU 资源初始化成功 (PyTorch)。")
@@ -371,12 +388,24 @@ class IPMNode(Node):
         red_mask_2 = self.morph_torch(red_mask_2, self.morph_kernel_tensor, mode='opening')
         red_mask_2 = self.morph_torch(red_mask_2, self.morph_kernel_tensor, mode='closing')
 
+        # --- 【GPU】6.5 障碍物膨胀 (Dilation / MaxPool) ---
+        red_mask_1_final = F.max_pool2d(red_mask_1, 
+                                  kernel_size=self.inflation_kernel_size_1, 
+                                  stride=1, 
+                                  padding=self.inflation_padding_1)
+        
+        red_mask_2_final = F.max_pool2d(red_mask_2, 
+                                  kernel_size=self.inflation_kernel_size_2, 
+                                  stride=1, 
+                                  padding=self.inflation_padding_2)
+
+
         # --- 【GPU -> CPU】7. 下载结果 ---
         torch.cuda.synchronize() # 确保所有 GPU 操作完成
         
         # 转换为 uint8 NumPy 数组
-        mask_np_1 = red_mask_1.squeeze().byte().cpu().numpy()
-        mask_np_2 = red_mask_2.squeeze().byte().cpu().numpy()
+        mask_np_1 = red_mask_1_final.squeeze().byte().cpu().numpy()
+        mask_np_2 = red_mask_2_final.squeeze().byte().cpu().numpy()
 
         # # --- 【CPU】8. 查找障碍物像素 ---
         # obstacle_pixels_1 = cv2.findNonZero(mask_np_1)
@@ -436,7 +465,7 @@ class IPMNode(Node):
             # 使用 np.concatenate 进行最终合并
             final_points_np = np.concatenate(master_points_list, axis=0)
         else:
-            final_points_np = np.empty((0, 3), dtype=np.float32)
+            final_points_np = np.empty((0, 3), dtype=np.float32) # 发送一个包含零个点的 sensor_msgs/PointCloud2 消息
 
         # --- 【CPU】10. 创建并发布点云 ---
         header = Header(stamp=msg.header.stamp, frame_id="body")
@@ -449,7 +478,7 @@ class IPMNode(Node):
         # point_cloud_msg = point_cloud2.create_cloud(header, fields, points_list)
         # 使用 final_points_np.tolist() 传递数据
         point_cloud_msg = point_cloud2.create_cloud(header, fields, final_points_np.tolist())
-        self.pointcloud_pub.publish(point_cloud_msg)
+        self.pointcloud_pub.publish(point_cloud_msg) 
             
         # --- 【CPU】11. 可选的可视化和调试图像发布 ---
         if self.enable_vis or self.bev_image_pub.get_subscription_count() > 0:
@@ -475,7 +504,6 @@ class IPMNode(Node):
                 for pt in src_pts_2:
                          cv2.circle(vis_img, (int(pt[0]), int(pt[1])), 5, (0, 0, 255), -1)
                 cv2.imshow("1. Undistorted Image (PyTorch)", vis_img)
-                
                 # 显示 BEV 结果
                 debug_bev_display_2 = cv2.bitwise_and(bev_image_2_np, bev_image_2_np, mask=mask_np_2)
                 cv2.imshow("2.1 BEV Result (Config 1)", debug_bev_display_1)
@@ -492,3 +520,14 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
+# 空消息：最终发布的 PointCloud2 消息具有以下特点：
+# header: 正常填充，包含当前的时间戳 (msg.header.stamp) 和坐标系 (frame_id="body")。
+# fields: 正常填充，包含 x, y, z 三个字段（PointField.FLOAT32）。
+# width 和 height: point_cloud2.create_cloud 将根据点数设置这些字段。
+# 对于空点云，width 将为 0，height 为 1（或 $0 \times 1$ 的 $N$ 点云）。
+# data: 包含表示 0 个点的序列化字节数据，通常是一个空字节串或长度为 0 的缓冲区。
+# row_step 和 point_step: 正常填充，point_step 为 $12$ 字节（3 个 float32），row_step 为 $0$。
+
+
+# 接收方可以检查 msg.width * msg.height 是否为 0 来判断点云是否为空。
