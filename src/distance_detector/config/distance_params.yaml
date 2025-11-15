@@ -7,11 +7,13 @@ distance_node_cv:
     # 图像和主题
     image_topic: "/camera/color/image_raw"
     proximity_topic: "/object_in_proximity"
+    red_in_bev_topic: "/object_in_bev"
     image_width: 640
     image_height: 480
     
     # 掩码
     mask_file_name: "90.png"
+    bev_mask_file_name: "bev_mask.png"
     viz_alpha: 0.3
     
     # HSV 阈值
