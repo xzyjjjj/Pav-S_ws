@@ -383,10 +383,10 @@ class IPMNode(Node):
         red_mask_2 = red_mask_2.unsqueeze(1).float()
         
         red_mask_1 = self.morph_torch(red_mask_1, self.morph_kernel_tensor, mode='opening')
-        red_mask_1 = self.morph_torch(red_mask_1, self.morph_kernel_tensor, mode='closing')
+        # red_mask_1 = self.morph_torch(red_mask_1, self.morph_kernel_tensor, mode='closing')
         
         red_mask_2 = self.morph_torch(red_mask_2, self.morph_kernel_tensor, mode='opening')
-        red_mask_2 = self.morph_torch(red_mask_2, self.morph_kernel_tensor, mode='closing')
+        # red_mask_2 = self.morph_torch(red_mask_2, self.morph_kernel_tensor, mode='closing')
 
         # --- 【GPU】6.5 障碍物膨胀 (Dilation / MaxPool) ---
         red_mask_1_final = F.max_pool2d(red_mask_1, 
